@@ -31,6 +31,20 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
+.brand-block {
+  display: flex;
+  align-items: center;
+}
+
+.site-logo {
+  width: 260px;
+  max-width: 40vw;
+  height: auto;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #efefef;
+}
+
 h1 {
   margin: 0;
   font-size: 1.35rem;

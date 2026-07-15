@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-label="HongLeong Assurance">
+  <rect width="900" height="240" fill="#efefef"/>
+  <g transform="translate(30 18)">
+    <g transform="rotate(-20 110 70)">
+      <rect x="46" y="0" width="24" height="104" fill="#07104d"/>
+      <rect x="86" y="0" width="24" height="104" fill="#07104d"/>
+      <rect x="126" y="0" width="24" height="104" fill="#07104d"/>
+    </g>
+    <path d="M22 98 C72 56, 142 56, 202 98" fill="none" stroke="#ff1f10" stroke-width="20"/>
+    <path d="M28 142 C80 100, 148 100, 206 142" fill="none" stroke="#ff1f10" stroke-width="20"/>
+    <path d="M36 184 C90 142, 156 142, 212 184" fill="none" stroke="#ff1f10" stroke-width="20"/>
+  </g>
+  <text x="250" y="192" font-family="Arial, Helvetica, sans-serif" font-size="86" fill="#07104d">
+    <tspan font-weight="700">HongLeong</tspan>
+    <tspan dx="12" font-weight="400">Assurance</tspan>
+  </text>
+</svg>

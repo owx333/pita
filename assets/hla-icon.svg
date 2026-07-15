@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" role="img" aria-label="HongLeong icon">
+  <rect width="128" height="128" fill="#efefef"/>
+  <g transform="translate(16 14) rotate(-20 48 42)">
+    <rect x="18" y="0" width="12" height="58" fill="#07104d"/>
+    <rect x="40" y="0" width="12" height="58" fill="#07104d"/>
+    <rect x="62" y="0" width="12" height="58" fill="#07104d"/>
+  </g>
+  <g transform="translate(16 42)">
+    <path d="M6 18 C32 -2, 66 -2, 96 18" fill="none" stroke="#ff1f10" stroke-width="10"/>
+    <path d="M10 40 C36 20, 68 20, 98 40" fill="none" stroke="#ff1f10" stroke-width="10"/>
+    <path d="M14 62 C40 42, 70 42, 100 62" fill="none" stroke="#ff1f10" stroke-width="10"/>
+  </g>
+</svg>
