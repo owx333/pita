@@ -15,11 +15,16 @@ RFP Module 2 practice quiz website built from the uploaded exam papers.
 ## Files
 
 - `index.html` - quiz page
+- `mock200.html` - separate 200-question mock exam page
 - `styles.css` - page styles
 - `app.js` - quiz logic and language switching
+- `mock200.js` - logic for the standalone 200-question page
 - `data/questions.json` - trilingual question bank + answer key
 - `data/questions-data.js` - embedded question bank for direct HTML opening
+- `data/mock200.json` - standalone 200-question mock exam bank
+- `data/mock200-data.js` - embedded 200-question mock exam bank
 - `scripts/build_quiz_data.py` - PDF parser and Malay translation generator
+- `scripts/generate_mock200.py` - builds the separate 200-question mock exam from RFP重点
 
 ## Regenerate question data
 
@@ -46,6 +51,10 @@ python3 scripts/build_quiz_data.py \
 
 You can directly double-click `index.html` in File Explorer.  
 Because `data/questions-data.js` is embedded as JavaScript, the quiz works without a local server.
+
+To open the separate 200-question page, directly double-click:
+
+- `mock200.html`
 
 ## Run locally with server (optional)
 

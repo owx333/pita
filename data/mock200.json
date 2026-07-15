@@ -1,0 +1,2624 @@
+{
+  "meta": {
+    "title": "RFP Module 2 模拟考试（200题）",
+    "language": "zh",
+    "questionCount": 200,
+    "source": {
+      "slidePdf": "/workspace/materials/Registred Financial Planning (RFP) Module 2 Tutorial  (Man) _V1.0 as of Nov 2024.pdf",
+      "ebookPdf": "/workspace/materials/E-Book_PCM2_Mandarin.pdf"
+    },
+    "focus": [
+      "理解风险：风险、危险因素、风险诱因、纯风险/投机风险、特定风险/基本风险。",
+      "风险管理：规避、控制、保留、转移，以及损失预防与损失降低。",
+      "保险需求分析：需求分析、人类生命价值、实际现金价值、关键人物价值。",
+      "人寿保单：定期/终身/储蓄型保单、可保利益与不可争辩条款。",
+      "医疗与年金：重大疾病、残疾定义、共同保险、年金类型与阶段。",
+      "普通保险：机器故障险、雇主责任险、金钱保险、代位求偿与赔偿原则。",
+      "回教保险：Tabarru'、Wakalah、Mudharabah、Al-Maisir。",
+      "法律与消费者：最大诚信、附和合同、消费者知情权。",
+      "SOCSO：失效抚恤计划与常见承保/豁免概念。"
+    ]
+  },
+  "questions": [
+    {
+      "id": 1,
+      "chapter": "第1章 理解风险",
+      "question": "【术语识别】以下定义对应哪个术语？\n暴露于不确定并可能造成财务损失的状态。",
+      "options": {
+        "a": "纯风险（Pure Risk）",
+        "b": "损失预防（Loss Prevention）",
+        "c": "风险（Risk）",
+        "d": "基本风险（Fundamental Risk）"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「风险（Risk）」，因为其定义就是：暴露于不确定并可能造成财务损失的状态。"
+    },
+    {
+      "id": 2,
+      "chapter": "第1章 理解风险",
+      "question": "【概念理解】关于「风险（Risk）」，下列哪项描述最准确？",
+      "options": {
+        "a": "企业因关键员工离职或身故可能承担的经济损失价值。",
+        "b": "无法从事原本职业即符合残疾给付条件，定义较宽。",
+        "c": "在损失发生后减少损失程度。",
+        "d": "暴露于不确定并可能造成财务损失的状态。"
+      },
+      "answer": "d",
+      "explanation": "「风险（Risk）」的正确描述为：暴露于不确定并可能造成财务损失的状态。"
+    },
+    {
+      "id": 3,
+      "chapter": "第1章 理解风险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "累积期（Accumulation Phase） — 由经济、科技、政策变化引起的新风险。",
+        "b": "实际现金价值（Actual Cash Value） — 参与者将部分供款捐入风险基金以互助共济。",
+        "c": "风险转移（Risk Transfer） — 保险人赔付后可向责任第三方追偿。",
+        "d": "风险（Risk） — 暴露于不确定并可能造成财务损失的状态。"
+      },
+      "answer": "d",
+      "explanation": "正确配对是：风险（Risk） — 暴露于不确定并可能造成财务损失的状态。"
+    },
+    {
+      "id": 4,
+      "chapter": "第1章 理解风险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "关键人物价值（Key-man Value） — 企业因关键员工离职或身故可能承担的经济损失价值。",
+        "b": "附和合同（Contract of Adhesion） — 条款由保险人拟定，投保人通常只能接受或拒绝。",
+        "c": "家政服务人员豁免（Domestic Servant Exemption） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。",
+        "d": "风险（Risk） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「风险（Risk） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。」。正确解释应为：暴露于不确定并可能造成财务损失的状态。"
+    },
+    {
+      "id": 5,
+      "chapter": "第1章 理解风险",
+      "question": "【术语识别】以下定义对应哪个术语？\n导致损失发生的直接原因，例如火灾、车祸、疾病。",
+      "options": {
+        "a": "风险诱因（Hazard）",
+        "b": "危险因素（Peril）",
+        "c": "现金/金钱保险（Money Insurance）",
+        "d": "基本风险（Fundamental Risk）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「危险因素（Peril）」，因为其定义就是：导致损失发生的直接原因，例如火灾、车祸、疾病。"
+    },
+    {
+      "id": 6,
+      "chapter": "第1章 理解风险",
+      "question": "【概念理解】关于「危险因素（Peril）」，下列哪项描述最准确？",
+      "options": {
+        "a": "以具体财务责任计算保障缺口的保险需求方法。",
+        "b": "仅在无法从事合理适任的任何职业时才符合残疾给付。",
+        "c": "保单生效一段时间后，保险人一般不得因早期资料争议拒赔。",
+        "d": "导致损失发生的直接原因，例如火灾、车祸、疾病。"
+      },
+      "answer": "d",
+      "explanation": "「危险因素（Peril）」的正确描述为：导致损失发生的直接原因，例如火灾、车祸、疾病。"
+    },
+    {
+      "id": 7,
+      "chapter": "第1章 理解风险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "投机风险（Speculative Risk） — 承保雇主依法对员工工伤事故应承担的赔偿责任。",
+        "b": "危险因素（Peril） — 导致损失发生的直接原因，例如火灾、车祸、疾病。",
+        "c": "定期寿险（Term Policy） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。",
+        "d": "家政服务人员豁免（Domestic Servant Exemption） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：危险因素（Peril） — 导致损失发生的直接原因，例如火灾、车祸、疾病。"
+    },
+    {
+      "id": 8,
+      "chapter": "第1章 理解风险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "定期寿险（Term Policy） — 在约定期间提供保障，通常保费较低且保障纯粹。",
+        "b": "危险因素（Peril） — 赔偿金额等于重置成本减去折旧。",
+        "c": "动态风险（Dynamic Risk） — 由经济、科技、政策变化引起的新风险。",
+        "d": "雇主责任险（Employer's Liability） — 承保雇主依法对员工工伤事故应承担的赔偿责任。"
+      },
+      "answer": "b",
+      "explanation": "错误配对是「危险因素（Peril） — 赔偿金额等于重置成本减去折旧。」。正确解释应为：导致损失发生的直接原因，例如火灾、车祸、疾病。"
+    },
+    {
+      "id": 9,
+      "chapter": "第1章 理解风险",
+      "question": "【术语识别】以下定义对应哪个术语？\n会提高损失发生概率或严重程度的条件。",
+      "options": {
+        "a": "风险诱因（Hazard）",
+        "b": "可保利益（Insurable Interest）",
+        "c": "家政服务人员豁免（Domestic Servant Exemption）",
+        "d": "定期寿险（Term Policy）"
+      },
+      "answer": "a",
+      "explanation": "正确术语是「风险诱因（Hazard）」，因为其定义就是：会提高损失发生概率或严重程度的条件。"
+    },
+    {
+      "id": 10,
+      "chapter": "第1章 理解风险",
+      "question": "【概念理解】关于「风险诱因（Hazard）」，下列哪项描述最准确？",
+      "options": {
+        "a": "会提高损失发生概率或严重程度的条件。",
+        "b": "年金产品中持续缴费与投资增长的阶段。",
+        "c": "条款由保险人拟定，投保人通常只能接受或拒绝。",
+        "d": "SOCSO 对失去工作能力成员提供长期收入保障。"
+      },
+      "answer": "a",
+      "explanation": "「风险诱因（Hazard）」的正确描述为：会提高损失发生概率或严重程度的条件。"
+    },
+    {
+      "id": 11,
+      "chapter": "第1章 理解风险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "自身职业定义（Own Occupation） — 经营者作为代理人管理基金并收取代理费用。",
+        "b": "投机风险（Speculative Risk） — SOCSO 对失去工作能力成员提供长期收入保障。",
+        "c": "风险诱因（Hazard） — 会提高损失发生概率或严重程度的条件。",
+        "d": "确定年金（Annuity Certain） — 理赔时被保险人与保险公司按比例共同承担医疗费用。"
+      },
+      "answer": "c",
+      "explanation": "正确配对是：风险诱因（Hazard） — 会提高损失发生概率或严重程度的条件。"
+    },
+    {
+      "id": 12,
+      "chapter": "第1章 理解风险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "风险保留（Risk Retention） — 由个人或企业自行承担损失后果。",
+        "b": "消费者知情权 — 消费者有权获得清晰、完整、可理解的产品信息。",
+        "c": "静态风险（Static Risk） — 由社会长期结构问题引起、变化较慢的风险。",
+        "d": "风险诱因（Hazard） — 影响社会大多数人的系统性风险，如经济衰退。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「风险诱因（Hazard） — 影响社会大多数人的系统性风险，如经济衰退。」。正确解释应为：会提高损失发生概率或严重程度的条件。"
+    },
+    {
+      "id": 13,
+      "chapter": "第1章 理解风险",
+      "question": "【术语识别】以下定义对应哪个术语？\n由环境或实物条件造成的危险诱因，如电线老化。",
+      "options": {
+        "a": "需求分析法（Needs Analysis）",
+        "b": "重大疾病保险（Critical Illness）",
+        "c": "物理风险诱因（Physical Hazard）",
+        "d": "储蓄/两全保单（Endowment Policy）"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「物理风险诱因（Physical Hazard）」，因为其定义就是：由环境或实物条件造成的危险诱因，如电线老化。"
+    },
+    {
+      "id": 14,
+      "chapter": "第1章 理解风险",
+      "question": "【概念理解】关于「物理风险诱因（Physical Hazard）」，下列哪项描述最准确？",
+      "options": {
+        "a": "由环境或实物条件造成的危险诱因，如电线老化。",
+        "b": "保险人赔付后可向责任第三方追偿。",
+        "c": "参与者将部分供款捐入风险基金以互助共济。",
+        "d": "参与者与经营者按约定比例分享投资利润。"
+      },
+      "answer": "a",
+      "explanation": "「物理风险诱因（Physical Hazard）」的正确描述为：由环境或实物条件造成的危险诱因，如电线老化。"
+    },
+    {
+      "id": 15,
+      "chapter": "第1章 理解风险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "代位求偿（Subrogation） — 参与者与经营者按约定比例分享投资利润。",
+        "b": "物理风险诱因（Physical Hazard） — 由环境或实物条件造成的危险诱因，如电线老化。",
+        "c": "可保利益（Insurable Interest） — 主要影响个人或个别企业的风险。",
+        "d": "不可争辩条款（Incontestability Clause） — 条款由保险人拟定，投保人通常只能接受或拒绝。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：物理风险诱因（Physical Hazard） — 由环境或实物条件造成的危险诱因，如电线老化。"
+    },
+    {
+      "id": 16,
+      "chapter": "第1章 理解风险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "物理风险诱因（Physical Hazard） — 承保现金在场所内或运送途中被抢劫盗窃等损失。",
+        "b": "附和合同（Contract of Adhesion） — 条款由保险人拟定，投保人通常只能接受或拒绝。",
+        "c": "自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。",
+        "d": "人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。"
+      },
+      "answer": "a",
+      "explanation": "错误配对是「物理风险诱因（Physical Hazard） — 承保现金在场所内或运送途中被抢劫盗窃等损失。」。正确解释应为：由环境或实物条件造成的危险诱因，如电线老化。"
+    },
+    {
+      "id": 17,
+      "chapter": "第1章 理解风险",
+      "question": "【术语识别】以下定义对应哪个术语？\n因态度或行为疏忽导致损失概率上升的诱因。",
+      "options": {
+        "a": "任何职业定义（Any Occupation）",
+        "b": "给付/清算期（Liquidation Phase）",
+        "c": "道德风险诱因（Morale Hazard）",
+        "d": "Al-Maisir"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「道德风险诱因（Morale Hazard）」，因为其定义就是：因态度或行为疏忽导致损失概率上升的诱因。"
+    },
+    {
+      "id": 18,
+      "chapter": "第1章 理解风险",
+      "question": "【概念理解】关于「道德风险诱因（Morale Hazard）」，下列哪项描述最准确？",
+      "options": {
+        "a": "用较低危险的活动或物质替代高风险做法。",
+        "b": "投保与承保双方都必须充分、诚实披露重大事实。",
+        "c": "条款由保险人拟定，投保人通常只能接受或拒绝。",
+        "d": "因态度或行为疏忽导致损失概率上升的诱因。"
+      },
+      "answer": "d",
+      "explanation": "「道德风险诱因（Morale Hazard）」的正确描述为：因态度或行为疏忽导致损失概率上升的诱因。"
+    },
+    {
+      "id": 19,
+      "chapter": "第1章 理解风险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "道德风险诱因（Morale Hazard） — 因态度或行为疏忽导致损失概率上升的诱因。",
+        "b": "风险诱因（Hazard） — 承保机器突发机械或电气故障造成的损失。",
+        "c": "附和合同（Contract of Adhesion） — 用较低危险的活动或物质替代高风险做法。",
+        "d": "危险因素（Peril） — SOCSO 对失去工作能力成员提供长期收入保障。"
+      },
+      "answer": "a",
+      "explanation": "正确配对是：道德风险诱因（Morale Hazard） — 因态度或行为疏忽导致损失概率上升的诱因。"
+    },
+    {
+      "id": 20,
+      "chapter": "第1章 理解风险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "道德风险诱因（Morale Hazard） — 年金把累积资产转换为定期现金流的阶段。",
+        "b": "代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。",
+        "c": "机器故障险（Machinery Breakdown） — 承保机器突发机械或电气故障造成的损失。",
+        "d": "Al-Maisir — 伊斯兰金融中被禁止的赌博成分。"
+      },
+      "answer": "a",
+      "explanation": "错误配对是「道德风险诱因（Morale Hazard） — 年金把累积资产转换为定期现金流的阶段。」。正确解释应为：因态度或行为疏忽导致损失概率上升的诱因。"
+    },
+    {
+      "id": 21,
+      "chapter": "第1章 理解风险",
+      "question": "【术语识别】以下定义对应哪个术语？\n只有损失或无损失两种结果，不会带来获利。",
+      "options": {
+        "a": "任何职业定义（Any Occupation）",
+        "b": "纯风险（Pure Risk）",
+        "c": "风险规避（Risk Avoidance）",
+        "d": "附和合同（Contract of Adhesion）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「纯风险（Pure Risk）」，因为其定义就是：只有损失或无损失两种结果，不会带来获利。"
+    },
+    {
+      "id": 22,
+      "chapter": "第1章 理解风险",
+      "question": "【概念理解】关于「纯风险（Pure Risk）」，下列哪项描述最准确？",
+      "options": {
+        "a": "只有损失或无损失两种结果，不会带来获利。",
+        "b": "承保雇主依法对员工工伤事故应承担的赔偿责任。",
+        "c": "以具体财务责任计算保障缺口的保险需求方法。",
+        "d": "用较低危险的活动或物质替代高风险做法。"
+      },
+      "answer": "a",
+      "explanation": "「纯风险（Pure Risk）」的正确描述为：只有损失或无损失两种结果，不会带来获利。"
+    },
+    {
+      "id": 23,
+      "chapter": "第1章 理解风险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "纯风险（Pure Risk） — 只有损失或无损失两种结果，不会带来获利。",
+        "b": "Mudharabah 模式 — 用较低危险的活动或物质替代高风险做法。",
+        "c": "关键人物价值（Key-man Value） — 在损失发生后减少损失程度。",
+        "d": "损失预防（Loss Prevention） — 赔偿金额等于重置成本减去折旧。"
+      },
+      "answer": "a",
+      "explanation": "正确配对是：纯风险（Pure Risk） — 只有损失或无损失两种结果，不会带来获利。"
+    },
+    {
+      "id": 24,
+      "chapter": "第1章 理解风险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "Mudharabah 模式 — 参与者与经营者按约定比例分享投资利润。",
+        "b": "Wakalah 模式 — 经营者作为代理人管理基金并收取代理费用。",
+        "c": "物理风险诱因（Physical Hazard） — 由环境或实物条件造成的危险诱因，如电线老化。",
+        "d": "纯风险（Pure Risk） — 采取措施降低损失发生频率或严重程度。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「纯风险（Pure Risk） — 采取措施降低损失发生频率或严重程度。」。正确解释应为：只有损失或无损失两种结果，不会带来获利。"
+    },
+    {
+      "id": 25,
+      "chapter": "第1章 理解风险",
+      "question": "【术语识别】以下定义对应哪个术语？\n可能损失也可能获利的风险。",
+      "options": {
+        "a": "投机风险（Speculative Risk）",
+        "b": "累积期（Accumulation Phase）",
+        "c": "道德风险诱因（Morale Hazard）",
+        "d": "失效抚恤金计划（Invalidity Pension Scheme）"
+      },
+      "answer": "a",
+      "explanation": "正确术语是「投机风险（Speculative Risk）」，因为其定义就是：可能损失也可能获利的风险。"
+    },
+    {
+      "id": 26,
+      "chapter": "第1章 理解风险",
+      "question": "【概念理解】关于「投机风险（Speculative Risk）」，下列哪项描述最准确？",
+      "options": {
+        "a": "影响社会大多数人的系统性风险，如经济衰退。",
+        "b": "可能损失也可能获利的风险。",
+        "c": "年金把累积资产转换为定期现金流的阶段。",
+        "d": "只有损失或无损失两种结果，不会带来获利。"
+      },
+      "answer": "b",
+      "explanation": "「投机风险（Speculative Risk）」的正确描述为：可能损失也可能获利的风险。"
+    },
+    {
+      "id": 27,
+      "chapter": "第1章 理解风险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "人类生命价值法（Human Life Value） — SOCSO 对失去工作能力成员提供长期收入保障。",
+        "b": "损失降低（Loss Reduction） — 暴露于不确定并可能造成财务损失的状态。",
+        "c": "纯风险（Pure Risk） — 投保与承保双方都必须充分、诚实披露重大事实。",
+        "d": "投机风险（Speculative Risk） — 可能损失也可能获利的风险。"
+      },
+      "answer": "d",
+      "explanation": "正确配对是：投机风险（Speculative Risk） — 可能损失也可能获利的风险。"
+    },
+    {
+      "id": 28,
+      "chapter": "第1章 理解风险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "投机风险（Speculative Risk） — 以具体财务责任计算保障缺口的保险需求方法。",
+        "b": "家政服务人员豁免（Domestic Servant Exemption） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。",
+        "c": "重大疾病保险（Critical Illness） — 确诊合约列明疾病时一次性给付保险金。",
+        "d": "风险保留（Risk Retention） — 由个人或企业自行承担损失后果。"
+      },
+      "answer": "a",
+      "explanation": "错误配对是「投机风险（Speculative Risk） — 以具体财务责任计算保障缺口的保险需求方法。」。正确解释应为：可能损失也可能获利的风险。"
+    },
+    {
+      "id": 29,
+      "chapter": "第1章 理解风险",
+      "question": "【术语识别】以下定义对应哪个术语？\n主要影响个人或个别企业的风险。",
+      "options": {
+        "a": "风险（Risk）",
+        "b": "特定风险（Particular Risk）",
+        "c": "物理风险诱因（Physical Hazard）",
+        "d": "现金/金钱保险（Money Insurance）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「特定风险（Particular Risk）」，因为其定义就是：主要影响个人或个别企业的风险。"
+    },
+    {
+      "id": 30,
+      "chapter": "第1章 理解风险",
+      "question": "【概念理解】关于「特定风险（Particular Risk）」，下列哪项描述最准确？",
+      "options": {
+        "a": "导致损失发生的直接原因，例如火灾、车祸、疾病。",
+        "b": "暴露于不确定并可能造成财务损失的状态。",
+        "c": "主要影响个人或个别企业的风险。",
+        "d": "保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"
+      },
+      "answer": "c",
+      "explanation": "「特定风险（Particular Risk）」的正确描述为：主要影响个人或个别企业的风险。"
+    },
+    {
+      "id": 31,
+      "chapter": "第1章 理解风险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "基本风险（Fundamental Risk） — 生存至期满或在期内身故都可领取给付。",
+        "b": "特定风险（Particular Risk） — 主要影响个人或个别企业的风险。",
+        "c": "重大疾病保险（Critical Illness） — 保障终身并可累积现金价值。",
+        "d": "确定年金（Annuity Certain） — 年金把累积资产转换为定期现金流的阶段。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：特定风险（Particular Risk） — 主要影响个人或个别企业的风险。"
+    },
+    {
+      "id": 32,
+      "chapter": "第1章 理解风险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "附和合同（Contract of Adhesion） — 条款由保险人拟定，投保人通常只能接受或拒绝。",
+        "b": "家政服务人员豁免（Domestic Servant Exemption） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。",
+        "c": "共同保险（Co-insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。",
+        "d": "特定风险（Particular Risk） — 伊斯兰金融中被禁止的赌博成分。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「特定风险（Particular Risk） — 伊斯兰金融中被禁止的赌博成分。」。正确解释应为：主要影响个人或个别企业的风险。"
+    },
+    {
+      "id": 33,
+      "chapter": "第1章 理解风险",
+      "question": "【术语识别】以下定义对应哪个术语？\n影响社会大多数人的系统性风险，如经济衰退。",
+      "options": {
+        "a": "代位求偿（Subrogation）",
+        "b": "确定年金（Annuity Certain）",
+        "c": "纯风险（Pure Risk）",
+        "d": "基本风险（Fundamental Risk）"
+      },
+      "answer": "d",
+      "explanation": "正确术语是「基本风险（Fundamental Risk）」，因为其定义就是：影响社会大多数人的系统性风险，如经济衰退。"
+    },
+    {
+      "id": 34,
+      "chapter": "第1章 理解风险",
+      "question": "【概念理解】关于「基本风险（Fundamental Risk）」，下列哪项描述最准确？",
+      "options": {
+        "a": "由社会长期结构问题引起、变化较慢的风险。",
+        "b": "暴露于不确定并可能造成财务损失的状态。",
+        "c": "影响社会大多数人的系统性风险，如经济衰退。",
+        "d": "赔偿金额等于重置成本减去折旧。"
+      },
+      "answer": "c",
+      "explanation": "「基本风险（Fundamental Risk）」的正确描述为：影响社会大多数人的系统性风险，如经济衰退。"
+    },
+    {
+      "id": 35,
+      "chapter": "第1章 理解风险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "投机风险（Speculative Risk） — 由个人或企业自行承担损失后果。",
+        "b": "自身职业定义（Own Occupation） — 样本越大，实际损失越接近期望损失。",
+        "c": "基本风险（Fundamental Risk） — 影响社会大多数人的系统性风险，如经济衰退。",
+        "d": "风险（Risk） — 会提高损失发生概率或严重程度的条件。"
+      },
+      "answer": "c",
+      "explanation": "正确配对是：基本风险（Fundamental Risk） — 影响社会大多数人的系统性风险，如经济衰退。"
+    },
+    {
+      "id": 36,
+      "chapter": "第1章 理解风险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "Al-Maisir — 伊斯兰金融中被禁止的赌博成分。",
+        "b": "代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。",
+        "c": "消费者知情权 — 消费者有权获得清晰、完整、可理解的产品信息。",
+        "d": "基本风险（Fundamental Risk） — 用较低危险的活动或物质替代高风险做法。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「基本风险（Fundamental Risk） — 用较低危险的活动或物质替代高风险做法。」。正确解释应为：影响社会大多数人的系统性风险，如经济衰退。"
+    },
+    {
+      "id": 37,
+      "chapter": "第1章 理解风险",
+      "question": "【术语识别】以下定义对应哪个术语？\n由社会长期结构问题引起、变化较慢的风险。",
+      "options": {
+        "a": "代位求偿（Subrogation）",
+        "b": "确定年金（Annuity Certain）",
+        "c": "静态风险（Static Risk）",
+        "d": "风险规避（Risk Avoidance）"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「静态风险（Static Risk）」，因为其定义就是：由社会长期结构问题引起、变化较慢的风险。"
+    },
+    {
+      "id": 38,
+      "chapter": "第1章 理解风险",
+      "question": "【概念理解】关于「静态风险（Static Risk）」，下列哪项描述最准确？",
+      "options": {
+        "a": "由社会长期结构问题引起、变化较慢的风险。",
+        "b": "会提高损失发生概率或严重程度的条件。",
+        "c": "暴露于不确定并可能造成财务损失的状态。",
+        "d": "SOCSO 对失去工作能力成员提供长期收入保障。"
+      },
+      "answer": "a",
+      "explanation": "「静态风险（Static Risk）」的正确描述为：由社会长期结构问题引起、变化较慢的风险。"
+    },
+    {
+      "id": 39,
+      "chapter": "第1章 理解风险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "累积期（Accumulation Phase） — 可能损失也可能获利的风险。",
+        "b": "确定年金（Annuity Certain） — 投保与承保双方都必须充分、诚实披露重大事实。",
+        "c": "损失降低（Loss Reduction） — 把损失财务后果转移给第三方，例如保险公司。",
+        "d": "静态风险（Static Risk） — 由社会长期结构问题引起、变化较慢的风险。"
+      },
+      "answer": "d",
+      "explanation": "正确配对是：静态风险（Static Risk） — 由社会长期结构问题引起、变化较慢的风险。"
+    },
+    {
+      "id": 40,
+      "chapter": "第1章 理解风险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。",
+        "b": "静态风险（Static Risk） — 承保机器突发机械或电气故障造成的损失。",
+        "c": "共同保险（Co-insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。",
+        "d": "储蓄/两全保单（Endowment Policy） — 生存至期满或在期内身故都可领取给付。"
+      },
+      "answer": "b",
+      "explanation": "错误配对是「静态风险（Static Risk） — 承保机器突发机械或电气故障造成的损失。」。正确解释应为：由社会长期结构问题引起、变化较慢的风险。"
+    },
+    {
+      "id": 41,
+      "chapter": "第1章 理解风险",
+      "question": "【术语识别】以下定义对应哪个术语？\n由经济、科技、政策变化引起的新风险。",
+      "options": {
+        "a": "机器故障险（Machinery Breakdown）",
+        "b": "风险转移（Risk Transfer）",
+        "c": "动态风险（Dynamic Risk）",
+        "d": "需求分析法（Needs Analysis）"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「动态风险（Dynamic Risk）」，因为其定义就是：由经济、科技、政策变化引起的新风险。"
+    },
+    {
+      "id": 42,
+      "chapter": "第1章 理解风险",
+      "question": "【概念理解】关于「动态风险（Dynamic Risk）」，下列哪项描述最准确？",
+      "options": {
+        "a": "保险人赔付后可向责任第三方追偿。",
+        "b": "降低损失发生的可能性。",
+        "c": "赔偿金额等于重置成本减去折旧。",
+        "d": "由经济、科技、政策变化引起的新风险。"
+      },
+      "answer": "d",
+      "explanation": "「动态风险（Dynamic Risk）」的正确描述为：由经济、科技、政策变化引起的新风险。"
+    },
+    {
+      "id": 43,
+      "chapter": "第1章 理解风险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "动态风险（Dynamic Risk） — 由经济、科技、政策变化引起的新风险。",
+        "b": "Mudharabah 模式 — 暴露于不确定并可能造成财务损失的状态。",
+        "c": "Wakalah 模式 — 给付期固定，不依赖受领人生存与否。",
+        "d": "风险诱因（Hazard） — 在约定期间提供保障，通常保费较低且保障纯粹。"
+      },
+      "answer": "a",
+      "explanation": "正确配对是：动态风险（Dynamic Risk） — 由经济、科技、政策变化引起的新风险。"
+    },
+    {
+      "id": 44,
+      "chapter": "第1章 理解风险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "给付/清算期（Liquidation Phase） — 年金把累积资产转换为定期现金流的阶段。",
+        "b": "风险规避（Risk Avoidance） — 透过不参与某项活动来避免相关风险。",
+        "c": "终身寿险（Whole Life Policy） — 保障终身并可累积现金价值。",
+        "d": "动态风险（Dynamic Risk） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「动态风险（Dynamic Risk） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。」。正确解释应为：由经济、科技、政策变化引起的新风险。"
+    },
+    {
+      "id": 45,
+      "chapter": "第2章 风险管理",
+      "question": "【术语识别】以下定义对应哪个术语？\n透过不参与某项活动来避免相关风险。",
+      "options": {
+        "a": "关键人物价值（Key-man Value）",
+        "b": "风险规避（Risk Avoidance）",
+        "c": "给付/清算期（Liquidation Phase）",
+        "d": "机器故障险（Machinery Breakdown）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「风险规避（Risk Avoidance）」，因为其定义就是：透过不参与某项活动来避免相关风险。"
+    },
+    {
+      "id": 46,
+      "chapter": "第2章 风险管理",
+      "question": "【概念理解】关于「风险规避（Risk Avoidance）」，下列哪项描述最准确？",
+      "options": {
+        "a": "导致损失发生的直接原因，例如火灾、车祸、疾病。",
+        "b": "采取措施降低损失发生频率或严重程度。",
+        "c": "用较低危险的活动或物质替代高风险做法。",
+        "d": "透过不参与某项活动来避免相关风险。"
+      },
+      "answer": "d",
+      "explanation": "「风险规避（Risk Avoidance）」的正确描述为：透过不参与某项活动来避免相关风险。"
+    },
+    {
+      "id": 47,
+      "chapter": "第2章 风险管理",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "损失降低（Loss Reduction） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。",
+        "b": "可保利益（Insurable Interest） — 无法从事原本职业即符合残疾给付条件，定义较宽。",
+        "c": "风险规避（Risk Avoidance） — 透过不参与某项活动来避免相关风险。",
+        "d": "Tabarru'（互助捐献） — 把损失财务后果转移给第三方，例如保险公司。"
+      },
+      "answer": "c",
+      "explanation": "正确配对是：风险规避（Risk Avoidance） — 透过不参与某项活动来避免相关风险。"
+    },
+    {
+      "id": 48,
+      "chapter": "第2章 风险管理",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。",
+        "b": "基本风险（Fundamental Risk） — 影响社会大多数人的系统性风险，如经济衰退。",
+        "c": "共同保险（Co-insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。",
+        "d": "风险规避（Risk Avoidance） — 把损失财务后果转移给第三方，例如保险公司。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「风险规避（Risk Avoidance） — 把损失财务后果转移给第三方，例如保险公司。」。正确解释应为：透过不参与某项活动来避免相关风险。"
+    },
+    {
+      "id": 49,
+      "chapter": "第2章 风险管理",
+      "question": "【术语识别】以下定义对应哪个术语？\n采取措施降低损失发生频率或严重程度。",
+      "options": {
+        "a": "风险控制（Risk Control）",
+        "b": "机器故障险（Machinery Breakdown）",
+        "c": "重大疾病保险（Critical Illness）",
+        "d": "基本风险（Fundamental Risk）"
+      },
+      "answer": "a",
+      "explanation": "正确术语是「风险控制（Risk Control）」，因为其定义就是：采取措施降低损失发生频率或严重程度。"
+    },
+    {
+      "id": 50,
+      "chapter": "第2章 风险管理",
+      "question": "【概念理解】关于「风险控制（Risk Control）」，下列哪项描述最准确？",
+      "options": {
+        "a": "承保现金在场所内或运送途中被抢劫盗窃等损失。",
+        "b": "采取措施降低损失发生频率或严重程度。",
+        "c": "在损失发生后减少损失程度。",
+        "d": "暴露于不确定并可能造成财务损失的状态。"
+      },
+      "answer": "b",
+      "explanation": "「风险控制（Risk Control）」的正确描述为：采取措施降低损失发生频率或严重程度。"
+    },
+    {
+      "id": 51,
+      "chapter": "第2章 风险管理",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "Tabarru'（互助捐献） — 只有损失或无损失两种结果，不会带来获利。",
+        "b": "投机风险（Speculative Risk） — 暴露于不确定并可能造成财务损失的状态。",
+        "c": "风险控制（Risk Control） — 采取措施降低损失发生频率或严重程度。",
+        "d": "给付/清算期（Liquidation Phase） — 企业因关键员工离职或身故可能承担的经济损失价值。"
+      },
+      "answer": "c",
+      "explanation": "正确配对是：风险控制（Risk Control） — 采取措施降低损失发生频率或严重程度。"
+    },
+    {
+      "id": 52,
+      "chapter": "第2章 风险管理",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "动态风险（Dynamic Risk） — 由经济、科技、政策变化引起的新风险。",
+        "b": "家政服务人员豁免（Domestic Servant Exemption） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。",
+        "c": "风险控制（Risk Control） — 赔偿金额等于重置成本减去折旧。",
+        "d": "需求分析法（Needs Analysis） — 以具体财务责任计算保障缺口的保险需求方法。"
+      },
+      "answer": "c",
+      "explanation": "错误配对是「风险控制（Risk Control） — 赔偿金额等于重置成本减去折旧。」。正确解释应为：采取措施降低损失发生频率或严重程度。"
+    },
+    {
+      "id": 53,
+      "chapter": "第2章 风险管理",
+      "question": "【术语识别】以下定义对应哪个术语？\n由个人或企业自行承担损失后果。",
+      "options": {
+        "a": "需求分析法（Needs Analysis）",
+        "b": "风险保留（Risk Retention）",
+        "c": "风险控制（Risk Control）",
+        "d": "定期寿险（Term Policy）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「风险保留（Risk Retention）」，因为其定义就是：由个人或企业自行承担损失后果。"
+    },
+    {
+      "id": 54,
+      "chapter": "第2章 风险管理",
+      "question": "【概念理解】关于「风险保留（Risk Retention）」，下列哪项描述最准确？",
+      "options": {
+        "a": "给付期固定，不依赖受领人生存与否。",
+        "b": "由环境或实物条件造成的危险诱因，如电线老化。",
+        "c": "由个人或企业自行承担损失后果。",
+        "d": "采取措施降低损失发生频率或严重程度。"
+      },
+      "answer": "c",
+      "explanation": "「风险保留（Risk Retention）」的正确描述为：由个人或企业自行承担损失后果。"
+    },
+    {
+      "id": 55,
+      "chapter": "第2章 风险管理",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "风险保留（Risk Retention） — 由个人或企业自行承担损失后果。",
+        "b": "特定风险（Particular Risk） — 采取措施降低损失发生频率或严重程度。",
+        "c": "人类生命价值法（Human Life Value） — 保险人赔付后可向责任第三方追偿。",
+        "d": "可保利益（Insurable Interest） — 承保机器突发机械或电气故障造成的损失。"
+      },
+      "answer": "a",
+      "explanation": "正确配对是：风险保留（Risk Retention） — 由个人或企业自行承担损失后果。"
+    },
+    {
+      "id": 56,
+      "chapter": "第2章 风险管理",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "终身寿险（Whole Life Policy） — 保障终身并可累积现金价值。",
+        "b": "风险保留（Risk Retention） — 采取措施降低损失发生频率或严重程度。",
+        "c": "需求分析法（Needs Analysis） — 以具体财务责任计算保障缺口的保险需求方法。",
+        "d": "不可争辩条款（Incontestability Clause） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"
+      },
+      "answer": "b",
+      "explanation": "错误配对是「风险保留（Risk Retention） — 采取措施降低损失发生频率或严重程度。」。正确解释应为：由个人或企业自行承担损失后果。"
+    },
+    {
+      "id": 57,
+      "chapter": "第2章 风险管理",
+      "question": "【术语识别】以下定义对应哪个术语？\n把损失财务后果转移给第三方，例如保险公司。",
+      "options": {
+        "a": "Wakalah 模式",
+        "b": "物理风险诱因（Physical Hazard）",
+        "c": "重大疾病保险（Critical Illness）",
+        "d": "风险转移（Risk Transfer）"
+      },
+      "answer": "d",
+      "explanation": "正确术语是「风险转移（Risk Transfer）」，因为其定义就是：把损失财务后果转移给第三方，例如保险公司。"
+    },
+    {
+      "id": 58,
+      "chapter": "第2章 风险管理",
+      "question": "【概念理解】关于「风险转移（Risk Transfer）」，下列哪项描述最准确？",
+      "options": {
+        "a": "在约定期间提供保障，通常保费较低且保障纯粹。",
+        "b": "给付持续至最后一位受领人身故。",
+        "c": "把损失财务后果转移给第三方，例如保险公司。",
+        "d": "参与者与经营者按约定比例分享投资利润。"
+      },
+      "answer": "c",
+      "explanation": "「风险转移（Risk Transfer）」的正确描述为：把损失财务后果转移给第三方，例如保险公司。"
+    },
+    {
+      "id": 59,
+      "chapter": "第2章 风险管理",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "风险转移（Risk Transfer） — 把损失财务后果转移给第三方，例如保险公司。",
+        "b": "危险因素（Peril） — 企业因关键员工离职或身故可能承担的经济损失价值。",
+        "c": "Mudharabah 模式 — 样本越大，实际损失越接近期望损失。",
+        "d": "Wakalah 模式 — SOCSO 对失去工作能力成员提供长期收入保障。"
+      },
+      "answer": "a",
+      "explanation": "正确配对是：风险转移（Risk Transfer） — 把损失财务后果转移给第三方，例如保险公司。"
+    },
+    {
+      "id": 60,
+      "chapter": "第2章 风险管理",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "风险诱因（Hazard） — 会提高损失发生概率或严重程度的条件。",
+        "b": "风险（Risk） — 暴露于不确定并可能造成财务损失的状态。",
+        "c": "风险转移（Risk Transfer） — 透过不参与某项活动来避免相关风险。",
+        "d": "人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。"
+      },
+      "answer": "c",
+      "explanation": "错误配对是「风险转移（Risk Transfer） — 透过不参与某项活动来避免相关风险。」。正确解释应为：把损失财务后果转移给第三方，例如保险公司。"
+    },
+    {
+      "id": 61,
+      "chapter": "第2章 风险管理",
+      "question": "【术语识别】以下定义对应哪个术语？\n降低损失发生的可能性。",
+      "options": {
+        "a": "损失预防（Loss Prevention）",
+        "b": "联合及遗属年金（Joint & Survivor）",
+        "c": "Tabarru'（互助捐献）",
+        "d": "现金/金钱保险（Money Insurance）"
+      },
+      "answer": "a",
+      "explanation": "正确术语是「损失预防（Loss Prevention）」，因为其定义就是：降低损失发生的可能性。"
+    },
+    {
+      "id": 62,
+      "chapter": "第2章 风险管理",
+      "question": "【概念理解】关于「损失预防（Loss Prevention）」，下列哪项描述最准确？",
+      "options": {
+        "a": "降低损失发生的可能性。",
+        "b": "主要影响个人或个别企业的风险。",
+        "c": "保单生效一段时间后，保险人一般不得因早期资料争议拒赔。",
+        "d": "投保人对被保险人生命或财产具有合法经济利益关系。"
+      },
+      "answer": "a",
+      "explanation": "「损失预防（Loss Prevention）」的正确描述为：降低损失发生的可能性。"
+    },
+    {
+      "id": 63,
+      "chapter": "第2章 风险管理",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "损失预防（Loss Prevention） — 降低损失发生的可能性。",
+        "b": "现金/金钱保险（Money Insurance） — 可能损失也可能获利的风险。",
+        "c": "确定年金（Annuity Certain） — 由社会长期结构问题引起、变化较慢的风险。",
+        "d": "Tabarru'（互助捐献） — 样本越大，实际损失越接近期望损失。"
+      },
+      "answer": "a",
+      "explanation": "正确配对是：损失预防（Loss Prevention） — 降低损失发生的可能性。"
+    },
+    {
+      "id": 64,
+      "chapter": "第2章 风险管理",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "危险因素（Peril） — 导致损失发生的直接原因，例如火灾、车祸、疾病。",
+        "b": "任何职业定义（Any Occupation） — 仅在无法从事合理适任的任何职业时才符合残疾给付。",
+        "c": "损失预防（Loss Prevention） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。",
+        "d": "人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。"
+      },
+      "answer": "c",
+      "explanation": "错误配对是「损失预防（Loss Prevention） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。」。正确解释应为：降低损失发生的可能性。"
+    },
+    {
+      "id": 65,
+      "chapter": "第2章 风险管理",
+      "question": "【术语识别】以下定义对应哪个术语？\n在损失发生后减少损失程度。",
+      "options": {
+        "a": "代位求偿（Subrogation）",
+        "b": "最大诚信（Utmost Good Faith）",
+        "c": "损失降低（Loss Reduction）",
+        "d": "雇主责任险（Employer's Liability）"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「损失降低（Loss Reduction）」，因为其定义就是：在损失发生后减少损失程度。"
+    },
+    {
+      "id": 66,
+      "chapter": "第2章 风险管理",
+      "question": "【概念理解】关于「损失降低（Loss Reduction）」，下列哪项描述最准确？",
+      "options": {
+        "a": "由经济、科技、政策变化引起的新风险。",
+        "b": "在损失发生后减少损失程度。",
+        "c": "承保现金在场所内或运送途中被抢劫盗窃等损失。",
+        "d": "影响社会大多数人的系统性风险，如经济衰退。"
+      },
+      "answer": "b",
+      "explanation": "「损失降低（Loss Reduction）」的正确描述为：在损失发生后减少损失程度。"
+    },
+    {
+      "id": 67,
+      "chapter": "第2章 风险管理",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "损失降低（Loss Reduction） — 在损失发生后减少损失程度。",
+        "b": "现金/金钱保险（Money Insurance） — 赔偿金额等于重置成本减去折旧。",
+        "c": "道德风险诱因（Morale Hazard） — 确诊合约列明疾病时一次性给付保险金。",
+        "d": "动态风险（Dynamic Risk） — 参与者与经营者按约定比例分享投资利润。"
+      },
+      "answer": "a",
+      "explanation": "正确配对是：损失降低（Loss Reduction） — 在损失发生后减少损失程度。"
+    },
+    {
+      "id": 68,
+      "chapter": "第2章 风险管理",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "特定风险（Particular Risk） — 主要影响个人或个别企业的风险。",
+        "b": "损失降低（Loss Reduction） — 理赔时被保险人与保险公司按比例共同承担医疗费用。",
+        "c": "Mudharabah 模式 — 参与者与经营者按约定比例分享投资利润。",
+        "d": "基本风险（Fundamental Risk） — 影响社会大多数人的系统性风险，如经济衰退。"
+      },
+      "answer": "b",
+      "explanation": "错误配对是「损失降低（Loss Reduction） — 理赔时被保险人与保险公司按比例共同承担医疗费用。」。正确解释应为：在损失发生后减少损失程度。"
+    },
+    {
+      "id": 69,
+      "chapter": "第2章 风险管理",
+      "question": "【术语识别】以下定义对应哪个术语？\n用较低危险的活动或物质替代高风险做法。",
+      "options": {
+        "a": "Wakalah 模式",
+        "b": "任何职业定义（Any Occupation）",
+        "c": "替代（Substitution）",
+        "d": "联合及遗属年金（Joint & Survivor）"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「替代（Substitution）」，因为其定义就是：用较低危险的活动或物质替代高风险做法。"
+    },
+    {
+      "id": 70,
+      "chapter": "第2章 风险管理",
+      "question": "【概念理解】关于「替代（Substitution）」，下列哪项描述最准确？",
+      "options": {
+        "a": "用较低危险的活动或物质替代高风险做法。",
+        "b": "确诊合约列明疾病时一次性给付保险金。",
+        "c": "理赔时被保险人与保险公司按比例共同承担医疗费用。",
+        "d": "影响社会大多数人的系统性风险，如经济衰退。"
+      },
+      "answer": "a",
+      "explanation": "「替代（Substitution）」的正确描述为：用较低危险的活动或物质替代高风险做法。"
+    },
+    {
+      "id": 71,
+      "chapter": "第2章 风险管理",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "共同保险（Co-insurance） — 承保现金在场所内或运送途中被抢劫盗窃等损失。",
+        "b": "替代（Substitution） — 用较低危险的活动或物质替代高风险做法。",
+        "c": "给付/清算期（Liquidation Phase） — 仅在无法从事合理适任的任何职业时才符合残疾给付。",
+        "d": "人类生命价值法（Human Life Value） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：替代（Substitution） — 用较低危险的活动或物质替代高风险做法。"
+    },
+    {
+      "id": 72,
+      "chapter": "第2章 风险管理",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "风险（Risk） — 暴露于不确定并可能造成财务损失的状态。",
+        "b": "投机风险（Speculative Risk） — 可能损失也可能获利的风险。",
+        "c": "动态风险（Dynamic Risk） — 由经济、科技、政策变化引起的新风险。",
+        "d": "替代（Substitution） — 由社会长期结构问题引起、变化较慢的风险。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「替代（Substitution） — 由社会长期结构问题引起、变化较慢的风险。」。正确解释应为：用较低危险的活动或物质替代高风险做法。"
+    },
+    {
+      "id": 73,
+      "chapter": "第2章 风险管理",
+      "question": "【术语识别】以下定义对应哪个术语？\n样本越大，实际损失越接近期望损失。",
+      "options": {
+        "a": "需求分析法（Needs Analysis）",
+        "b": "道德风险诱因（Morale Hazard）",
+        "c": "大数法则（Law of Large Numbers）",
+        "d": "终身寿险（Whole Life Policy）"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「大数法则（Law of Large Numbers）」，因为其定义就是：样本越大，实际损失越接近期望损失。"
+    },
+    {
+      "id": 74,
+      "chapter": "第2章 风险管理",
+      "question": "【概念理解】关于「大数法则（Law of Large Numbers）」，下列哪项描述最准确？",
+      "options": {
+        "a": "由个人或企业自行承担损失后果。",
+        "b": "承保现金在场所内或运送途中被抢劫盗窃等损失。",
+        "c": "样本越大，实际损失越接近期望损失。",
+        "d": "影响社会大多数人的系统性风险，如经济衰退。"
+      },
+      "answer": "c",
+      "explanation": "「大数法则（Law of Large Numbers）」的正确描述为：样本越大，实际损失越接近期望损失。"
+    },
+    {
+      "id": 75,
+      "chapter": "第2章 风险管理",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "风险控制（Risk Control） — 在约定期间提供保障，通常保费较低且保障纯粹。",
+        "b": "大数法则（Law of Large Numbers） — 样本越大，实际损失越接近期望损失。",
+        "c": "实际现金价值（Actual Cash Value） — 会提高损失发生概率或严重程度的条件。",
+        "d": "机器故障险（Machinery Breakdown） — 经营者作为代理人管理基金并收取代理费用。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：大数法则（Law of Large Numbers） — 样本越大，实际损失越接近期望损失。"
+    },
+    {
+      "id": 76,
+      "chapter": "第2章 风险管理",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "风险保留（Risk Retention） — 由个人或企业自行承担损失后果。",
+        "b": "大数法则（Law of Large Numbers） — 在约定期间提供保障，通常保费较低且保障纯粹。",
+        "c": "投机风险（Speculative Risk） — 可能损失也可能获利的风险。",
+        "d": "Wakalah 模式 — 经营者作为代理人管理基金并收取代理费用。"
+      },
+      "answer": "b",
+      "explanation": "错误配对是「大数法则（Law of Large Numbers） — 在约定期间提供保障，通常保费较低且保障纯粹。」。正确解释应为：样本越大，实际损失越接近期望损失。"
+    },
+    {
+      "id": 77,
+      "chapter": "第3章 保险需求分析",
+      "question": "【术语识别】以下定义对应哪个术语？\n以具体财务责任计算保障缺口的保险需求方法。",
+      "options": {
+        "a": "需求分析法（Needs Analysis）",
+        "b": "关键人物价值（Key-man Value）",
+        "c": "大数法则（Law of Large Numbers）",
+        "d": "特定风险（Particular Risk）"
+      },
+      "answer": "a",
+      "explanation": "正确术语是「需求分析法（Needs Analysis）」，因为其定义就是：以具体财务责任计算保障缺口的保险需求方法。"
+    },
+    {
+      "id": 78,
+      "chapter": "第3章 保险需求分析",
+      "question": "【概念理解】关于「需求分析法（Needs Analysis）」，下列哪项描述最准确？",
+      "options": {
+        "a": "投保人对被保险人生命或财产具有合法经济利益关系。",
+        "b": "给付持续至最后一位受领人身故。",
+        "c": "以具体财务责任计算保障缺口的保险需求方法。",
+        "d": "经营者作为代理人管理基金并收取代理费用。"
+      },
+      "answer": "c",
+      "explanation": "「需求分析法（Needs Analysis）」的正确描述为：以具体财务责任计算保障缺口的保险需求方法。"
+    },
+    {
+      "id": 79,
+      "chapter": "第3章 保险需求分析",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "替代（Substitution） — 赔偿金额等于重置成本减去折旧。",
+        "b": "代位求偿（Subrogation） — 在损失发生后减少损失程度。",
+        "c": "需求分析法（Needs Analysis） — 以具体财务责任计算保障缺口的保险需求方法。",
+        "d": "失效抚恤金计划（Invalidity Pension Scheme） — 主要影响个人或个别企业的风险。"
+      },
+      "answer": "c",
+      "explanation": "正确配对是：需求分析法（Needs Analysis） — 以具体财务责任计算保障缺口的保险需求方法。"
+    },
+    {
+      "id": 80,
+      "chapter": "第3章 保险需求分析",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "需求分析法（Needs Analysis） — 可能损失也可能获利的风险。",
+        "b": "风险保留（Risk Retention） — 由个人或企业自行承担损失后果。",
+        "c": "Al-Maisir — 伊斯兰金融中被禁止的赌博成分。",
+        "d": "Wakalah 模式 — 经营者作为代理人管理基金并收取代理费用。"
+      },
+      "answer": "a",
+      "explanation": "错误配对是「需求分析法（Needs Analysis） — 可能损失也可能获利的风险。」。正确解释应为：以具体财务责任计算保障缺口的保险需求方法。"
+    },
+    {
+      "id": 81,
+      "chapter": "第3章 保险需求分析",
+      "question": "【术语识别】以下定义对应哪个术语？\n估算家庭因经济支柱身故而损失的收入现值。",
+      "options": {
+        "a": "联合及遗属年金（Joint & Survivor）",
+        "b": "替代（Substitution）",
+        "c": "人类生命价值法（Human Life Value）",
+        "d": "任何职业定义（Any Occupation）"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「人类生命价值法（Human Life Value）」，因为其定义就是：估算家庭因经济支柱身故而损失的收入现值。"
+    },
+    {
+      "id": 82,
+      "chapter": "第3章 保险需求分析",
+      "question": "【概念理解】关于「人类生命价值法（Human Life Value）」，下列哪项描述最准确？",
+      "options": {
+        "a": "把损失财务后果转移给第三方，例如保险公司。",
+        "b": "估算家庭因经济支柱身故而损失的收入现值。",
+        "c": "确诊合约列明疾病时一次性给付保险金。",
+        "d": "经营者作为代理人管理基金并收取代理费用。"
+      },
+      "answer": "b",
+      "explanation": "「人类生命价值法（Human Life Value）」的正确描述为：估算家庭因经济支柱身故而损失的收入现值。"
+    },
+    {
+      "id": 83,
+      "chapter": "第3章 保险需求分析",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "储蓄/两全保单（Endowment Policy） — 承保机器突发机械或电气故障造成的损失。",
+        "b": "大数法则（Law of Large Numbers） — 由个人或企业自行承担损失后果。",
+        "c": "人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。",
+        "d": "需求分析法（Needs Analysis） — 投保与承保双方都必须充分、诚实披露重大事实。"
+      },
+      "answer": "c",
+      "explanation": "正确配对是：人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。"
+    },
+    {
+      "id": 84,
+      "chapter": "第3章 保险需求分析",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "特定风险（Particular Risk） — 主要影响个人或个别企业的风险。",
+        "b": "人类生命价值法（Human Life Value） — 样本越大，实际损失越接近期望损失。",
+        "c": "确定年金（Annuity Certain） — 给付期固定，不依赖受领人生存与否。",
+        "d": "代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。"
+      },
+      "answer": "b",
+      "explanation": "错误配对是「人类生命价值法（Human Life Value） — 样本越大，实际损失越接近期望损失。」。正确解释应为：估算家庭因经济支柱身故而损失的收入现值。"
+    },
+    {
+      "id": 85,
+      "chapter": "第3章 保险需求分析",
+      "question": "【术语识别】以下定义对应哪个术语？\n赔偿金额等于重置成本减去折旧。",
+      "options": {
+        "a": "道德风险诱因（Morale Hazard）",
+        "b": "实际现金价值（Actual Cash Value）",
+        "c": "纯风险（Pure Risk）",
+        "d": "不可争辩条款（Incontestability Clause）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「实际现金价值（Actual Cash Value）」，因为其定义就是：赔偿金额等于重置成本减去折旧。"
+    },
+    {
+      "id": 86,
+      "chapter": "第3章 保险需求分析",
+      "question": "【概念理解】关于「实际现金价值（Actual Cash Value）」，下列哪项描述最准确？",
+      "options": {
+        "a": "赔偿金额等于重置成本减去折旧。",
+        "b": "理赔目的是恢复损失前财务状态，而非让被保险人获利。",
+        "c": "给付期固定，不依赖受领人生存与否。",
+        "d": "由环境或实物条件造成的危险诱因，如电线老化。"
+      },
+      "answer": "a",
+      "explanation": "「实际现金价值（Actual Cash Value）」的正确描述为：赔偿金额等于重置成本减去折旧。"
+    },
+    {
+      "id": 87,
+      "chapter": "第3章 保险需求分析",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "损失降低（Loss Reduction） — 由环境或实物条件造成的危险诱因，如电线老化。",
+        "b": "机器故障险（Machinery Breakdown） — 采取措施降低损失发生频率或严重程度。",
+        "c": "实际现金价值（Actual Cash Value） — 赔偿金额等于重置成本减去折旧。",
+        "d": "给付/清算期（Liquidation Phase） — 伊斯兰金融中被禁止的赌博成分。"
+      },
+      "answer": "c",
+      "explanation": "正确配对是：实际现金价值（Actual Cash Value） — 赔偿金额等于重置成本减去折旧。"
+    },
+    {
+      "id": 88,
+      "chapter": "第3章 保险需求分析",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "现金/金钱保险（Money Insurance） — 承保现金在场所内或运送途中被抢劫盗窃等损失。",
+        "b": "重大疾病保险（Critical Illness） — 确诊合约列明疾病时一次性给付保险金。",
+        "c": "累积期（Accumulation Phase） — 年金产品中持续缴费与投资增长的阶段。",
+        "d": "实际现金价值（Actual Cash Value） — 暴露于不确定并可能造成财务损失的状态。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「实际现金价值（Actual Cash Value） — 暴露于不确定并可能造成财务损失的状态。」。正确解释应为：赔偿金额等于重置成本减去折旧。"
+    },
+    {
+      "id": 89,
+      "chapter": "第3章 保险需求分析",
+      "question": "【术语识别】以下定义对应哪个术语？\n企业因关键员工离职或身故可能承担的经济损失价值。",
+      "options": {
+        "a": "累积期（Accumulation Phase）",
+        "b": "Tabarru'（互助捐献）",
+        "c": "替代（Substitution）",
+        "d": "关键人物价值（Key-man Value）"
+      },
+      "answer": "d",
+      "explanation": "正确术语是「关键人物价值（Key-man Value）」，因为其定义就是：企业因关键员工离职或身故可能承担的经济损失价值。"
+    },
+    {
+      "id": 90,
+      "chapter": "第3章 保险需求分析",
+      "question": "【概念理解】关于「关键人物价值（Key-man Value）」，下列哪项描述最准确？",
+      "options": {
+        "a": "企业因关键员工离职或身故可能承担的经济损失价值。",
+        "b": "伊斯兰金融中被禁止的赌博成分。",
+        "c": "会提高损失发生概率或严重程度的条件。",
+        "d": "采取措施降低损失发生频率或严重程度。"
+      },
+      "answer": "a",
+      "explanation": "「关键人物价值（Key-man Value）」的正确描述为：企业因关键员工离职或身故可能承担的经济损失价值。"
+    },
+    {
+      "id": 91,
+      "chapter": "第3章 保险需求分析",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "雇主责任险（Employer's Liability） — 经营者作为代理人管理基金并收取代理费用。",
+        "b": "关键人物价值（Key-man Value） — 企业因关键员工离职或身故可能承担的经济损失价值。",
+        "c": "大数法则（Law of Large Numbers） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。",
+        "d": "物理风险诱因（Physical Hazard） — 导致损失发生的直接原因，例如火灾、车祸、疾病。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：关键人物价值（Key-man Value） — 企业因关键员工离职或身故可能承担的经济损失价值。"
+    },
+    {
+      "id": 92,
+      "chapter": "第3章 保险需求分析",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "关键人物价值（Key-man Value） — 承保机器突发机械或电气故障造成的损失。",
+        "b": "消费者知情权 — 消费者有权获得清晰、完整、可理解的产品信息。",
+        "c": "Al-Maisir — 伊斯兰金融中被禁止的赌博成分。",
+        "d": "Wakalah 模式 — 经营者作为代理人管理基金并收取代理费用。"
+      },
+      "answer": "a",
+      "explanation": "错误配对是「关键人物价值（Key-man Value） — 承保机器突发机械或电气故障造成的损失。」。正确解释应为：企业因关键员工离职或身故可能承担的经济损失价值。"
+    },
+    {
+      "id": 93,
+      "chapter": "第4章 人寿保单",
+      "question": "【术语识别】以下定义对应哪个术语？\n投保人对被保险人生命或财产具有合法经济利益关系。",
+      "options": {
+        "a": "共同保险（Co-insurance）",
+        "b": "静态风险（Static Risk）",
+        "c": "可保利益（Insurable Interest）",
+        "d": "重大疾病保险（Critical Illness）"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「可保利益（Insurable Interest）」，因为其定义就是：投保人对被保险人生命或财产具有合法经济利益关系。"
+    },
+    {
+      "id": 94,
+      "chapter": "第4章 人寿保单",
+      "question": "【概念理解】关于「可保利益（Insurable Interest）」，下列哪项描述最准确？",
+      "options": {
+        "a": "在约定期间提供保障，通常保费较低且保障纯粹。",
+        "b": "投保人对被保险人生命或财产具有合法经济利益关系。",
+        "c": "把损失财务后果转移给第三方，例如保险公司。",
+        "d": "影响社会大多数人的系统性风险，如经济衰退。"
+      },
+      "answer": "b",
+      "explanation": "「可保利益（Insurable Interest）」的正确描述为：投保人对被保险人生命或财产具有合法经济利益关系。"
+    },
+    {
+      "id": 95,
+      "chapter": "第4章 人寿保单",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "可保利益（Insurable Interest） — 投保人对被保险人生命或财产具有合法经济利益关系。",
+        "b": "实际现金价值（Actual Cash Value） — 会提高损失发生概率或严重程度的条件。",
+        "c": "共同保险（Co-insurance） — 参与者与经营者按约定比例分享投资利润。",
+        "d": "代位求偿（Subrogation） — 年金产品中持续缴费与投资增长的阶段。"
+      },
+      "answer": "a",
+      "explanation": "正确配对是：可保利益（Insurable Interest） — 投保人对被保险人生命或财产具有合法经济利益关系。"
+    },
+    {
+      "id": 96,
+      "chapter": "第4章 人寿保单",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "损失预防（Loss Prevention） — 降低损失发生的可能性。",
+        "b": "危险因素（Peril） — 导致损失发生的直接原因，例如火灾、车祸、疾病。",
+        "c": "可保利益（Insurable Interest） — 消费者有权获得清晰、完整、可理解的产品信息。",
+        "d": "家政服务人员豁免（Domestic Servant Exemption） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。"
+      },
+      "answer": "c",
+      "explanation": "错误配对是「可保利益（Insurable Interest） — 消费者有权获得清晰、完整、可理解的产品信息。」。正确解释应为：投保人对被保险人生命或财产具有合法经济利益关系。"
+    },
+    {
+      "id": 97,
+      "chapter": "第4章 人寿保单",
+      "question": "【术语识别】以下定义对应哪个术语？\n在约定期间提供保障，通常保费较低且保障纯粹。",
+      "options": {
+        "a": "动态风险（Dynamic Risk）",
+        "b": "纯风险（Pure Risk）",
+        "c": "风险转移（Risk Transfer）",
+        "d": "定期寿险（Term Policy）"
+      },
+      "answer": "d",
+      "explanation": "正确术语是「定期寿险（Term Policy）」，因为其定义就是：在约定期间提供保障，通常保费较低且保障纯粹。"
+    },
+    {
+      "id": 98,
+      "chapter": "第4章 人寿保单",
+      "question": "【概念理解】关于「定期寿险（Term Policy）」，下列哪项描述最准确？",
+      "options": {
+        "a": "采取措施降低损失发生频率或严重程度。",
+        "b": "在约定期间提供保障，通常保费较低且保障纯粹。",
+        "c": "仅在无法从事合理适任的任何职业时才符合残疾给付。",
+        "d": "无法从事原本职业即符合残疾给付条件，定义较宽。"
+      },
+      "answer": "b",
+      "explanation": "「定期寿险（Term Policy）」的正确描述为：在约定期间提供保障，通常保费较低且保障纯粹。"
+    },
+    {
+      "id": 99,
+      "chapter": "第4章 人寿保单",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "任何职业定义（Any Occupation） — 投保人对被保险人生命或财产具有合法经济利益关系。",
+        "b": "定期寿险（Term Policy） — 在约定期间提供保障，通常保费较低且保障纯粹。",
+        "c": "赔偿原则（Principle of Indemnity） — 年金产品中持续缴费与投资增长的阶段。",
+        "d": "不可争辩条款（Incontestability Clause） — 由经济、科技、政策变化引起的新风险。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：定期寿险（Term Policy） — 在约定期间提供保障，通常保费较低且保障纯粹。"
+    },
+    {
+      "id": 100,
+      "chapter": "第4章 人寿保单",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "共同保险（Co-insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。",
+        "b": "替代（Substitution） — 用较低危险的活动或物质替代高风险做法。",
+        "c": "重大疾病保险（Critical Illness） — 确诊合约列明疾病时一次性给付保险金。",
+        "d": "定期寿险（Term Policy） — 可能损失也可能获利的风险。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「定期寿险（Term Policy） — 可能损失也可能获利的风险。」。正确解释应为：在约定期间提供保障，通常保费较低且保障纯粹。"
+    },
+    {
+      "id": 101,
+      "chapter": "第4章 人寿保单",
+      "question": "【术语识别】以下定义对应哪个术语？\n保障终身并可累积现金价值。",
+      "options": {
+        "a": "损失预防（Loss Prevention）",
+        "b": "终身寿险（Whole Life Policy）",
+        "c": "需求分析法（Needs Analysis）",
+        "d": "雇主责任险（Employer's Liability）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「终身寿险（Whole Life Policy）」，因为其定义就是：保障终身并可累积现金价值。"
+    },
+    {
+      "id": 102,
+      "chapter": "第4章 人寿保单",
+      "question": "【概念理解】关于「终身寿险（Whole Life Policy）」，下列哪项描述最准确？",
+      "options": {
+        "a": "保障终身并可累积现金价值。",
+        "b": "导致损失发生的直接原因，例如火灾、车祸、疾病。",
+        "c": "用较低危险的活动或物质替代高风险做法。",
+        "d": "SOCSO 对失去工作能力成员提供长期收入保障。"
+      },
+      "answer": "a",
+      "explanation": "「终身寿险（Whole Life Policy）」的正确描述为：保障终身并可累积现金价值。"
+    },
+    {
+      "id": 103,
+      "chapter": "第4章 人寿保单",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "静态风险（Static Risk） — 由环境或实物条件造成的危险诱因，如电线老化。",
+        "b": "终身寿险（Whole Life Policy） — 保障终身并可累积现金价值。",
+        "c": "损失预防（Loss Prevention） — 投保与承保双方都必须充分、诚实披露重大事实。",
+        "d": "道德风险诱因（Morale Hazard） — 年金产品中持续缴费与投资增长的阶段。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：终身寿险（Whole Life Policy） — 保障终身并可累积现金价值。"
+    },
+    {
+      "id": 104,
+      "chapter": "第4章 人寿保单",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "定期寿险（Term Policy） — 在约定期间提供保障，通常保费较低且保障纯粹。",
+        "b": "风险规避（Risk Avoidance） — 透过不参与某项活动来避免相关风险。",
+        "c": "终身寿险（Whole Life Policy） — 样本越大，实际损失越接近期望损失。",
+        "d": "静态风险（Static Risk） — 由社会长期结构问题引起、变化较慢的风险。"
+      },
+      "answer": "c",
+      "explanation": "错误配对是「终身寿险（Whole Life Policy） — 样本越大，实际损失越接近期望损失。」。正确解释应为：保障终身并可累积现金价值。"
+    },
+    {
+      "id": 105,
+      "chapter": "第4章 人寿保单",
+      "question": "【术语识别】以下定义对应哪个术语？\n生存至期满或在期内身故都可领取给付。",
+      "options": {
+        "a": "实际现金价值（Actual Cash Value）",
+        "b": "储蓄/两全保单（Endowment Policy）",
+        "c": "风险诱因（Hazard）",
+        "d": "风险规避（Risk Avoidance）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「储蓄/两全保单（Endowment Policy）」，因为其定义就是：生存至期满或在期内身故都可领取给付。"
+    },
+    {
+      "id": 106,
+      "chapter": "第4章 人寿保单",
+      "question": "【概念理解】关于「储蓄/两全保单（Endowment Policy）」，下列哪项描述最准确？",
+      "options": {
+        "a": "给付持续至最后一位受领人身故。",
+        "b": "用较低危险的活动或物质替代高风险做法。",
+        "c": "仅在无法从事合理适任的任何职业时才符合残疾给付。",
+        "d": "生存至期满或在期内身故都可领取给付。"
+      },
+      "answer": "d",
+      "explanation": "「储蓄/两全保单（Endowment Policy）」的正确描述为：生存至期满或在期内身故都可领取给付。"
+    },
+    {
+      "id": 107,
+      "chapter": "第4章 人寿保单",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "定期寿险（Term Policy） — 承保雇主依法对员工工伤事故应承担的赔偿责任。",
+        "b": "实际现金价值（Actual Cash Value） — 给付持续至最后一位受领人身故。",
+        "c": "储蓄/两全保单（Endowment Policy） — 生存至期满或在期内身故都可领取给付。",
+        "d": "需求分析法（Needs Analysis） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"
+      },
+      "answer": "c",
+      "explanation": "正确配对是：储蓄/两全保单（Endowment Policy） — 生存至期满或在期内身故都可领取给付。"
+    },
+    {
+      "id": 108,
+      "chapter": "第4章 人寿保单",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "附和合同（Contract of Adhesion） — 条款由保险人拟定，投保人通常只能接受或拒绝。",
+        "b": "损失降低（Loss Reduction） — 在损失发生后减少损失程度。",
+        "c": "储蓄/两全保单（Endowment Policy） — 投保人对被保险人生命或财产具有合法经济利益关系。",
+        "d": "赔偿原则（Principle of Indemnity） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。"
+      },
+      "answer": "c",
+      "explanation": "错误配对是「储蓄/两全保单（Endowment Policy） — 投保人对被保险人生命或财产具有合法经济利益关系。」。正确解释应为：生存至期满或在期内身故都可领取给付。"
+    },
+    {
+      "id": 109,
+      "chapter": "第4章 人寿保单",
+      "question": "【术语识别】以下定义对应哪个术语？\n保单生效一段时间后，保险人一般不得因早期资料争议拒赔。",
+      "options": {
+        "a": "人类生命价值法（Human Life Value）",
+        "b": "不可争辩条款（Incontestability Clause）",
+        "c": "物理风险诱因（Physical Hazard）",
+        "d": "危险因素（Peril）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「不可争辩条款（Incontestability Clause）」，因为其定义就是：保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"
+    },
+    {
+      "id": 110,
+      "chapter": "第4章 人寿保单",
+      "question": "【概念理解】关于「不可争辩条款（Incontestability Clause）」，下列哪项描述最准确？",
+      "options": {
+        "a": "理赔目的是恢复损失前财务状态，而非让被保险人获利。",
+        "b": "生存至期满或在期内身故都可领取给付。",
+        "c": "保单生效一段时间后，保险人一般不得因早期资料争议拒赔。",
+        "d": "年金产品中持续缴费与投资增长的阶段。"
+      },
+      "answer": "c",
+      "explanation": "「不可争辩条款（Incontestability Clause）」的正确描述为：保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"
+    },
+    {
+      "id": 111,
+      "chapter": "第4章 人寿保单",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "Al-Maisir — 可能损失也可能获利的风险。",
+        "b": "不可争辩条款（Incontestability Clause） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。",
+        "c": "基本风险（Fundamental Risk） — 参与者与经营者按约定比例分享投资利润。",
+        "d": "重大疾病保险（Critical Illness） — 暴露于不确定并可能造成财务损失的状态。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：不可争辩条款（Incontestability Clause） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"
+    },
+    {
+      "id": 112,
+      "chapter": "第4章 人寿保单",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "静态风险（Static Risk） — 由社会长期结构问题引起、变化较慢的风险。",
+        "b": "损失降低（Loss Reduction） — 在损失发生后减少损失程度。",
+        "c": "不可争辩条款（Incontestability Clause） — 因态度或行为疏忽导致损失概率上升的诱因。",
+        "d": "共同保险（Co-insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。"
+      },
+      "answer": "c",
+      "explanation": "错误配对是「不可争辩条款（Incontestability Clause） — 因态度或行为疏忽导致损失概率上升的诱因。」。正确解释应为：保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"
+    },
+    {
+      "id": 113,
+      "chapter": "第5章 医疗保险",
+      "question": "【术语识别】以下定义对应哪个术语？\n确诊合约列明疾病时一次性给付保险金。",
+      "options": {
+        "a": "联合及遗属年金（Joint & Survivor）",
+        "b": "风险保留（Risk Retention）",
+        "c": "重大疾病保险（Critical Illness）",
+        "d": "风险（Risk）"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「重大疾病保险（Critical Illness）」，因为其定义就是：确诊合约列明疾病时一次性给付保险金。"
+    },
+    {
+      "id": 114,
+      "chapter": "第5章 医疗保险",
+      "question": "【概念理解】关于「重大疾病保险（Critical Illness）」，下列哪项描述最准确？",
+      "options": {
+        "a": "确诊合约列明疾病时一次性给付保险金。",
+        "b": "家政服务人员通常不属于 SOCSO 一般雇员承保范围。",
+        "c": "承保雇主依法对员工工伤事故应承担的赔偿责任。",
+        "d": "年金产品中持续缴费与投资增长的阶段。"
+      },
+      "answer": "a",
+      "explanation": "「重大疾病保险（Critical Illness）」的正确描述为：确诊合约列明疾病时一次性给付保险金。"
+    },
+    {
+      "id": 115,
+      "chapter": "第5章 医疗保险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "赔偿原则（Principle of Indemnity） — 仅在无法从事合理适任的任何职业时才符合残疾给付。",
+        "b": "重大疾病保险（Critical Illness） — 确诊合约列明疾病时一次性给付保险金。",
+        "c": "风险转移（Risk Transfer） — SOCSO 对失去工作能力成员提供长期收入保障。",
+        "d": "确定年金（Annuity Certain） — 承保现金在场所内或运送途中被抢劫盗窃等损失。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：重大疾病保险（Critical Illness） — 确诊合约列明疾病时一次性给付保险金。"
+    },
+    {
+      "id": 116,
+      "chapter": "第5章 医疗保险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "重大疾病保险（Critical Illness） — SOCSO 对失去工作能力成员提供长期收入保障。",
+        "b": "损失预防（Loss Prevention） — 降低损失发生的可能性。",
+        "c": "替代（Substitution） — 用较低危险的活动或物质替代高风险做法。",
+        "d": "给付/清算期（Liquidation Phase） — 年金把累积资产转换为定期现金流的阶段。"
+      },
+      "answer": "a",
+      "explanation": "错误配对是「重大疾病保险（Critical Illness） — SOCSO 对失去工作能力成员提供长期收入保障。」。正确解释应为：确诊合约列明疾病时一次性给付保险金。"
+    },
+    {
+      "id": 117,
+      "chapter": "第5章 医疗保险",
+      "question": "【术语识别】以下定义对应哪个术语？\n理赔时被保险人与保险公司按比例共同承担医疗费用。",
+      "options": {
+        "a": "投机风险（Speculative Risk）",
+        "b": "特定风险（Particular Risk）",
+        "c": "共同保险（Co-insurance）",
+        "d": "附和合同（Contract of Adhesion）"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「共同保险（Co-insurance）」，因为其定义就是：理赔时被保险人与保险公司按比例共同承担医疗费用。"
+    },
+    {
+      "id": 118,
+      "chapter": "第5章 医疗保险",
+      "question": "【概念理解】关于「共同保险（Co-insurance）」，下列哪项描述最准确？",
+      "options": {
+        "a": "仅在无法从事合理适任的任何职业时才符合残疾给付。",
+        "b": "由个人或企业自行承担损失后果。",
+        "c": "理赔时被保险人与保险公司按比例共同承担医疗费用。",
+        "d": "在约定期间提供保障，通常保费较低且保障纯粹。"
+      },
+      "answer": "c",
+      "explanation": "「共同保险（Co-insurance）」的正确描述为：理赔时被保险人与保险公司按比例共同承担医疗费用。"
+    },
+    {
+      "id": 119,
+      "chapter": "第5章 医疗保险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "风险保留（Risk Retention） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。",
+        "b": "共同保险（Co-insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。",
+        "c": "基本风险（Fundamental Risk） — 参与者与经营者按约定比例分享投资利润。",
+        "d": "消费者知情权 — 伊斯兰金融中被禁止的赌博成分。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：共同保险（Co-insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。"
+    },
+    {
+      "id": 120,
+      "chapter": "第5章 医疗保险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "共同保险（Co-insurance） — 由经济、科技、政策变化引起的新风险。",
+        "b": "Wakalah 模式 — 经营者作为代理人管理基金并收取代理费用。",
+        "c": "风险规避（Risk Avoidance） — 透过不参与某项活动来避免相关风险。",
+        "d": "静态风险（Static Risk） — 由社会长期结构问题引起、变化较慢的风险。"
+      },
+      "answer": "a",
+      "explanation": "错误配对是「共同保险（Co-insurance） — 由经济、科技、政策变化引起的新风险。」。正确解释应为：理赔时被保险人与保险公司按比例共同承担医疗费用。"
+    },
+    {
+      "id": 121,
+      "chapter": "第5章 医疗保险",
+      "question": "【术语识别】以下定义对应哪个术语？\n无法从事原本职业即符合残疾给付条件，定义较宽。",
+      "options": {
+        "a": "自身职业定义（Own Occupation）",
+        "b": "静态风险（Static Risk）",
+        "c": "道德风险诱因（Morale Hazard）",
+        "d": "重大疾病保险（Critical Illness）"
+      },
+      "answer": "a",
+      "explanation": "正确术语是「自身职业定义（Own Occupation）」，因为其定义就是：无法从事原本职业即符合残疾给付条件，定义较宽。"
+    },
+    {
+      "id": 122,
+      "chapter": "第5章 医疗保险",
+      "question": "【概念理解】关于「自身职业定义（Own Occupation）」，下列哪项描述最准确？",
+      "options": {
+        "a": "用较低危险的活动或物质替代高风险做法。",
+        "b": "无法从事原本职业即符合残疾给付条件，定义较宽。",
+        "c": "估算家庭因经济支柱身故而损失的收入现值。",
+        "d": "赔偿金额等于重置成本减去折旧。"
+      },
+      "answer": "b",
+      "explanation": "「自身职业定义（Own Occupation）」的正确描述为：无法从事原本职业即符合残疾给付条件，定义较宽。"
+    },
+    {
+      "id": 123,
+      "chapter": "第5章 医疗保险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "Mudharabah 模式 — 降低损失发生的可能性。",
+        "b": "需求分析法（Needs Analysis） — 消费者有权获得清晰、完整、可理解的产品信息。",
+        "c": "自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。",
+        "d": "可保利益（Insurable Interest） — 保障终身并可累积现金价值。"
+      },
+      "answer": "c",
+      "explanation": "正确配对是：自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。"
+    },
+    {
+      "id": 124,
+      "chapter": "第5章 医疗保险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "家政服务人员豁免（Domestic Servant Exemption） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。",
+        "b": "定期寿险（Term Policy） — 在约定期间提供保障，通常保费较低且保障纯粹。",
+        "c": "风险转移（Risk Transfer） — 把损失财务后果转移给第三方，例如保险公司。",
+        "d": "自身职业定义（Own Occupation） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「自身职业定义（Own Occupation） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。」。正确解释应为：无法从事原本职业即符合残疾给付条件，定义较宽。"
+    },
+    {
+      "id": 125,
+      "chapter": "第5章 医疗保险",
+      "question": "【术语识别】以下定义对应哪个术语？\n仅在无法从事合理适任的任何职业时才符合残疾给付。",
+      "options": {
+        "a": "自身职业定义（Own Occupation）",
+        "b": "任何职业定义（Any Occupation）",
+        "c": "定期寿险（Term Policy）",
+        "d": "附和合同（Contract of Adhesion）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「任何职业定义（Any Occupation）」，因为其定义就是：仅在无法从事合理适任的任何职业时才符合残疾给付。"
+    },
+    {
+      "id": 126,
+      "chapter": "第5章 医疗保险",
+      "question": "【概念理解】关于「任何职业定义（Any Occupation）」，下列哪项描述最准确？",
+      "options": {
+        "a": "消费者有权获得清晰、完整、可理解的产品信息。",
+        "b": "采取措施降低损失发生频率或严重程度。",
+        "c": "仅在无法从事合理适任的任何职业时才符合残疾给付。",
+        "d": "主要影响个人或个别企业的风险。"
+      },
+      "answer": "c",
+      "explanation": "「任何职业定义（Any Occupation）」的正确描述为：仅在无法从事合理适任的任何职业时才符合残疾给付。"
+    },
+    {
+      "id": 127,
+      "chapter": "第5章 医疗保险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "任何职业定义（Any Occupation） — 仅在无法从事合理适任的任何职业时才符合残疾给付。",
+        "b": "特定风险（Particular Risk） — 无法从事原本职业即符合残疾给付条件，定义较宽。",
+        "c": "损失降低（Loss Reduction） — 确诊合约列明疾病时一次性给付保险金。",
+        "d": "危险因素（Peril） — 降低损失发生的可能性。"
+      },
+      "answer": "a",
+      "explanation": "正确配对是：任何职业定义（Any Occupation） — 仅在无法从事合理适任的任何职业时才符合残疾给付。"
+    },
+    {
+      "id": 128,
+      "chapter": "第5章 医疗保险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "雇主责任险（Employer's Liability） — 承保雇主依法对员工工伤事故应承担的赔偿责任。",
+        "b": "风险保留（Risk Retention） — 由个人或企业自行承担损失后果。",
+        "c": "损失预防（Loss Prevention） — 降低损失发生的可能性。",
+        "d": "任何职业定义（Any Occupation） — 投保人对被保险人生命或财产具有合法经济利益关系。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「任何职业定义（Any Occupation） — 投保人对被保险人生命或财产具有合法经济利益关系。」。正确解释应为：仅在无法从事合理适任的任何职业时才符合残疾给付。"
+    },
+    {
+      "id": 129,
+      "chapter": "第6章 年金",
+      "question": "【术语识别】以下定义对应哪个术语？\n给付期固定，不依赖受领人生存与否。",
+      "options": {
+        "a": "Tabarru'（互助捐献）",
+        "b": "风险诱因（Hazard）",
+        "c": "纯风险（Pure Risk）",
+        "d": "确定年金（Annuity Certain）"
+      },
+      "answer": "d",
+      "explanation": "正确术语是「确定年金（Annuity Certain）」，因为其定义就是：给付期固定，不依赖受领人生存与否。"
+    },
+    {
+      "id": 130,
+      "chapter": "第6章 年金",
+      "question": "【概念理解】关于「确定年金（Annuity Certain）」，下列哪项描述最准确？",
+      "options": {
+        "a": "可能损失也可能获利的风险。",
+        "b": "生存至期满或在期内身故都可领取给付。",
+        "c": "采取措施降低损失发生频率或严重程度。",
+        "d": "给付期固定，不依赖受领人生存与否。"
+      },
+      "answer": "d",
+      "explanation": "「确定年金（Annuity Certain）」的正确描述为：给付期固定，不依赖受领人生存与否。"
+    },
+    {
+      "id": 131,
+      "chapter": "第6章 年金",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "确定年金（Annuity Certain） — 给付期固定，不依赖受领人生存与否。",
+        "b": "纯风险（Pure Risk） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。",
+        "c": "任何职业定义（Any Occupation） — 用较低危险的活动或物质替代高风险做法。",
+        "d": "关键人物价值（Key-man Value） — 承保雇主依法对员工工伤事故应承担的赔偿责任。"
+      },
+      "answer": "a",
+      "explanation": "正确配对是：确定年金（Annuity Certain） — 给付期固定，不依赖受领人生存与否。"
+    },
+    {
+      "id": 132,
+      "chapter": "第6章 年金",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "可保利益（Insurable Interest） — 投保人对被保险人生命或财产具有合法经济利益关系。",
+        "b": "关键人物价值（Key-man Value） — 企业因关键员工离职或身故可能承担的经济损失价值。",
+        "c": "确定年金（Annuity Certain） — 估算家庭因经济支柱身故而损失的收入现值。",
+        "d": "纯风险（Pure Risk） — 只有损失或无损失两种结果，不会带来获利。"
+      },
+      "answer": "c",
+      "explanation": "错误配对是「确定年金（Annuity Certain） — 估算家庭因经济支柱身故而损失的收入现值。」。正确解释应为：给付期固定，不依赖受领人生存与否。"
+    },
+    {
+      "id": 133,
+      "chapter": "第6章 年金",
+      "question": "【术语识别】以下定义对应哪个术语？\n给付持续至最后一位受领人身故。",
+      "options": {
+        "a": "联合及遗属年金（Joint & Survivor）",
+        "b": "任何职业定义（Any Occupation）",
+        "c": "特定风险（Particular Risk）",
+        "d": "可保利益（Insurable Interest）"
+      },
+      "answer": "a",
+      "explanation": "正确术语是「联合及遗属年金（Joint & Survivor）」，因为其定义就是：给付持续至最后一位受领人身故。"
+    },
+    {
+      "id": 134,
+      "chapter": "第6章 年金",
+      "question": "【概念理解】关于「联合及遗属年金（Joint & Survivor）」，下列哪项描述最准确？",
+      "options": {
+        "a": "给付持续至最后一位受领人身故。",
+        "b": "可能损失也可能获利的风险。",
+        "c": "保障终身并可累积现金价值。",
+        "d": "理赔目的是恢复损失前财务状态，而非让被保险人获利。"
+      },
+      "answer": "a",
+      "explanation": "「联合及遗属年金（Joint & Survivor）」的正确描述为：给付持续至最后一位受领人身故。"
+    },
+    {
+      "id": 135,
+      "chapter": "第6章 年金",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "风险（Risk） — 降低损失发生的可能性。",
+        "b": "联合及遗属年金（Joint & Survivor） — 给付持续至最后一位受领人身故。",
+        "c": "基本风险（Fundamental Risk） — 透过不参与某项活动来避免相关风险。",
+        "d": "失效抚恤金计划（Invalidity Pension Scheme） — 由个人或企业自行承担损失后果。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：联合及遗属年金（Joint & Survivor） — 给付持续至最后一位受领人身故。"
+    },
+    {
+      "id": 136,
+      "chapter": "第6章 年金",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "联合及遗属年金（Joint & Survivor） — 可能损失也可能获利的风险。",
+        "b": "损失降低（Loss Reduction） — 在损失发生后减少损失程度。",
+        "c": "损失预防（Loss Prevention） — 降低损失发生的可能性。",
+        "d": "静态风险（Static Risk） — 由社会长期结构问题引起、变化较慢的风险。"
+      },
+      "answer": "a",
+      "explanation": "错误配对是「联合及遗属年金（Joint & Survivor） — 可能损失也可能获利的风险。」。正确解释应为：给付持续至最后一位受领人身故。"
+    },
+    {
+      "id": 137,
+      "chapter": "第6章 年金",
+      "question": "【术语识别】以下定义对应哪个术语？\n年金产品中持续缴费与投资增长的阶段。",
+      "options": {
+        "a": "可保利益（Insurable Interest）",
+        "b": "累积期（Accumulation Phase）",
+        "c": "Wakalah 模式",
+        "d": "损失降低（Loss Reduction）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「累积期（Accumulation Phase）」，因为其定义就是：年金产品中持续缴费与投资增长的阶段。"
+    },
+    {
+      "id": 138,
+      "chapter": "第6章 年金",
+      "question": "【概念理解】关于「累积期（Accumulation Phase）」，下列哪项描述最准确？",
+      "options": {
+        "a": "年金产品中持续缴费与投资增长的阶段。",
+        "b": "由社会长期结构问题引起、变化较慢的风险。",
+        "c": "只有损失或无损失两种结果，不会带来获利。",
+        "d": "降低损失发生的可能性。"
+      },
+      "answer": "a",
+      "explanation": "「累积期（Accumulation Phase）」的正确描述为：年金产品中持续缴费与投资增长的阶段。"
+    },
+    {
+      "id": 139,
+      "chapter": "第6章 年金",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "累积期（Accumulation Phase） — 年金产品中持续缴费与投资增长的阶段。",
+        "b": "代位求偿（Subrogation） — 给付期固定，不依赖受领人生存与否。",
+        "c": "人类生命价值法（Human Life Value） — 影响社会大多数人的系统性风险，如经济衰退。",
+        "d": "特定风险（Particular Risk） — 理赔时被保险人与保险公司按比例共同承担医疗费用。"
+      },
+      "answer": "a",
+      "explanation": "正确配对是：累积期（Accumulation Phase） — 年金产品中持续缴费与投资增长的阶段。"
+    },
+    {
+      "id": 140,
+      "chapter": "第6章 年金",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "累积期（Accumulation Phase） — 可能损失也可能获利的风险。",
+        "b": "雇主责任险（Employer's Liability） — 承保雇主依法对员工工伤事故应承担的赔偿责任。",
+        "c": "Al-Maisir — 伊斯兰金融中被禁止的赌博成分。",
+        "d": "动态风险（Dynamic Risk） — 由经济、科技、政策变化引起的新风险。"
+      },
+      "answer": "a",
+      "explanation": "错误配对是「累积期（Accumulation Phase） — 可能损失也可能获利的风险。」。正确解释应为：年金产品中持续缴费与投资增长的阶段。"
+    },
+    {
+      "id": 141,
+      "chapter": "第6章 年金",
+      "question": "【术语识别】以下定义对应哪个术语？\n年金把累积资产转换为定期现金流的阶段。",
+      "options": {
+        "a": "给付/清算期（Liquidation Phase）",
+        "b": "风险转移（Risk Transfer）",
+        "c": "代位求偿（Subrogation）",
+        "d": "大数法则（Law of Large Numbers）"
+      },
+      "answer": "a",
+      "explanation": "正确术语是「给付/清算期（Liquidation Phase）」，因为其定义就是：年金把累积资产转换为定期现金流的阶段。"
+    },
+    {
+      "id": 142,
+      "chapter": "第6章 年金",
+      "question": "【概念理解】关于「给付/清算期（Liquidation Phase）」，下列哪项描述最准确？",
+      "options": {
+        "a": "参与者与经营者按约定比例分享投资利润。",
+        "b": "理赔目的是恢复损失前财务状态，而非让被保险人获利。",
+        "c": "年金产品中持续缴费与投资增长的阶段。",
+        "d": "年金把累积资产转换为定期现金流的阶段。"
+      },
+      "answer": "d",
+      "explanation": "「给付/清算期（Liquidation Phase）」的正确描述为：年金把累积资产转换为定期现金流的阶段。"
+    },
+    {
+      "id": 143,
+      "chapter": "第6章 年金",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "储蓄/两全保单（Endowment Policy） — 透过不参与某项活动来避免相关风险。",
+        "b": "家政服务人员豁免（Domestic Servant Exemption） — 承保机器突发机械或电气故障造成的损失。",
+        "c": "给付/清算期（Liquidation Phase） — 年金把累积资产转换为定期现金流的阶段。",
+        "d": "大数法则（Law of Large Numbers） — 估算家庭因经济支柱身故而损失的收入现值。"
+      },
+      "answer": "c",
+      "explanation": "正确配对是：给付/清算期（Liquidation Phase） — 年金把累积资产转换为定期现金流的阶段。"
+    },
+    {
+      "id": 144,
+      "chapter": "第6章 年金",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "损失降低（Loss Reduction） — 在损失发生后减少损失程度。",
+        "b": "风险转移（Risk Transfer） — 把损失财务后果转移给第三方，例如保险公司。",
+        "c": "给付/清算期（Liquidation Phase） — 无法从事原本职业即符合残疾给付条件，定义较宽。",
+        "d": "储蓄/两全保单（Endowment Policy） — 生存至期满或在期内身故都可领取给付。"
+      },
+      "answer": "c",
+      "explanation": "错误配对是「给付/清算期（Liquidation Phase） — 无法从事原本职业即符合残疾给付条件，定义较宽。」。正确解释应为：年金把累积资产转换为定期现金流的阶段。"
+    },
+    {
+      "id": 145,
+      "chapter": "第7章 普通保险",
+      "question": "【术语识别】以下定义对应哪个术语？\n承保机器突发机械或电气故障造成的损失。",
+      "options": {
+        "a": "Mudharabah 模式",
+        "b": "纯风险（Pure Risk）",
+        "c": "储蓄/两全保单（Endowment Policy）",
+        "d": "机器故障险（Machinery Breakdown）"
+      },
+      "answer": "d",
+      "explanation": "正确术语是「机器故障险（Machinery Breakdown）」，因为其定义就是：承保机器突发机械或电气故障造成的损失。"
+    },
+    {
+      "id": 146,
+      "chapter": "第7章 普通保险",
+      "question": "【概念理解】关于「机器故障险（Machinery Breakdown）」，下列哪项描述最准确？",
+      "options": {
+        "a": "承保机器突发机械或电气故障造成的损失。",
+        "b": "企业因关键员工离职或身故可能承担的经济损失价值。",
+        "c": "无法从事原本职业即符合残疾给付条件，定义较宽。",
+        "d": "只有损失或无损失两种结果，不会带来获利。"
+      },
+      "answer": "a",
+      "explanation": "「机器故障险（Machinery Breakdown）」的正确描述为：承保机器突发机械或电气故障造成的损失。"
+    },
+    {
+      "id": 147,
+      "chapter": "第7章 普通保险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "机器故障险（Machinery Breakdown） — 承保机器突发机械或电气故障造成的损失。",
+        "b": "累积期（Accumulation Phase） — 理赔时被保险人与保险公司按比例共同承担医疗费用。",
+        "c": "家政服务人员豁免（Domestic Servant Exemption） — 生存至期满或在期内身故都可领取给付。",
+        "d": "危险因素（Peril） — 可能损失也可能获利的风险。"
+      },
+      "answer": "a",
+      "explanation": "正确配对是：机器故障险（Machinery Breakdown） — 承保机器突发机械或电气故障造成的损失。"
+    },
+    {
+      "id": 148,
+      "chapter": "第7章 普通保险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "机器故障险（Machinery Breakdown） — 采取措施降低损失发生频率或严重程度。",
+        "b": "确定年金（Annuity Certain） — 给付期固定，不依赖受领人生存与否。",
+        "c": "特定风险（Particular Risk） — 主要影响个人或个别企业的风险。",
+        "d": "给付/清算期（Liquidation Phase） — 年金把累积资产转换为定期现金流的阶段。"
+      },
+      "answer": "a",
+      "explanation": "错误配对是「机器故障险（Machinery Breakdown） — 采取措施降低损失发生频率或严重程度。」。正确解释应为：承保机器突发机械或电气故障造成的损失。"
+    },
+    {
+      "id": 149,
+      "chapter": "第7章 普通保险",
+      "question": "【术语识别】以下定义对应哪个术语？\n承保雇主依法对员工工伤事故应承担的赔偿责任。",
+      "options": {
+        "a": "Wakalah 模式",
+        "b": "雇主责任险（Employer's Liability）",
+        "c": "家政服务人员豁免（Domestic Servant Exemption）",
+        "d": "重大疾病保险（Critical Illness）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「雇主责任险（Employer's Liability）」，因为其定义就是：承保雇主依法对员工工伤事故应承担的赔偿责任。"
+    },
+    {
+      "id": 150,
+      "chapter": "第7章 普通保险",
+      "question": "【概念理解】关于「雇主责任险（Employer's Liability）」，下列哪项描述最准确？",
+      "options": {
+        "a": "家政服务人员通常不属于 SOCSO 一般雇员承保范围。",
+        "b": "承保雇主依法对员工工伤事故应承担的赔偿责任。",
+        "c": "把损失财务后果转移给第三方，例如保险公司。",
+        "d": "赔偿金额等于重置成本减去折旧。"
+      },
+      "answer": "b",
+      "explanation": "「雇主责任险（Employer's Liability）」的正确描述为：承保雇主依法对员工工伤事故应承担的赔偿责任。"
+    },
+    {
+      "id": 151,
+      "chapter": "第7章 普通保险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "危险因素（Peril） — SOCSO 对失去工作能力成员提供长期收入保障。",
+        "b": "可保利益（Insurable Interest） — 参与者将部分供款捐入风险基金以互助共济。",
+        "c": "雇主责任险（Employer's Liability） — 承保雇主依法对员工工伤事故应承担的赔偿责任。",
+        "d": "最大诚信（Utmost Good Faith） — 仅在无法从事合理适任的任何职业时才符合残疾给付。"
+      },
+      "answer": "c",
+      "explanation": "正确配对是：雇主责任险（Employer's Liability） — 承保雇主依法对员工工伤事故应承担的赔偿责任。"
+    },
+    {
+      "id": 152,
+      "chapter": "第7章 普通保险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "Mudharabah 模式 — 参与者与经营者按约定比例分享投资利润。",
+        "b": "联合及遗属年金（Joint & Survivor） — 给付持续至最后一位受领人身故。",
+        "c": "雇主责任险（Employer's Liability） — SOCSO 对失去工作能力成员提供长期收入保障。",
+        "d": "投机风险（Speculative Risk） — 可能损失也可能获利的风险。"
+      },
+      "answer": "c",
+      "explanation": "错误配对是「雇主责任险（Employer's Liability） — SOCSO 对失去工作能力成员提供长期收入保障。」。正确解释应为：承保雇主依法对员工工伤事故应承担的赔偿责任。"
+    },
+    {
+      "id": 153,
+      "chapter": "第7章 普通保险",
+      "question": "【术语识别】以下定义对应哪个术语？\n承保现金在场所内或运送途中被抢劫盗窃等损失。",
+      "options": {
+        "a": "现金/金钱保险（Money Insurance）",
+        "b": "不可争辩条款（Incontestability Clause）",
+        "c": "给付/清算期（Liquidation Phase）",
+        "d": "风险保留（Risk Retention）"
+      },
+      "answer": "a",
+      "explanation": "正确术语是「现金/金钱保险（Money Insurance）」，因为其定义就是：承保现金在场所内或运送途中被抢劫盗窃等损失。"
+    },
+    {
+      "id": 154,
+      "chapter": "第7章 普通保险",
+      "question": "【概念理解】关于「现金/金钱保险（Money Insurance）」，下列哪项描述最准确？",
+      "options": {
+        "a": "消费者有权获得清晰、完整、可理解的产品信息。",
+        "b": "确诊合约列明疾病时一次性给付保险金。",
+        "c": "承保现金在场所内或运送途中被抢劫盗窃等损失。",
+        "d": "把损失财务后果转移给第三方，例如保险公司。"
+      },
+      "answer": "c",
+      "explanation": "「现金/金钱保险（Money Insurance）」的正确描述为：承保现金在场所内或运送途中被抢劫盗窃等损失。"
+    },
+    {
+      "id": 155,
+      "chapter": "第7章 普通保险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "家政服务人员豁免（Domestic Servant Exemption） — 保险人赔付后可向责任第三方追偿。",
+        "b": "现金/金钱保险（Money Insurance） — 承保现金在场所内或运送途中被抢劫盗窃等损失。",
+        "c": "Mudharabah 模式 — 经营者作为代理人管理基金并收取代理费用。",
+        "d": "自身职业定义（Own Occupation） — 保障终身并可累积现金价值。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：现金/金钱保险（Money Insurance） — 承保现金在场所内或运送途中被抢劫盗窃等损失。"
+    },
+    {
+      "id": 156,
+      "chapter": "第7章 普通保险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "现金/金钱保险（Money Insurance） — SOCSO 对失去工作能力成员提供长期收入保障。",
+        "b": "可保利益（Insurable Interest） — 投保人对被保险人生命或财产具有合法经济利益关系。",
+        "c": "风险保留（Risk Retention） — 由个人或企业自行承担损失后果。",
+        "d": "雇主责任险（Employer's Liability） — 承保雇主依法对员工工伤事故应承担的赔偿责任。"
+      },
+      "answer": "a",
+      "explanation": "错误配对是「现金/金钱保险（Money Insurance） — SOCSO 对失去工作能力成员提供长期收入保障。」。正确解释应为：承保现金在场所内或运送途中被抢劫盗窃等损失。"
+    },
+    {
+      "id": 157,
+      "chapter": "第7章 普通保险",
+      "question": "【术语识别】以下定义对应哪个术语？\n保险人赔付后可向责任第三方追偿。",
+      "options": {
+        "a": "Tabarru'（互助捐献）",
+        "b": "代位求偿（Subrogation）",
+        "c": "给付/清算期（Liquidation Phase）",
+        "d": "自身职业定义（Own Occupation）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「代位求偿（Subrogation）」，因为其定义就是：保险人赔付后可向责任第三方追偿。"
+    },
+    {
+      "id": 158,
+      "chapter": "第7章 普通保险",
+      "question": "【概念理解】关于「代位求偿（Subrogation）」，下列哪项描述最准确？",
+      "options": {
+        "a": "仅在无法从事合理适任的任何职业时才符合残疾给付。",
+        "b": "确诊合约列明疾病时一次性给付保险金。",
+        "c": "保险人赔付后可向责任第三方追偿。",
+        "d": "条款由保险人拟定，投保人通常只能接受或拒绝。"
+      },
+      "answer": "c",
+      "explanation": "「代位求偿（Subrogation）」的正确描述为：保险人赔付后可向责任第三方追偿。"
+    },
+    {
+      "id": 159,
+      "chapter": "第7章 普通保险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。",
+        "b": "自身职业定义（Own Occupation） — 透过不参与某项活动来避免相关风险。",
+        "c": "Mudharabah 模式 — 估算家庭因经济支柱身故而损失的收入现值。",
+        "d": "风险（Risk） — 由社会长期结构问题引起、变化较慢的风险。"
+      },
+      "answer": "a",
+      "explanation": "正确配对是：代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。"
+    },
+    {
+      "id": 160,
+      "chapter": "第7章 普通保险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "Al-Maisir — 伊斯兰金融中被禁止的赌博成分。",
+        "b": "可保利益（Insurable Interest） — 投保人对被保险人生命或财产具有合法经济利益关系。",
+        "c": "代位求偿（Subrogation） — 参与者将部分供款捐入风险基金以互助共济。",
+        "d": "动态风险（Dynamic Risk） — 由经济、科技、政策变化引起的新风险。"
+      },
+      "answer": "c",
+      "explanation": "错误配对是「代位求偿（Subrogation） — 参与者将部分供款捐入风险基金以互助共济。」。正确解释应为：保险人赔付后可向责任第三方追偿。"
+    },
+    {
+      "id": 161,
+      "chapter": "第7章 普通保险",
+      "question": "【术语识别】以下定义对应哪个术语？\n理赔目的是恢复损失前财务状态，而非让被保险人获利。",
+      "options": {
+        "a": "风险保留（Risk Retention）",
+        "b": "赔偿原则（Principle of Indemnity）",
+        "c": "附和合同（Contract of Adhesion）",
+        "d": "不可争辩条款（Incontestability Clause）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「赔偿原则（Principle of Indemnity）」，因为其定义就是：理赔目的是恢复损失前财务状态，而非让被保险人获利。"
+    },
+    {
+      "id": 162,
+      "chapter": "第7章 普通保险",
+      "question": "【概念理解】关于「赔偿原则（Principle of Indemnity）」，下列哪项描述最准确？",
+      "options": {
+        "a": "影响社会大多数人的系统性风险，如经济衰退。",
+        "b": "因态度或行为疏忽导致损失概率上升的诱因。",
+        "c": "以具体财务责任计算保障缺口的保险需求方法。",
+        "d": "理赔目的是恢复损失前财务状态，而非让被保险人获利。"
+      },
+      "answer": "d",
+      "explanation": "「赔偿原则（Principle of Indemnity）」的正确描述为：理赔目的是恢复损失前财务状态，而非让被保险人获利。"
+    },
+    {
+      "id": 163,
+      "chapter": "第7章 普通保险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "风险诱因（Hazard） — 由社会长期结构问题引起、变化较慢的风险。",
+        "b": "替代（Substitution） — 影响社会大多数人的系统性风险，如经济衰退。",
+        "c": "赔偿原则（Principle of Indemnity） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。",
+        "d": "定期寿险（Term Policy） — 采取措施降低损失发生频率或严重程度。"
+      },
+      "answer": "c",
+      "explanation": "正确配对是：赔偿原则（Principle of Indemnity） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。"
+    },
+    {
+      "id": 164,
+      "chapter": "第7章 普通保险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "道德风险诱因（Morale Hazard） — 因态度或行为疏忽导致损失概率上升的诱因。",
+        "b": "人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。",
+        "c": "不可争辩条款（Incontestability Clause） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。",
+        "d": "赔偿原则（Principle of Indemnity） — 可能损失也可能获利的风险。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「赔偿原则（Principle of Indemnity） — 可能损失也可能获利的风险。」。正确解释应为：理赔目的是恢复损失前财务状态，而非让被保险人获利。"
+    },
+    {
+      "id": 165,
+      "chapter": "第8章 回教保险",
+      "question": "【术语识别】以下定义对应哪个术语？\n参与者将部分供款捐入风险基金以互助共济。",
+      "options": {
+        "a": "终身寿险（Whole Life Policy）",
+        "b": "Tabarru'（互助捐献）",
+        "c": "实际现金价值（Actual Cash Value）",
+        "d": "雇主责任险（Employer's Liability）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「Tabarru'（互助捐献）」，因为其定义就是：参与者将部分供款捐入风险基金以互助共济。"
+    },
+    {
+      "id": 166,
+      "chapter": "第8章 回教保险",
+      "question": "【概念理解】关于「Tabarru'（互助捐献）」，下列哪项描述最准确？",
+      "options": {
+        "a": "无法从事原本职业即符合残疾给付条件，定义较宽。",
+        "b": "企业因关键员工离职或身故可能承担的经济损失价值。",
+        "c": "SOCSO 对失去工作能力成员提供长期收入保障。",
+        "d": "参与者将部分供款捐入风险基金以互助共济。"
+      },
+      "answer": "d",
+      "explanation": "「Tabarru'（互助捐献）」的正确描述为：参与者将部分供款捐入风险基金以互助共济。"
+    },
+    {
+      "id": 167,
+      "chapter": "第8章 回教保险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "不可争辩条款（Incontestability Clause） — 主要影响个人或个别企业的风险。",
+        "b": "关键人物价值（Key-man Value） — 年金把累积资产转换为定期现金流的阶段。",
+        "c": "失效抚恤金计划（Invalidity Pension Scheme） — 会提高损失发生概率或严重程度的条件。",
+        "d": "Tabarru'（互助捐献） — 参与者将部分供款捐入风险基金以互助共济。"
+      },
+      "answer": "d",
+      "explanation": "正确配对是：Tabarru'（互助捐献） — 参与者将部分供款捐入风险基金以互助共济。"
+    },
+    {
+      "id": 168,
+      "chapter": "第8章 回教保险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "赔偿原则（Principle of Indemnity） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。",
+        "b": "Tabarru'（互助捐献） — 把损失财务后果转移给第三方，例如保险公司。",
+        "c": "危险因素（Peril） — 导致损失发生的直接原因，例如火灾、车祸、疾病。",
+        "d": "代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。"
+      },
+      "answer": "b",
+      "explanation": "错误配对是「Tabarru'（互助捐献） — 把损失财务后果转移给第三方，例如保险公司。」。正确解释应为：参与者将部分供款捐入风险基金以互助共济。"
+    },
+    {
+      "id": 169,
+      "chapter": "第8章 回教保险",
+      "question": "【术语识别】以下定义对应哪个术语？\n经营者作为代理人管理基金并收取代理费用。",
+      "options": {
+        "a": "代位求偿（Subrogation）",
+        "b": "赔偿原则（Principle of Indemnity）",
+        "c": "给付/清算期（Liquidation Phase）",
+        "d": "Wakalah 模式"
+      },
+      "answer": "d",
+      "explanation": "正确术语是「Wakalah 模式」，因为其定义就是：经营者作为代理人管理基金并收取代理费用。"
+    },
+    {
+      "id": 170,
+      "chapter": "第8章 回教保险",
+      "question": "【概念理解】关于「Wakalah 模式」，下列哪项描述最准确？",
+      "options": {
+        "a": "经营者作为代理人管理基金并收取代理费用。",
+        "b": "年金产品中持续缴费与投资增长的阶段。",
+        "c": "给付期固定，不依赖受领人生存与否。",
+        "d": "采取措施降低损失发生频率或严重程度。"
+      },
+      "answer": "a",
+      "explanation": "「Wakalah 模式」的正确描述为：经营者作为代理人管理基金并收取代理费用。"
+    },
+    {
+      "id": 171,
+      "chapter": "第8章 回教保险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "可保利益（Insurable Interest） — 年金把累积资产转换为定期现金流的阶段。",
+        "b": "Wakalah 模式 — 经营者作为代理人管理基金并收取代理费用。",
+        "c": "定期寿险（Term Policy） — 用较低危险的活动或物质替代高风险做法。",
+        "d": "联合及遗属年金（Joint & Survivor） — 由环境或实物条件造成的危险诱因，如电线老化。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：Wakalah 模式 — 经营者作为代理人管理基金并收取代理费用。"
+    },
+    {
+      "id": 172,
+      "chapter": "第8章 回教保险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "现金/金钱保险（Money Insurance） — 承保现金在场所内或运送途中被抢劫盗窃等损失。",
+        "b": "Wakalah 模式 — 生存至期满或在期内身故都可领取给付。",
+        "c": "Mudharabah 模式 — 参与者与经营者按约定比例分享投资利润。",
+        "d": "代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。"
+      },
+      "answer": "b",
+      "explanation": "错误配对是「Wakalah 模式 — 生存至期满或在期内身故都可领取给付。」。正确解释应为：经营者作为代理人管理基金并收取代理费用。"
+    },
+    {
+      "id": 173,
+      "chapter": "第8章 回教保险",
+      "question": "【术语识别】以下定义对应哪个术语？\n参与者与经营者按约定比例分享投资利润。",
+      "options": {
+        "a": "失效抚恤金计划（Invalidity Pension Scheme）",
+        "b": "机器故障险（Machinery Breakdown）",
+        "c": "Mudharabah 模式",
+        "d": "储蓄/两全保单（Endowment Policy）"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「Mudharabah 模式」，因为其定义就是：参与者与经营者按约定比例分享投资利润。"
+    },
+    {
+      "id": 174,
+      "chapter": "第8章 回教保险",
+      "question": "【概念理解】关于「Mudharabah 模式」，下列哪项描述最准确？",
+      "options": {
+        "a": "在损失发生后减少损失程度。",
+        "b": "会提高损失发生概率或严重程度的条件。",
+        "c": "参与者与经营者按约定比例分享投资利润。",
+        "d": "以具体财务责任计算保障缺口的保险需求方法。"
+      },
+      "answer": "c",
+      "explanation": "「Mudharabah 模式」的正确描述为：参与者与经营者按约定比例分享投资利润。"
+    },
+    {
+      "id": 175,
+      "chapter": "第8章 回教保险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "需求分析法（Needs Analysis） — SOCSO 对失去工作能力成员提供长期收入保障。",
+        "b": "危险因素（Peril） — 透过不参与某项活动来避免相关风险。",
+        "c": "重大疾病保险（Critical Illness） — 降低损失发生的可能性。",
+        "d": "Mudharabah 模式 — 参与者与经营者按约定比例分享投资利润。"
+      },
+      "answer": "d",
+      "explanation": "正确配对是：Mudharabah 模式 — 参与者与经营者按约定比例分享投资利润。"
+    },
+    {
+      "id": 176,
+      "chapter": "第8章 回教保险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "静态风险（Static Risk） — 由社会长期结构问题引起、变化较慢的风险。",
+        "b": "风险控制（Risk Control） — 采取措施降低损失发生频率或严重程度。",
+        "c": "确定年金（Annuity Certain） — 给付期固定，不依赖受领人生存与否。",
+        "d": "Mudharabah 模式 — 投保人对被保险人生命或财产具有合法经济利益关系。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「Mudharabah 模式 — 投保人对被保险人生命或财产具有合法经济利益关系。」。正确解释应为：参与者与经营者按约定比例分享投资利润。"
+    },
+    {
+      "id": 177,
+      "chapter": "第8章 回教保险",
+      "question": "【术语识别】以下定义对应哪个术语？\n伊斯兰金融中被禁止的赌博成分。",
+      "options": {
+        "a": "人类生命价值法（Human Life Value）",
+        "b": "Al-Maisir",
+        "c": "Tabarru'（互助捐献）",
+        "d": "储蓄/两全保单（Endowment Policy）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「Al-Maisir」，因为其定义就是：伊斯兰金融中被禁止的赌博成分。"
+    },
+    {
+      "id": 178,
+      "chapter": "第8章 回教保险",
+      "question": "【概念理解】关于「Al-Maisir」，下列哪项描述最准确？",
+      "options": {
+        "a": "确诊合约列明疾病时一次性给付保险金。",
+        "b": "理赔时被保险人与保险公司按比例共同承担医疗费用。",
+        "c": "伊斯兰金融中被禁止的赌博成分。",
+        "d": "只有损失或无损失两种结果，不会带来获利。"
+      },
+      "answer": "c",
+      "explanation": "「Al-Maisir」的正确描述为：伊斯兰金融中被禁止的赌博成分。"
+    },
+    {
+      "id": 179,
+      "chapter": "第8章 回教保险",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "风险转移（Risk Transfer） — 参与者将部分供款捐入风险基金以互助共济。",
+        "b": "Al-Maisir — 伊斯兰金融中被禁止的赌博成分。",
+        "c": "定期寿险（Term Policy） — 由环境或实物条件造成的危险诱因，如电线老化。",
+        "d": "赔偿原则（Principle of Indemnity） — 参与者与经营者按约定比例分享投资利润。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：Al-Maisir — 伊斯兰金融中被禁止的赌博成分。"
+    },
+    {
+      "id": 180,
+      "chapter": "第8章 回教保险",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "损失降低（Loss Reduction） — 在损失发生后减少损失程度。",
+        "b": "Al-Maisir — 年金产品中持续缴费与投资增长的阶段。",
+        "c": "风险控制（Risk Control） — 采取措施降低损失发生频率或严重程度。",
+        "d": "纯风险（Pure Risk） — 只有损失或无损失两种结果，不会带来获利。"
+      },
+      "answer": "b",
+      "explanation": "错误配对是「Al-Maisir — 年金产品中持续缴费与投资增长的阶段。」。正确解释应为：伊斯兰金融中被禁止的赌博成分。"
+    },
+    {
+      "id": 181,
+      "chapter": "第9章 法律原则",
+      "question": "【术语识别】以下定义对应哪个术语？\n投保与承保双方都必须充分、诚实披露重大事实。",
+      "options": {
+        "a": "终身寿险（Whole Life Policy）",
+        "b": "可保利益（Insurable Interest）",
+        "c": "最大诚信（Utmost Good Faith）",
+        "d": "道德风险诱因（Morale Hazard）"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「最大诚信（Utmost Good Faith）」，因为其定义就是：投保与承保双方都必须充分、诚实披露重大事实。"
+    },
+    {
+      "id": 182,
+      "chapter": "第9章 法律原则",
+      "question": "【概念理解】关于「最大诚信（Utmost Good Faith）」，下列哪项描述最准确？",
+      "options": {
+        "a": "投保与承保双方都必须充分、诚实披露重大事实。",
+        "b": "用较低危险的活动或物质替代高风险做法。",
+        "c": "理赔时被保险人与保险公司按比例共同承担医疗费用。",
+        "d": "暴露于不确定并可能造成财务损失的状态。"
+      },
+      "answer": "a",
+      "explanation": "「最大诚信（Utmost Good Faith）」的正确描述为：投保与承保双方都必须充分、诚实披露重大事实。"
+    },
+    {
+      "id": 183,
+      "chapter": "第9章 法律原则",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "实际现金价值（Actual Cash Value） — 生存至期满或在期内身故都可领取给付。",
+        "b": "最大诚信（Utmost Good Faith） — 投保与承保双方都必须充分、诚实披露重大事实。",
+        "c": "风险诱因（Hazard） — 年金产品中持续缴费与投资增长的阶段。",
+        "d": "任何职业定义（Any Occupation） — 由个人或企业自行承担损失后果。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：最大诚信（Utmost Good Faith） — 投保与承保双方都必须充分、诚实披露重大事实。"
+    },
+    {
+      "id": 184,
+      "chapter": "第9章 法律原则",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "附和合同（Contract of Adhesion） — 条款由保险人拟定，投保人通常只能接受或拒绝。",
+        "b": "自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。",
+        "c": "最大诚信（Utmost Good Faith） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。",
+        "d": "现金/金钱保险（Money Insurance） — 承保现金在场所内或运送途中被抢劫盗窃等损失。"
+      },
+      "answer": "c",
+      "explanation": "错误配对是「最大诚信（Utmost Good Faith） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。」。正确解释应为：投保与承保双方都必须充分、诚实披露重大事实。"
+    },
+    {
+      "id": 185,
+      "chapter": "第9章 法律原则",
+      "question": "【术语识别】以下定义对应哪个术语？\n条款由保险人拟定，投保人通常只能接受或拒绝。",
+      "options": {
+        "a": "重大疾病保险（Critical Illness）",
+        "b": "自身职业定义（Own Occupation）",
+        "c": "累积期（Accumulation Phase）",
+        "d": "附和合同（Contract of Adhesion）"
+      },
+      "answer": "d",
+      "explanation": "正确术语是「附和合同（Contract of Adhesion）」，因为其定义就是：条款由保险人拟定，投保人通常只能接受或拒绝。"
+    },
+    {
+      "id": 186,
+      "chapter": "第9章 法律原则",
+      "question": "【概念理解】关于「附和合同（Contract of Adhesion）」，下列哪项描述最准确？",
+      "options": {
+        "a": "条款由保险人拟定，投保人通常只能接受或拒绝。",
+        "b": "影响社会大多数人的系统性风险，如经济衰退。",
+        "c": "导致损失发生的直接原因，例如火灾、车祸、疾病。",
+        "d": "会提高损失发生概率或严重程度的条件。"
+      },
+      "answer": "a",
+      "explanation": "「附和合同（Contract of Adhesion）」的正确描述为：条款由保险人拟定，投保人通常只能接受或拒绝。"
+    },
+    {
+      "id": 187,
+      "chapter": "第9章 法律原则",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "给付/清算期（Liquidation Phase） — 由社会长期结构问题引起、变化较慢的风险。",
+        "b": "风险转移（Risk Transfer） — 样本越大，实际损失越接近期望损失。",
+        "c": "实际现金价值（Actual Cash Value） — 以具体财务责任计算保障缺口的保险需求方法。",
+        "d": "附和合同（Contract of Adhesion） — 条款由保险人拟定，投保人通常只能接受或拒绝。"
+      },
+      "answer": "d",
+      "explanation": "正确配对是：附和合同（Contract of Adhesion） — 条款由保险人拟定，投保人通常只能接受或拒绝。"
+    },
+    {
+      "id": 188,
+      "chapter": "第9章 法律原则",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "附和合同（Contract of Adhesion） — 把损失财务后果转移给第三方，例如保险公司。",
+        "b": "纯风险（Pure Risk） — 只有损失或无损失两种结果，不会带来获利。",
+        "c": "家政服务人员豁免（Domestic Servant Exemption） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。",
+        "d": "自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。"
+      },
+      "answer": "a",
+      "explanation": "错误配对是「附和合同（Contract of Adhesion） — 把损失财务后果转移给第三方，例如保险公司。」。正确解释应为：条款由保险人拟定，投保人通常只能接受或拒绝。"
+    },
+    {
+      "id": 189,
+      "chapter": "第10章 消费者保护",
+      "question": "【术语识别】以下定义对应哪个术语？\n消费者有权获得清晰、完整、可理解的产品信息。",
+      "options": {
+        "a": "需求分析法（Needs Analysis）",
+        "b": "附和合同（Contract of Adhesion）",
+        "c": "家政服务人员豁免（Domestic Servant Exemption）",
+        "d": "消费者知情权"
+      },
+      "answer": "d",
+      "explanation": "正确术语是「消费者知情权」，因为其定义就是：消费者有权获得清晰、完整、可理解的产品信息。"
+    },
+    {
+      "id": 190,
+      "chapter": "第10章 消费者保护",
+      "question": "【概念理解】关于「消费者知情权」，下列哪项描述最准确？",
+      "options": {
+        "a": "年金产品中持续缴费与投资增长的阶段。",
+        "b": "确诊合约列明疾病时一次性给付保险金。",
+        "c": "消费者有权获得清晰、完整、可理解的产品信息。",
+        "d": "投保人对被保险人生命或财产具有合法经济利益关系。"
+      },
+      "answer": "c",
+      "explanation": "「消费者知情权」的正确描述为：消费者有权获得清晰、完整、可理解的产品信息。"
+    },
+    {
+      "id": 191,
+      "chapter": "第10章 消费者保护",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "Al-Maisir — 赔偿金额等于重置成本减去折旧。",
+        "b": "动态风险（Dynamic Risk） — 由环境或实物条件造成的危险诱因，如电线老化。",
+        "c": "不可争辩条款（Incontestability Clause） — 确诊合约列明疾病时一次性给付保险金。",
+        "d": "消费者知情权 — 消费者有权获得清晰、完整、可理解的产品信息。"
+      },
+      "answer": "d",
+      "explanation": "正确配对是：消费者知情权 — 消费者有权获得清晰、完整、可理解的产品信息。"
+    },
+    {
+      "id": 192,
+      "chapter": "第10章 消费者保护",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "储蓄/两全保单（Endowment Policy） — 生存至期满或在期内身故都可领取给付。",
+        "b": "Al-Maisir — 伊斯兰金融中被禁止的赌博成分。",
+        "c": "人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。",
+        "d": "消费者知情权 — 条款由保险人拟定，投保人通常只能接受或拒绝。"
+      },
+      "answer": "d",
+      "explanation": "错误配对是「消费者知情权 — 条款由保险人拟定，投保人通常只能接受或拒绝。」。正确解释应为：消费者有权获得清晰、完整、可理解的产品信息。"
+    },
+    {
+      "id": 193,
+      "chapter": "第11章 SOCSO",
+      "question": "【术语识别】以下定义对应哪个术语？\nSOCSO 对失去工作能力成员提供长期收入保障。",
+      "options": {
+        "a": "Al-Maisir",
+        "b": "失效抚恤金计划（Invalidity Pension Scheme）",
+        "c": "给付/清算期（Liquidation Phase）",
+        "d": "终身寿险（Whole Life Policy）"
+      },
+      "answer": "b",
+      "explanation": "正确术语是「失效抚恤金计划（Invalidity Pension Scheme）」，因为其定义就是：SOCSO 对失去工作能力成员提供长期收入保障。"
+    },
+    {
+      "id": 194,
+      "chapter": "第11章 SOCSO",
+      "question": "【概念理解】关于「失效抚恤金计划（Invalidity Pension Scheme）」，下列哪项描述最准确？",
+      "options": {
+        "a": "导致损失发生的直接原因，例如火灾、车祸、疾病。",
+        "b": "SOCSO 对失去工作能力成员提供长期收入保障。",
+        "c": "用较低危险的活动或物质替代高风险做法。",
+        "d": "承保雇主依法对员工工伤事故应承担的赔偿责任。"
+      },
+      "answer": "b",
+      "explanation": "「失效抚恤金计划（Invalidity Pension Scheme）」的正确描述为：SOCSO 对失去工作能力成员提供长期收入保障。"
+    },
+    {
+      "id": 195,
+      "chapter": "第11章 SOCSO",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "投机风险（Speculative Risk） — 采取措施降低损失发生频率或严重程度。",
+        "b": "附和合同（Contract of Adhesion） — 参与者将部分供款捐入风险基金以互助共济。",
+        "c": "道德风险诱因（Morale Hazard） — 会提高损失发生概率或严重程度的条件。",
+        "d": "失效抚恤金计划（Invalidity Pension Scheme） — SOCSO 对失去工作能力成员提供长期收入保障。"
+      },
+      "answer": "d",
+      "explanation": "正确配对是：失效抚恤金计划（Invalidity Pension Scheme） — SOCSO 对失去工作能力成员提供长期收入保障。"
+    },
+    {
+      "id": 196,
+      "chapter": "第11章 SOCSO",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "风险规避（Risk Avoidance） — 透过不参与某项活动来避免相关风险。",
+        "b": "静态风险（Static Risk） — 由社会长期结构问题引起、变化较慢的风险。",
+        "c": "失效抚恤金计划（Invalidity Pension Scheme） — 在损失发生后减少损失程度。",
+        "d": "风险转移（Risk Transfer） — 把损失财务后果转移给第三方，例如保险公司。"
+      },
+      "answer": "c",
+      "explanation": "错误配对是「失效抚恤金计划（Invalidity Pension Scheme） — 在损失发生后减少损失程度。」。正确解释应为：SOCSO 对失去工作能力成员提供长期收入保障。"
+    },
+    {
+      "id": 197,
+      "chapter": "第11章 SOCSO",
+      "question": "【术语识别】以下定义对应哪个术语？\n家政服务人员通常不属于 SOCSO 一般雇员承保范围。",
+      "options": {
+        "a": "累积期（Accumulation Phase）",
+        "b": "雇主责任险（Employer's Liability）",
+        "c": "家政服务人员豁免（Domestic Servant Exemption）",
+        "d": "Al-Maisir"
+      },
+      "answer": "c",
+      "explanation": "正确术语是「家政服务人员豁免（Domestic Servant Exemption）」，因为其定义就是：家政服务人员通常不属于 SOCSO 一般雇员承保范围。"
+    },
+    {
+      "id": 198,
+      "chapter": "第11章 SOCSO",
+      "question": "【概念理解】关于「家政服务人员豁免（Domestic Servant Exemption）」，下列哪项描述最准确？",
+      "options": {
+        "a": "透过不参与某项活动来避免相关风险。",
+        "b": "降低损失发生的可能性。",
+        "c": "可能损失也可能获利的风险。",
+        "d": "家政服务人员通常不属于 SOCSO 一般雇员承保范围。"
+      },
+      "answer": "d",
+      "explanation": "「家政服务人员豁免（Domestic Servant Exemption）」的正确描述为：家政服务人员通常不属于 SOCSO 一般雇员承保范围。"
+    },
+    {
+      "id": 199,
+      "chapter": "第11章 SOCSO",
+      "question": "【配对题】以下哪一组“术语—解释”配对是正确的？",
+      "options": {
+        "a": "风险规避（Risk Avoidance） — 赔偿金额等于重置成本减去折旧。",
+        "b": "家政服务人员豁免（Domestic Servant Exemption） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。",
+        "c": "需求分析法（Needs Analysis） — 无法从事原本职业即符合残疾给付条件，定义较宽。",
+        "d": "任何职业定义（Any Occupation） — 确诊合约列明疾病时一次性给付保险金。"
+      },
+      "answer": "b",
+      "explanation": "正确配对是：家政服务人员豁免（Domestic Servant Exemption） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。"
+    },
+    {
+      "id": 200,
+      "chapter": "第11章 SOCSO",
+      "question": "【辨识题】以下哪一组“术语—解释”配对是错误的？",
+      "options": {
+        "a": "物理风险诱因（Physical Hazard） — 由环境或实物条件造成的危险诱因，如电线老化。",
+        "b": "家政服务人员豁免（Domestic Servant Exemption） — 导致损失发生的直接原因，例如火灾、车祸、疾病。",
+        "c": "累积期（Accumulation Phase） — 年金产品中持续缴费与投资增长的阶段。",
+        "d": "实际现金价值（Actual Cash Value） — 赔偿金额等于重置成本减去折旧。"
+      },
+      "answer": "b",
+      "explanation": "错误配对是「家政服务人员豁免（Domestic Servant Exemption） — 导致损失发生的直接原因，例如火灾、车祸、疾病。」。正确解释应为：家政服务人员通常不属于 SOCSO 一般雇员承保范围。"
+    }
+  ]
+}

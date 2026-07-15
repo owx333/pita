@@ -152,6 +152,7 @@ button.secondary {
 .question-text {
   margin: 0.5rem 0;
   line-height: 1.45;
+  white-space: pre-line;
 }
 
 .options {
@@ -205,6 +206,23 @@ button.secondary {
 
 .hidden {
   display: none;
+}
+
+.chapter-tag {
+  display: inline-block;
+  margin: 0 0 0.45rem;
+  padding: 0.15rem 0.5rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.8rem;
+  background: #f7f9ff;
+}
+
+.mode-buttons {
+  display: grid;
+  gap: 0.4rem;
+  margin-bottom: 0.7rem;
 }
 
 @media (max-width: 960px) {
