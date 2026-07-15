@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 224 224" role="img" aria-label="HongLeong favicon">
+  <rect width="224" height="224" fill="#efefef"/>
+
+  <g transform="translate(16 10)">
+    <g transform="rotate(-36 86 52)">
+      <rect x="36" y="8" width="22" height="124" fill="#07104d"/>
+      <rect x="74" y="8" width="22" height="124" fill="#07104d"/>
+      <rect x="112" y="8" width="22" height="124" fill="#07104d"/>
+    </g>
+
+    <path d="M18 104 C68 64, 132 64, 192 104" fill="none" stroke="#ff2619" stroke-width="26"/>
+    <path d="M28 146 C80 106, 140 106, 196 146" fill="none" stroke="#ff2619" stroke-width="26"/>
+    <path d="M40 186 C92 146, 148 146, 200 186" fill="none" stroke="#ff2619" stroke-width="26"/>
+  </g>
+</svg>
