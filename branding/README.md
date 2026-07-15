@@ -5,8 +5,8 @@ in GitHub without touching app logic.
 
 ## Files used by the site
 
-- `branding/logo/header-logo.svg` -> top-left header logo
-- `branding/favicon/favicon.svg` -> browser favicon
+- `branding/logo/header-logo.png` -> top-left header logo
+- `branding/favicon/favicon.png` -> browser favicon
 
 ## How to update
 
@@ -14,4 +14,4 @@ in GitHub without touching app logic.
 2. Keep the same filename to avoid changing code references.
 3. Refresh browser with `Ctrl + F5` to clear cache.
 
-If you prefer PNG, replace the file and update HTML references accordingly.
+Current setup is PNG-based to match your uploaded assets exactly.
