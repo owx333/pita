@@ -8,6 +8,9 @@ const uiText = {
     datasetPractice75: "75-question revision",
     datasetMock200: "200-question exam",
     datasetMock200Hard: "200-question advanced exam",
+    datasetUnavailable:
+      "This set is not loaded. Please update files and reload index.html.",
+    datasetHint: (name, total) => `Current set: ${name} (${total} questions)`,
     languageLabel: "Language:",
     progressTitle: "Progress",
     answered: (count, total) => `Answered ${count} / ${total}`,
@@ -35,6 +38,8 @@ const uiText = {
     datasetPractice75: "75题温习",
     datasetMock200: "200题考试",
     datasetMock200Hard: "200题加强版",
+    datasetUnavailable: "该题库未载入。请先更新文件后重新打开 index.html。",
+    datasetHint: (name, total) => `当前题库：${name}（${total}题）`,
     languageLabel: "语言：",
     progressTitle: "练习进度",
     answered: (count, total) => `已作答 ${count} / ${total}`,
@@ -62,6 +67,9 @@ const uiText = {
     datasetPractice75: "Ulang kaji 75 soalan",
     datasetMock200: "Peperiksaan 200 soalan",
     datasetMock200Hard: "Peperiksaan lanjutan 200 soalan",
+    datasetUnavailable:
+      "Set ini belum dimuatkan. Sila kemas kini fail dan buka semula index.html.",
+    datasetHint: (name, total) => `Set semasa: ${name} (${total} soalan)`,
     languageLabel: "Bahasa:",
     progressTitle: "Kemajuan",
     answered: (count, total) => `Dijawab ${count} / ${total}`,
@@ -104,6 +112,10 @@ const elements = {
   languageLabel: document.querySelector("#language-label"),
   languageSelect: document.querySelector("#language-select"),
   summaryTitle: document.querySelector("#summary-title"),
+  datasetHint: document.querySelector("#dataset-hint"),
+  datasetButton75: document.querySelector("#dataset-btn-75"),
+  datasetButton200: document.querySelector("#dataset-btn-200"),
+  datasetButton200Hard: document.querySelector("#dataset-btn-200-hard"),
   summaryStatus: document.querySelector("#summary-status"),
   summaryScore: document.querySelector("#summary-score"),
   helper: document.querySelector("#summary-helper"),
@@ -134,6 +146,9 @@ function setStaticLabels() {
   elements.datasetSelect.options[0].textContent = labels.datasetPractice75;
   elements.datasetSelect.options[1].textContent = labels.datasetMock200;
   elements.datasetSelect.options[2].textContent = labels.datasetMock200Hard;
+  elements.datasetButton75.textContent = labels.datasetPractice75;
+  elements.datasetButton200.textContent = labels.datasetMock200;
+  elements.datasetButton200Hard.textContent = labels.datasetMock200Hard;
   elements.languageLabel.textContent = labels.languageLabel;
   elements.summaryTitle.textContent = labels.progressTitle;
   elements.checkButton.textContent = labels.checkButton;
@@ -141,6 +156,32 @@ function setStaticLabels() {
   elements.helper.textContent = labels.helper;
   elements.quizTitle.textContent = labels.questionsTitle;
   elements.showAnswerLabel.textContent = labels.showAnswer;
+}
+
+function datasetNameByKey(datasetKey, labels) {
+  if (datasetKey === "mock200") {
+    return labels.datasetMock200;
+  }
+  if (datasetKey === "mock200Hard") {
+    return labels.datasetMock200Hard;
+  }
+  return labels.datasetPractice75;
+}
+
+function updateDatasetButtons() {
+  const active = state.dataset;
+  const mapping = [
+    [elements.datasetButton75, "practice75"],
+    [elements.datasetButton200, "mock200"],
+    [elements.datasetButton200Hard, "mock200Hard"],
+  ];
+  mapping.forEach(([button, key]) => {
+    if (key === active) {
+      button.classList.remove("secondary");
+    } else {
+      button.classList.add("secondary");
+    }
+  });
 }
 
 function normalizePractice75Question(question) {
@@ -170,15 +211,25 @@ function normalizeMock200Question(question) {
 }
 
 function switchDataset(datasetKey) {
+  const labels = t();
   const nextQuestions = state.datasets[datasetKey];
   if (!nextQuestions || nextQuestions.length === 0) {
+    elements.questionList.textContent = labels.datasetUnavailable;
+    elements.datasetHint.textContent = labels.datasetUnavailable;
+    elements.datasetSelect.value = state.dataset;
     return;
   }
   state.dataset = datasetKey;
+  elements.datasetSelect.value = datasetKey;
   state.questions = [...nextQuestions];
   state.answers = {};
   state.checked = false;
   setStaticLabels();
+  elements.datasetHint.textContent = labels.datasetHint(
+    datasetNameByKey(datasetKey, labels),
+    state.questions.length
+  );
+  updateDatasetButtons();
   updateSummary();
   renderQuestions();
 }
@@ -291,6 +342,11 @@ function wireEvents() {
   elements.datasetSelect.addEventListener("change", (event) => {
     switchDataset(event.target.value);
   });
+  elements.datasetButton75.addEventListener("click", () => switchDataset("practice75"));
+  elements.datasetButton200.addEventListener("click", () => switchDataset("mock200"));
+  elements.datasetButton200Hard.addEventListener("click", () =>
+    switchDataset("mock200Hard")
+  );
 
   elements.languageSelect.addEventListener("change", (event) => {
     state.language = event.target.value;
@@ -374,9 +430,11 @@ async function initialize() {
 
   if (state.datasets.mock200.length === 0) {
     elements.datasetSelect.options[1].disabled = true;
+    elements.datasetButton200.disabled = true;
   }
   if (state.datasets.mock200Hard.length === 0) {
     elements.datasetSelect.options[2].disabled = true;
+    elements.datasetButton200Hard.disabled = true;
   }
   setStaticLabels();
   switchDataset("practice75");

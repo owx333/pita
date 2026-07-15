@@ -225,6 +225,11 @@ button.secondary {
   margin-bottom: 0.7rem;
 }
 
+#dataset-buttons button:disabled {
+  cursor: not-allowed;
+  opacity: 0.55;
+}
+
 @media (max-width: 960px) {
   .layout {
     grid-template-columns: 1fr;
