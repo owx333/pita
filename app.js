@@ -5,7 +5,6 @@ const uiText = {
     subtitle200: "Mock exam mode: 200 questions from RFP key topics",
     subtitle200Hard: "Advanced mock exam mode: harder 200-question set",
     subtitle400Tri: "Comprehensive mode: 400 trilingual questions",
-    datasetLabel: "Question set:",
     datasetPractice75: "75-question revision",
     datasetMock200: "200-question exam",
     datasetMock200Hard: "200-question advanced exam",
@@ -37,7 +36,6 @@ const uiText = {
     subtitle200: "模拟考试模式：200题（RFP重点）",
     subtitle200Hard: "加强版模式：200题（更高难度）",
     subtitle400Tri: "综合模式：400题三语题库",
-    datasetLabel: "题库：",
     datasetPractice75: "75题温习",
     datasetMock200: "200题考试",
     datasetMock200Hard: "200题加强版",
@@ -68,7 +66,6 @@ const uiText = {
     subtitle200: "Mod peperiksaan simulasi: 200 soalan berdasarkan topik utama RFP",
     subtitle200Hard: "Mod lanjutan: set 200 soalan tahap lebih sukar",
     subtitle400Tri: "Mod komprehensif: 400 soalan tiga bahasa",
-    datasetLabel: "Set soalan:",
     datasetPractice75: "Ulang kaji 75 soalan",
     datasetMock200: "Peperiksaan 200 soalan",
     datasetMock200Hard: "Peperiksaan lanjutan 200 soalan",
@@ -114,8 +111,6 @@ const state = {
 const elements = {
   title: document.querySelector("#app-title"),
   subtitle: document.querySelector("#app-subtitle"),
-  datasetLabel: document.querySelector("#dataset-label"),
-  datasetSelect: document.querySelector("#dataset-select"),
   languageLabel: document.querySelector("#language-label"),
   languageSelect: document.querySelector("#language-select"),
   summaryTitle: document.querySelector("#summary-title"),
@@ -151,11 +146,6 @@ function setStaticLabels() {
       mock400Tri: labels.subtitle400Tri,
     }[state.dataset] || labels.subtitle75
   );
-  elements.datasetLabel.textContent = labels.datasetLabel;
-  elements.datasetSelect.options[0].textContent = labels.datasetPractice75;
-  elements.datasetSelect.options[1].textContent = labels.datasetMock200;
-  elements.datasetSelect.options[2].textContent = labels.datasetMock200Hard;
-  elements.datasetSelect.options[3].textContent = labels.datasetMock400Tri;
   elements.datasetButton75.textContent = labels.datasetPractice75;
   elements.datasetButton200.textContent = labels.datasetMock200;
   elements.datasetButton200Hard.textContent = labels.datasetMock200Hard;
@@ -257,11 +247,9 @@ function switchDataset(datasetKey) {
   if (!nextQuestions || nextQuestions.length === 0) {
     elements.questionList.textContent = labels.datasetUnavailable;
     elements.datasetHint.textContent = labels.datasetUnavailable;
-    elements.datasetSelect.value = state.dataset;
     return;
   }
   state.dataset = datasetKey;
-  elements.datasetSelect.value = datasetKey;
   state.questions = [...nextQuestions];
   state.answers = {};
   state.checked = false;
@@ -384,9 +372,6 @@ function renderQuestions() {
 }
 
 function wireEvents() {
-  elements.datasetSelect.addEventListener("change", (event) => {
-    switchDataset(event.target.value);
-  });
   elements.datasetButton75.addEventListener("click", () => switchDataset("practice75"));
   elements.datasetButton200.addEventListener("click", () => switchDataset("mock200"));
   elements.datasetButton200Hard.addEventListener("click", () =>
@@ -439,10 +424,12 @@ async function initialize() {
       normalizePractice75Question
     );
 
-    let mockPayload = window.__MOCK200_DATA__;
+    let mockPayload = window.__MOCK200_TRI_DATA__;
     if (!mockPayload) {
       try {
-        const mockResponse = await fetch("./data/mock200.json", { cache: "no-store" });
+        const mockResponse = await fetch("./data/mock200-trilingual.json", {
+          cache: "no-store",
+        });
         if (mockResponse.ok) {
           mockPayload = await mockResponse.json();
         }
@@ -450,14 +437,17 @@ async function initialize() {
         // Keep silent: offline mode may block fetch.
       }
     }
-    state.datasets.mock200 = (mockPayload?.questions || []).map(
-      normalizeMock200Question
+    if (!mockPayload && window.__MOCK200_DATA__) {
+      mockPayload = window.__MOCK200_DATA__;
+    }
+    state.datasets.mock200 = (mockPayload?.questions || []).map((q) =>
+      typeof q.question === "object" ? normalizeTrilingualQuestion(q) : normalizeMock200Question(q)
     );
 
-    let mockHardPayload = window.__MOCK200_HARD_DATA__;
+    let mockHardPayload = window.__MOCK200_HARD_TRI_DATA__;
     if (!mockHardPayload) {
       try {
-        const mockHardResponse = await fetch("./data/mock200-hard.json", {
+        const mockHardResponse = await fetch("./data/mock200-hard-trilingual.json", {
           cache: "no-store",
         });
         if (mockHardResponse.ok) {
@@ -467,8 +457,11 @@ async function initialize() {
         // Keep silent: offline mode may block fetch.
       }
     }
-    state.datasets.mock200Hard = (mockHardPayload?.questions || []).map(
-      normalizeMock200Question
+    if (!mockHardPayload && window.__MOCK200_HARD_DATA__) {
+      mockHardPayload = window.__MOCK200_HARD_DATA__;
+    }
+    state.datasets.mock200Hard = (mockHardPayload?.questions || []).map((q) =>
+      typeof q.question === "object" ? normalizeTrilingualQuestion(q) : normalizeMock200Question(q)
     );
 
     let mock400Payload = window.__MOCK400_DATA__;
@@ -494,15 +487,12 @@ async function initialize() {
   }
 
   if (state.datasets.mock200.length === 0) {
-    elements.datasetSelect.options[1].disabled = true;
     elements.datasetButton200.disabled = true;
   }
   if (state.datasets.mock200Hard.length === 0) {
-    elements.datasetSelect.options[2].disabled = true;
     elements.datasetButton200Hard.disabled = true;
   }
   if (state.datasets.mock400Tri.length === 0) {
-    elements.datasetSelect.options[3].disabled = true;
     elements.datasetButton400Tri.disabled = true;
   }
   setStaticLabels();

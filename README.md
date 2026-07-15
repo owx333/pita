@@ -25,11 +25,16 @@ RFP Module 2 practice quiz website built from the uploaded exam papers.
 - `data/mock200-data.js` - embedded 200-question mock exam bank
 - `data/mock200-hard.json` - harder 200-question mock exam bank
 - `data/mock200-hard-data.js` - embedded harder 200-question bank
+- `data/mock200-trilingual.json` - trilingual version of the 200-question exam bank
+- `data/mock200-trilingual-data.js` - embedded trilingual 200-question bank
+- `data/mock200-hard-trilingual.json` - trilingual version of the harder 200-question bank
+- `data/mock200-hard-trilingual-data.js` - embedded trilingual harder 200-question bank
 - `data/mock400-trilingual.json` - combined 400-question trilingual bank
 - `data/mock400-trilingual-data.js` - embedded 400-question trilingual bank
 - `scripts/build_quiz_data.py` - PDF parser and Malay translation generator
 - `scripts/generate_mock200.py` - builds the separate 200-question mock exam from RFP重点
 - `scripts/generate_mock200_hard.py` - builds the harder 200-question version
+- `scripts/build_mock200_trilingual_sets.py` - splits the 400-trilingual bank into trilingual 200 + harder 200 sets
 - `scripts/generate_mock400_trilingual.py` - builds the 400-question trilingual combined version
 
 ## Regenerate question data
@@ -58,7 +63,7 @@ python3 scripts/build_quiz_data.py \
 You can directly double-click `index.html` in File Explorer.  
 Because `data/questions-data.js` is embedded as JavaScript, the quiz works without a local server.
 
-In `index.html`, use the top **题库 / Question set** selector:
+In `index.html`, use the left-side **题库 buttons**:
 
 - `75题温习`
 - `200题考试`
