@@ -3,9 +3,11 @@ const uiText = {
     title: "RFP Module 2 Practice Quiz",
     subtitle75: "Trilingual revision website (English / 中文 / Bahasa Melayu)",
     subtitle200: "Mock exam mode: 200 questions from RFP key topics",
+    subtitle200Hard: "Advanced mock exam mode: harder 200-question set",
     datasetLabel: "Question set:",
     datasetPractice75: "75-question revision",
     datasetMock200: "200-question exam",
+    datasetMock200Hard: "200-question advanced exam",
     languageLabel: "Language:",
     progressTitle: "Progress",
     answered: (count, total) => `Answered ${count} / ${total}`,
@@ -28,9 +30,11 @@ const uiText = {
     title: "RFP 第二单元练习测验",
     subtitle75: "三语温习网站（英文 / 中文 / 马来文）",
     subtitle200: "模拟考试模式：200题（RFP重点）",
+    subtitle200Hard: "加强版模式：200题（更高难度）",
     datasetLabel: "题库：",
     datasetPractice75: "75题温习",
     datasetMock200: "200题考试",
+    datasetMock200Hard: "200题加强版",
     languageLabel: "语言：",
     progressTitle: "练习进度",
     answered: (count, total) => `已作答 ${count} / ${total}`,
@@ -53,9 +57,11 @@ const uiText = {
     title: "Kuiz Latihan RFP Modul 2",
     subtitle75: "Laman ulang kaji tiga bahasa (English / 中文 / Bahasa Melayu)",
     subtitle200: "Mod peperiksaan simulasi: 200 soalan berdasarkan topik utama RFP",
+    subtitle200Hard: "Mod lanjutan: set 200 soalan tahap lebih sukar",
     datasetLabel: "Set soalan:",
     datasetPractice75: "Ulang kaji 75 soalan",
     datasetMock200: "Peperiksaan 200 soalan",
+    datasetMock200Hard: "Peperiksaan lanjutan 200 soalan",
     languageLabel: "Bahasa:",
     progressTitle: "Kemajuan",
     answered: (count, total) => `Dijawab ${count} / ${total}`,
@@ -86,6 +92,7 @@ const state = {
   datasets: {
     practice75: [],
     mock200: [],
+    mock200Hard: [],
   },
 };
 
@@ -116,11 +123,17 @@ function t() {
 function setStaticLabels() {
   const labels = t();
   elements.title.textContent = labels.title;
-  elements.subtitle.textContent =
-    state.dataset === "mock200" ? labels.subtitle200 : labels.subtitle75;
+  elements.subtitle.textContent = (
+    {
+      practice75: labels.subtitle75,
+      mock200: labels.subtitle200,
+      mock200Hard: labels.subtitle200Hard,
+    }[state.dataset] || labels.subtitle75
+  );
   elements.datasetLabel.textContent = labels.datasetLabel;
   elements.datasetSelect.options[0].textContent = labels.datasetPractice75;
   elements.datasetSelect.options[1].textContent = labels.datasetMock200;
+  elements.datasetSelect.options[2].textContent = labels.datasetMock200Hard;
   elements.languageLabel.textContent = labels.languageLabel;
   elements.summaryTitle.textContent = labels.progressTitle;
   elements.checkButton.textContent = labels.checkButton;
@@ -336,6 +349,23 @@ async function initialize() {
     state.datasets.mock200 = (mockPayload?.questions || []).map(
       normalizeMock200Question
     );
+
+    let mockHardPayload = window.__MOCK200_HARD_DATA__;
+    if (!mockHardPayload) {
+      try {
+        const mockHardResponse = await fetch("./data/mock200-hard.json", {
+          cache: "no-store",
+        });
+        if (mockHardResponse.ok) {
+          mockHardPayload = await mockHardResponse.json();
+        }
+      } catch (error) {
+        // Keep silent: offline mode may block fetch.
+      }
+    }
+    state.datasets.mock200Hard = (mockHardPayload?.questions || []).map(
+      normalizeMock200Question
+    );
   } catch (error) {
     elements.questionList.textContent = t().loadError;
     console.error(error);
@@ -344,6 +374,9 @@ async function initialize() {
 
   if (state.datasets.mock200.length === 0) {
     elements.datasetSelect.options[1].disabled = true;
+  }
+  if (state.datasets.mock200Hard.length === 0) {
+    elements.datasetSelect.options[2].disabled = true;
   }
   setStaticLabels();
   switchDataset("practice75");

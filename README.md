@@ -23,8 +23,11 @@ RFP Module 2 practice quiz website built from the uploaded exam papers.
 - `data/questions-data.js` - embedded question bank for direct HTML opening
 - `data/mock200.json` - standalone 200-question mock exam bank
 - `data/mock200-data.js` - embedded 200-question mock exam bank
+- `data/mock200-hard.json` - harder 200-question mock exam bank
+- `data/mock200-hard-data.js` - embedded harder 200-question bank
 - `scripts/build_quiz_data.py` - PDF parser and Malay translation generator
 - `scripts/generate_mock200.py` - builds the separate 200-question mock exam from RFP重点
+- `scripts/generate_mock200_hard.py` - builds the harder 200-question version
 
 ## Regenerate question data
 
@@ -56,6 +59,7 @@ In `index.html`, use the top **题库 / Question set** selector:
 
 - `75题温习`
 - `200题考试`
+- `200题加强版`
 
 So you can switch to the 200-question exam mode from the same original page.
 
