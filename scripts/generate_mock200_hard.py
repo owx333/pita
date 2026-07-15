@@ -5,7 +5,6 @@ from __future__ import annotations
 
 import json
 import random
-from collections import defaultdict
 from pathlib import Path
 from typing import Dict, List, Sequence
 
@@ -41,10 +40,6 @@ def pick_random_facts(
 
 def generate_hard_questions(facts: Sequence[Fact]) -> List[Dict[str, object]]:
     rnd = random.Random(20260716)
-    chapter_map: Dict[str, List[Fact]] = defaultdict(list)
-    for fact in facts:
-        chapter_map[fact.chapter].append(fact)
-    chapter_names = list(chapter_map.keys())
 
     questions: List[Dict[str, object]] = []
     qid = 1
@@ -56,11 +51,11 @@ def generate_hard_questions(facts: Sequence[Fact]) -> List[Dict[str, object]]:
         questions.append(
             {
                 "id": qid,
-                "chapter": fact.chapter,
+                "chapter": "",
                 "question": (
-                    "【加强版·场景判断】客户访谈出现以下核心线索：\n"
+                    "客户访谈出现以下核心线索：\n"
                     f"{fact.definition}\n"
-                    "若以RFP Module 2框架做归类，最应判定为哪个术语？"
+                    "最符合的术语是下列哪一项？"
                 ),
                 "options": options,
                 "answer": answer_key(options, fact.term),
@@ -69,21 +64,21 @@ def generate_hard_questions(facts: Sequence[Fact]) -> List[Dict[str, object]]:
         )
         qid += 1
 
-        # Type 2: chapter mapping
-        other_chapters = [ch for ch in chapter_names if ch != fact.chapter]
-        chapter_distractors = rnd.sample(other_chapters, 3)
-        chapter_options = build_options(fact.chapter, chapter_distractors, rnd)
+        # Type 2: choose most accurate statement for concept
+        same_chapter_defs = pick_random_facts(facts, rnd, 3, exclude=fact, chapter=fact.chapter)
+        definition_options = build_options(
+            fact.definition,
+            [f.definition for f in same_chapter_defs],
+            rnd,
+        )
         questions.append(
             {
                 "id": qid,
-                "chapter": fact.chapter,
-                "question": (
-                    f"【加强版·章节定位】若考题重点是「{fact.term}」，"
-                    "该题最直接归入以下哪一章？"
-                ),
-                "options": chapter_options,
-                "answer": answer_key(chapter_options, fact.chapter),
-                "explanation": f"「{fact.term}」属于{fact.chapter}的核心考点。",
+                "chapter": "",
+                "question": f"关于「{fact.term}」，下列哪项描述最准确？",
+                "options": definition_options,
+                "answer": answer_key(definition_options, fact.definition),
+                "explanation": f"「{fact.term}」的正确定义为：{fact.definition}",
             }
         )
         qid += 1
@@ -92,8 +87,8 @@ def generate_hard_questions(facts: Sequence[Fact]) -> List[Dict[str, object]]:
         wrong_fact = pick_random_facts(facts, rnd, 1, exclude=fact)[0]
         wrong_statement = f"{fact.term}是指：{wrong_fact.definition}"
         true_statement_1 = f"{fact.term}是指：{fact.definition}"
-        true_statement_2 = f"{fact.term}属于「{fact.chapter}」的关键概念。"
-        true_statement_3 = f"复习{fact.term}时，应和同章概念一起对照记忆。"
+        true_statement_2 = f"在考试题中，{fact.term}常用于判断风险或保障处理逻辑。"
+        true_statement_3 = f"区分{fact.term}时，应抓住定义中的关键字。"
         options = build_options(
             wrong_statement,
             [true_statement_1, true_statement_2, true_statement_3],
@@ -102,8 +97,8 @@ def generate_hard_questions(facts: Sequence[Fact]) -> List[Dict[str, object]]:
         questions.append(
             {
                 "id": qid,
-                "chapter": fact.chapter,
-                "question": f"【加强版·辨错】以下关于「{fact.term}」的叙述，哪一项错误？",
+                "chapter": "",
+                "question": f"以下关于「{fact.term}」的叙述，哪一项错误？",
                 "options": options,
                 "answer": answer_key(options, wrong_statement),
                 "explanation": (
@@ -114,30 +109,21 @@ def generate_hard_questions(facts: Sequence[Fact]) -> List[Dict[str, object]]:
         )
         qid += 1
 
-        # Type 4: full triple matching
+        # Type 4: pure term-definition matching
         distract_facts = pick_random_facts(facts, rnd, 3, exclude=fact)
-        correct = f"{fact.chapter} | {fact.term} | {fact.definition}"
-        wrong_1 = (
-            f"{fact.chapter} | {distract_facts[0].term} | {fact.definition}"
-        )
-        wrong_2 = (
-            f"{distract_facts[1].chapter} | {fact.term} | {fact.definition}"
-        )
-        wrong_3 = (
-            f"{fact.chapter} | {fact.term} | {distract_facts[2].definition}"
-        )
+        correct = f"{fact.term} — {fact.definition}"
+        wrong_1 = f"{distract_facts[0].term} — {fact.definition}"
+        wrong_2 = f"{fact.term} — {distract_facts[1].definition}"
+        wrong_3 = f"{distract_facts[2].term} — {distract_facts[0].definition}"
         options = build_options(correct, [wrong_1, wrong_2, wrong_3], rnd)
         questions.append(
             {
                 "id": qid,
-                "chapter": fact.chapter,
-                "question": "【加强版·综合配对】下列哪一组“章节 | 术语 | 解释”完全正确？",
+                "chapter": "",
+                "question": "下列哪一组“术语—解释”配对正确？",
                 "options": options,
                 "answer": answer_key(options, correct),
-                "explanation": (
-                    f"只有「{fact.chapter} | {fact.term} | {fact.definition}」"
-                    "三项同时匹配。"
-                ),
+                "explanation": f"正确配对是：{fact.term} — {fact.definition}",
             }
         )
         qid += 1
@@ -160,8 +146,9 @@ def main() -> None:
             "difficulty": "hard",
             "questionCount": 200,
             "notes": [
-                "题型更偏向场景判断、章节定位和综合配对。",
-                "干扰项刻意靠近同章概念，提升辨析难度。",
+                "题型改为考试风格，不显示“加强版”标签前缀。",
+                "不再出现“属于哪一章”的题型，改为概念辨析与情境判断。",
+                "干扰项刻意靠近相近概念，提升辨析难度。",
             ],
             "source": {
                 "slidePdf": "/workspace/materials/Registred Financial Planning (RFP) Module 2 Tutorial  (Man) _V1.0 as of Nov 2024.pdf",
