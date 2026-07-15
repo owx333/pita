@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RFP Module 2 Trilingual Quiz</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div>
+        <h1 id="app-title">RFP Module 2 Practice Quiz</h1>
+        <p id="app-subtitle">
+          Trilingual revision website (English / 中文 / Bahasa Melayu)
+        </p>
+      </div>
+      <div class="language-controls">
+        <label for="language-select" id="language-label">Language:</label>
+        <select id="language-select">
+          <option value="en">English</option>
+          <option value="zh">中文</option>
+          <option value="ms">Bahasa Melayu</option>
+        </select>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="panel summary-panel">
+        <h2 id="summary-title">Progress</h2>
+        <p id="summary-status">Answered 0 / 75</p>
+        <p id="summary-score">Score: 0</p>
+        <div class="actions">
+          <button id="check-btn" type="button">Check answers</button>
+          <button id="reset-btn" type="button" class="secondary">Reset</button>
+        </div>
+        <p class="helper" id="summary-helper">
+          Tip: You can answer first, then check all at once.
+        </p>
+      </aside>
+
+      <section class="panel quiz-panel">
+        <div class="quiz-toolbar">
+          <h2 id="quiz-title">Questions</h2>
+          <label class="toggle">
+            <input id="show-answer-toggle" type="checkbox" />
+            <span id="show-answer-label">Show correct answer after checking</span>
+          </label>
+        </div>
+        <div id="question-list" class="question-list"></div>
+      </section>
+    </main>
+
+    <template id="question-template">
+      <article class="question-card">
+        <header class="question-header">
+          <h3 class="question-number"></h3>
+          <span class="result-badge"></span>
+        </header>
+        <p class="question-text"></p>
+        <div class="options"></div>
+        <p class="answer-line hidden"></p>
+      </article>
+    </template>
+
+    <script src="./app.js" type="module"></script>
+  </body>
+</html>

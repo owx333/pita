@@ -1,0 +1,2346 @@
+{
+  "meta": {
+    "title": {
+      "en": "RFP Module 2 Practice Quiz",
+      "zh": "RFP 第二单元练习测验",
+      "ms": "Kuiz Latihan RFP Modul 2"
+    },
+    "description": {
+      "en": "Trilingual revision quiz generated from the provided exam papers.",
+      "zh": "由提供的考卷生成的三语温习测验。",
+      "ms": "Kuiz ulang kaji tiga bahasa yang dijana daripada kertas peperiksaan yang diberi."
+    },
+    "questionCount": 75,
+    "source": {
+      "englishPdf": "/home/ubuntu/.cursor/projects/workspace/uploads/PCM2_PracExam_ENG_d34d.pdf",
+      "chinesePdf": "/home/ubuntu/.cursor/projects/workspace/uploads/PCM2_PracExam_MAN_be31.pdf"
+    }
+  },
+  "questions": [
+    {
+      "id": 1,
+      "question": {
+        "en": "Defective electrical wiring that may lead to a fire is an example of a ________.",
+        "zh": "电线缺陷可能导致的火灾是指以下哪一个情况？",
+        "ms": "Pendawaian elektrik yang rosak yang boleh mengakibatkan kebakaran adalah contoh ________."
+      },
+      "options": {
+        "a": {
+          "en": "morale hazard",
+          "zh": "道德风险诱因",
+          "ms": "bahaya moral"
+        },
+        "b": {
+          "en": "non-diversifiable risk",
+          "zh": "不可分散的风险",
+          "ms": "risiko tidak boleh dipelbagaikan"
+        },
+        "c": {
+          "en": "speculative risk",
+          "zh": "投机风险",
+          "ms": "risiko spekulatif"
+        },
+        "d": {
+          "en": "physical hazard",
+          "zh": "物理风险诱因",
+          "ms": "bahaya fizikal"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 2,
+      "question": {
+        "en": "Which of the following is not a hazard?",
+        "zh": "下列哪项不属于风险诱因？",
+        "ms": "Antara berikut, yang manakah bukan bahaya?"
+      },
+      "options": {
+        "a": {
+          "en": "Storing one ton of dynamite in a garage",
+          "zh": "在车库里储存一吨炸药",
+          "ms": "Menyimpan satu tan dinamit dalam garaj"
+        },
+        "b": {
+          "en": "Bad diet (eating lots of junk food)",
+          "zh": "饮食不良（吃大量垃圾食品）",
+          "ms": "Diet yang tidak baik (makan banyak makanan ringan)"
+        },
+        "c": {
+          "en": "Skating on thin ice",
+          "zh": "在大风险中溜冰",
+          "ms": "Meluncur di atas ais nipis"
+        },
+        "d": {
+          "en": "Getting shot accidentally while deer hunting",
+          "zh": "猎鹿时意外中枪",
+          "ms": "Ditembak secara tidak sengaja semasa memburu rusa"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 3,
+      "question": {
+        "en": "Which of the following is a true statement?",
+        "zh": "以下哪项陈述是正确的？",
+        "ms": "Antara berikut, yang manakah pernyataan yang benar?"
+      },
+      "options": {
+        "a": {
+          "en": "Liability risks are risks associated with building calamities",
+          "zh": "责任风险是与建筑灾难相关的风险。",
+          "ms": "Risiko liabiliti ialah risiko yang berkaitan dengan bencana bangunan"
+        },
+        "b": {
+          "en": "Theft is a diversifiable risk",
+          "zh": "盗窃是一种可分散的风险。",
+          "ms": "Kecurian adalah risiko yang boleh dipelbagaikan"
+        },
+        "c": {
+          "en": "Most individuals in the industrialized countries carry no insurance",
+          "zh": "工业化国家的大多数人没有保险。",
+          "ms": "Kebanyakan individu di negara perindustrian tidak membawa insurans"
+        },
+        "d": {
+          "en": "The Law of Large Numbers is used in Risk Pooling",
+          "zh": "风险分担中运用的是大数定律。",
+          "ms": "Undang-undang Nombor Besar digunakan dalam Pengumpulan Risiko"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 4,
+      "question": {
+        "en": "Loss Transfer means ________________.",
+        "zh": "损失转移是指：",
+        "ms": "Pemindahan Kerugian bermaksud ________________."
+      },
+      "options": {
+        "a": {
+          "en": "shifting the financial consequences of a loss to a third party",
+          "zh": "将损失的财务后果转嫁给第三方",
+          "ms": "mengalihkan akibat kewangan kerugian kepada pihak ketiga"
+        },
+        "b": {
+          "en": "shifting the financial consequences of a loss to a self-insurance program",
+          "zh": "将损失的财务后果转移到自保计划上",
+          "ms": "mengalihkan akibat kewangan kerugian kepada program insurans diri"
+        },
+        "c": {
+          "en": "shifting the financial consequences of a loss to a well-diversified portfolio",
+          "zh": "将损失的财务后果转移到多元化的投资组合上",
+          "ms": "mengalihkan akibat kewangan kerugian kepada portfolio yang terpelbagai dengan baik"
+        },
+        "d": {
+          "en": "shifting the financial consequences of a loss to a wealthier group of people",
+          "zh": "将损失的经济后果转嫁给更富裕的群体",
+          "ms": "mengalihkan akibat kewangan daripada kerugian kepada kumpulan orang yang lebih kaya"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 5,
+      "question": {
+        "en": "Studies have shown that there is a relationship between demographic characteristics and risk tolerance. The following are the demographic characteristics, EXCEPT _____________.",
+        "zh": "研究表明，人口统计学特征与风险承受能力之间存在关系。以下是人口统计学特征， 但不包括：",
+        "ms": "Kajian telah menunjukkan bahawa terdapat hubungan antara ciri demografi dan toleransi risiko. Berikut ialah ciri demografi, KECUALI _____________."
+      },
+      "options": {
+        "a": {
+          "en": "age",
+          "zh": "年龄",
+          "ms": "umur"
+        },
+        "b": {
+          "en": "gender",
+          "zh": "性别",
+          "ms": "jantina"
+        },
+        "c": {
+          "en": "education background",
+          "zh": "教育背景",
+          "ms": "latar belakang pendidikan"
+        },
+        "d": {
+          "en": "Hobby",
+          "zh": "爱好",
+          "ms": "hobi"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 6,
+      "question": {
+        "en": "`The war in Ukraine has affected the economy and the people of the country. The recession ratio has heightened, the unemployment ratio has increased, there has been a loss of business revenue and crime rates have worsened`. To which classification of risk does this statement refer to?",
+        "zh": "\"乌克兰战争影响了该国的经济和人民。经济衰退率加剧，失业率上升，企业收入 损失，犯罪率上升。\"这句话指的是哪一种风险分类？",
+        "ms": "`Peperangan di Ukraine telah menjejaskan ekonomi dan rakyat negara itu. Nisbah kemelesetan telah meningkat, nisbah pengangguran telah meningkat, terdapat kehilangan hasil perniagaan dan kadar jenayah bertambah buruk`. Penyataan ini merujuk kepada klasifikasi risiko yang manakah?"
+      },
+      "options": {
+        "a": {
+          "en": "Particular risk",
+          "zh": "特定风险",
+          "ms": "Risiko tertentu"
+        },
+        "b": {
+          "en": "Fundamental risk",
+          "zh": "基本面风险",
+          "ms": "Risiko asas"
+        },
+        "c": {
+          "en": "Static risk",
+          "zh": "静态风险",
+          "ms": "Risiko statik"
+        },
+        "d": {
+          "en": "Dynamic risk",
+          "zh": "动态风险",
+          "ms": "Risiko dinamik"
+        }
+      },
+      "answer": "b"
+    },
+    {
+      "id": 7,
+      "question": {
+        "en": "Which of the following risks are insurable? I. Pure risks II. Particular risks III. Fundamental risks",
+        "zh": "下列哪些风险是可受保的？ I 纯风险 II 特殊风险 III 基本风险",
+        "ms": "Antara risiko berikut, yang manakah boleh diinsuranskan? I. Risiko murni II. Risiko tertentu III. Risiko asas"
+      },
+      "options": {
+        "a": {
+          "en": "I and II",
+          "zh": "一和二",
+          "ms": "I dan II"
+        },
+        "b": {
+          "en": "I and III",
+          "zh": "一和三",
+          "ms": "I dan III"
+        },
+        "c": {
+          "en": "II and III",
+          "zh": "二和三",
+          "ms": "II dan III"
+        },
+        "d": {
+          "en": "I, II and III",
+          "zh": "一、二、三",
+          "ms": "I, II dan III"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 8,
+      "question": {
+        "en": "Assume that you own a fireworks manufacturing plant. A prospective insurer indicates it will not insure your property unless you take some loss prevention measures. Which of the following is the best loss prevention measure?",
+        "zh": "假设您拥有一家烟花制造厂。一家潜在保险公司表示，除非您采取一些防损措施， 否则它不会为您的财产投保。以下哪项是最佳的防损措施？",
+        "ms": "Andaikan anda memiliki kilang pembuatan bunga api. Seorang bakal penanggung insurans menunjukkan ia tidak akan menginsuranskan harta anda melainkan anda mengambil beberapa langkah pencegahan kerugian. Antara berikut, yang manakah merupakan langkah pencegahan kerugian yang terbaik?"
+      },
+      "options": {
+        "a": {
+          "en": "Maintain your own fire department",
+          "zh": "建立自己的消防部门",
+          "ms": "Kekalkan jabatan bomba anda sendiri"
+        },
+        "b": {
+          "en": "Create two identical facilities, each having half the capacity of the original building",
+          "zh": "创建两个相同的设施，每个设施的容量均为原有建筑的一半",
+          "ms": "Cipta dua kemudahan yang sama, setiap satu mempunyai separuh kapasiti bangunan asal"
+        },
+        "c": {
+          "en": "Put smoke alarms and fire sprinklers in each building",
+          "zh": "在每栋建筑内安装烟雾报警器和消防喷头",
+          "ms": "Letakkan penggera asap dan penyembur api di setiap bangunan"
+        },
+        "d": {
+          "en": "Do not mix ingredients until the last possible moment",
+          "zh": "等到烟花生产前的最后一刻才混合原料",
+          "ms": "Jangan campurkan bahan sehingga saat terakhir yang mungkin"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 9,
+      "question": {
+        "en": "Which of the following statements concerning individual's willingness to assume risk are correct? I. Risk averters have low tolerance for risks II. Risk indifferent people are influenced neither by the danger nor the opportunity presented by risky situations III. Risk seekers have high tolerance for risks in certain life situations",
+        "zh": "以下哪些关于个人愿意承担风险的陈述是正确的？ I. 风险规避者的风险承受能力较低。 II. 风险中立者既不受危险的影响，也不受风险情况带来的机遇的影响。 III. 风险追求者在某些生活情况下的风险承受能力较高。",
+        "ms": "Manakah antara pernyataan berikut mengenai kesediaan individu untuk menanggung risiko adalah betul? I. Penghindar risiko mempunyai toleransi yang rendah terhadap risiko II. Orang yang acuh tak acuh berisiko tidak dipengaruhi oleh bahaya mahupun peluang yang diberikan oleh situasi berisiko III. Pencari risiko mempunyai toleransi yang tinggi terhadap risiko dalam situasi kehidupan tertentu"
+      },
+      "options": {
+        "a": {
+          "en": "I and II",
+          "zh": "I和II",
+          "ms": "I dan II"
+        },
+        "b": {
+          "en": "I and III",
+          "zh": "I和III",
+          "ms": "I dan III"
+        },
+        "c": {
+          "en": "II and III",
+          "zh": "II和III",
+          "ms": "II dan III"
+        },
+        "d": {
+          "en": "I, II and III",
+          "zh": "I、II、III",
+          "ms": "I, II dan III"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 10,
+      "question": {
+        "en": "A sushi bar is concerned about lawsuits from customers who may become ill after eating raw fish. Avoidance is not an option, since a sushi bar's main product line is raw fish. Which of the following would be the most practical loss prevention technique the restaurant could use?",
+        "zh": "一家寿司店担心顾客吃了生鱼后会生病，从而遭到诉讼。回避并不是一个选择，因 为寿司店的主要产品是生鱼。以下哪项是餐厅可以使用的最实用的损失预防技术？",
+        "ms": "Sebuah bar sushi bimbang tentang tindakan undang-undang daripada pelanggan yang mungkin menjadi sakit selepas makan ikan mentah. Mengelak bukan pilihan, kerana barisan produk utama bar sushi ialah ikan mentah. Antara berikut, yang manakah merupakan teknik pencegahan kerugian yang paling praktikal yang boleh digunakan oleh restoran?"
+      },
+      "options": {
+        "a": {
+          "en": "Posting a sign in the restaurant that says \"Not responsible for anything\"",
+          "zh": "在餐厅里张贴\"不负任何责任\"的标志",
+          "ms": "Menyiarkan papan tanda di restoran yang mengatakan \"Tidak bertanggungjawab untuk apa-apa\""
+        },
+        "b": {
+          "en": "Requiring each customer to sign a legal waiver before serving them sushi",
+          "zh": "要求每位顾客在享用寿司之前签署法律豁免书",
+          "ms": "Memerlukan setiap pelanggan menandatangani penepian undang-undang sebelum menghidangkan sushi kepada mereka"
+        },
+        "c": {
+          "en": "Posting a warning on the menu that explains the risks of consuming raw fish",
+          "zh": "在菜单上张贴警告，解释食用生鱼的风险",
+          "ms": "Menyiarkan amaran pada menu yang menerangkan risiko pengambilan ikan mentah"
+        },
+        "d": {
+          "en": "Training servers to identify patrons who are feeling ill",
+          "zh": "培训服务员识别身体不适的顾客",
+          "ms": "Melatih pelayan untuk mengenal pasti pelanggan yang berasa sakit"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 11,
+      "question": {
+        "en": "Which of the following would be least important in making a self -insurance decision?",
+        "zh": "在做出自我保险决定时，以下哪项最不重要？",
+        "ms": "Antara berikut, yang manakah paling kurang penting dalam membuat keputusan insurans diri?"
+      },
+      "options": {
+        "a": {
+          "en": "The size of the risk pool",
+          "zh": "风险池规模",
+          "ms": "Saiz kolam risiko"
+        },
+        "b": {
+          "en": "Social and ethical concerns",
+          "zh": "社会和道德问题",
+          "ms": "Kebimbangan sosial dan etika"
+        },
+        "c": {
+          "en": "Historical management policy",
+          "zh": "历史管理政策",
+          "ms": "Dasar pengurusan sejarah"
+        },
+        "d": {
+          "en": "Financial ability to pay losses",
+          "zh": "财务能力支付损失",
+          "ms": "Keupayaan kewangan untuk membayar kerugian"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 12,
+      "question": {
+        "en": "Which of the following statements about the loss control is not correct?",
+        "zh": "下列哪一项关于损失控制的说法是不正确的？",
+        "ms": "Manakah antara pernyataan berikut tentang kawalan kehilangan adalah tidak betul?"
+      },
+      "options": {
+        "a": {
+          "en": "Loss control is also known as risk control",
+          "zh": "损失控制又称风险控制。",
+          "ms": "Kawalan kerugian juga dikenali sebagai kawalan risiko"
+        },
+        "b": {
+          "en": "Loss control can be classified into two categories, namely loss prevention and loss reduction",
+          "zh": "损失控制可分为两类，即预防损失和减少损失。",
+          "ms": "Kawalan kerugian boleh dikelaskan kepada dua kategori iaitu pencegahan kerugian dan pengurangan kerugian"
+        },
+        "c": {
+          "en": "A number of activities associated with loss control simultaneously reduce both loss frequency as well as severity",
+          "zh": "与损失控制相关的一系列活动可以同时降低损失的频率和严重程度。",
+          "ms": "Sebilangan aktiviti yang berkaitan dengan kawalan kerugian pada masa yang sama mengurangkan kedua-dua kekerapan kehilangan serta keterukan"
+        },
+        "d": {
+          "en": "Risk transfer is an example of loss control",
+          "zh": "风险转移是损失控制的一个例子。",
+          "ms": "Pemindahan risiko adalah contoh kawalan kerugian"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 13,
+      "question": {
+        "en": "The four techniques used in a risk management plan are risk avoidance, _______, risk retention and _______.",
+        "zh": "风险管理计划中使用的四种技术是风险规避、_______、风险保留和_______。",
+        "ms": "Empat teknik yang digunakan dalam pelan pengurusan risiko ialah mengelakkan risiko, _______, pengekalan risiko dan _______."
+      },
+      "options": {
+        "a": {
+          "en": "risk control, risk transfer",
+          "zh": "风险控制、风险转移",
+          "ms": "kawalan risiko, pemindahan risiko"
+        },
+        "b": {
+          "en": "risk clearance, risk transfer",
+          "zh": "风险清算，风险转移",
+          "ms": "pelepasan risiko, pemindahan risiko"
+        },
+        "c": {
+          "en": "risk control, property risk",
+          "zh": "风险控制、财产风险",
+          "ms": "kawalan risiko, risiko harta"
+        },
+        "d": {
+          "en": "risk transfer, risk implementation",
+          "zh": "风险转移、风险实施",
+          "ms": "pemindahan risiko, pelaksanaan risiko"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 14,
+      "question": {
+        "en": "In risk management, the replacement of one activity or substance with another which is less dangerous is termed _____________.",
+        "zh": "在风险管理中，用另一种危险性较小的活动或物质替代一种活动或物质被称为",
+        "ms": "Dalam pengurusan risiko, penggantian satu aktiviti atau bahan dengan yang lain yang kurang berbahaya dipanggil _____________."
+      },
+      "options": {
+        "a": {
+          "en": "elimination",
+          "zh": "消除",
+          "ms": "penyingkiran"
+        },
+        "b": {
+          "en": "substitution",
+          "zh": "替代",
+          "ms": "penggantian"
+        },
+        "c": {
+          "en": "separation",
+          "zh": "分离",
+          "ms": "perpisahan"
+        },
+        "d": {
+          "en": "rational planning",
+          "zh": "合理规划",
+          "ms": "perancangan yang rasional"
+        }
+      },
+      "answer": "b"
+    },
+    {
+      "id": 15,
+      "question": {
+        "en": "Examine the following list of \"risks.\" Determine which of these are \"pure risks.\" I. The risk that your antique BMW will depreciate in market value II. The risk that you will have a collision in your BMW, thus causing you to spend thousands of dollars in repair costs III. The risk that someone will steal your BMW IV. The risk that you will buy a house and lightning will strike your roof, thus causing you to have to purchase a new roof V. The risk that you will invest your life savings in a business venture that fails, thus causing you to lose your entire investment",
+        "zh": "检查以下\"风险\"列表。确定其中哪些是\"纯风险\"。 I、您的古董宝马汽车存在市场价值贬值的风险。 II. 您的宝马汽车可能会发生碰撞，从而导致您花费数千令吉的维修费用。 III. 有人盗窃您的宝马汽车的风险。 IV. 您购买房屋时屋顶可能被雷击中，从而导致您不得不购买新屋顶的风险。 V. 您将毕生的积蓄投入到一项失败的商业活动中，从而导致您失去全部投资的风 险。",
+        "ms": "Periksa senarai \"risiko\" berikut. Tentukan yang mana antara ini adalah \"risiko tulen.\" I. Risiko bahawa BMW antik anda akan menyusut nilai pasaran II. Risiko bahawa anda akan mengalami perlanggaran dalam BMW anda, sekali gus menyebabkan anda membelanjakan beribu-ribu ringgit dalam kos pembaikan III. Risiko seseorang akan mencuri BMW IV anda. Risiko anda akan membeli rumah dan petir akan menyambar bumbung anda, sekali gus menyebabkan anda terpaksa membeli bumbung baru V. Risiko anda akan melaburkan simpanan hayat anda dalam usaha perniagaan yang gagal, sekali gus menyebabkan anda kehilangan keseluruhan pelaburan anda"
+      },
+      "options": {
+        "a": {
+          "en": "I, II, III, IV, and V",
+          "zh": "I、II、III、IV 和 V",
+          "ms": "I, II, III, IV dan V"
+        },
+        "b": {
+          "en": "I, II, and IV",
+          "zh": "I、II 和 IV",
+          "ms": "I, II, dan IV"
+        },
+        "c": {
+          "en": "I, II, III, and IV",
+          "zh": "I、II、III 和 IV",
+          "ms": "I, II, III, dan IV"
+        },
+        "d": {
+          "en": "II, III, and IV",
+          "zh": "II、III 和 IV",
+          "ms": "II, III, dan IV"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 16,
+      "question": {
+        "en": "Which of the following would not be considered a need in the needs -based approach?",
+        "zh": "在基于需求的方法中，下列哪项不被视为需求？",
+        "ms": "Manakah antara berikut tidak akan dianggap sebagai keperluan dalam pendekatan berasaskan keperluan?"
+      },
+      "options": {
+        "a": {
+          "en": "Burial fund",
+          "zh": "丧葬基金",
+          "ms": "Tabung pengebumian"
+        },
+        "b": {
+          "en": "Fund to cover the equity in the home",
+          "zh": "用于弥补房屋净值的基金",
+          "ms": "Dana untuk menampung ekuiti dalam rumah"
+        },
+        "c": {
+          "en": "College education fund",
+          "zh": "大学教育基金",
+          "ms": "Tabung pendidikan kolej"
+        },
+        "d": {
+          "en": "Debt retirement fund",
+          "zh": "债务偿还基金",
+          "ms": "Kumpulan wang persaraan hutang"
+        }
+      },
+      "answer": "b"
+    },
+    {
+      "id": 17,
+      "question": {
+        "en": "In motor insurance, the sum assured is based on _____________.",
+        "zh": "在汽车保险中，保险金额基于",
+        "ms": "Dalam insurans motor, jumlah diinsuranskan adalah berdasarkan _____________."
+      },
+      "options": {
+        "a": {
+          "en": "the agent's estimation of the value of the motor vehicle's risk",
+          "zh": "代理人对机动车风险价值的评估。",
+          "ms": "anggaran ejen tentang nilai risiko kenderaan bermotor"
+        },
+        "b": {
+          "en": "the insurer's estimation of the value of the motor vehicle's risk",
+          "zh": "保险人对机动车风险价值的估计。",
+          "ms": "anggaran penanggung insurans tentang nilai risiko kenderaan bermotor"
+        },
+        "c": {
+          "en": "the market value of the vehicle at the time the insurance is bought",
+          "zh": "购买保险时的车辆的市场价值。",
+          "ms": "nilai pasaran kenderaan pada masa insurans dibeli"
+        },
+        "d": {
+          "en": "a fixed tariff rate",
+          "zh": "固定关税税率。",
+          "ms": "kadar tarif tetap"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 18,
+      "question": {
+        "en": "Using the ____ approach is the most accurate method to determine life insurance needs.",
+        "zh": "使用 ____ 方法是确定人寿保险需求最准确的方法。",
+        "ms": "Menggunakan pendekatan ____ adalah kaedah paling tepat untuk menentukan keperluan insurans hayat."
+      },
+      "options": {
+        "a": {
+          "en": "human life value",
+          "zh": "人类生命价值",
+          "ms": "nilai kehidupan manusia"
+        },
+        "b": {
+          "en": "multiple earnings",
+          "zh": "多重收益",
+          "ms": "berbilang pendapatan"
+        },
+        "c": {
+          "en": "economic identification",
+          "zh": "经济认同",
+          "ms": "pengenalan ekonomi"
+        },
+        "d": {
+          "en": "needs analysis",
+          "zh": "需求分析",
+          "ms": "analisis keperluan"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 19,
+      "question": {
+        "en": "In determining available resources to offset economic needs, you would generally not consider _______________.",
+        "zh": "在确定可运用资源以抵消受保人去世时的经济需求，你通常不会考虑",
+        "ms": "Dalam menentukan sumber yang ada untuk mengimbangi keperluan ekonomi, anda biasanya tidak akan mempertimbangkan _______________."
+      },
+      "options": {
+        "a": {
+          "en": "Retirement benefits",
+          "zh": "退休福利",
+          "ms": "Faedah persaraan"
+        },
+        "b": {
+          "en": "Earning potential of financially independent children",
+          "zh": "经济独立儿童的收入潜力",
+          "ms": "Potensi pendapatan kanak-kanak bebas kewangan"
+        },
+        "c": {
+          "en": "Earning potential of surviving spouse",
+          "zh": "配偶的收入潜力",
+          "ms": "Potensi pendapatan pasangan yang masih hidup"
+        },
+        "d": {
+          "en": "Savings",
+          "zh": "储蓄",
+          "ms": "Simpanan"
+        }
+      },
+      "answer": "b"
+    },
+    {
+      "id": 20,
+      "question": {
+        "en": "According to Dr. S.S. Huebner, the human life value is defined as __________.",
+        "zh": "根据 SS Huebner 博士的说法，人类生命的价值定义为",
+        "ms": "Menurut Dr. S.S. Huebner, nilai kehidupan manusia ditakrifkan sebagai __________."
+      },
+      "options": {
+        "a": {
+          "en": "the present value of potential income loss by dependents as a result of a person's death",
+          "zh": "因某人死亡而导致受抚养人的潜在收入损失的现值。",
+          "ms": "nilai semasa potensi kehilangan pendapatan oleh tanggungan akibat kematian seseorang"
+        },
+        "b": {
+          "en": "measuring risk associated with premature death",
+          "zh": "衡量与过早死亡相关的风险。",
+          "ms": "mengukur risiko yang berkaitan dengan kematian pramatang"
+        },
+        "c": {
+          "en": "the future value of potential income loss by dependents as a result of a person 's death",
+          "zh": "死亡而导致其受抚养人未来潜在收入损失的价值。",
+          "ms": "nilai masa hadapan potensi kehilangan pendapatan oleh tanggungan akibat kematian seseorang"
+        },
+        "d": {
+          "en": "loss of potential income for dependents",
+          "zh": "受抚养人的潜在收入损失。",
+          "ms": "kehilangan potensi pendapatan untuk tanggungan"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 21,
+      "question": {
+        "en": "Pension for civil service retirees is an example of a _____ scheme.",
+        "zh": "公务员退休金就是_____计划的一个例子。",
+        "ms": "Pencen pesara perkhidmatan awam adalah contoh skim _____."
+      },
+      "options": {
+        "a": {
+          "en": "defined-benefit",
+          "zh": "固定收益",
+          "ms": "ditakrifkan-faedah"
+        },
+        "b": {
+          "en": "defined-contribution",
+          "zh": "固定缴款",
+          "ms": "ditakrifkan-sumbangan"
+        },
+        "c": {
+          "en": "defined-hybrid",
+          "zh": "定义混合",
+          "ms": "takrif-hibrid"
+        },
+        "d": {
+          "en": "defined-retirement",
+          "zh": "确定退休",
+          "ms": "ditakrifkan-persaraan"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 22,
+      "question": {
+        "en": "The needs approach to determining the amount of life insurance considers ____.",
+        "zh": "确定人寿保险金额的需求方法考虑",
+        "ms": "Pendekatan keperluan untuk menentukan jumlah insurans hayat yang dipertimbangkan ____."
+      },
+      "options": {
+        "a": {
+          "en": "family income",
+          "zh": "家庭收入",
+          "ms": "pendapatan keluarga"
+        },
+        "b": {
+          "en": "paying off debts",
+          "zh": "偿还债务",
+          "ms": "membayar hutang"
+        },
+        "c": {
+          "en": "specific financial needs",
+          "zh": "特定财务需求",
+          "ms": "keperluan kewangan tertentu"
+        },
+        "d": {
+          "en": "all of the above",
+          "zh": "上述所有的",
+          "ms": "semua di atas"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 23,
+      "question": {
+        "en": "A double storey house with a current construction value of RM520,000 is partially destroyed by fire. Replacement cost is estimated at RM225,000 and depreciation is RM25,000. How much can the owner expect from an insurance policy that compensates for the loss on an actual cash value basis?",
+        "zh": "一栋双层房屋的目前建筑价值为 RM520,000。 房屋一些部分被大火烧毁。重置成 本估计为 RM225,000，折旧为 RM25,000。如果保险单以实际现金价值为依据赔偿损失， 业主可以期望获得多少赔偿？",
+        "ms": "Sebuah rumah dua tingkat dengan nilai pembinaan semasa RM520,000 sebahagiannya musnah terbakar. Kos penggantian dianggarkan RM225,000 dan susut nilai ialah RM25,000. Berapa banyak yang boleh diharapkan oleh pemilik daripada polisi insurans yang mengimbangi kerugian berdasarkan nilai tunai sebenar?"
+      },
+      "options": {
+        "a": {
+          "en": "RM520,000",
+          "zh": "RM520,000",
+          "ms": "RM520,000"
+        },
+        "b": {
+          "en": "RM250,000",
+          "zh": "RM250,000",
+          "ms": "RM250,000"
+        },
+        "c": {
+          "en": "RM225,000",
+          "zh": "RM225,000",
+          "ms": "RM225,000"
+        },
+        "d": {
+          "en": "RM200,000",
+          "zh": "RM200,000",
+          "ms": "RM200,000"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 24,
+      "question": {
+        "en": "Peter is the General Manager of Zen Sdn Bhd. As a key-man, his annual compensation is RM330,000. The current annual salary of an executive to perform his routine duties is RM30,000. It is estimated that it takes three years to train a successor to fully replace Peter. What is the value of the key-man?",
+        "zh": "Peter 是 Zen Sdn Bhd 的总经理，作为关键人物，他的年薪是 RM330,000。目前 执行日常工作的高管的年薪是 RM30,000。估计需要三年时间才能培养出一个接班人来 完全取代 Peter。此关键人物的价值是多少？",
+        "ms": "Peter ialah Pengurus Besar Zen Sdn Bhd. Sebagai orang penting, pampasan tahunannya ialah RM330,000. Gaji tahunan semasa eksekutif untuk melaksanakan tugas rutinnya ialah RM30,000. Dianggarkan mengambil masa tiga tahun untuk melatih pengganti bagi menggantikan Peter sepenuhnya. Apakah nilai orang kunci?"
+      },
+      "options": {
+        "a": {
+          "en": "RM300,000",
+          "zh": "RM300,000",
+          "ms": "RM300,000"
+        },
+        "b": {
+          "en": "RM330,000",
+          "zh": "RM330,000",
+          "ms": "RM330,000"
+        },
+        "c": {
+          "en": "RM600,000",
+          "zh": "RM600,000",
+          "ms": "RM600,000"
+        },
+        "d": {
+          "en": "RM900,000",
+          "zh": "RM900,000",
+          "ms": "RM900,000"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 25,
+      "question": {
+        "en": "Patrick is 33 years old and expected to retire at age 58. His annual earnings are RM80,000, out of which RM60,000 is needed to support his family yearly for the next",
+        "zh": "Patrick 33 岁，预计 58 岁退休。他的年收入为 RM80,000，其中 RM60,000需要 在未来 25 年内每年维持其家庭生计。假设他的收入每年增长 4%，则他的人生价值预 计为",
+        "ms": "Patrick berumur 33 tahun dan dijangka bersara pada usia 58 tahun. Pendapatan tahunannya ialah RM80,000, yang mana RM60,000 diperlukan untuk menyara keluarganya setiap tahun untuk seterusnya"
+      },
+      "options": {
+        "a": {
+          "en": "",
+          "zh": "RM974,817.79",
+          "ms": ""
+        },
+        "b": {
+          "en": "",
+          "zh": "RM2,598,704.68",
+          "ms": ""
+        },
+        "c": {
+          "en": "",
+          "zh": "RM159,950.18",
+          "ms": ""
+        },
+        "d": {
+          "en": "",
+          "zh": "RM970,000.05",
+          "ms": ""
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 26,
+      "question": {
+        "en": "This policy has the features of pure endowment and term combined. Whether the insured dies within or lives through the period of coverage, the sum insured plus bonuses are paid out. This policy is _________________.",
+        "zh": "本保单兼具纯储蓄和定期寿险的特点。无论受保人在保险期间内身故或生存，均 可获得保险金额和红利。具有以上特点的保单是：",
+        "ms": "Polisi ini mempunyai ciri-ciri endowmen tulen dan gabungan istilah. Sama ada insured meninggal dunia dalam tempoh atau hidup sepanjang tempoh perlindungan, jumlah diinsuranskan ditambah bonus dibayar. Dasar ini ialah _________________."
+      },
+      "options": {
+        "a": {
+          "en": "Endowment policy",
+          "zh": "储蓄保单",
+          "ms": "Dasar wakaf"
+        },
+        "b": {
+          "en": "Term policy",
+          "zh": "定期保险",
+          "ms": "Dasar jangka masa"
+        },
+        "c": {
+          "en": "Whole life policy",
+          "zh": "终身寿险保单",
+          "ms": "Polisi seumur hidup"
+        },
+        "d": {
+          "en": "Modified endowment policy",
+          "zh": "修改后的储蓄保单",
+          "ms": "Dasar endowmen yang diubah suai"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 27,
+      "question": {
+        "en": "An investment-linked policy has several advantages. Which one of the following is not an advantage of an investment-linked plan?",
+        "zh": "投资连结保险有多种优势。下列哪一项不是投资连结计划的优势？",
+        "ms": "Polisi berkaitan pelaburan mempunyai beberapa kelebihan. Yang manakah antara berikut bukan kelebihan pelan berkaitan pelaburan?"
+      },
+      "options": {
+        "a": {
+          "en": "Premium top-up option",
+          "zh": "充值保费选项",
+          "ms": "Pilihan tambah nilai premium"
+        },
+        "b": {
+          "en": "No surrender value",
+          "zh": "无退保价值",
+          "ms": "Tiada nilai serahan"
+        },
+        "c": {
+          "en": "Switching option",
+          "zh": "切换投资基金单位选项",
+          "ms": "Pilihan menukar"
+        },
+        "d": {
+          "en": "Partial withdrawal option",
+          "zh": "部分提款选项",
+          "ms": "Pilihan pengeluaran separa"
+        }
+      },
+      "answer": "b"
+    },
+    {
+      "id": 28,
+      "question": {
+        "en": "Encik Ahmad has a policy that covers death only and is renewable every five years. What type of policy is this likely to be?",
+        "zh": "Encik Ahmad 有一份仅涵盖死亡的保单，每五年可续保一次。这可能是什么类型 的保单？",
+        "ms": "Encik Ahmad mempunyai polisi yang melindungi kematian sahaja dan boleh diperbaharui setiap lima tahun. Apakah jenis dasar ini mungkin?"
+      },
+      "options": {
+        "a": {
+          "en": "5-year term (without TPD)",
+          "zh": "5 年期限（无 TPD）",
+          "ms": "Tempoh 5 tahun (tanpa TPD)"
+        },
+        "b": {
+          "en": "5-year term (with TPD)",
+          "zh": "5 年期限（包括 TPD）",
+          "ms": "Tempoh 5 tahun (dengan TPD)"
+        },
+        "c": {
+          "en": "5-year limited payment whole life",
+          "zh": "5年有限付款终身",
+          "ms": "Bayaran terhad 5 tahun sepanjang hayat"
+        },
+        "d": {
+          "en": "5-year endowment",
+          "zh": "5年期捐赠",
+          "ms": "Wakaf 5 tahun"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 29,
+      "question": {
+        "en": "Under the Financial Services Act 2013, what is the lowest legal age for a proposer to be able to enter into an insurance contract with an insurer?",
+        "zh": "根据 2013 年金融服务法，投保人与保险公司签订保险合同的最低法定年龄是多 少岁？",
+        "ms": "Di bawah Akta Perkhidmatan Kewangan 2013, apakah umur undang-undang yang paling rendah untuk pencadang boleh membuat kontrak insurans dengan syarikat insurans?"
+      },
+      "options": {
+        "a": {
+          "en": "16 years of age",
+          "zh": "16岁",
+          "ms": "umur 16 tahun"
+        },
+        "b": {
+          "en": "18 years of age",
+          "zh": "18岁",
+          "ms": "umur 18 tahun"
+        },
+        "c": {
+          "en": "21 years of age",
+          "zh": "21岁",
+          "ms": "umur 21 tahun"
+        },
+        "d": {
+          "en": "25 years of age",
+          "zh": "25岁",
+          "ms": "umur 25 tahun"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 30,
+      "question": {
+        "en": "The clause that a life insurer cannot contest a claim based on the information provided at the time of application after a given period after the date of issue or date of reinstatement whichever is later is known as ___________.",
+        "zh": "人寿保险公司不得在保单签发日或恢复日（以较晚者为准）后的一定期限内，根 据投保人申请时提供的信息对索赔提出异议，该条款称为",
+        "ms": "Klausa bahawa penanggung insurans hayat tidak boleh mempertikaikan tuntutan berdasarkan maklumat yang diberikan pada masa permohonan selepas tempoh tertentu selepas tarikh dikeluarkan atau tarikh pengembalian semula yang mana kemudian dikenali sebagai ___________."
+      },
+      "options": {
+        "a": {
+          "en": "the suicide clause",
+          "zh": "自杀条款。",
+          "ms": "fasal bunuh diri"
+        },
+        "b": {
+          "en": "the settlement option",
+          "zh": "解决选项。",
+          "ms": "pilihan penyelesaian"
+        },
+        "c": {
+          "en": "the incontestability clause",
+          "zh": "不可争辩条款。",
+          "ms": "klausa tidak boleh dipertikaikan"
+        },
+        "d": {
+          "en": "non-forfeiture provisions",
+          "zh": "不没收条款。",
+          "ms": "peruntukan bukan pelucuthakan"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 31,
+      "question": {
+        "en": "Some of the key features of investment-linked plans include the ____________. I. Ability to make premium top-ups II, Flexibility of switching the units from one fund to another III. Option of withdrawing all or a portion of the units in the investment-linked fund",
+        "zh": "投资连结计划的一些主要特点包括： I. 能够补充保费。 II. 能够灵活地将基金单位从一个基金转换到另一个基金。 III. 能够选择提取投资联结基金中的全部或部分单位。",
+        "ms": "Beberapa ciri utama pelan berkaitan pelaburan termasuk ____________. I. Keupayaan untuk membuat tambah nilai premium II, Fleksibiliti menukar unit daripada satu dana kepada yang lain III. Pilihan untuk mengeluarkan semua atau sebahagian daripada unit dalam dana berkaitan pelaburan"
+      },
+      "options": {
+        "a": {
+          "en": "I only",
+          "zh": "I",
+          "ms": "saya sahaja"
+        },
+        "b": {
+          "en": "I and II",
+          "zh": "I和II",
+          "ms": "I dan II"
+        },
+        "c": {
+          "en": "II and III",
+          "zh": "II和III",
+          "ms": "II dan III"
+        },
+        "d": {
+          "en": "I, II and III",
+          "zh": "I、II、III",
+          "ms": "I, II dan III"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 32,
+      "question": {
+        "en": "The charges for investment-linked life insurance are likely to be a combination of two or more of the following: I. annual fund management fee II. mortality charges III. surrender charges IV. policy fee",
+        "zh": "投资连结型人寿保险的费用可能是下列两项或多项的组合： I.年度基金管理费。 II.死亡费用。 III.退保费用。 IV.保单费。",
+        "ms": "Caj untuk insurans hayat berkaitan pelaburan mungkin merupakan gabungan dua atau lebih daripada yang berikut: I. yuran pengurusan dana tahunan II. caj kematian III. caj serahan IV. yuran polisi"
+      },
+      "options": {
+        "a": {
+          "en": "I, II and III",
+          "zh": "一、二、三",
+          "ms": "I, II dan III"
+        },
+        "b": {
+          "en": "I, III and IV",
+          "zh": "I、III 和 IV",
+          "ms": "I, III dan IV"
+        },
+        "c": {
+          "en": "II, III and IV",
+          "zh": "II、III 和 IV",
+          "ms": "II, III dan IV"
+        },
+        "d": {
+          "en": "I, II, III and IV",
+          "zh": "I、II、III 和 IV",
+          "ms": "I, II, III dan IV"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 33,
+      "question": {
+        "en": "What type of life policy will you recommend to a young graduate who has just taken a housing loan and wishes to cover the indebtedness at minimum cost?",
+        "zh": "对于刚刚获得房贷款并希望以最低成本偿还债务的年轻毕业生，您会推荐哪种人 寿保险？",
+        "ms": "Apakah jenis polisi hayat yang akan anda cadangkan kepada graduan muda yang baru mengambil pinjaman perumahan dan ingin menampung keberhutangan pada kos minimum?"
+      },
+      "options": {
+        "a": {
+          "en": "An accident policy",
+          "zh": "意外保险",
+          "ms": "Polisi kemalangan"
+        },
+        "b": {
+          "en": "An increasing term policy",
+          "zh": "递增期限保险",
+          "ms": "Dasar jangka masa yang semakin meningkat"
+        },
+        "c": {
+          "en": "A decreasing term policy",
+          "zh": "递减期限保险",
+          "ms": "Dasar jangka berkurangan"
+        },
+        "d": {
+          "en": "A whole life policy",
+          "zh": "终身保险",
+          "ms": "Polisi seumur hidup"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 34,
+      "question": {
+        "en": "Which of the following health insurance is often issued in conjunction with a life policy and covers a list of dread diseases only?",
+        "zh": "下列哪种健康保险通常与人寿保险一起签发，并且仅涵盖一系列严重疾病？",
+        "ms": "Manakah antara berikut insurans kesihatan yang sering dikeluarkan bersama polisi hayat dan meliputi senarai penyakit yang menakutkan sahaja?"
+      },
+      "options": {
+        "a": {
+          "en": "Critical illnesses insurance",
+          "zh": "重大疾病保险",
+          "ms": "Insurans penyakit kritikal"
+        },
+        "b": {
+          "en": "Healthcare rider insurance",
+          "zh": "医疗保险附加险",
+          "ms": "Insurans rider penjagaan kesihatan"
+        },
+        "c": {
+          "en": "Major medical insurance",
+          "zh": "重大医疗保险",
+          "ms": "Insurans perubatan utama"
+        },
+        "d": {
+          "en": "Hospital and surgical insurance",
+          "zh": "医院和手术保险",
+          "ms": "Insurans hospital dan pembedahan"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 35,
+      "question": {
+        "en": "Terms of payment under your health insurance are governed by ___________.",
+        "zh": "您的健康保险付款条款受以下哪个条款管辖?",
+        "ms": "Syarat pembayaran di bawah insurans kesihatan anda dikawal oleh ___________."
+      },
+      "options": {
+        "a": {
+          "en": "Annual limits",
+          "zh": "年度限额",
+          "ms": "Had tahunan"
+        },
+        "b": {
+          "en": "Lifetime limits",
+          "zh": "终身限额",
+          "ms": "Had seumur hidup"
+        },
+        "c": {
+          "en": "Co-insurance",
+          "zh": "共同保险",
+          "ms": "Insurans bersama"
+        },
+        "d": {
+          "en": "All of the above",
+          "zh": "上述所有的",
+          "ms": "Semua di atas"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 36,
+      "question": {
+        "en": "Which of the following changes would tend to decrease the premium on a disability policy?",
+        "zh": "以下哪项变化会降低残疾保险的保费？",
+        "ms": "Manakah antara perubahan berikut akan cenderung mengurangkan premium bagi polisi hilang upaya?"
+      },
+      "options": {
+        "a": {
+          "en": "A shorter waiting period",
+          "zh": "更短的等待时间",
+          "ms": "Tempoh menunggu yang lebih singkat"
+        },
+        "b": {
+          "en": "Use of 'own occupation' definition of disability instead of 'any occupation to which reasonably suited'",
+          "zh": "使用\"自身职业\"来定义残疾，而不是\"任何合理适合的职业\"",
+          "ms": "Penggunaan takrifan 'pekerjaan sendiri' tentang ketidakupayaan dan bukannya 'apa-apa pekerjaan yang sesuai dengannya'"
+        },
+        "c": {
+          "en": "Increasing the benefit level from 65% to 75% of prior earnings",
+          "zh": "将福利水平从之前收入的 65% 提高到 75%",
+          "ms": "Meningkatkan tahap faedah daripada 65% kepada 75% daripada pendapatan terdahulu"
+        },
+        "d": {
+          "en": "Lowering the payment period from until age 70 to until age 65",
+          "zh": "将缴费期限从 70 岁缩短至 65 岁",
+          "ms": "Menurunkan tempoh pembayaran daripada sehingga umur 70 tahun kepada sehingga umur 65 tahun"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 37,
+      "question": {
+        "en": "Some of the common EXCLUSION found in major medical plans are _______. I. dental care II. pregnancy and childbirth (normal) III. optional cosmetic surgery IV. expenses incurred as a result of war",
+        "zh": "主要医疗保险计划中的一些常见的不受保项目包括： I. 牙科护理； II. 怀孕和分娩（正常）； III. 可选的整容手术； IV. 因战争而产生的费用。",
+        "ms": "Beberapa PENGECUALIAN yang biasa ditemui dalam pelan perubatan utama ialah _______. I. penjagaan gigi II. kehamilan dan bersalin (normal) III. pembedahan kosmetik pilihan IV. perbelanjaan yang ditanggung akibat peperangan"
+      },
+      "options": {
+        "a": {
+          "en": "I, II and IV",
+          "zh": "I、II 和 IV",
+          "ms": "I, II dan IV"
+        },
+        "b": {
+          "en": "I, II and III",
+          "zh": "I、II、III",
+          "ms": "I, II dan III"
+        },
+        "c": {
+          "en": "I, III and IV",
+          "zh": "I、III 和 IV",
+          "ms": "I, III dan IV"
+        },
+        "d": {
+          "en": "I, II, III and IV",
+          "zh": "I、II、III 和 IV",
+          "ms": "I, II, III dan IV"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 38,
+      "question": {
+        "en": "Long-term healthcare covers ____________, which is defined as medical care ordered by a physician and provided by a registered nurse, licensed practical nurse or licensed therapist 24 hours a day.",
+        "zh": "长期医疗保健涵盖 ____________，其定义为由医生安排并由注册护士、执业护士 或执业治疗师全天 24 小时提供的医疗服务。",
+        "ms": "Penjagaan kesihatan jangka panjang meliputi ____________, yang ditakrifkan sebagai penjagaan perubatan yang diperintahkan oleh doktor dan disediakan oleh jururawat berdaftar, jururawat praktikal berlesen atau ahli terapi berlesen 24 jam sehari."
+      },
+      "options": {
+        "a": {
+          "en": "custodian care",
+          "zh": "监护照顾",
+          "ms": "penjagaan penjaga"
+        },
+        "b": {
+          "en": "intermediate nursing care",
+          "zh": "中级护理",
+          "ms": "penjagaan kejururawatan pertengahan"
+        },
+        "c": {
+          "en": "skilled nursing care",
+          "zh": "专业护理",
+          "ms": "penjagaan kejururawatan mahir"
+        },
+        "d": {
+          "en": "intensive home care",
+          "zh": "重症家庭护理",
+          "ms": "penjagaan rumah yang intensif"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 39,
+      "question": {
+        "en": "Suppose Janet, a skilled neuro -surgeon, became unable to perform surgery because of severe arthritis. Which of the following is NOT true?",
+        "zh": "假设 Janet 是一位经验丰富的神经外科医生，由于严重的关节炎而无法进行手术。 以下哪项说法不正确？",
+        "ms": "Katakan Janet, pakar bedah saraf yang mahir, tidak dapat melakukan pembedahan kerana arthritis yang teruk. Antara berikut, yang manakah TIDAK benar?"
+      },
+      "options": {
+        "a": {
+          "en": "If Janet has a disability policy with an \"own occupation\" definition of disability, she will probably collect some benefits",
+          "zh": "如果珍妮特有一份残疾保险，其中将残疾定义为 \"自身职业\"，她可能会获得一 些福利。",
+          "ms": "Jika Janet mempunyai dasar hilang upaya dengan takrifan \"pekerjaan sendiri\" tentang ketidakupayaan, dia mungkin akan mengumpul beberapa faedah"
+        },
+        "b": {
+          "en": "If the policy contains an \"own occupation\" definition of disability, the insurer will provide coverage only if Janet would not be able to perform another type of job such as teaching or consulting",
+          "zh": "如果保单中包含\"自身职业\"残疾定义，则仅当 Janet 无法从事其他类型的工作 （例如教学或咨询）时，保险公司才会提供保险。",
+          "ms": "Jika polisi mengandungi takrifan hilang upaya \"pekerjaan sendiri\", syarikat insurans akan menyediakan perlindungan hanya jika Janet tidak dapat melaksanakan jenis pekerjaan lain seperti mengajar atau berunding."
+        },
+        "c": {
+          "en": "If the policy contains an \"any occupation for which reasonable suited\" definition of disability, the insurer will attempt to determine if there is another job for which Janet is suited and is still able to perform",
+          "zh": "如果保单包含\"任何合理适合的职业 \"的残疾定义，保险公司将尝试确定 Janet 是否适合其他工作并且仍然能够胜任",
+          "ms": "Jika polisi mengandungi takrifan hilang upaya \"apa-apa pekerjaan yang sesuai untuknya\", syarikat insurans akan cuba menentukan sama ada terdapat pekerjaan lain yang Janet sesuai dan masih mampu melaksanakannya."
+        },
+        "d": {
+          "en": "A policy with an \"own occupation\" definition is generally more expensive than a policy with an \"any occupation for which reasonable suited\" definition of disability",
+          "zh": "具有\"自身职业\"定义的保险单通常比具有 \"任何合理适合的职业 \"残疾定义的 保险单更昂贵",
+          "ms": "Polisi dengan takrifan \"pekerjaan sendiri\" secara amnya lebih mahal daripada polisi dengan takrifan kecacatan \"sebarang pekerjaan yang munasabah sesuai\""
+        }
+      },
+      "answer": "b"
+    },
+    {
+      "id": 40,
+      "question": {
+        "en": "Which of the following is true about long-term health care plan? I. It is rarely found in Malaysia II. It pays a daily or monthly benefit III. It covers medical or custodial care received in a nursing facility, hospital or at home",
+        "zh": "以下哪项关于长期医疗保健计划的说法是正确的？ I.在马来西亚是不常见的保健计划 II.按日或按月支付福利 III. 涵盖在护理机构、医院或家中接受的医疗或监护护理",
+        "ms": "Antara berikut, yang manakah benar tentang pelan penjagaan kesihatan jangka panjang? I. Ia jarang ditemui di Malaysia II. Ia membayar faedah harian atau bulanan III. Ia meliputi penjagaan perubatan atau jagaan yang diterima di kemudahan kejururawatan, hospital atau di rumah"
+      },
+      "options": {
+        "a": {
+          "en": "I & II only",
+          "zh": "I & II",
+          "ms": "I & II sahaja"
+        },
+        "b": {
+          "en": "I & III only",
+          "zh": "I & III",
+          "ms": "I & III sahaja"
+        },
+        "c": {
+          "en": "II & III only",
+          "zh": "II 和 III",
+          "ms": "II & III sahaja"
+        },
+        "d": {
+          "en": "I, II & III",
+          "zh": "I、II和III",
+          "ms": "I, II & III"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 41,
+      "question": {
+        "en": "Which of the following annuity policies does not depend on human life to make periodic payment?",
+        "zh": "下列哪种年金保险不根据受保人的生命来定期给付？",
+        "ms": "Antara polisi anuiti berikut, yang manakah tidak bergantung kepada kehidupan manusia untuk membuat pembayaran berkala?"
+      },
+      "options": {
+        "a": {
+          "en": "Pure life annuity",
+          "zh": "纯寿命年金",
+          "ms": "Anuiti kehidupan tulen"
+        },
+        "b": {
+          "en": "Annuity certain",
+          "zh": "定期年金",
+          "ms": "Anuiti pasti"
+        },
+        "c": {
+          "en": "Joint-life annuity",
+          "zh": "联合寿命年金",
+          "ms": "Anuiti kehidupan bersama"
+        },
+        "d": {
+          "en": "Survivor annuity",
+          "zh": "幸存者年金",
+          "ms": "Anuiti yang masih hidup"
+        }
+      },
+      "answer": "b"
+    },
+    {
+      "id": 42,
+      "question": {
+        "en": "Which of the following best describe the type of annuity that provides payments until the death of the last annuitant?",
+        "zh": ". 以下哪项最能描述提供付款直至最后一位年金领取人死亡的年金类型？",
+        "ms": "Antara berikut, yang manakah menerangkan jenis anuiti yang menyediakan pembayaran sehingga kematian anuiti terakhir?"
+      },
+      "options": {
+        "a": {
+          "en": "Joint-life annuity",
+          "zh": "联合寿命年金",
+          "ms": "Anuiti kehidupan bersama"
+        },
+        "b": {
+          "en": "Joint and survivor annuity",
+          "zh": "联合寿命年金和幸存者年金",
+          "ms": "Anuiti bersama dan terselamat"
+        },
+        "c": {
+          "en": "Immediate annuity",
+          "zh": "即期年金",
+          "ms": "Anuiti serta-merta"
+        },
+        "d": {
+          "en": "Pure life annuity",
+          "zh": "纯寿险年金",
+          "ms": "Anuiti kehidupan tulen"
+        }
+      },
+      "answer": "b"
+    },
+    {
+      "id": 43,
+      "question": {
+        "en": "An annuity product has two phases in its life cycle:",
+        "zh": "年金产品的生命周期分为两个阶段：",
+        "ms": "Produk anuiti mempunyai dua fasa dalam kitaran hayatnya:"
+      },
+      "options": {
+        "a": {
+          "en": "accumulation phase and receiving phase",
+          "zh": "积累阶段和接收阶段。",
+          "ms": "fasa pengumpulan dan fasa penerimaan"
+        },
+        "b": {
+          "en": "liquidation phase and receiving phase",
+          "zh": "清算阶段和接收阶段。",
+          "ms": "fasa pembubaran dan fasa penerimaan"
+        },
+        "c": {
+          "en": "accumulation phase and liquidation phase",
+          "zh": "积累阶段和清算阶段。",
+          "ms": "fasa pengumpulan dan fasa pembubaran"
+        },
+        "d": {
+          "en": "accumulation phase and distributing phase",
+          "zh": "积累阶段和分配阶段。",
+          "ms": "fasa pengumpulan dan fasa pengagihan"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 44,
+      "question": {
+        "en": "Hassan purchased a life income annuity with a 10 -year period certain. Hassan named himself as the annuitant and the payee, and he named his wife, Katijah, as the contingent payee of the annuity. Hassan died 16 years after benefit payments began. Which of the following statements is correct?",
+        "zh": "Hassan 购买了一份期限为 10 年的终身收入年金。Hassan 将自己指定为年金受 益人和收款人，并将他的妻子 Katijah 指定为年金的或有收款人。Hassan 在福利支 付开始后 16 年去世。以下哪项陈述是正确的？",
+        "ms": "Hassan membeli anuiti pendapatan seumur hidup dengan tempoh 10 tahun tertentu. Hassan menamakan dirinya sebagai penerima anuiti dan penerima, dan dia menamakan isterinya, Katijah, sebagai penerima kontinjen anuiti. Hassan meninggal dunia 16 tahun selepas pembayaran faedah bermula. Manakah antara pernyataan berikut yang betul?"
+      },
+      "options": {
+        "a": {
+          "en": "No further benefits are payable to Katijah",
+          "zh": "不再向 Katijah 发放福利",
+          "ms": "Tiada faedah lanjut akan dibayar kepada Katijah"
+        },
+        "b": {
+          "en": "Benefits are payable to Katijah for 4 more years",
+          "zh": "Katijah 可获得额外 4 年的福利",
+          "ms": "Manfaat akan dibayar kepada Katijah selama 4 tahun lagi"
+        },
+        "c": {
+          "en": "Benefits are payable to Katijah for 10 more years",
+          "zh": "Katijah 可获得额外 10 年的福利",
+          "ms": "Manfaat akan dibayar kepada Katijah selama 10 tahun lagi"
+        },
+        "d": {
+          "en": "Benefits are payable to Katijah until her death .",
+          "zh": "福利将支付给 Katijah 直至她去世",
+          "ms": "Faedah akan dibayar kepada Katijah sehingga kematiannya."
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 45,
+      "question": {
+        "en": "Mr. Kanesan asks you to recommend a policy that will cover the faulty design and construction of his machines and damage during installation. Which of the following policies is suitable for his needs?",
+        "zh": "Kanesan 先生请您推荐一款保险，该保险可承保其机器的设计、制造缺陷以及安 装过程中的损坏。下列哪一款保险适合他的需求？",
+        "ms": "En. Kanesan meminta anda mencadangkan polisi yang akan melindungi reka bentuk dan pembinaan mesin yang rosak dan kerosakan semasa pemasangan. Antara polisi berikut, yang manakah sesuai untuk keperluannya?"
+      },
+      "options": {
+        "a": {
+          "en": "Machinery breakdown policy",
+          "zh": "机械故障政策",
+          "ms": "Dasar kerosakan jentera"
+        },
+        "b": {
+          "en": "Contractor's all risk policy",
+          "zh": "承包商一切险保单",
+          "ms": "Polisi semua risiko kontraktor"
+        },
+        "c": {
+          "en": "Comprehensive machine policy",
+          "zh": "综合机器政策",
+          "ms": "Dasar mesin yang komprehensif"
+        },
+        "d": {
+          "en": "Loss of profit policy",
+          "zh": "利润损失保险",
+          "ms": "Polisi kehilangan keuntungan"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 46,
+      "question": {
+        "en": "Mr. Hew was compensated by insurer when his machine broke down. The amount paid covers loss of profits due to the interruption og the production because of the machine breakdown. What sort of policy is Mr. Hew likely to be carrying?",
+        "zh": "邱先生的机器发生故障时，保险公司 给与他赔偿。赔偿金额涵盖了机器故障导致 生产中断而造成的利润损失。邱先生可能购买哪种保险？",
+        "ms": "Encik Hew telah diberi pampasan oleh syarikat insurans apabila mesinnya rosak. Jumlah yang dibayar meliputi kehilangan keuntungan akibat gangguan dan pengeluaran kerana kerosakan mesin. Apakah jenis polisi yang mungkin dibawa oleh Encik Hew?"
+      },
+      "options": {
+        "a": {
+          "en": "Fire (consequential loss) policy",
+          "zh": "火灾（间接损失）保险",
+          "ms": "Polisi kebakaran (kerugian berbangkit)."
+        },
+        "b": {
+          "en": "Machinery & equipment policy",
+          "zh": "机械设备政策",
+          "ms": "Dasar jentera & peralatan"
+        },
+        "c": {
+          "en": "Machinery breakdown (loss of profit) policy",
+          "zh": "机械故障（利润损失）保险",
+          "ms": "Polisi kerosakan jentera (kerugian keuntungan)."
+        },
+        "d": {
+          "en": "Liability (loss of profit) policy",
+          "zh": "责任（利润损失）保险",
+          "ms": "Polisi liabiliti (kerugian keuntungan)."
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 47,
+      "question": {
+        "en": "Which of the following falls under the Employer's Liability Policy scope of cover? An employer's liability at law for accidents to his employee arising out of: I. The employer's personal negligence II. The employer's breach of duty in taking adequate safety measures III. The employee's own negligence",
+        "zh": "以下哪项属于雇主责任险的承保范围？雇主对雇员因下列情况造成的意外事故负 有的法律责任： I. 雇主的个人过失 II.雇主未采取充分安全措施 III.员工自身的疏忽",
+        "ms": "Antara berikut, yang manakah termasuk di bawah skop perlindungan Polisi Liabiliti Majikan? Tanggungan majikan di sisi undang-undang untuk kemalangan terhadap pekerjanya yang berpunca daripada: I. Kecuaian peribadi majikan II. Pelanggaran kewajipan majikan dalam mengambil langkah keselamatan yang mencukupi III. Kecuaian pekerja itu sendiri"
+      },
+      "options": {
+        "a": {
+          "en": "I only",
+          "zh": "I",
+          "ms": "saya sahaja"
+        },
+        "b": {
+          "en": "II only",
+          "zh": "II",
+          "ms": "II sahaja"
+        },
+        "c": {
+          "en": "I & II only",
+          "zh": "I 和 II",
+          "ms": "I & II sahaja"
+        },
+        "d": {
+          "en": "I & III only",
+          "zh": "I 和 III",
+          "ms": "I & III sahaja"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 48,
+      "question": {
+        "en": "Your homeowners' insurance will cover which of the following? I. The meter-reader's torn shorts, which were eaten by Blacky, your dog II. Your attached garage destroyed by typhoon III. Your new Proton Saga parked inside the garage",
+        "zh": "您的房屋保险涵盖以下哪项内容？ I. 抄电表员的短裤被你的狗撕破 II. 您的车库被台风摧毁 III. 您新的 Proton Saga 停在车库内",
+        "ms": "Insurans pemilik rumah anda akan melindungi yang manakah antara berikut? I. Seluar pendek pembaca meter yang koyak, yang dimakan oleh Blacky, anjing awak II. Garaj terpasang anda musnah akibat taufan III. Proton Saga baharu anda diletakkan di dalam garaj"
+      },
+      "options": {
+        "a": {
+          "en": "I & II only",
+          "zh": "I 和 II",
+          "ms": "I & II sahaja"
+        },
+        "b": {
+          "en": "I & III only",
+          "zh": "I 和 III",
+          "ms": "I & III sahaja"
+        },
+        "c": {
+          "en": "II & III only",
+          "zh": "II 和 III",
+          "ms": "II & III sahaja"
+        },
+        "d": {
+          "en": "I, II & III",
+          "zh": "I、II、III",
+          "ms": "I, II & III"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 49,
+      "question": {
+        "en": "The right of ____________ gives the insurer the right to recover its costs from the at-fault party after the company has paid a claim to its insured.",
+        "zh": "____________ 权利赋予保险公司在向被保险人支付索赔后向过错方收回其成本的 权利。",
+        "ms": "Hak ____________ memberi insurer hak untuk mendapatkan semula kosnya daripada pihak yang bersalah selepas syarikat membayar tuntutan kepada insurednya."
+      },
+      "options": {
+        "a": {
+          "en": "Subrogation",
+          "zh": "代位求偿权",
+          "ms": "Subrogasi"
+        },
+        "b": {
+          "en": "Indemnity",
+          "zh": "赔款",
+          "ms": "Indemniti"
+        },
+        "c": {
+          "en": "Co-insurance",
+          "zh": "共同保险",
+          "ms": "Insurans bersama"
+        },
+        "d": {
+          "en": "Insurable interest",
+          "zh": "保险利益",
+          "ms": "Kepentingan boleh insurans"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 50,
+      "question": {
+        "en": "Select the statement that is NOT true about money insurance:",
+        "zh": "选出关于金钱保险不正确的表述。",
+        "ms": "Pilih kenyataan yang TIDAK benar tentang insurans wang:"
+      },
+      "options": {
+        "a": {
+          "en": "It covers money in transit against loss or destruction by robbery, hold-up or theft",
+          "zh": "它承保运输过程中的资金因抢劫、抢劫或盗窃而丢失或毁坏。",
+          "ms": "Ia melindungi wang dalam transit terhadap kerugian atau kemusnahan melalui rompakan, tahan atau kecurian"
+        },
+        "b": {
+          "en": "It covers money in premises against loss or destruction by robbery, hold -up or theft",
+          "zh": "它承保场所内的资金因抢劫、抢劫或盗窃而遭受损失或毁坏。",
+          "ms": "Ia melindungi wang dalam premis terhadap kerugian atau kemusnahan oleh rompakan, tahan atau kecurian"
+        },
+        "c": {
+          "en": "The rate charged for money in transit is based on the estimated annual carryings",
+          "zh": "运输中货币的收费标准是根据预计的年运输量计算的。",
+          "ms": "Kadar yang dikenakan untuk wang dalam transit adalah berdasarkan anggaran bawaan tahunan"
+        },
+        "d": {
+          "en": "It indemnifies employers against money loss arising from the dishonesty of employees",
+          "zh": "它赔偿雇主因雇员不诚实而产生的金钱损失。",
+          "ms": "Ia menanggung rugi majikan terhadap kerugian wang yang timbul daripada ketidakjujuran pekerja"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 51,
+      "question": {
+        "en": "Mr. Balan's house was burglarised while the family was away on a holiday. Valuable items worth RM100,000 were stolen. What type of losses is Balan experiencing?",
+        "zh": "Balan 先生一家外出度假时，家里被盗。价值 RM100,000的贵重物品被盗。Balan 先生遭受了以下哪些损失？",
+        "ms": "Rumah Encik Balan dirompak semasa mereka sekeluarga pergi bercuti. Barangan berharga bernilai RM100,000 dilarikan. Apakah jenis kerugian yang dialami oleh Balan?"
+      },
+      "options": {
+        "a": {
+          "en": "Consequential loss",
+          "zh": "间接损失",
+          "ms": "Kerugian berbangkit"
+        },
+        "b": {
+          "en": "Expenses loss",
+          "zh": "费用损失",
+          "ms": "Kehilangan perbelanjaan"
+        },
+        "c": {
+          "en": "Direct loss",
+          "zh": "直接损失",
+          "ms": "Kerugian langsung"
+        },
+        "d": {
+          "en": "Financial loss",
+          "zh": "财务损失",
+          "ms": "Kerugian kewangan"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 52,
+      "question": {
+        "en": "A person who has entered to work under a contract of service with an employer is defined as a workman. The following are persons EXEMPTED from this definition: I. casual workers II. domestic servants III. members of the armed and police forces IV. non-manual workers whose monthly earnings exceed RM2,000",
+        "zh": "根据与雇主签订的服务合同而工作的人被定义为工人。以下人员不受此定义限 制： I 临时工。 II 家政服务人员。 III 武装部队和警察部队成员。 IV 月收入超过 RM2,000 的非体力劳动者。",
+        "ms": "Seseorang yang telah masuk bekerja di bawah kontrak perkhidmatan dengan majikan ditakrifkan sebagai pekerja. Berikut adalah orang yang DIKECUALIKAN daripada definisi ini: I. pekerja kasual II. pembantu rumah III. anggota angkatan tentera dan polis IV. pekerja bukan manual yang pendapatan bulanannya melebihi RM2,000"
+      },
+      "options": {
+        "a": {
+          "en": "I and II",
+          "zh": "I和II",
+          "ms": "I dan II"
+        },
+        "b": {
+          "en": "I, II and III",
+          "zh": "I、II、III",
+          "ms": "I, II dan III"
+        },
+        "c": {
+          "en": "I, II and IV",
+          "zh": "I、II 和 IV",
+          "ms": "I, II dan IV"
+        },
+        "d": {
+          "en": "I, II, III and IV",
+          "zh": "I、II、III 和 IV",
+          "ms": "I, II, III dan IV"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 53,
+      "question": {
+        "en": "General takaful schemes are short -duration ______________ contracts that give cover to individuals or businesses against loss or damages due to a catastrophe or disaster.",
+        "zh": "普通回教保险计划是________短期合同，为个人或企业提供因灾难或灾害造成的损 失或损害的保障。",
+        "ms": "Skim takaful am ialah kontrak ______________ jangka pendek yang memberi perlindungan kepada individu atau perniagaan terhadap kerugian atau kerosakan akibat malapetaka atau bencana."
+      },
+      "options": {
+        "a": {
+          "en": "tabaruk",
+          "zh": "tabaruk",
+          "ms": "tabaruk"
+        },
+        "b": {
+          "en": "al-maisir",
+          "zh": "al-maisir",
+          "ms": "al-maisir"
+        },
+        "c": {
+          "en": "syariah",
+          "zh": "syariah",
+          "ms": "syariah"
+        },
+        "d": {
+          "en": "al-ijara",
+          "zh": "al-ijara",
+          "ms": "al-ijara"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 54,
+      "question": {
+        "en": "Takaful business operators in Malaysia operate following two models, namely Al - Mudharabah and ___________.",
+        "zh": "马来西亚的回教保险经营者遵循两种模式，即 Al-Mudharabah 和________.",
+        "ms": "Pengendali perniagaan takaful di Malaysia beroperasi mengikut dua model iaitu Al - Mudharabah dan ___________."
+      },
+      "options": {
+        "a": {
+          "en": "Al-Akhlak",
+          "zh": "Al-Akhlak.",
+          "ms": "Al-Akhlak"
+        },
+        "b": {
+          "en": "Al-Ijma",
+          "zh": "Al-Ijma.",
+          "ms": "Al-Ijma"
+        },
+        "c": {
+          "en": "Wakalah",
+          "zh": "Wakalah.",
+          "ms": "Wakalah"
+        },
+        "d": {
+          "en": "Al-Muamalat",
+          "zh": "Al-Muamalat.",
+          "ms": "Al-Muamalat"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 55,
+      "question": {
+        "en": "What was the first takaful operating model used in Malaysia?",
+        "zh": "以下哪一个是马来西亚回教保险采用的第一个运营模式？",
+        "ms": "Apakah model pengendalian takaful pertama yang digunakan di Malaysia?"
+      },
+      "options": {
+        "a": {
+          "en": "Wakalah model",
+          "zh": "Wakalah model",
+          "ms": "Model Wakalah"
+        },
+        "b": {
+          "en": "Ijma model",
+          "zh": "Ijma model",
+          "ms": "Model Ijma"
+        },
+        "c": {
+          "en": "Al-Mudharabah model",
+          "zh": "Al-Mudharabah model",
+          "ms": "Model Al-Mudharabah"
+        },
+        "d": {
+          "en": "Al-Akhlak model",
+          "zh": "Al-Akhlak model",
+          "ms": "Model Al-Akhlak"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 56,
+      "question": {
+        "en": "In the view of Islamic scholars, an insurance contract is a contract of buying and selling. For a buy - sell contract to be valid according to the Syariah, the following must exist: I. seller and buyer II. subject matter III. consent (sighah-ijab and qabul) IV. moral and ethics",
+        "zh": "伊斯兰学者认为，保险合同是一种买卖合同。根据伊斯兰教法，买卖合同要有效 必须满足以下条件： I. 卖方和买方。 II. 标的物。 III. 同意（sighah-ijab 和 qabul）。 IV. 道德和伦理。",
+        "ms": "Pada pandangan ulama Islam, kontrak insurans adalah kontrak jual beli. Untuk sah kontrak jual beli mengikut Syariah, perkara berikut mesti wujud: I. penjual dan pembeli II. subjek III. keizinan (sighah-ijab dan qabul) IV. moral dan etika"
+      },
+      "options": {
+        "a": {
+          "en": "I and II",
+          "zh": "I和II",
+          "ms": "I dan II"
+        },
+        "b": {
+          "en": "I, II and III",
+          "zh": "I、II、III",
+          "ms": "I, II dan III"
+        },
+        "c": {
+          "en": "I, II and IV",
+          "zh": "I、II 和 IV",
+          "ms": "I, II dan IV"
+        },
+        "d": {
+          "en": "I, II, III and IV",
+          "zh": "I、II、III 和 IV",
+          "ms": "I, II, III dan IV"
+        }
+      },
+      "answer": "b"
+    },
+    {
+      "id": 57,
+      "question": {
+        "en": "The element of Al-Maisir is referred to as _________.",
+        "zh": "Al-Maisir 元素被称为",
+        "ms": "Unsur Al-Maisir disebut sebagai _________."
+      },
+      "options": {
+        "a": {
+          "en": "gambling",
+          "zh": "赌博。",
+          "ms": "perjudian"
+        },
+        "b": {
+          "en": "uncertainty",
+          "zh": "不确定。",
+          "ms": "ketidakpastian"
+        },
+        "c": {
+          "en": "ijab and qabul",
+          "zh": "ijab and qabul.",
+          "ms": "ijab dan qabul"
+        },
+        "d": {
+          "en": "the imposing of interest",
+          "zh": "征收利息。",
+          "ms": "mengenakan minat"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 58,
+      "question": {
+        "en": "All the following features are unique to insurance contracts (versus other business contracts) except:",
+        "zh": "下列所有特征都是保险合同所独有的特征（相对于其他商业合同），除了：",
+        "ms": "Semua ciri berikut adalah unik untuk kontrak insurans (berbanding kontrak perniagaan lain) kecuali:"
+      },
+      "options": {
+        "a": {
+          "en": "insurable interest",
+          "zh": "保险利益",
+          "ms": "kepentingan boleh insurans"
+        },
+        "b": {
+          "en": "subrogation",
+          "zh": "代位求偿权",
+          "ms": "subrogasi"
+        },
+        "c": {
+          "en": "utmost good faith",
+          "zh": "至高真诚",
+          "ms": "penuh niat baik"
+        },
+        "d": {
+          "en": "consideration",
+          "zh": "考虑因素",
+          "ms": "pertimbangan"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 59,
+      "question": {
+        "en": "The personal feature of property insurance contracts means that:",
+        "zh": "财产保险合同中的个人契约特征是指：",
+        "ms": "Ciri peribadi kontrak insurans harta bermakna bahawa:"
+      },
+      "options": {
+        "a": {
+          "en": "subrogation always applies",
+          "zh": "代位求偿权始终适用",
+          "ms": "subrogasi sentiasa terpakai"
+        },
+        "b": {
+          "en": "ambiguities in the wording will always be construed against the insurer",
+          "zh": "措辞上的歧义总是会被解释为对保险公司不利",
+          "ms": "kekaburan dalam perkataan akan sentiasa ditafsirkan terhadap syarikat insurans"
+        },
+        "c": {
+          "en": "insurance contracts cannot be freely transferred to other parties",
+          "zh": "保险合同不能自由转让给其他人",
+          "ms": "kontrak insurans tidak boleh dipindahkan secara bebas kepada pihak lain"
+        },
+        "d": {
+          "en": "the buyer of insurance must have insurable interest in property before the policy is issued",
+          "zh": "保险购买者在签发保险单之前必须对财产拥有保险利益",
+          "ms": "pembeli insurans mesti mempunyai kepentingan boleh insurans dalam harta sebelum polisi dikeluarkan"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 60,
+      "question": {
+        "en": "'The insured must accept the entire contract with all its terms and conditions that are attached to the policy contract. The insured cannot bargain for the contract to be modified to suit his case'. The above statement describes the ____________.",
+        "zh": "\"受保险人必须接受整个合同以及保险合同附带的所有条款和条件。受保险人不 得讨价还价修改合同以适合其情况。\" 上述声明描述了",
+        "ms": "'Orang yang diinsuranskan mesti menerima keseluruhan kontrak dengan semua terma dan syarat yang dilampirkan pada kontrak polisi. Orang yang diinsuranskan tidak boleh tawar-menawar untuk kontrak itu diubah suai untuk disesuaikan dengan kesnya'. Pernyataan di atas menerangkan tentang ____________."
+      },
+      "options": {
+        "a": {
+          "en": "aleatory contract",
+          "zh": "侥幸偶然的契约",
+          "ms": "kontrak yang membosankan"
+        },
+        "b": {
+          "en": "unilateral contract",
+          "zh": "单方面的契约。",
+          "ms": "kontrak unilateral"
+        },
+        "c": {
+          "en": "personal contract",
+          "zh": "个人契约",
+          "ms": "kontrak peribadi"
+        },
+        "d": {
+          "en": "contract of adhesion",
+          "zh": "遵从的契约。",
+          "ms": "kontrak lekatan"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 61,
+      "question": {
+        "en": "The principle of utmost good faith:",
+        "zh": "至高真诚原则是：",
+        "ms": "Prinsip niat murni:"
+      },
+      "options": {
+        "a": {
+          "en": "holds the insurer to a higher standard of honesty",
+          "zh": "要求保险公司遵守最高的诚信标准",
+          "ms": "memegang penanggung insurans kepada standard kejujuran yang lebih tinggi"
+        },
+        "b": {
+          "en": "does not apply in life insurance",
+          "zh": "不适用于人寿保险",
+          "ms": "tidak terpakai dalam insurans hayat"
+        },
+        "c": {
+          "en": "holds the insured to a higher standard of honesty",
+          "zh": "要求受保险人遵守最高的诚实标准",
+          "ms": "memastikan orang yang diinsuranskan pada standard kejujuran yang lebih tinggi"
+        },
+        "d": {
+          "en": "requires the insurer and insured to enter the contract with utmost good faith",
+          "zh": "要求保险人和受保险人以最大诚信原则签订合同",
+          "ms": "memerlukan insurer dan insured untuk memasuki kontrak dengan penuh niat baik"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 62,
+      "question": {
+        "en": "Insurable interest must exist at the time of purchasing a policy. Which of the following indicates the existence of insurable interest?",
+        "zh": "投保人购买保险时必须存在保险利益。下列哪项表明存在保险利益？",
+        "ms": "Kepentingan boleh insurans mesti wujud pada masa membeli polisi. Manakah antara berikut menunjukkan kewujudan kepentingan boleh insurans?"
+      },
+      "options": {
+        "a": {
+          "en": "Fiance",
+          "zh": "未婚夫",
+          "ms": "tunang"
+        },
+        "b": {
+          "en": "Ownership of property",
+          "zh": "财产所有权",
+          "ms": "Pemilikan harta"
+        },
+        "c": {
+          "en": "Proof of residence",
+          "zh": "居住证明",
+          "ms": "Bukti tempat tinggal"
+        },
+        "d": {
+          "en": "Proof of payment",
+          "zh": "付款证明",
+          "ms": "Bukti pembayaran"
+        }
+      },
+      "answer": "b"
+    },
+    {
+      "id": 63,
+      "question": {
+        "en": "If a property insurance agent goes to Maria's door, convinces her to apply for insurance and write a check for the policy premium, which of the following has occurred?",
+        "zh": "如果一名财产保险代理人来到玛丽亚家门口，说服她申请保险并开具保费支票， 则会发生下列哪种情况？",
+        "ms": "Jika ejen insurans harta pergi ke pintu rumah Maria, meyakinkannya untuk memohon insurans dan menulis cek untuk premium polisi, yang manakah telah berlaku?"
+      },
+      "options": {
+        "a": {
+          "en": "Offer, acceptance",
+          "zh": "献议、承受",
+          "ms": "Tawaran, penerimaan"
+        },
+        "b": {
+          "en": "Soliciting an offer, offer, acceptance, consideration",
+          "zh": "征求要约、献议、承受、考虑",
+          "ms": "Meminta tawaran, tawaran, penerimaan, pertimbangan"
+        },
+        "c": {
+          "en": "Offer, counter offer, acceptance, consideration",
+          "zh": "献议、反献议、承受、考虑",
+          "ms": "Tawaran, tawaran balas, penerimaan, pertimbangan"
+        },
+        "d": {
+          "en": "Offer, consideration",
+          "zh": "献议、考虑",
+          "ms": "Tawaran, pertimbangan"
+        }
+      },
+      "answer": "b"
+    },
+    {
+      "id": 64,
+      "question": {
+        "en": "Which of the following is correct concerning when insurable interest must exist?",
+        "zh": "下列哪项关于何时必须存在可保利益的表述是正确的？",
+        "ms": "Antara berikut, yang manakah betul mengenai apabila kepentingan boleh insurans mesti wujud?"
+      },
+      "options": {
+        "a": {
+          "en": "In property and liability insurance, it must exist at the inception of the contract",
+          "zh": "在财产和责任保险中，它必须在合同开始时就存在。",
+          "ms": "Dalam insurans harta dan liabiliti, ia mesti wujud pada permulaan kontrak"
+        },
+        "b": {
+          "en": "It is seldom required in property insurance unless there are liens on the property",
+          "zh": "除非财产上有留置权，否则财产保险很少需要此项。",
+          "ms": "Ia jarang diperlukan dalam insurans harta melainkan terdapat lien pada harta tersebut"
+        },
+        "c": {
+          "en": "It must exist at the time of death of the insured for the beneficiary to collect in life insurance",
+          "zh": "它必须在受保险人死亡时存在，受益人才能在人寿保险中领取。",
+          "ms": "Ia mesti wujud pada masa kematian orang yang diinsuranskan untuk benefisiari untuk mengutip dalam insurans hayat"
+        },
+        "d": {
+          "en": "In life insurance, it must exist at the inception of the policy but it is not necessary at the time of the loss",
+          "zh": "在人寿保险中，它必须在保单开始时存在，但在损失发生时则不必如此。",
+          "ms": "Dalam insurans hayat, ia mesti wujud pada permulaan polisi tetapi ia tidak perlu pada masa kerugian"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 65,
+      "question": {
+        "en": "Evan has his house insured for RM200,000. He s old the house to Ann for RM225,000. Three days after the sale is complete d the house is destroyed by fire. Evan has not cancelled his homeowner's insurance policy, so he decides to file a claim for losses caused by the fire. What will most likely happen?",
+        "zh": "Evan 为他的房子投保了 RM200,000。他以 RM225,000的价格将房子卖给了 Ann。 交易完成三天后，房子被大火烧毁。Evan 尚未取消房屋保险，因此他决定就火灾造成 的损失提出索赔。最有可能会发生什么？",
+        "ms": "Evan mempunyai rumahnya diinsuranskan sebanyak RM200,000. Dia menghulurkan rumah itu kepada Ann dengan harga RM225,000. Tiga hari selepas jualan selesai d rumah itu musnah terbakar. Evan tidak membatalkan polisi insurans pemilik rumahnya, jadi dia memutuskan untuk memfailkan tuntutan untuk kerugian yang disebabkan oleh kebakaran. Apakah kemungkinan besar akan berlaku?"
+      },
+      "options": {
+        "a": {
+          "en": "Evan will collect RM200,000 in insurance payments",
+          "zh": "Evan 将收取 RM200,000的保险金。",
+          "ms": "Evan akan mengutip RM200,000 sebagai bayaran insurans"
+        },
+        "b": {
+          "en": "Evan will collect RM200,000 in insurance payments ONLY IF Ann has not yet purchased a homeowner's policy of her own",
+          "zh": "仅当 Ann 尚未购买自己的房屋保险时，Evan 才能收取 RM200,000 的保险金。",
+          "ms": "Evan akan mengutip RM200,000 sebagai bayaran insurans SAHAJA JIKA Ann masih belum membeli polisi pemilik rumah sendiri"
+        },
+        "c": {
+          "en": "Evan will collect nothing because he has no insurable interest",
+          "zh": "埃文不会得到任何报酬，因为他没有可保利益。",
+          "ms": "Evan tidak akan memungut apa-apa kerana dia tidak mempunyai kepentingan boleh insurans"
+        },
+        "d": {
+          "en": "Ann will collect RM200,000 from Evan's insurer",
+          "zh": "Ann 将从 Evan 的保险公司领取 RM200,000。",
+          "ms": "Ann akan mengutip RM200,000 daripada syarikat insurans Evan"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 66,
+      "question": {
+        "en": "The following are the objectives of the code of good practice for life insurance products, EXCEPT:",
+        "zh": "人寿保险产品良好行为准则的目标如下，除了：",
+        "ms": "Berikut ialah objektif kod amalan baik untuk produk insurans hayat, KECUALI:"
+      },
+      "options": {
+        "a": {
+          "en": "fair pricing of products",
+          "zh": "产品的公平定价。",
+          "ms": "penetapan harga produk yang adil"
+        },
+        "b": {
+          "en": "truth in selling with full disclosure",
+          "zh": "诚实销售，全面披露。",
+          "ms": "kebenaran dalam penjualan dengan pendedahan penuh"
+        },
+        "c": {
+          "en": "design of life insurance products to ethical standards",
+          "zh": "人寿保险产品的设计符合道德标准。",
+          "ms": "reka bentuk produk insurans hayat mengikut piawaian etika"
+        },
+        "d": {
+          "en": "competence of an agent recommending the product",
+          "zh": "代理商推荐产品的资质。",
+          "ms": "kecekapan ejen yang mengesyorkan produk"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 67,
+      "question": {
+        "en": "What are the purposes of having the inter -company agreement amongst the members of PIAM?",
+        "zh": "马来西亚普通保险协会 (PIAM) 成员公司之间签订公司间协议的目的是什么？",
+        "ms": "Apakah tujuan mengadakan perjanjian antara syarikat di kalangan ahli PIAM?"
+      },
+      "options": {
+        "a": {
+          "en": "To promote and protect the interest of the members",
+          "zh": "增进和保护会员的利益。",
+          "ms": "Untuk mempromosi dan melindungi kepentingan ahli"
+        },
+        "b": {
+          "en": "To regulate the conduct and activities of all insurance companies engaged in the general insurance business",
+          "zh": "规范所有从事一般保险业务的保险公司的行为和活动。",
+          "ms": "Untuk mengawal selia kelakuan dan aktiviti semua syarikat insurans yang terlibat dalam perniagaan insurans am"
+        },
+        "c": {
+          "en": "To monitor the tariffs, commissions and remuneration applicable to the general insurance business",
+          "zh": "监控适用于一般保险业务的费率、佣金和报酬。",
+          "ms": "Untuk memantau tarif, komisen dan imbuhan yang dikenakan kepada perniagaan insurans am"
+        },
+        "d": {
+          "en": "All of the above",
+          "zh": "上述所有的",
+          "ms": "Semua di atas"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 68,
+      "question": {
+        "en": "A life insurer or its intermediary shall not issue or use a brochure providing information on non -guaranteed benefits unless the release of such information has been authorized by its appointed __________.",
+        "zh": "人寿保险公司或其中介人不得发布或使用提供非保证福利信息的小册子，除非此 类信息的发布已得到其指定",
+        "ms": "Penanggung insurans hayat atau pengantaranya tidak boleh mengeluarkan atau menggunakan risalah yang memberikan maklumat tentang manfaat tidak terjamin melainkan pelepasan maklumat tersebut telah dibenarkan oleh __________ yang dilantiknya."
+      },
+      "options": {
+        "a": {
+          "en": "Chief Executive Officer (CEO)",
+          "zh": "首席执行官（CEO）。",
+          "ms": "Ketua Pegawai Eksekutif (CEO)"
+        },
+        "b": {
+          "en": "Chief Financial Officer (CFO)",
+          "zh": "首席财务官（CFO）。",
+          "ms": "Ketua Pegawai Kewangan (CFO)"
+        },
+        "c": {
+          "en": "accountant",
+          "zh": "会计。",
+          "ms": "akauntan"
+        },
+        "d": {
+          "en": "actuary",
+          "zh": "精算师。",
+          "ms": "aktuari"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 69,
+      "question": {
+        "en": "Under Bank Negara Malaysia 's qualitative control guidelines by Bank Negara for Agents, agents must fulfill the following requirements, EXCEPT:",
+        "zh": "依据马来西亚国家银行针对 保险代理员制定的质量控制指南， 保险代理员必须满 足以下要求，除了：",
+        "ms": "Di bawah garis panduan kawalan kualitatif Bank Negara Malaysia oleh Bank Negara untuk Ejen, ejen mesti memenuhi keperluan berikut, KECUALI:"
+      },
+      "options": {
+        "a": {
+          "en": "be at least 18 years old",
+          "zh": "年满 18 岁。",
+          "ms": "berumur sekurang-kurangnya 18 tahun"
+        },
+        "b": {
+          "en": "not be an undischarged bankrupt",
+          "zh": "非未解除破产者。",
+          "ms": "tidak menjadi bankrap yang belum dilepaskan"
+        },
+        "c": {
+          "en": "be registered with Life Insurance Association of Malaysia (LIAM)",
+          "zh": "在马来西亚人寿保险协会（LIAM）注册。",
+          "ms": "berdaftar dengan Persatuan Insurans Hayat Malaysia (LIAM)"
+        },
+        "d": {
+          "en": "be registered with National Association of Malaysian Life Insurance And Financial Advisors (NAMLIFA)",
+          "zh": "在马来西亚全国人寿保险与财务顾问协会（NAMLIFA）注册。",
+          "ms": "berdaftar dengan Persatuan Kebangsaan Insurans Hayat dan Penasihat Kewangan Malaysia (NAMLIFA)"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 70,
+      "question": {
+        "en": "The following are the rights of a consumer, EXCEPT:",
+        "zh": "消费者的权利如下，除了：",
+        "ms": "Berikut adalah hak pengguna, KECUALI:"
+      },
+      "options": {
+        "a": {
+          "en": "the right to be heard",
+          "zh": "表达意见的权利。",
+          "ms": "hak untuk didengari"
+        },
+        "b": {
+          "en": "the right to satisfaction",
+          "zh": "获得满意的权利。",
+          "ms": "hak untuk mendapat kepuasan"
+        },
+        "c": {
+          "en": "the right to information",
+          "zh": "知情权。",
+          "ms": "hak untuk mendapatkan maklumat"
+        },
+        "d": {
+          "en": "the right to coerce sellers",
+          "zh": "被卖家强制的权利。",
+          "ms": "hak untuk memaksa penjual"
+        }
+      },
+      "answer": "d"
+    },
+    {
+      "id": 71,
+      "question": {
+        "en": "An employee who is injured while on leave is covered by SOCSO under the ___.",
+        "zh": "休假期间受伤的员工可享以下哪一项社会保险机构的保障？",
+        "ms": "Pekerja yang cedera semasa bercuti dilindungi oleh PERKESO di bawah ___."
+      },
+      "options": {
+        "a": {
+          "en": "employee injury insurance scheme",
+          "zh": "员工工伤保险计划。",
+          "ms": "skim insurans kecederaan pekerja"
+        },
+        "b": {
+          "en": "employer injury insurance scheme",
+          "zh": "雇主伤害保险计划。",
+          "ms": "skim insurans kecederaan majikan"
+        },
+        "c": {
+          "en": "invalidity pension scheme",
+          "zh": "伤残抚恤金计划。",
+          "ms": "skim pencen ilat"
+        },
+        "d": {
+          "en": "validity pension scheme",
+          "zh": "有效性养老金计划。",
+          "ms": "skim pencen yang sah"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 72,
+      "question": {
+        "en": "The Social Security Act (1969) defines 'an employee' as __________.",
+        "zh": "《社会保障法》（1969 年）将\"雇员\"定义为",
+        "ms": "Akta Keselamatan Sosial (1969) mentakrifkan 'seorang pekerja' sebagai __________."
+      },
+      "options": {
+        "a": {
+          "en": "a person employed under a contract of service or apprenticeship",
+          "zh": "根据服务合同或学徒合同受雇的人员。",
+          "ms": "seseorang yang diambil bekerja di bawah kontrak perkhidmatan atau perantisan"
+        },
+        "b": {
+          "en": "a sub-contract staff",
+          "zh": "分包员工。",
+          "ms": "kakitangan sub-kontrak"
+        },
+        "c": {
+          "en": "a broker",
+          "zh": "经纪人。",
+          "ms": "seorang broker"
+        },
+        "d": {
+          "en": "None of the above",
+          "zh": "以上都不是",
+          "ms": "Tiada satu pun di atas"
+        }
+      },
+      "answer": "a"
+    },
+    {
+      "id": 73,
+      "question": {
+        "en": "The following are the benefits under the SOCSO scheme, EXCEPT:",
+        "zh": "SOCSO 计划下的福利如下，除了：",
+        "ms": "Berikut adalah faedah di bawah skim PERKESO, KECUALI:"
+      },
+      "options": {
+        "a": {
+          "en": "medical benefits",
+          "zh": "医疗福利。",
+          "ms": "faedah perubatan"
+        },
+        "b": {
+          "en": "funeral benefits",
+          "zh": "丧葬福利。",
+          "ms": "faedah pengebumian"
+        },
+        "c": {
+          "en": "bonus payment",
+          "zh": "獎金支付。",
+          "ms": "pembayaran bonus"
+        },
+        "d": {
+          "en": "education benefits",
+          "zh": "教育福利。",
+          "ms": "faedah pendidikan"
+        }
+      },
+      "answer": "c"
+    },
+    {
+      "id": 74,
+      "question": {
+        "en": "_____________ are EXEMPTED from coverage by SOCSO.",
+        "zh": "_____________ 不受社会保险局 (SOCSO) 保障。",
+        "ms": "_____________ DIKECUALIKAN daripada perlindungan PERKESO."
+      },
+      "options": {
+        "a": {
+          "en": "Employees of an immediate employer",
+          "zh": "直接雇主的雇员",
+          "ms": "Pekerja majikan terdekat"
+        },
+        "b": {
+          "en": "Domestic servants",
+          "zh": "家政服务人员",
+          "ms": "Pembantu rumah tangga"
+        },
+        "c": {
+          "en": "Supervisors",
+          "zh": "主管",
+          "ms": "Pengawas"
+        },
+        "d": {
+          "en": "Employees",
+          "zh": "雇员",
+          "ms": "Pekerja"
+        }
+      },
+      "answer": "b"
+    },
+    {
+      "id": 75,
+      "question": {
+        "en": "The temporary disablement benefit under the SOCSO scheme is NOT payable when the ___________.",
+        "zh": "SOCSO 计划下的临时伤残津贴在以下情况下不予支付：",
+        "ms": "Manfaat hilang upaya sementara di bawah skim PERKESO TIDAK dibayar apabila ___________."
+      },
+      "options": {
+        "a": {
+          "en": "employee has been certified by a doctor to be unfit for work for not less than four days including the day of the accident",
+          "zh": "雇员经医生证明不适合工作不少于四天（包括事故发生当天）。",
+          "ms": "pekerja telah disahkan oleh doktor tidak layak bekerja selama tidak kurang empat hari termasuk hari kemalangan"
+        },
+        "b": {
+          "en": "benefit is paid for the certified period of disablement when the employee is on medical leave",
+          "zh": "当员工休病假时，将支付经核实的伤残津贴。",
+          "ms": "faedah dibayar untuk tempoh hilang upaya yang disahkan apabila pekerja sedang bercuti"
+        },
+        "c": {
+          "en": "benefit is payable for the certified period of disablement even if the employee works and earns wages during this period",
+          "zh": "即使雇员在核实的伤残期间工作并获得工资，也有权获得福利。",
+          "ms": "faedah perlu dibayar untuk tempoh hilang upaya yang disahkan walaupun pekerja bekerja dan mendapat gaji dalam tempoh ini"
+        },
+        "d": {
+          "en": "daily rate of temporary disablement benefit is equivalent to 80% of the average assumed daily wage subject to a minimum rate of RM30",
+          "zh": "暂时失能福利的每日金额相当于假定平均日工资的 80％，最低金额为 30 令吉。",
+          "ms": "kadar harian faedah hilang upaya sementara adalah bersamaan dengan 80% daripada purata gaji harian yang diandaikan tertakluk kepada kadar minimum RM30"
+        }
+      },
+      "answer": "c"
+    }
+  ]
+}
