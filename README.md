@@ -18,6 +18,7 @@ RFP Module 2 practice quiz website built from the uploaded exam papers.
 - `styles.css` - page styles
 - `app.js` - quiz logic and language switching
 - `data/questions.json` - trilingual question bank + answer key
+- `data/questions-data.js` - embedded question bank for direct HTML opening
 - `scripts/build_quiz_data.py` - PDF parser and Malay translation generator
 
 ## Regenerate question data
@@ -26,7 +27,8 @@ RFP Module 2 practice quiz website built from the uploaded exam papers.
 python3 scripts/build_quiz_data.py \
   --english-pdf /home/ubuntu/.cursor/projects/workspace/uploads/PCM2_PracExam_ENG_d34d.pdf \
   --chinese-pdf /home/ubuntu/.cursor/projects/workspace/uploads/PCM2_PracExam_MAN_be31.pdf \
-  --output /workspace/data/questions.json
+  --output /workspace/data/questions.json \
+  --js-output /workspace/data/questions-data.js
 ```
 
 If translation service is unavailable, you can still build with English fallback:
@@ -36,10 +38,16 @@ python3 scripts/build_quiz_data.py \
   --english-pdf /home/ubuntu/.cursor/projects/workspace/uploads/PCM2_PracExam_ENG_d34d.pdf \
   --chinese-pdf /home/ubuntu/.cursor/projects/workspace/uploads/PCM2_PracExam_MAN_be31.pdf \
   --output /workspace/data/questions.json \
+  --js-output /workspace/data/questions-data.js \
   --skip-translate
 ```
 
-## Run locally
+## Open on Windows (no command needed)
+
+You can directly double-click `index.html` in File Explorer.  
+Because `data/questions-data.js` is embedded as JavaScript, the quiz works without a local server.
+
+## Run locally with server (optional)
 
 ```bash
 python3 -m http.server 8000

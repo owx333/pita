@@ -236,11 +236,14 @@ async function initialize() {
   setStaticLabels();
 
   try {
-    const response = await fetch("./data/questions.json", { cache: "no-store" });
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
+    let payload = window.__QUIZ_DATA__;
+    if (!payload) {
+      const response = await fetch("./data/questions.json", { cache: "no-store" });
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+      payload = await response.json();
     }
-    const payload = await response.json();
     state.questions = payload.questions || [];
   } catch (error) {
     elements.questionList.textContent = t().loadError;

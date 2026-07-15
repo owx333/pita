@@ -214,6 +214,12 @@ def main() -> None:
     parser.add_argument("--chinese-pdf", type=Path, required=True)
     parser.add_argument("--output", type=Path, required=True)
     parser.add_argument(
+        "--js-output",
+        type=Path,
+        default=None,
+        help="Optional JavaScript output path. Writes `window.__QUIZ_DATA__ = ...` for offline HTML use.",
+    )
+    parser.add_argument(
         "--skip-translate",
         action="store_true",
         help="Use English as fallback instead of translating to Malay.",
@@ -269,6 +275,14 @@ def main() -> None:
         encoding="utf-8",
     )
     print(f"[done] wrote {args.output} with {QUESTION_COUNT} questions")
+
+    if args.js_output is not None:
+        args.js_output.parent.mkdir(parents=True, exist_ok=True)
+        js_content = "window.__QUIZ_DATA__ = " + json.dumps(
+            payload, ensure_ascii=False, separators=(",", ":")
+        ) + ";\n"
+        args.js_output.write_text(js_content, encoding="utf-8")
+        print(f"[done] wrote {args.js_output} for offline HTML")
 
 
 if __name__ == "__main__":
