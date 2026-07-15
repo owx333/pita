@@ -19,6 +19,8 @@ RFP Module 2 practice quiz website built from the uploaded exam papers.
 - `styles.css` - page styles
 - `app.js` - quiz logic and language switching
 - `mock200.js` - logic for the standalone 200-question page
+- `branding/logo/header-logo.svg` - editable header logo (safe to replace in GitHub)
+- `branding/favicon/favicon.svg` - editable favicon (safe to replace in GitHub)
 - `data/questions.json` - trilingual question bank + answer key
 - `data/questions-data.js` - embedded question bank for direct HTML opening
 - `data/mock200.json` - standalone 200-question mock exam bank

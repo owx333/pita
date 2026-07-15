@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 320" role="img" aria-label="HongLeong Assurance">
+  <g transform="translate(20 38)">
+    <g transform="translate(0 0)">
+      <g transform="rotate(-35 66 44)">
+        <rect x="20" y="2" width="14" height="88" fill="#07104d"/>
+        <rect x="44" y="2" width="14" height="88" fill="#07104d"/>
+        <rect x="68" y="2" width="14" height="88" fill="#07104d"/>
+      </g>
+      <path d="M8 66 C34 44, 72 44, 108 66" fill="none" stroke="#ff2619" stroke-width="15"/>
+      <path d="M14 94 C40 72, 76 72, 110 94" fill="none" stroke="#ff2619" stroke-width="15"/>
+      <path d="M20 122 C46 100, 80 100, 112 122" fill="none" stroke="#ff2619" stroke-width="15"/>
+    </g>
+
+    <text x="132" y="102" font-family="Arial, Helvetica, sans-serif" font-size="98" fill="#07104d">
+      <tspan font-weight="700">HongLeong</tspan>
+      <tspan dx="14" font-weight="400">Assurance</tspan>
+    </text>
+  </g>
+</svg>
