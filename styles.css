@@ -37,12 +37,9 @@ body {
 }
 
 .site-logo {
-  width: 260px;
-  max-width: 40vw;
+  width: 320px;
+  max-width: 46vw;
   height: auto;
-  border: 1px solid var(--border);
-  border-radius: 8px;
-  background: #efefef;
 }
 
 h1 {

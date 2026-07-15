@@ -1,17 +1,18 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 240" role="img" aria-label="HongLeong Assurance">
-  <rect width="900" height="240" fill="#efefef"/>
-  <g transform="translate(30 18)">
-    <g transform="rotate(-20 110 70)">
-      <rect x="46" y="0" width="24" height="104" fill="#07104d"/>
-      <rect x="86" y="0" width="24" height="104" fill="#07104d"/>
-      <rect x="126" y="0" width="24" height="104" fill="#07104d"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 170" role="img" aria-label="HongLeong Assurance">
+  <g transform="translate(2 8)">
+    <g transform="translate(0 0)">
+      <g transform="translate(4 2) rotate(-34 56 44)">
+        <rect x="18" y="6" width="12" height="76" fill="#07104d"/>
+        <rect x="40" y="6" width="12" height="76" fill="#07104d"/>
+        <rect x="62" y="6" width="12" height="76" fill="#07104d"/>
+      </g>
+      <path d="M10 62 C34 44, 66 44, 92 62" fill="none" stroke="#ff2619" stroke-width="12"/>
+      <path d="M14 84 C38 66, 68 66, 94 84" fill="none" stroke="#ff2619" stroke-width="12"/>
+      <path d="M18 106 C42 88, 70 88, 96 106" fill="none" stroke="#ff2619" stroke-width="12"/>
     </g>
-    <path d="M22 98 C72 56, 142 56, 202 98" fill="none" stroke="#ff1f10" stroke-width="20"/>
-    <path d="M28 142 C80 100, 148 100, 206 142" fill="none" stroke="#ff1f10" stroke-width="20"/>
-    <path d="M36 184 C90 142, 156 142, 212 184" fill="none" stroke="#ff1f10" stroke-width="20"/>
   </g>
-  <text x="250" y="192" font-family="Arial, Helvetica, sans-serif" font-size="86" fill="#07104d">
+  <text x="126" y="98" font-family="Arial, Helvetica, sans-serif" font-size="74" fill="#07104d">
     <tspan font-weight="700">HongLeong</tspan>
-    <tspan dx="12" font-weight="400">Assurance</tspan>
+    <tspan dx="8" font-weight="400">Assurance</tspan>
   </text>
 </svg>
