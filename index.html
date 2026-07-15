@@ -15,13 +15,17 @@
         </p>
       </div>
       <div class="language-controls">
+        <label for="dataset-select" id="dataset-label">题库：</label>
+        <select id="dataset-select">
+          <option value="practice75">75题温习</option>
+          <option value="mock200">200题考试</option>
+        </select>
         <label for="language-select" id="language-label">Language:</label>
         <select id="language-select">
           <option value="en">English</option>
           <option value="zh">中文</option>
           <option value="ms">Bahasa Melayu</option>
         </select>
-        <a href="./mock200.html">模拟考试200题</a>
       </div>
     </header>
 
@@ -57,6 +61,7 @@
           <h3 class="question-number"></h3>
           <span class="result-badge"></span>
         </header>
+        <p class="chapter-tag hidden question-chapter"></p>
         <p class="question-text"></p>
         <div class="options"></div>
         <p class="answer-line hidden"></p>
@@ -64,6 +69,7 @@
     </template>
 
     <script src="./data/questions-data.js"></script>
+    <script src="./data/mock200-data.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>

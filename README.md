@@ -52,9 +52,12 @@ python3 scripts/build_quiz_data.py \
 You can directly double-click `index.html` in File Explorer.  
 Because `data/questions-data.js` is embedded as JavaScript, the quiz works without a local server.
 
-To open the separate 200-question page, directly double-click:
+In `index.html`, use the top **题库 / Question set** selector:
 
-- `mock200.html`
+- `75题温习`
+- `200题考试`
+
+So you can switch to the 200-question exam mode from the same original page.
 
 ## Run locally with server (optional)
 
