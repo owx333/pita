@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RFP Module 2 Trilingual Quiz</title>
+    <title>PITA练习测验</title>
     <link rel="icon" type="image/svg+xml" href="./assets/favicon-hla.svg?v=2" />
     <link rel="shortcut icon" href="./assets/favicon-hla.svg?v=2" />
     <link rel="stylesheet" href="./styles.css" />
@@ -14,7 +14,7 @@
         <img src="./assets/hla-logo.svg" alt="HongLeong Assurance" class="site-logo" />
       </div>
       <div>
-        <h1 id="app-title">RFP Module 2 Practice Quiz</h1>
+        <h1 id="app-title">PITA练习测验</h1>
         <p id="app-subtitle">
           Trilingual revision website (English / 中文 / Bahasa Melayu)
         </p>
@@ -25,6 +25,7 @@
           <option value="practice75">75题温习</option>
           <option value="mock200">200题考试</option>
           <option value="mock200Hard">200题加强版</option>
+          <option value="mock400Tri">400题三语综合</option>
         </select>
         <label for="language-select" id="language-label">Language:</label>
         <select id="language-select">
@@ -42,6 +43,7 @@
           <button id="dataset-btn-75" type="button" class="secondary">75题温习</button>
           <button id="dataset-btn-200" type="button" class="secondary">200题考试</button>
           <button id="dataset-btn-200-hard" type="button" class="secondary">200题加强版</button>
+          <button id="dataset-btn-400-tri" type="button" class="secondary">400题三语综合</button>
         </div>
         <p id="dataset-hint" class="helper"></p>
         <p id="summary-status">Answered 0 / 75</p>
@@ -83,6 +85,7 @@
     <script src="./data/questions-data.js"></script>
     <script src="./data/mock200-data.js"></script>
     <script src="./data/mock200-hard-data.js"></script>
+    <script src="./data/mock400-trilingual-data.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>

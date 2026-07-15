@@ -4,10 +4,12 @@ const uiText = {
     subtitle75: "Trilingual revision website (English / 中文 / Bahasa Melayu)",
     subtitle200: "Mock exam mode: 200 questions from RFP key topics",
     subtitle200Hard: "Advanced mock exam mode: harder 200-question set",
+    subtitle400Tri: "Comprehensive mode: 400 trilingual questions",
     datasetLabel: "Question set:",
     datasetPractice75: "75-question revision",
     datasetMock200: "200-question exam",
     datasetMock200Hard: "200-question advanced exam",
+    datasetMock400Tri: "400-question trilingual combined set",
     datasetUnavailable:
       "This set is not loaded. Please update files and reload index.html.",
     datasetHint: (name, total) => `Current set: ${name} (${total} questions)`,
@@ -30,14 +32,16 @@ const uiText = {
     loadError: "Failed to load questions data.",
   },
   zh: {
-    title: "RFP 第二单元练习测验",
+    title: "PITA练习测验",
     subtitle75: "三语温习网站（英文 / 中文 / 马来文）",
     subtitle200: "模拟考试模式：200题（RFP重点）",
     subtitle200Hard: "加强版模式：200题（更高难度）",
+    subtitle400Tri: "综合模式：400题三语题库",
     datasetLabel: "题库：",
     datasetPractice75: "75题温习",
     datasetMock200: "200题考试",
     datasetMock200Hard: "200题加强版",
+    datasetMock400Tri: "400题三语综合",
     datasetUnavailable: "该题库未载入。请先更新文件后重新打开 index.html。",
     datasetHint: (name, total) => `当前题库：${name}（${total}题）`,
     languageLabel: "语言：",
@@ -63,10 +67,12 @@ const uiText = {
     subtitle75: "Laman ulang kaji tiga bahasa (English / 中文 / Bahasa Melayu)",
     subtitle200: "Mod peperiksaan simulasi: 200 soalan berdasarkan topik utama RFP",
     subtitle200Hard: "Mod lanjutan: set 200 soalan tahap lebih sukar",
+    subtitle400Tri: "Mod komprehensif: 400 soalan tiga bahasa",
     datasetLabel: "Set soalan:",
     datasetPractice75: "Ulang kaji 75 soalan",
     datasetMock200: "Peperiksaan 200 soalan",
     datasetMock200Hard: "Peperiksaan lanjutan 200 soalan",
+    datasetMock400Tri: "Set gabungan tiga bahasa 400 soalan",
     datasetUnavailable:
       "Set ini belum dimuatkan. Sila kemas kini fail dan buka semula index.html.",
     datasetHint: (name, total) => `Set semasa: ${name} (${total} soalan)`,
@@ -101,6 +107,7 @@ const state = {
     practice75: [],
     mock200: [],
     mock200Hard: [],
+    mock400Tri: [],
   },
 };
 
@@ -116,6 +123,7 @@ const elements = {
   datasetButton75: document.querySelector("#dataset-btn-75"),
   datasetButton200: document.querySelector("#dataset-btn-200"),
   datasetButton200Hard: document.querySelector("#dataset-btn-200-hard"),
+  datasetButton400Tri: document.querySelector("#dataset-btn-400-tri"),
   summaryStatus: document.querySelector("#summary-status"),
   summaryScore: document.querySelector("#summary-score"),
   helper: document.querySelector("#summary-helper"),
@@ -140,15 +148,18 @@ function setStaticLabels() {
       practice75: labels.subtitle75,
       mock200: labels.subtitle200,
       mock200Hard: labels.subtitle200Hard,
+      mock400Tri: labels.subtitle400Tri,
     }[state.dataset] || labels.subtitle75
   );
   elements.datasetLabel.textContent = labels.datasetLabel;
   elements.datasetSelect.options[0].textContent = labels.datasetPractice75;
   elements.datasetSelect.options[1].textContent = labels.datasetMock200;
   elements.datasetSelect.options[2].textContent = labels.datasetMock200Hard;
+  elements.datasetSelect.options[3].textContent = labels.datasetMock400Tri;
   elements.datasetButton75.textContent = labels.datasetPractice75;
   elements.datasetButton200.textContent = labels.datasetMock200;
   elements.datasetButton200Hard.textContent = labels.datasetMock200Hard;
+  elements.datasetButton400Tri.textContent = labels.datasetMock400Tri;
   elements.languageLabel.textContent = labels.languageLabel;
   elements.summaryTitle.textContent = labels.progressTitle;
   elements.checkButton.textContent = labels.checkButton;
@@ -165,6 +176,9 @@ function datasetNameByKey(datasetKey, labels) {
   if (datasetKey === "mock200Hard") {
     return labels.datasetMock200Hard;
   }
+  if (datasetKey === "mock400Tri") {
+    return labels.datasetMock400Tri;
+  }
   return labels.datasetPractice75;
 }
 
@@ -174,6 +188,7 @@ function updateDatasetButtons() {
     [elements.datasetButton75, "practice75"],
     [elements.datasetButton200, "mock200"],
     [elements.datasetButton200Hard, "mock200Hard"],
+    [elements.datasetButton400Tri, "mock400Tri"],
   ];
   mapping.forEach(([button, key]) => {
     if (key === active) {
@@ -205,6 +220,32 @@ function normalizeMock200Question(question) {
       b: toLangMap(question.options.b),
       c: toLangMap(question.options.c),
       d: toLangMap(question.options.d),
+    },
+    answer: question.answer,
+  };
+}
+
+function normalizeTrilingualQuestion(question) {
+  const ensureLangMap = (value) => {
+    if (typeof value === "object" && value !== null) {
+      return {
+        en: value.en || value.zh || value.ms || "",
+        zh: value.zh || value.en || value.ms || "",
+        ms: value.ms || value.en || value.zh || "",
+      };
+    }
+    return { en: String(value || ""), zh: String(value || ""), ms: String(value || "") };
+  };
+
+  return {
+    id: question.id,
+    chapter: question.chapter || "",
+    question: ensureLangMap(question.question),
+    options: {
+      a: ensureLangMap(question.options?.a),
+      b: ensureLangMap(question.options?.b),
+      c: ensureLangMap(question.options?.c),
+      d: ensureLangMap(question.options?.d),
     },
     answer: question.answer,
   };
@@ -290,8 +331,12 @@ function renderQuestions() {
 
     title.textContent = labels.questionPrefix(question.id);
     questionText.textContent = question.question[state.language] || "";
-    if (question.chapter) {
-      chapterTag.textContent = question.chapter;
+    const chapterText =
+      typeof question.chapter === "object" && question.chapter !== null
+        ? question.chapter[state.language] || question.chapter.zh || question.chapter.en || ""
+        : question.chapter;
+    if (chapterText) {
+      chapterTag.textContent = chapterText;
       chapterTag.classList.remove("hidden");
     } else {
       chapterTag.classList.add("hidden");
@@ -346,6 +391,9 @@ function wireEvents() {
   elements.datasetButton200.addEventListener("click", () => switchDataset("mock200"));
   elements.datasetButton200Hard.addEventListener("click", () =>
     switchDataset("mock200Hard")
+  );
+  elements.datasetButton400Tri.addEventListener("click", () =>
+    switchDataset("mock400Tri")
   );
 
   elements.languageSelect.addEventListener("change", (event) => {
@@ -422,6 +470,23 @@ async function initialize() {
     state.datasets.mock200Hard = (mockHardPayload?.questions || []).map(
       normalizeMock200Question
     );
+
+    let mock400Payload = window.__MOCK400_DATA__;
+    if (!mock400Payload) {
+      try {
+        const mock400Response = await fetch("./data/mock400-trilingual.json", {
+          cache: "no-store",
+        });
+        if (mock400Response.ok) {
+          mock400Payload = await mock400Response.json();
+        }
+      } catch (error) {
+        // Keep silent: offline mode may block fetch.
+      }
+    }
+    state.datasets.mock400Tri = (mock400Payload?.questions || []).map(
+      normalizeTrilingualQuestion
+    );
   } catch (error) {
     elements.questionList.textContent = t().loadError;
     console.error(error);
@@ -435,6 +500,10 @@ async function initialize() {
   if (state.datasets.mock200Hard.length === 0) {
     elements.datasetSelect.options[2].disabled = true;
     elements.datasetButton200Hard.disabled = true;
+  }
+  if (state.datasets.mock400Tri.length === 0) {
+    elements.datasetSelect.options[3].disabled = true;
+    elements.datasetButton400Tri.disabled = true;
   }
   setStaticLabels();
   switchDataset("practice75");
