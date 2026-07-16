@@ -16,9 +16,11 @@ RFP Module 2 practice quiz website built from the uploaded exam papers.
 
 - `index.html` - quiz page
 - `mock200.html` - separate 200-question mock exam page
+- `tutorial-review.html` - tutorial-content revision page (chapter notes view)
 - `styles.css` - page styles
 - `app.js` - quiz logic and language switching
 - `mock200.js` - logic for the standalone 200-question page
+- `tutorial-review.js` - renders tutorial chapter review content
 - `branding/logo/header-logo.png` - editable header logo (safe to replace in GitHub)
 - `branding/favicon/favicon.png` - editable favicon (safe to replace in GitHub)
 - `data/questions.json` - trilingual question bank + answer key
@@ -33,11 +35,14 @@ RFP Module 2 practice quiz website built from the uploaded exam papers.
 - `data/mock200-hard-trilingual-data.js` - embedded trilingual harder 200-question bank
 - `data/mock400-trilingual.json` - combined 400-question trilingual bank
 - `data/mock400-trilingual-data.js` - embedded 400-question trilingual bank
+- `data/tutorial-review.json` - structured chapter review notes from tutorial PDF
+- `data/tutorial-review-data.js` - embedded tutorial review notes
 - `scripts/build_quiz_data.py` - PDF parser and Malay translation generator
 - `scripts/generate_mock200.py` - builds the separate 200-question mock exam from RFP重点
 - `scripts/generate_mock200_hard.py` - builds the harder 200-question version
 - `scripts/build_mock200_trilingual_sets.py` - splits the 400-trilingual bank into trilingual 200 + harder 200 sets
 - `scripts/generate_mock400_trilingual.py` - builds the 400-question trilingual combined version
+- `scripts/build_tutorial_review_data.py` - extracts chapter-oriented review notes from tutorial PDF
 
 ## Regenerate question data
 
