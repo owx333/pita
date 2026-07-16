@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a trilingual 400-question dataset from RFP core facts."""
+"""Build a varied trilingual 400-question dataset from RFP core facts."""
 
 from __future__ import annotations
 
@@ -119,6 +119,167 @@ def main() -> None:
     output_questions: List[Dict[str, object]] = []
     qid = 1
 
+    zh_templates = {
+        "a1": [
+            "某客户在风险沟通中提到：\n{definition}\n这最符合哪个术语？",
+            "根据以下描述，最贴切的术语是：\n{definition}",
+            "阅读线索后判断术语：\n{definition}\n应选哪一项？",
+            "若出现下列情形：\n{definition}\n通常归类为哪一术语？",
+        ],
+        "a2": [
+            "关于「{term}」，下列哪项描述最准确？",
+            "若要向客户解释「{term}」，哪项定义是正确的？",
+            "以下对「{term}」的理解，何者最恰当？",
+            "在RFP语境中，「{term}」应如何定义？",
+        ],
+        "a3": [
+            "围绕「{term}」这个概念，下列哪一组“术语—解释”配对正确？",
+            "关于「{term}」及相近概念，哪组配对是正确的？",
+            "以下术语配对中，何者与「{term}」逻辑一致？",
+            "在概念配对题中，与「{term}」相关的正确选项是？",
+        ],
+        "a4": [
+            "若以「{term}」为参照，下列哪一组“术语—解释”配对错误？",
+            "以下各项里，哪一项与「{term}」的概念关系不正确？",
+            "围绕「{term}」的辨错题中，哪组配对是错的？",
+            "关于「{term}」与其他术语的对应关系，哪项有误？",
+        ],
+        "b1": [
+            "情境：客户提供了这条关键线索：\n{definition}\n你最可能采用哪个术语进行归纳？",
+            "顾问访谈记录显示：\n{definition}\n该信息对应的核心术语是？",
+            "在案例分析中出现：\n{definition}\n最应判定为何种术语？",
+            "若客户陈述符合以下内容：\n{definition}\n最佳术语判断是？",
+        ],
+        "b2": [
+            "你要向新进顾问说明「{term}」，下列哪项讲法最准确？",
+            "培训场景下，关于「{term}」的正确解释是？",
+            "在实务答辩中，哪项对「{term}」的定义最稳妥？",
+            "针对「{term}」的高难度辨析，正确选项是？",
+        ],
+        "b3": [
+            "以下关于「{term}」的叙述，哪一项错误？",
+            "在「{term}」的判断题里，哪项说法不成立？",
+            "检视下列陈述，关于「{term}」哪项是错的？",
+            "围绕「{term}」的四项描述中，错误的是哪一个？",
+        ],
+        "b4": [
+            "当你以「{term}」作为分析核心时，下列哪组“术语—解释”最可采纳？",
+            "在拟定建议书时，围绕「{term}」应采用哪一组正确配对？",
+            "关于「{term}」的综合判断，下列配对哪项正确？",
+            "若题干以「{term}」为重点，哪组术语配对最合理？",
+        ],
+    }
+
+    en_templates = {
+        "a1": [
+            "A client mentions the following during risk discussion:\n{definition}\nWhich term best fits this?",
+            "Based on the following description, which term is the best match?\n{definition}",
+            "Read the clue and identify the term:\n{definition}\nWhich option is correct?",
+            "If the following situation appears:\n{definition}\nWhich term is usually used?",
+        ],
+        "a2": [
+            "Which statement is most accurate about \"{term}\"?",
+            "If you explain \"{term}\" to a client, which definition is correct?",
+            "Which understanding of \"{term}\" is the most appropriate?",
+            "In the RFP context, how should \"{term}\" be defined?",
+        ],
+        "a3": [
+            "Around the concept \"{term}\", which term-definition pair is correct?",
+            "For \"{term}\" and similar concepts, which pair is correct?",
+            "Which pairing is consistent with the logic of \"{term}\"?",
+            "In a concept-matching question, which option aligns with \"{term}\"?",
+        ],
+        "a4": [
+            "Using \"{term}\" as reference, which term-definition pair is incorrect?",
+            "Which item is NOT correctly related to the concept of \"{term}\"?",
+            "In this error-identification set for \"{term}\", which pair is wrong?",
+            "Regarding \"{term}\" and other terms, which mapping is incorrect?",
+        ],
+        "b1": [
+            "Scenario: The client provides this key clue:\n{definition}\nWhich term would you use to classify it?",
+            "Consultation notes show:\n{definition}\nWhat is the core term for this information?",
+            "In case analysis, you see:\n{definition}\nWhich term should be assigned?",
+            "If a client's statement matches this:\n{definition}\nWhat is the best term judgment?",
+        ],
+        "b2": [
+            "You are coaching a new advisor on \"{term}\". Which explanation is most accurate?",
+            "In a training setting, what is the correct explanation of \"{term}\"?",
+            "In practice defense, which definition of \"{term}\" is most reliable?",
+            "For advanced discrimination of \"{term}\", which option is correct?",
+        ],
+        "b3": [
+            "Which of the following statements about \"{term}\" is incorrect?",
+            "In this \"{term}\" judgment item, which statement does not hold?",
+            "Review the statements below: which one about \"{term}\" is wrong?",
+            "Among these four descriptions of \"{term}\", which is incorrect?",
+        ],
+        "b4": [
+            "When \"{term}\" is your analysis focus, which term-definition pair is most acceptable?",
+            "While drafting recommendations around \"{term}\", which correct pair should you adopt?",
+            "For a comprehensive judgment on \"{term}\", which pairing is correct?",
+            "If the stem highlights \"{term}\", which term pair is the most logical?",
+        ],
+    }
+
+    ms_templates = {
+        "a1": [
+            "Seorang pelanggan menyatakan perkara berikut semasa perbincangan risiko:\n{definition}\nIstilah manakah paling sesuai?",
+            "Berdasarkan penerangan berikut, istilah manakah paling tepat?\n{definition}",
+            "Baca petunjuk ini dan kenal pasti istilah:\n{definition}\nPilihan manakah betul?",
+            "Jika situasi berikut berlaku:\n{definition}\nIstilah manakah biasanya digunakan?",
+        ],
+        "a2": [
+            "Pernyataan manakah paling tepat tentang \"{term}\"?",
+            "Jika anda menerangkan \"{term}\" kepada pelanggan, definisi manakah betul?",
+            "Pemahaman manakah tentang \"{term}\" paling sesuai?",
+            "Dalam konteks RFP, bagaimana \"{term}\" sepatutnya ditakrifkan?",
+        ],
+        "a3": [
+            "Berkaitan konsep \"{term}\", pasangan istilah-definisi manakah yang betul?",
+            "Bagi \"{term}\" dan konsep hampir sama, pasangan manakah yang betul?",
+            "Pasangan manakah yang konsisten dengan logik \"{term}\"?",
+            "Dalam soalan padanan konsep, pilihan manakah selaras dengan \"{term}\"?",
+        ],
+        "a4": [
+            "Dengan \"{term}\" sebagai rujukan, pasangan istilah-definisi manakah yang salah?",
+            "Item manakah yang TIDAK berkaitan dengan betul kepada konsep \"{term}\"?",
+            "Dalam set kenal pasti ralat untuk \"{term}\", pasangan manakah salah?",
+            "Berkaitan \"{term}\" dan istilah lain, padanan manakah tidak tepat?",
+        ],
+        "b1": [
+            "Situasi: Pelanggan memberikan petunjuk utama ini:\n{definition}\nIstilah manakah yang paling sesuai untuk pengelasan?",
+            "Nota konsultasi menunjukkan:\n{definition}\nApakah istilah teras untuk maklumat ini?",
+            "Dalam analisis kes, anda melihat:\n{definition}\nIstilah manakah patut ditetapkan?",
+            "Jika kenyataan pelanggan sepadan dengan ini:\n{definition}\nApakah pertimbangan istilah terbaik?",
+        ],
+        "b2": [
+            "Anda melatih penasihat baharu tentang \"{term}\". Penerangan manakah paling tepat?",
+            "Dalam suasana latihan, apakah penerangan yang betul untuk \"{term}\"?",
+            "Dalam pembelaan amali, definisi manakah bagi \"{term}\" paling kukuh?",
+            "Untuk pembezaan lanjutan \"{term}\", pilihan manakah betul?",
+        ],
+        "b3": [
+            "Pernyataan manakah tentang \"{term}\" yang tidak betul?",
+            "Dalam item penilaian \"{term}\" ini, pernyataan manakah tidak sah?",
+            "Semak pernyataan berikut: yang manakah salah tentang \"{term}\"?",
+            "Antara empat huraian tentang \"{term}\" ini, yang manakah salah?",
+        ],
+        "b4": [
+            "Apabila \"{term}\" menjadi fokus analisis anda, pasangan istilah-definisi manakah paling sesuai?",
+            "Semasa menyediakan cadangan berkaitan \"{term}\", pasangan betul manakah patut dipilih?",
+            "Untuk penilaian menyeluruh tentang \"{term}\", pasangan manakah betul?",
+            "Jika soalan menekankan \"{term}\", pasangan istilah manakah paling logik?",
+        ],
+    }
+
+    def templ(kind: str, term_map: Dict[str, str], def_map: Dict[str, str], idx: int) -> Dict[str, str]:
+        i = idx % 4
+        return make_text(
+            en=en_templates[kind][i].format(term=term_map["en"], definition=def_map["en"]),
+            zh=zh_templates[kind][i].format(term=term_map["zh"], definition=def_map["zh"]),
+            ms=ms_templates[kind][i].format(term=term_map["ms"], definition=def_map["ms"]),
+        )
+
     for idx, fact in enumerate(FACTS):
         fact_term = term_text(fact.term, en_map, ms_map)
         fact_def = definition_text(fact.definition, en_map, ms_map)
@@ -131,11 +292,7 @@ def main() -> None:
                 "id": qid,
                 "sourceSet": "base200",
                 "chapter": "",
-                "question": make_text(
-                    en=f"Which term best matches the following definition?\n{fact_def['en']}",
-                    zh=f"以下定义对应哪个术语？\n{fact.definition}",
-                    ms=f"Istilah manakah paling sepadan dengan definisi berikut?\n{fact_def['ms']}",
-                ),
+                "question": templ("a1", fact_term, fact_def, idx),
                 "options": {k: term_text(v, en_map, ms_map) for k, v in options.items()},
                 "answer": answer_key(options, fact.term),
             }
@@ -150,11 +307,7 @@ def main() -> None:
                 "id": qid,
                 "sourceSet": "base200",
                 "chapter": "",
-                "question": make_text(
-                    en=f"Which statement is most accurate about \"{fact_term['en']}\"?",
-                    zh=f"关于「{fact.term}」，下列哪项描述最准确？",
-                    ms=f"Pernyataan manakah paling tepat tentang \"{fact_term['ms']}\"?",
-                ),
+                "question": templ("a2", fact_term, fact_def, idx),
                 "options": {
                     k: definition_text(v, en_map, ms_map) for k, v in option_defs.items()
                 },
@@ -175,11 +328,7 @@ def main() -> None:
                 "id": qid,
                 "sourceSet": "base200",
                 "chapter": "",
-                "question": make_text(
-                    en="Which term-definition pair is correct?",
-                    zh="以下哪一组“术语—解释”配对正确？",
-                    ms="Pasangan istilah-definisi manakah yang betul?",
-                ),
+                "question": templ("a3", fact_term, fact_def, idx),
                 "options": {
                     k: pair_text(
                         v.split(" — ", maxsplit=1)[0],
@@ -206,11 +355,7 @@ def main() -> None:
                 "id": qid,
                 "sourceSet": "base200",
                 "chapter": "",
-                "question": make_text(
-                    en="Which term-definition pair is incorrect?",
-                    zh="以下哪一组“术语—解释”配对错误？",
-                    ms="Pasangan istilah-definisi manakah yang salah?",
-                ),
+                "question": templ("a4", fact_term, fact_def, idx),
                 "options": {
                     k: pair_text(
                         v.split(" — ", maxsplit=1)[0],
@@ -233,19 +378,7 @@ def main() -> None:
                 "id": qid,
                 "sourceSet": "hard200",
                 "chapter": "",
-                "question": make_text(
-                    en=(
-                        "A client interview reveals the following core clue:\n"
-                        f"{fact_def['en']}\n"
-                        "Which term best fits this clue?"
-                    ),
-                    zh=f"客户访谈出现以下核心线索：\n{fact.definition}\n最符合的术语是下列哪一项？",
-                    ms=(
-                        "Temu bual pelanggan mendedahkan petunjuk teras berikut:\n"
-                        f"{fact_def['ms']}\n"
-                        "Istilah manakah paling sesuai dengan petunjuk ini?"
-                    ),
-                ),
+                "question": templ("b1", fact_term, fact_def, idx),
                 "options": {k: term_text(v, en_map, ms_map) for k, v in scenario_options.items()},
                 "answer": answer_key(scenario_options, fact.term),
             }
@@ -260,11 +393,7 @@ def main() -> None:
                 "id": qid,
                 "sourceSet": "hard200",
                 "chapter": "",
-                "question": make_text(
-                    en=f"Which statement is most accurate about \"{fact_term['en']}\"?",
-                    zh=f"关于「{fact.term}」，下列哪项描述最准确？",
-                    ms=f"Pernyataan manakah paling tepat tentang \"{fact_term['ms']}\"?",
-                ),
+                "question": templ("b2", fact_term, fact_def, idx),
                 "options": {k: definition_text(v, en_map, ms_map) for k, v in hard_defs.items()},
                 "answer": answer_key(hard_defs, fact.definition),
             }
@@ -301,11 +430,7 @@ def main() -> None:
                 "id": qid,
                 "sourceSet": "hard200",
                 "chapter": "",
-                "question": make_text(
-                    en=f"Which of the following statements about \"{fact_term['en']}\" is incorrect?",
-                    zh=f"以下关于「{fact.term}」的叙述，哪一项错误？",
-                    ms=f"Pernyataan manakah tentang \"{fact_term['ms']}\" yang tidak betul?",
-                ),
+                "question": templ("b3", fact_term, fact_def, idx),
                 "options": option_texts,
                 "answer": answer_key(stmt_options, wrong_stmt),
             }
@@ -324,11 +449,7 @@ def main() -> None:
                 "id": qid,
                 "sourceSet": "hard200",
                 "chapter": "",
-                "question": make_text(
-                    en="Which term-definition pair is correct?",
-                    zh="下列哪一组“术语—解释”配对正确？",
-                    ms="Pasangan istilah-definisi manakah yang betul?",
-                ),
+                "question": templ("b4", fact_term, fact_def, idx),
                 "options": {
                     k: pair_text(
                         v.split(" — ", maxsplit=1)[0],
