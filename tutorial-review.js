@@ -3,6 +3,8 @@ const data = window.__TUTORIAL_REVIEW_DATA__;
 const els = {
   chapterFilter: document.querySelector("#chapter-filter"),
   keywordFilter: document.querySelector("#keyword-filter"),
+  applyFilterButton: document.querySelector("#apply-filter-btn"),
+  resetFilterButton: document.querySelector("#reset-filter-btn"),
   summary: document.querySelector("#chapter-summary"),
   objectives: document.querySelector("#learning-objectives"),
   chapterContainer: document.querySelector("#chapter-container"),
@@ -52,7 +54,7 @@ function matchesKeyword(chapter, keyword) {
 }
 
 function renderChapters() {
-  const selected = els.chapterFilter.value;
+  const selected = String(els.chapterFilter.value || "all");
   const keyword = els.keywordFilter.value.trim();
   const chapters = data.chapters.filter((chapter) => {
     const chapterMatch = selected === "all" || String(chapter.id) === selected;
@@ -60,7 +62,12 @@ function renderChapters() {
     return chapterMatch && keywordMatch;
   });
 
-  els.chapterContainer.innerHTML = chapters.map(buildChapterCard).join("");
+  if (chapters.length === 0) {
+    els.chapterContainer.innerHTML =
+      '<article class="question-card"><p class="question-text">找不到符合条件的章节，请调整筛选条件后重试。</p></article>';
+  } else {
+    els.chapterContainer.innerHTML = chapters.map(buildChapterCard).join("");
+  }
   els.summary.textContent = `当前显示 ${chapters.length} / ${data.chapters.length} 章`;
 }
 
@@ -81,8 +88,18 @@ function init() {
     els.chapterFilter.append(option);
   }
 
+  els.applyFilterButton.addEventListener("click", renderChapters);
+  els.resetFilterButton.addEventListener("click", () => {
+    els.chapterFilter.value = "all";
+    els.keywordFilter.value = "";
+    renderChapters();
+  });
   els.chapterFilter.addEventListener("change", renderChapters);
-  els.keywordFilter.addEventListener("input", renderChapters);
+  els.keywordFilter.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+      renderChapters();
+    }
+  });
   renderChapters();
 }
 
