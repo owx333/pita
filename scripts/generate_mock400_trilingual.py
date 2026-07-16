@@ -470,9 +470,9 @@ def main() -> None:
     payload = {
         "meta": {
             "title": {
-                "en": "RFP Module 2 Mock Exam (400 Questions, Trilingual)",
-                "zh": "RFP 第二单元模拟考试（400题，三语）",
-                "ms": "Peperiksaan Olok-olok RFP Modul 2 (400 soalan, tiga bahasa)",
+                "en": "RFP Module 2 Exam Paper (400 Questions, Trilingual)",
+                "zh": "RFP 第二单元400题目的考卷（三语）",
+                "ms": "Kertas Peperiksaan RFP Modul 2 (400 soalan, tiga bahasa)",
             },
             "description": {
                 "en": "Combined core + advanced mock sets with English, Chinese and Malay text.",
