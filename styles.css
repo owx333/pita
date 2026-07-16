@@ -70,6 +70,7 @@ button {
   color: var(--text);
   padding: 0.45rem 0.7rem;
   min-height: 40px;
+  max-width: 100%;
 }
 
 input[type="text"] {
@@ -107,6 +108,13 @@ button.secondary {
   border: 1px solid var(--border);
   border-radius: 12px;
   padding: 1rem;
+  min-width: 0;
+}
+
+#chapter-filter,
+#keyword-filter {
+  width: 100%;
+  max-width: 100%;
 }
 
 .summary-panel {
