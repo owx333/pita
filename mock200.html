@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RFP Module 2 模拟考试 200 题</title>
+    <link rel="icon" type="image/png" href="./branding/favicon/favicon.png?v=2" />
+    <link rel="shortcut icon" href="./branding/favicon/favicon.png?v=2" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-block">
+        <img src="./branding/logo/header-logo.png" alt="HongLeong Assurance" class="site-logo" />
+      </div>
+      <div>
+        <h1>RFP Module 2 模拟考试（独立200题）</h1>
+        <p id="mock200-subtitle">
+          根据 RFP Slide 重点整理，不影响原本 75 题页面
+        </p>
+      </div>
+      <div class="language-controls">
+        <a href="./index.html">返回原本75题</a>
+        <a href="./tutorial-review.html">教材温习站</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="panel summary-panel">
+        <h2>练习控制</h2>
+        <p id="mock-count">当前题量：200 题</p>
+        <p id="mock-progress">已作答 0 / 200</p>
+        <p id="mock-score">得分：- / -</p>
+
+        <div class="mode-buttons">
+          <button id="mode-200" type="button">全部200题</button>
+          <button id="mode-100" type="button" class="secondary">随机100题</button>
+          <button id="mode-50" type="button" class="secondary">随机50题</button>
+        </div>
+
+        <div class="actions">
+          <button id="mock-check" type="button">检查答案</button>
+          <button id="mock-reset" type="button" class="secondary">重置</button>
+        </div>
+
+        <label class="toggle">
+          <input id="mock-show-explanation" type="checkbox" />
+          <span>批改后显示解析</span>
+        </label>
+      </aside>
+
+      <section class="panel quiz-panel">
+        <h2>题目列表</h2>
+        <div id="mock-questions" class="question-list"></div>
+      </section>
+    </main>
+
+    <template id="mock-question-template">
+      <article class="question-card">
+        <header class="question-header">
+          <h3 class="question-number"></h3>
+          <span class="result-badge">未批改</span>
+        </header>
+        <p class="chapter-tag"></p>
+        <p class="question-text"></p>
+        <div class="options"></div>
+        <p class="answer-line hidden"></p>
+      </article>
+    </template>
+
+    <script src="./data/mock200-data.js"></script>
+    <script src="./mock200.js"></script>
+  </body>
+</html>

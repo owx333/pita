@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PITA 教材温习站</title>
+    <link rel="icon" type="image/png" href="./branding/favicon/favicon.png?v=2" />
+    <link rel="shortcut icon" href="./branding/favicon/favicon.png?v=2" />
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="app-header">
+      <div class="brand-block">
+        <img src="./branding/logo/header-logo.png" alt="HongLeong Assurance" class="site-logo" />
+      </div>
+      <div>
+        <h1>PITA 教材温习站</h1>
+        <p id="tutorial-subtitle">根据 Module 2 Tutorial 文件整理的章节复习笔记</p>
+      </div>
+      <div class="language-controls">
+        <a href="./index.html">返回练习题主页</a>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="panel summary-panel">
+        <h2>温习导航</h2>
+        <label for="chapter-filter">章节筛选</label>
+        <select id="chapter-filter">
+          <option value="all">全部章节</option>
+        </select>
+
+        <label for="keyword-filter">关键词搜索</label>
+        <input id="keyword-filter" type="text" placeholder="输入术语/关键字" />
+        <div class="actions">
+          <button id="apply-filter-btn" type="button">套用筛选</button>
+          <button id="reset-filter-btn" type="button" class="secondary">清除筛选</button>
+        </div>
+
+        <p class="helper" id="chapter-summary"></p>
+      </aside>
+
+      <section class="panel quiz-panel">
+        <div class="quiz-toolbar">
+          <h2>学习目标</h2>
+        </div>
+        <ul id="learning-objectives" class="review-list"></ul>
+
+        <div class="quiz-toolbar">
+          <h2>章节重点</h2>
+        </div>
+        <div id="chapter-container" class="question-list"></div>
+      </section>
+    </main>
+
+    <script src="./data/tutorial-review-data.js"></script>
+    <script src="./tutorial-review.js"></script>
+  </body>
+</html>

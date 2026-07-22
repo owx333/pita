@@ -3,13 +3,18 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>RFP Module 2 Trilingual Quiz</title>
+    <title>PITA练习测验</title>
+    <link rel="icon" type="image/png" href="./branding/favicon/favicon.png?v=2" />
+    <link rel="shortcut icon" href="./branding/favicon/favicon.png?v=2" />
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <header class="app-header">
+      <div class="brand-block">
+        <img src="./branding/logo/header-logo.png" alt="HongLeong Assurance" class="site-logo" />
+      </div>
       <div>
-        <h1 id="app-title">RFP Module 2 Practice Quiz</h1>
+        <h1 id="app-title">PITA练习测验</h1>
         <p id="app-subtitle">
           Trilingual revision website (English / 中文 / Bahasa Melayu)
         </p>
@@ -21,12 +26,20 @@
           <option value="zh">中文</option>
           <option value="ms">Bahasa Melayu</option>
         </select>
+        <a href="./tutorial-review.html">教材温习站</a>
       </div>
     </header>
 
     <main class="layout">
       <aside class="panel summary-panel">
         <h2 id="summary-title">Progress</h2>
+        <div class="mode-buttons" id="dataset-buttons">
+          <button id="dataset-btn-75" type="button" class="secondary">75题温习</button>
+          <button id="dataset-btn-200" type="button" class="secondary">200题考试</button>
+          <button id="dataset-btn-200-hard" type="button" class="secondary">200题加强版</button>
+          <button id="dataset-btn-400-tri" type="button" class="secondary">110题自我评估考卷</button>
+        </div>
+        <p id="dataset-hint" class="helper"></p>
         <p id="summary-status">Answered 0 / 75</p>
         <p id="summary-score">Score: 0</p>
         <div class="actions">
@@ -56,6 +69,7 @@
           <h3 class="question-number"></h3>
           <span class="result-badge"></span>
         </header>
+        <p class="chapter-tag hidden question-chapter"></p>
         <p class="question-text"></p>
         <div class="options"></div>
         <p class="answer-line hidden"></p>
@@ -63,6 +77,9 @@
     </template>
 
     <script src="./data/questions-data.js"></script>
+    <script src="./data/mock200-trilingual-data.js"></script>
+    <script src="./data/mock200-hard-trilingual-data.js"></script>
+    <script src="./data/mock400-trilingual-data.js"></script>
     <script src="./app.js"></script>
   </body>
 </html>

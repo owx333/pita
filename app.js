@@ -1,7 +1,17 @@
 const uiText = {
   en: {
     title: "RFP Module 2 Practice Quiz",
-    subtitle: "Trilingual revision website (English / 中文 / Bahasa Melayu)",
+    subtitle75: "Trilingual revision website (English / 中文 / Bahasa Melayu)",
+    subtitle200: "Mock exam mode: 200 questions from RFP key topics",
+    subtitle200Hard: "Advanced mock exam mode: harder 200-question set",
+    subtitle400Tri: "Exam paper mode: 110 self-assessment questions",
+    datasetPractice75: "75-question revision",
+    datasetMock200: "200-question exam",
+    datasetMock200Hard: "200-question advanced exam",
+    datasetMock400Tri: "110-question self-assessment exam paper",
+    datasetUnavailable:
+      "This set is not loaded. Please update files and reload index.html.",
+    datasetHint: (name, total) => `Current set: ${name} (${total} questions)`,
     languageLabel: "Language:",
     progressTitle: "Progress",
     answered: (count, total) => `Answered ${count} / ${total}`,
@@ -21,8 +31,17 @@ const uiText = {
     loadError: "Failed to load questions data.",
   },
   zh: {
-    title: "RFP 第二单元练习测验",
-    subtitle: "三语温习网站（英文 / 中文 / 马来文）",
+    title: "PITA练习测验",
+    subtitle75: "三语温习网站（英文 / 中文 / 马来文）",
+    subtitle200: "模拟考试模式：200题（RFP重点）",
+    subtitle200Hard: "加强版模式：200题（更高难度）",
+    subtitle400Tri: "考卷模式：110题（自我评估）",
+    datasetPractice75: "75题温习",
+    datasetMock200: "200题考试",
+    datasetMock200Hard: "200题加强版",
+    datasetMock400Tri: "110题自我评估考卷",
+    datasetUnavailable: "该题库未载入。请先更新文件后重新打开 index.html。",
+    datasetHint: (name, total) => `当前题库：${name}（${total}题）`,
     languageLabel: "语言：",
     progressTitle: "练习进度",
     answered: (count, total) => `已作答 ${count} / ${total}`,
@@ -43,7 +62,17 @@ const uiText = {
   },
   ms: {
     title: "Kuiz Latihan RFP Modul 2",
-    subtitle: "Laman ulang kaji tiga bahasa (English / 中文 / Bahasa Melayu)",
+    subtitle75: "Laman ulang kaji tiga bahasa (English / 中文 / Bahasa Melayu)",
+    subtitle200: "Mod peperiksaan simulasi: 200 soalan berdasarkan topik utama RFP",
+    subtitle200Hard: "Mod lanjutan: set 200 soalan tahap lebih sukar",
+    subtitle400Tri: "Mod kertas peperiksaan: 110 soalan penilaian kendiri",
+    datasetPractice75: "Ulang kaji 75 soalan",
+    datasetMock200: "Peperiksaan 200 soalan",
+    datasetMock200Hard: "Peperiksaan lanjutan 200 soalan",
+    datasetMock400Tri: "Kertas peperiksaan penilaian kendiri 110 soalan",
+    datasetUnavailable:
+      "Set ini belum dimuatkan. Sila kemas kini fail dan buka semula index.html.",
+    datasetHint: (name, total) => `Set semasa: ${name} (${total} soalan)`,
     languageLabel: "Bahasa:",
     progressTitle: "Kemajuan",
     answered: (count, total) => `Dijawab ${count} / ${total}`,
@@ -66,10 +95,17 @@ const uiText = {
 
 const state = {
   language: "zh",
+  dataset: "practice75",
   checked: false,
   showCorrectAnswers: false,
   answers: {},
   questions: [],
+  datasets: {
+    practice75: [],
+    mock200: [],
+    mock200Hard: [],
+    mock400Tri: [],
+  },
 };
 
 const elements = {
@@ -78,6 +114,11 @@ const elements = {
   languageLabel: document.querySelector("#language-label"),
   languageSelect: document.querySelector("#language-select"),
   summaryTitle: document.querySelector("#summary-title"),
+  datasetHint: document.querySelector("#dataset-hint"),
+  datasetButton75: document.querySelector("#dataset-btn-75"),
+  datasetButton200: document.querySelector("#dataset-btn-200"),
+  datasetButton200Hard: document.querySelector("#dataset-btn-200-hard"),
+  datasetButton400Tri: document.querySelector("#dataset-btn-400-tri"),
   summaryStatus: document.querySelector("#summary-status"),
   summaryScore: document.querySelector("#summary-score"),
   helper: document.querySelector("#summary-helper"),
@@ -97,7 +138,18 @@ function t() {
 function setStaticLabels() {
   const labels = t();
   elements.title.textContent = labels.title;
-  elements.subtitle.textContent = labels.subtitle;
+  elements.subtitle.textContent = (
+    {
+      practice75: labels.subtitle75,
+      mock200: labels.subtitle200,
+      mock200Hard: labels.subtitle200Hard,
+      mock400Tri: labels.subtitle400Tri,
+    }[state.dataset] || labels.subtitle75
+  );
+  elements.datasetButton75.textContent = labels.datasetPractice75;
+  elements.datasetButton200.textContent = labels.datasetMock200;
+  elements.datasetButton200Hard.textContent = labels.datasetMock200Hard;
+  elements.datasetButton400Tri.textContent = labels.datasetMock400Tri;
   elements.languageLabel.textContent = labels.languageLabel;
   elements.summaryTitle.textContent = labels.progressTitle;
   elements.checkButton.textContent = labels.checkButton;
@@ -105,6 +157,110 @@ function setStaticLabels() {
   elements.helper.textContent = labels.helper;
   elements.quizTitle.textContent = labels.questionsTitle;
   elements.showAnswerLabel.textContent = labels.showAnswer;
+}
+
+function datasetNameByKey(datasetKey, labels) {
+  if (datasetKey === "mock200") {
+    return labels.datasetMock200;
+  }
+  if (datasetKey === "mock200Hard") {
+    return labels.datasetMock200Hard;
+  }
+  if (datasetKey === "mock400Tri") {
+    return labels.datasetMock400Tri;
+  }
+  return labels.datasetPractice75;
+}
+
+function updateDatasetButtons() {
+  const active = state.dataset;
+  const mapping = [
+    [elements.datasetButton75, "practice75"],
+    [elements.datasetButton200, "mock200"],
+    [elements.datasetButton200Hard, "mock200Hard"],
+    [elements.datasetButton400Tri, "mock400Tri"],
+  ];
+  mapping.forEach(([button, key]) => {
+    if (key === active) {
+      button.classList.remove("secondary");
+    } else {
+      button.classList.add("secondary");
+    }
+  });
+}
+
+function normalizePractice75Question(question) {
+  return {
+    id: question.id,
+    chapter: "",
+    question: question.question,
+    options: question.options,
+    answer: question.answer,
+  };
+}
+
+function normalizeMock200Question(question) {
+  const toLangMap = (value) => ({ en: value, zh: value, ms: value });
+  return {
+    id: question.id,
+    chapter: question.chapter || "",
+    question: toLangMap(question.question),
+    options: {
+      a: toLangMap(question.options.a),
+      b: toLangMap(question.options.b),
+      c: toLangMap(question.options.c),
+      d: toLangMap(question.options.d),
+    },
+    answer: question.answer,
+  };
+}
+
+function normalizeTrilingualQuestion(question) {
+  const ensureLangMap = (value) => {
+    if (typeof value === "object" && value !== null) {
+      return {
+        en: value.en || value.zh || value.ms || "",
+        zh: value.zh || value.en || value.ms || "",
+        ms: value.ms || value.en || value.zh || "",
+      };
+    }
+    return { en: String(value || ""), zh: String(value || ""), ms: String(value || "") };
+  };
+
+  return {
+    id: question.id,
+    chapter: question.chapter || "",
+    question: ensureLangMap(question.question),
+    options: {
+      a: ensureLangMap(question.options?.a),
+      b: ensureLangMap(question.options?.b),
+      c: ensureLangMap(question.options?.c),
+      d: ensureLangMap(question.options?.d),
+    },
+    answer: question.answer,
+  };
+}
+
+function switchDataset(datasetKey) {
+  const labels = t();
+  const nextQuestions = state.datasets[datasetKey];
+  if (!nextQuestions || nextQuestions.length === 0) {
+    elements.questionList.textContent = labels.datasetUnavailable;
+    elements.datasetHint.textContent = labels.datasetUnavailable;
+    return;
+  }
+  state.dataset = datasetKey;
+  state.questions = [...nextQuestions];
+  state.answers = {};
+  state.checked = false;
+  setStaticLabels();
+  elements.datasetHint.textContent = labels.datasetHint(
+    datasetNameByKey(datasetKey, labels),
+    state.questions.length
+  );
+  updateDatasetButtons();
+  updateSummary();
+  renderQuestions();
 }
 
 function getScore() {
@@ -156,12 +312,23 @@ function renderQuestions() {
     const card = fragment.querySelector(".question-card");
     const title = fragment.querySelector(".question-number");
     const resultBadge = fragment.querySelector(".result-badge");
+    const chapterTag = fragment.querySelector(".question-chapter");
     const questionText = fragment.querySelector(".question-text");
     const optionsContainer = fragment.querySelector(".options");
     const answerLine = fragment.querySelector(".answer-line");
 
     title.textContent = labels.questionPrefix(question.id);
     questionText.textContent = question.question[state.language] || "";
+    const chapterText =
+      typeof question.chapter === "object" && question.chapter !== null
+        ? question.chapter[state.language] || question.chapter.zh || question.chapter.en || ""
+        : question.chapter;
+    if (chapterText) {
+      chapterTag.textContent = chapterText;
+      chapterTag.classList.remove("hidden");
+    } else {
+      chapterTag.classList.add("hidden");
+    }
 
     if (!state.checked) {
       resultBadge.textContent = labels.notChecked;
@@ -205,6 +372,15 @@ function renderQuestions() {
 }
 
 function wireEvents() {
+  elements.datasetButton75.addEventListener("click", () => switchDataset("practice75"));
+  elements.datasetButton200.addEventListener("click", () => switchDataset("mock200"));
+  elements.datasetButton200Hard.addEventListener("click", () =>
+    switchDataset("mock200Hard")
+  );
+  elements.datasetButton400Tri.addEventListener("click", () =>
+    switchDataset("mock400Tri")
+  );
+
   elements.languageSelect.addEventListener("change", (event) => {
     state.language = event.target.value;
     setStaticLabels();
@@ -233,27 +409,94 @@ function wireEvents() {
 
 async function initialize() {
   elements.questionList.textContent = t().loading;
-  setStaticLabels();
+  wireEvents();
 
   try {
-    let payload = window.__QUIZ_DATA__;
-    if (!payload) {
+    let practicePayload = window.__QUIZ_DATA__;
+    if (!practicePayload) {
       const response = await fetch("./data/questions.json", { cache: "no-store" });
       if (!response.ok) {
         throw new Error(`HTTP ${response.status}`);
       }
-      payload = await response.json();
+      practicePayload = await response.json();
     }
-    state.questions = payload.questions || [];
+    state.datasets.practice75 = (practicePayload.questions || []).map(
+      normalizePractice75Question
+    );
+
+    let mockPayload = window.__MOCK200_TRI_DATA__;
+    if (!mockPayload) {
+      try {
+        const mockResponse = await fetch("./data/mock200-trilingual.json", {
+          cache: "no-store",
+        });
+        if (mockResponse.ok) {
+          mockPayload = await mockResponse.json();
+        }
+      } catch (error) {
+        // Keep silent: offline mode may block fetch.
+      }
+    }
+    if (!mockPayload && window.__MOCK200_DATA__) {
+      mockPayload = window.__MOCK200_DATA__;
+    }
+    state.datasets.mock200 = (mockPayload?.questions || []).map((q) =>
+      typeof q.question === "object" ? normalizeTrilingualQuestion(q) : normalizeMock200Question(q)
+    );
+
+    let mockHardPayload = window.__MOCK200_HARD_TRI_DATA__;
+    if (!mockHardPayload) {
+      try {
+        const mockHardResponse = await fetch("./data/mock200-hard-trilingual.json", {
+          cache: "no-store",
+        });
+        if (mockHardResponse.ok) {
+          mockHardPayload = await mockHardResponse.json();
+        }
+      } catch (error) {
+        // Keep silent: offline mode may block fetch.
+      }
+    }
+    if (!mockHardPayload && window.__MOCK200_HARD_DATA__) {
+      mockHardPayload = window.__MOCK200_HARD_DATA__;
+    }
+    state.datasets.mock200Hard = (mockHardPayload?.questions || []).map((q) =>
+      typeof q.question === "object" ? normalizeTrilingualQuestion(q) : normalizeMock200Question(q)
+    );
+
+    let mock400Payload = window.__MOCK400_DATA__;
+    if (!mock400Payload) {
+      try {
+        const mock400Response = await fetch("./data/mock400-trilingual.json", {
+          cache: "no-store",
+        });
+        if (mock400Response.ok) {
+          mock400Payload = await mock400Response.json();
+        }
+      } catch (error) {
+        // Keep silent: offline mode may block fetch.
+      }
+    }
+    state.datasets.mock400Tri = (mock400Payload?.questions || []).map(
+      normalizeTrilingualQuestion
+    );
   } catch (error) {
     elements.questionList.textContent = t().loadError;
     console.error(error);
     return;
   }
 
-  wireEvents();
-  updateSummary();
-  renderQuestions();
+  if (state.datasets.mock200.length === 0) {
+    elements.datasetButton200.disabled = true;
+  }
+  if (state.datasets.mock200Hard.length === 0) {
+    elements.datasetButton200Hard.disabled = true;
+  }
+  if (state.datasets.mock400Tri.length === 0) {
+    elements.datasetButton400Tri.disabled = true;
+  }
+  setStaticLabels();
+  switchDataset("practice75");
 }
 
 initialize();
