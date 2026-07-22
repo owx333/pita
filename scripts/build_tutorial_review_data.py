@@ -86,10 +86,107 @@ def extract_chapter_positions(text: str) -> List[tuple[int, int]]:
     return ordered
 
 
-def extract_excerpt(text: str, start: int, end: int) -> str:
+def normalize_line(line: str) -> str:
+    line = line.replace("\u3000", " ")
+    line = re.sub(r"\s+", " ", line).strip()
+    line = re.sub(r"^[•·▪▫◆◇○●oO]+\s*", "", line)
+    return line
+
+
+def is_noise_line(line: str) -> bool:
+    if not line:
+        return True
+    if re.fullmatch(r"[0-9\s./:,-]+", line):
+        return True
+    if re.fullmatch(r"[✓✔✗×><=+\-()（）\[\]]+", line):
+        return True
+    if line.lower().startswith("registred financial planning"):
+        return True
+    if line.lower().startswith("registered financial planning"):
+        return True
+    compact = re.sub(r"\s+", "", line)
+    if len(compact) <= 1:
+        return True
+    return False
+
+
+def extract_highlights(text: str, start: int, end: int, chapter_num: int, chapter_title: str) -> List[str]:
     segment = text[start:end]
-    segment = re.sub(r"\s+", " ", segment).strip()
-    return segment[:520] + ("..." if len(segment) > 520 else "")
+    lines = [normalize_line(line) for line in segment.splitlines()]
+
+    cleaned: List[str] = []
+    seen = set()
+    title_markers = {
+        chapter_title.replace(" ", ""),
+        f"第{chapter_num}章:{chapter_title}".replace(" ", ""),
+        f"第{chapter_num}章：{chapter_title}".replace(" ", ""),
+    }
+
+    for line in lines:
+        if is_noise_line(line):
+            continue
+        compact = re.sub(r"\s+", "", line)
+        if compact in seen:
+            continue
+        if compact in title_markers:
+            continue
+        if compact.startswith(f"第{chapter_num}章") and len(compact) <= 16:
+            continue
+        seen.add(compact)
+        cleaned.append(line)
+
+    if not cleaned:
+        return []
+
+    # Keep the first group of meaningful lines as "quick revision points".
+    return cleaned[:16]
+
+
+def extract_highlights_from_excerpt_blob(
+    excerpt: str, chapter_num: int, chapter_title: str
+) -> List[str]:
+    text = str(excerpt or "").replace("...", " ")
+    text = re.sub(r"(第\s*\d+\s*章\s*[:：])", r"\n\1", text)
+    text = re.sub(
+        r"(风险分类|纯风险的类型|应对风险的态度|个人风险|物业风险|法律责任风险|学习目标|年金的分类|保险类型|风险管理流程)",
+        r"\n\1",
+        text,
+    )
+    text = re.sub(r"\s{2,}", "\n", text)
+    text = re.sub(r"\s[0-9]{2}\s", "\n", text)
+    lines = [normalize_line(line) for line in re.split(r"[\n；;。]+", text)]
+
+    cleaned: List[str] = []
+    seen = set()
+    title_markers = {
+        chapter_title.replace(" ", ""),
+        f"第{chapter_num}章:{chapter_title}".replace(" ", ""),
+        f"第{chapter_num}章：{chapter_title}".replace(" ", ""),
+    }
+
+    for line in lines:
+        if is_noise_line(line):
+            continue
+        compact = re.sub(r"\s+", "", line)
+        if compact in seen:
+            continue
+        if compact in title_markers:
+            continue
+        if compact.startswith(f"第{chapter_num}章") and len(compact) <= 16:
+            continue
+        seen.add(compact)
+        cleaned.append(line)
+
+    return cleaned[:16]
+
+
+def build_excerpt_from_highlights(highlights: List[str]) -> str:
+    if not highlights:
+        return ""
+    excerpt = "；".join(highlights[:4]).strip()
+    if len(excerpt) > 360:
+        return excerpt[:360].rstrip() + "..."
+    return excerpt
 
 
 def facts_by_chapter() -> Dict[int, List[Dict[str, str]]]:
@@ -104,23 +201,56 @@ def facts_by_chapter() -> Dict[int, List[Dict[str, str]]]:
 
 
 def main() -> None:
-    raw = read_pdf_text(PDF_PATH)
-    text = clean_text(raw)
-    chapter_marks = extract_chapter_positions(text)
     chapter_facts = facts_by_chapter()
-
     chapters = []
-    for i, (chapter_num, start) in enumerate(chapter_marks):
-        end = chapter_marks[i + 1][1] if i + 1 < len(chapter_marks) else len(text)
-        chapters.append(
-            {
-                "id": chapter_num,
-                "title": DEFAULT_CHAPTERS.get(chapter_num, f"第{chapter_num}章"),
-                "sourceExcerpt": extract_excerpt(text, start, end),
-                "keyTerms": chapter_facts.get(chapter_num, []),
-                "memoryChecklist": MEMORY_CHECKLIST.get(chapter_num, []),
-            }
+
+    if PDF_PATH.exists():
+        raw = read_pdf_text(PDF_PATH)
+        text = clean_text(raw)
+        chapter_marks = extract_chapter_positions(text)
+
+        for i, (chapter_num, start) in enumerate(chapter_marks):
+            end = chapter_marks[i + 1][1] if i + 1 < len(chapter_marks) else len(text)
+            chapter_title = DEFAULT_CHAPTERS.get(chapter_num, f"第{chapter_num}章")
+            highlights = extract_highlights(text, start, end, chapter_num, chapter_title)
+            chapters.append(
+                {
+                    "id": chapter_num,
+                    "title": chapter_title,
+                    "sourceExcerpt": build_excerpt_from_highlights(highlights),
+                    "sourceHighlights": highlights,
+                    "keyTerms": chapter_facts.get(chapter_num, []),
+                    "memoryChecklist": MEMORY_CHECKLIST.get(chapter_num, []),
+                }
+            )
+    elif OUT_JSON.exists():
+        existing = json.loads(OUT_JSON.read_text(encoding="utf-8"))
+        existing_chapters = existing.get("chapters", [])
+        for chapter in existing_chapters:
+            chapter_num = int(chapter.get("id", 0))
+            chapter_title = chapter.get("title") or DEFAULT_CHAPTERS.get(chapter_num, f"第{chapter_num}章")
+            highlights = extract_highlights_from_excerpt_blob(
+                chapter.get("sourceExcerpt", ""),
+                chapter_num,
+                chapter_title,
+            )
+            chapters.append(
+                {
+                    "id": chapter_num,
+                    "title": chapter_title,
+                    "sourceExcerpt": build_excerpt_from_highlights(highlights),
+                    "sourceHighlights": highlights,
+                    "keyTerms": chapter.get("keyTerms") or chapter_facts.get(chapter_num, []),
+                    "memoryChecklist": chapter.get("memoryChecklist")
+                    or MEMORY_CHECKLIST.get(chapter_num, []),
+                }
+            )
+    else:
+        raise FileNotFoundError(
+            "Source PDF and existing tutorial-review.json are both unavailable."
         )
+
+    chapters = sorted(chapters, key=lambda item: item["id"])
 
     payload = {
         "meta": {

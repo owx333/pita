@@ -17,7 +17,92 @@ function escapeHtml(str) {
     .replaceAll(">", "&gt;");
 }
 
+function parseLegacyExcerpt(excerpt) {
+  if (!excerpt) return [];
+  let text = String(excerpt).replace(/\.{3,}/g, " ");
+  text = text.replace(/(第\s*\d+\s*章\s*[:：])/g, "|||$1");
+  text = text.replace(
+    /(风险分类|纯风险的类型|应对风险的态度|个人风险|物业风险|法律责任风险|学习目标|年金的分类|保险类型|风险管理流程)/g,
+    "|||$1"
+  );
+
+  return text
+    .split(/(?:\|\|\||[；;。]|(?<!\d)\s{2,})/)
+    .map((item) => item.replace(/\s+/g, " ").trim())
+    .filter((item) => item.length >= 6)
+    .filter((item) => !/^[0-9\s./:,-]+$/.test(item))
+    .slice(0, 16);
+}
+
+function splitMessyLineToPoints(line) {
+  const seed = String(line || "")
+    .replace(/[•▪]/g, "\n")
+    .replace(/\s[oO]\s/g, "\n")
+    .replace(/(风险分类|纯风险的类型|应对风险的态度|风险分析|保险类型|消费者权益|雇主责任)/g, "\n$1")
+    .replace(/\s{2,}/g, "\n");
+
+  const chunks = seed
+    .split(/[\n；;。]+/)
+    .map((item) => item.replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+
+  const compact = [];
+  for (const chunk of chunks) {
+    if (chunk.length <= 88) {
+      compact.push(chunk);
+      continue;
+    }
+    const parts = chunk
+      .split(/[，,:：]/)
+      .map((item) => item.trim())
+      .filter((item) => item.length >= 6);
+    if (parts.length > 1) {
+      compact.push(...parts);
+    } else {
+      compact.push(chunk.slice(0, 88));
+    }
+  }
+  return compact;
+}
+
+function buildSummaryPoints(chapter, fallbackHighlights) {
+  const points = [];
+  const pushUnique = (value) => {
+    const text = String(value || "").replace(/\s+/g, " ").trim();
+    if (!text || text.length < 6 || text.length > 96) return;
+    if (/^[0-9\s./:,-]+$/.test(text)) return;
+    if (!points.includes(text)) points.push(text);
+  };
+
+  for (const item of chapter.memoryChecklist || []) {
+    pushUnique(`考试重点：${item}`);
+  }
+
+  for (const term of chapter.keyTerms || []) {
+    pushUnique(`${term.term}：${term.definition}`);
+    if (points.length >= 10) break;
+  }
+
+  for (const item of fallbackHighlights || []) {
+    for (const piece of splitMessyLineToPoints(item)) {
+      pushUnique(piece);
+      if (points.length >= 14) break;
+    }
+    if (points.length >= 14) break;
+  }
+
+  return points.slice(0, 14);
+}
+
 function buildChapterCard(chapter) {
+  const rawHighlights =
+    Array.isArray(chapter.sourceHighlights) && chapter.sourceHighlights.length > 0
+      ? chapter.sourceHighlights
+      : parseLegacyExcerpt(chapter.sourceExcerpt);
+  const summaryPoints = buildSummaryPoints(chapter, rawHighlights);
+  const highlightItems = summaryPoints
+    .map((item) => `<li>${escapeHtml(item)}</li>`)
+    .join("");
   const termItems = chapter.keyTerms
     .map(
       (item) =>
@@ -27,11 +112,20 @@ function buildChapterCard(chapter) {
   const checklistItems = chapter.memoryChecklist
     .map((item) => `<li>${escapeHtml(item)}</li>`)
     .join("");
+  const sourceExcerpt = escapeHtml(chapter.sourceExcerpt || "（暂无摘录）").replaceAll(
+    "\n",
+    "<br />"
+  );
 
   return `
     <details class="question-card tutorial-card" open>
       <summary class="tutorial-summary">第 ${chapter.id} 章：${escapeHtml(chapter.title)}</summary>
-      <p class="answer-line"><strong>原文摘录：</strong>${escapeHtml(chapter.sourceExcerpt)}</p>
+      <h4>重点整理</h4>
+      <ul class="review-list">${highlightItems || "<li>（本章暂无可读重点）</li>"}</ul>
+      <details class="tutorial-source">
+        <summary>查看原文摘录</summary>
+        <p class="answer-line tutorial-excerpt">${sourceExcerpt}</p>
+      </details>
       <h4>关键术语</h4>
       <ul class="review-list">${termItems || "<li>（本章暂无自动抽取术语）</li>"}</ul>
       <h4>记忆清单</h4>
