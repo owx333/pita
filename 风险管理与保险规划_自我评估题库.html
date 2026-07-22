@@ -1,0 +1,665 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>第二单元：风险管理与保险规划 — 自我评估题库</title>
+<style>
+  :root{
+    --ink:#1c2321;
+    --ink-soft:#4a5450;
+    --paper:#faf7f0;
+    --paper-raised:#ffffff;
+    --line:#ddd6c4;
+    --brass:#8a6d3b;
+    --brass-deep:#6b5228;
+    --seal:#7c2d2d;
+    --pine:#3f5d4e;
+    --pine-deep:#2e4437;
+    --gold-bg:#f4ecd8;
+    --wrong:#a13d3d;
+    --wrong-bg:#f9e6e6;
+    --right:#2e6b4f;
+    --right-bg:#e6f2ea;
+    --shadow: 0 1px 2px rgba(28,35,33,0.06), 0 8px 24px rgba(28,35,33,0.08);
+    --radius: 14px;
+  }
+  *{box-sizing:border-box;}
+  html,body{margin:0;padding:0;}
+  body{
+    background:
+      radial-gradient(1200px 600px at 10% -10%, #fff7e6 0%, transparent 60%),
+      radial-gradient(1000px 700px at 110% 10%, #eef3ea 0%, transparent 55%),
+      var(--paper);
+    color:var(--ink);
+    font-family: "Noto Serif SC","Songti SC","SimSun","PMingLiU", "Georgia", serif;
+    line-height:1.6;
+    min-height:100vh;
+  }
+  .wrap{
+    max-width:760px;
+    margin:0 auto;
+    padding:28px 18px 80px;
+  }
+  header.masthead{
+    text-align:center;
+    padding:22px 10px 26px;
+    border-bottom:3px double var(--brass);
+    margin-bottom:26px;
+    position:relative;
+  }
+  header.masthead .eyebrow{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    letter-spacing:0.28em;
+    font-size:11px;
+    color:var(--brass-deep);
+    text-transform:uppercase;
+    margin-bottom:10px;
+  }
+  header.masthead h1{
+    font-size:28px;
+    margin:0 0 6px;
+    font-weight:700;
+    color:var(--ink);
+  }
+  header.masthead .sub{
+    font-size:14px;
+    color:var(--ink-soft);
+    font-family:"Helvetica Neue",Arial,sans-serif;
+  }
+
+  /* ---------- Home / lesson picker ---------- */
+  .grid-lessons{
+    display:grid;
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+  .lesson-card{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:16px 18px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:14px;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+    transition:transform .15s ease, border-color .15s ease;
+  }
+  .lesson-card:hover{ transform: translateY(-2px); border-color:var(--brass); }
+  .lesson-card .num{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-weight:800;
+    font-size:13px;
+    color:var(--brass-deep);
+    background:var(--gold-bg);
+    border:1px solid var(--brass);
+    border-radius:999px;
+    width:34px;height:34px;
+    display:flex;align-items:center;justify-content:center;
+    flex-shrink:0;
+  }
+  .lesson-card .title{
+    flex:1;
+    font-size:16px;
+    color:var(--ink);
+  }
+  .lesson-card .meta{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:12px;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+  .lesson-card .badge{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:11px;
+    font-weight:700;
+    padding:3px 9px;
+    border-radius:999px;
+    white-space:nowrap;
+  }
+  .badge.done{ background:var(--right-bg); color:var(--right); border:1px solid #bfe0cd;}
+
+  .all-btn{
+    margin:22px 0 6px;
+    display:block;
+    width:100%;
+    text-align:center;
+    background:var(--pine);
+    color:#fff;
+    border:none;
+    border-radius:var(--radius);
+    padding:16px;
+    font-size:16px;
+    font-weight:700;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    letter-spacing:0.02em;
+    cursor:pointer;
+    box-shadow:var(--shadow);
+    transition:background .15s ease, transform .15s ease;
+  }
+  .all-btn:hover{ background:var(--pine-deep); transform:translateY(-1px);}
+  .all-btn .sm{ display:block; font-weight:400; font-size:12px; opacity:.85; margin-top:3px;}
+
+  .section-label{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:12px;
+    letter-spacing:.18em;
+    text-transform:uppercase;
+    color:var(--ink-soft);
+    margin:26px 0 10px 2px;
+  }
+
+  /* ---------- Quiz screen ---------- */
+  .quiz-header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin-bottom:14px;
+    gap:10px;
+  }
+  .back-btn{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:13px;
+    color:var(--ink-soft);
+    background:none;
+    border:1px solid var(--line);
+    border-radius:999px;
+    padding:6px 14px;
+    cursor:pointer;
+  }
+  .back-btn:hover{ border-color:var(--brass); color:var(--brass-deep); }
+  .lesson-tag{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:12px;
+    color:var(--brass-deep);
+    font-weight:700;
+    text-align:right;
+  }
+  .progress-track{
+    height:6px;
+    background:var(--line);
+    border-radius:999px;
+    overflow:hidden;
+    margin-bottom:22px;
+  }
+  .progress-fill{
+    height:100%;
+    background:linear-gradient(90deg, var(--brass), var(--pine));
+    border-radius:999px;
+    transition:width .3s ease;
+  }
+
+  .qcard{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:26px 24px 22px;
+    box-shadow:var(--shadow);
+  }
+  .qnum{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:12px;
+    color:var(--ink-soft);
+    letter-spacing:.1em;
+    margin-bottom:10px;
+  }
+  .qtext{
+    font-size:18px;
+    color:var(--ink);
+    white-space:pre-line;
+    margin-bottom:20px;
+  }
+  .options{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+  }
+  .opt{
+    display:flex;
+    align-items:flex-start;
+    gap:12px;
+    padding:13px 15px;
+    border:1.5px solid var(--line);
+    border-radius:10px;
+    cursor:pointer;
+    background:#fffdf9;
+    transition: border-color .12s ease, background .12s ease;
+    font-size:15.5px;
+  }
+  .opt:hover{ border-color:var(--brass); background:var(--gold-bg); }
+  .opt .letter{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-weight:800;
+    font-size:13px;
+    color:var(--brass-deep);
+    background:var(--gold-bg);
+    border:1px solid var(--brass);
+    border-radius:50%;
+    width:26px;height:26px;
+    flex-shrink:0;
+    display:flex;align-items:center;justify-content:center;
+    margin-top:1px;
+  }
+  .opt.selected{ border-color:var(--brass); background:var(--gold-bg); }
+  .opt.correct{ border-color:var(--right); background:var(--right-bg); }
+  .opt.correct .letter{ background:var(--right); color:#fff; border-color:var(--right);}
+  .opt.wrong{ border-color:var(--wrong); background:var(--wrong-bg); }
+  .opt.wrong .letter{ background:var(--wrong); color:#fff; border-color:var(--wrong);}
+  .opt.disabled{ cursor:default; }
+  .opt.disabled:hover{ background:inherit; }
+
+  .result-line{
+    margin-top:16px;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:14px;
+    font-weight:700;
+    display:none;
+    align-items:center;
+    gap:8px;
+  }
+  .result-line.show{ display:flex; }
+  .result-line.ok{ color:var(--right); }
+  .result-line.bad{ color:var(--wrong); }
+
+  .nav-row{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-top:20px;
+  }
+  .score-pill{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:13px;
+    color:var(--ink-soft);
+  }
+  .next-btn{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-weight:700;
+    font-size:14px;
+    background:var(--ink);
+    color:#fff;
+    border:none;
+    border-radius:999px;
+    padding:11px 24px;
+    cursor:pointer;
+    opacity:.35;
+    pointer-events:none;
+    transition:opacity .15s ease, background .15s ease;
+  }
+  .next-btn.active{ opacity:1; pointer-events:auto; background:var(--seal); }
+  .next-btn.active:hover{ background:#5c2222; }
+
+  /* ---------- Results screen ---------- */
+  .results-card{
+    background:var(--paper-raised);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:34px 26px;
+    text-align:center;
+    box-shadow:var(--shadow);
+  }
+  .results-card .score-big{
+    font-size:56px;
+    font-weight:800;
+    color:var(--seal);
+    line-height:1;
+    margin:6px 0 4px;
+  }
+  .results-card .score-frac{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:14px;
+    color:var(--ink-soft);
+    margin-bottom:20px;
+  }
+  .results-card .remark{
+    font-size:15px;
+    color:var(--ink-soft);
+    margin-bottom:22px;
+  }
+  .btn-row{
+    display:flex;
+    gap:10px;
+    justify-content:center;
+    flex-wrap:wrap;
+  }
+  .btn-row button{
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-weight:700;
+    font-size:13.5px;
+    border-radius:999px;
+    padding:11px 20px;
+    cursor:pointer;
+    border:1px solid var(--line);
+    background:#fff;
+    color:var(--ink);
+  }
+  .btn-row button.primary{
+    background:var(--pine);
+    border-color:var(--pine);
+    color:#fff;
+  }
+  .btn-row button.primary:hover{ background:var(--pine-deep); }
+  .btn-row button:hover{ border-color:var(--brass); }
+
+  .review-list{
+    margin-top:26px;
+    text-align:left;
+  }
+  .review-item{
+    border-top:1px solid var(--line);
+    padding:14px 2px;
+    font-size:14.5px;
+  }
+  .review-item .rq{ white-space:pre-line; margin-bottom:8px; color:var(--ink);}
+  .review-item .ra{ font-family:"Helvetica Neue",Arial,sans-serif; font-size:13px; }
+  .review-item .ra .yours{ color:var(--wrong); font-weight:700;}
+  .review-item .ra .correct{ color:var(--right); font-weight:700;}
+  .tag-lesson{
+    display:inline-block;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:11px;
+    color:var(--brass-deep);
+    background:var(--gold-bg);
+    border:1px solid var(--brass);
+    border-radius:999px;
+    padding:2px 8px;
+    margin-bottom:6px;
+  }
+
+  .hidden{ display:none !important; }
+
+  footer.note{
+    text-align:center;
+    margin-top:40px;
+    font-family:"Helvetica Neue",Arial,sans-serif;
+    font-size:11.5px;
+    color:#9a9384;
+  }
+
+  @media (max-width:480px){
+    .qcard{ padding:20px 16px 18px; }
+    .qtext{ font-size:16.5px; }
+    header.masthead h1{ font-size:23px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="masthead">
+    <div class="eyebrow">MFPC · RFP Module 2</div>
+    <h1>第二单元：风险管理与保险规划</h1>
+    <div class="sub">自我评估题库 · 400 题综合版</div>
+  </header>
+
+  <!-- ============ HOME SCREEN ============ -->
+  <div id="screen-home">
+    <button class="all-btn" id="btn-all">
+      开始全书综合测验（400 题，随机顺序）
+      <span class="sm">一次完成 400 题综合模拟，全面检验掌握程度</span>
+    </button>
+
+    <div class="section-label">分套测验</div>
+    <div class="grid-lessons" id="lesson-list"></div>
+  </div>
+
+  <!-- ============ QUIZ SCREEN ============ -->
+  <div id="screen-quiz" class="hidden">
+    <div class="quiz-header">
+      <button class="back-btn" id="btn-back">← 返回目录</button>
+      <div class="lesson-tag" id="quiz-lesson-tag"></div>
+    </div>
+    <div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div>
+
+    <div class="qcard">
+      <div class="qnum" id="qnum"></div>
+      <div class="qtext" id="qtext"></div>
+      <div class="options" id="options"></div>
+      <div class="result-line" id="result-line"></div>
+      <div class="nav-row">
+        <div class="score-pill" id="score-pill"></div>
+        <button class="next-btn" id="btn-next">下一题 →</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============ RESULTS SCREEN ============ -->
+  <div id="screen-results" class="hidden">
+    <div class="results-card">
+      <div style="font-family:'Helvetica Neue',Arial,sans-serif;font-size:12px;letter-spacing:.18em;color:var(--ink-soft);text-transform:uppercase;" id="results-lesson-tag">测验完成</div>
+      <div class="score-big" id="score-percent">0%</div>
+      <div class="score-frac" id="score-frac"></div>
+      <div class="remark" id="score-remark"></div>
+      <div class="btn-row">
+        <button class="primary" id="btn-retry">重新测验</button>
+        <button id="btn-home">返回目录</button>
+      </div>
+      <div class="review-list" id="review-list"></div>
+    </div>
+  </div>
+
+  <footer class="note">内容整理自《第二单元：风险管理与保险规划》模拟题库（400题） · 仅供个人复习自测使用</footer>
+</div>
+
+<script>
+const LESSONS = [{"id": 1, "title": "400题综合模拟测验", "questions": [{"q": "某客户在风险沟通中提到：\n暴露于不确定并可能造成财务损失的状态。\n这最符合哪个术语？", "options": ["风险控制（Risk Control）", "需求分析法（Needs Analysis）", "风险（Risk）", "可保利益（Insurable Interest）"], "answer": 2}, {"q": "关于「风险（Risk）」，下列哪项描述最准确？", "options": ["投保与承保双方都必须充分、诚实披露重大事实。", "暴露于不确定并可能造成财务损失的状态。", "承保现金在场所内或运送途中被抢劫盗窃等损失。", "消费者有权获得清晰、完整、可理解的产品信息。"], "answer": 1}, {"q": "围绕「风险（Risk）」这个概念，下列哪一组“术语—解释”配对正确？", "options": ["风险诱因（Hazard） — 生存至期满或在期内身故都可领取给付。", "风险（Risk） — 暴露于不确定并可能造成财务损失的状态。", "Mudharabah 模式 — 伊斯兰金融中被禁止的赌博成分。", "实际现金价值（Actual Cash Value） — 以具体财务责任计算保障缺口的保险需求方法。"], "answer": 1}, {"q": "若以「风险（Risk）」为参照，下列哪一组“术语—解释”配对错误？", "options": ["失效抚恤金计划（Invalidity Pension Scheme） — SOCSO 对失去工作能力成员提供长期收入保障。", "Al-Maisir — 伊斯兰金融中被禁止的赌博成分。", "损失预防（Loss Prevention） — 降低损失发生的可能性。", "风险（Risk） — 无法从事原本职业即符合残疾给付条件，定义较宽。"], "answer": 3}, {"q": "情境：客户提供了这条关键线索：\n暴露于不确定并可能造成财务损失的状态。\n你最可能采用哪个术语进行归纳？", "options": ["失效抚恤金计划（Invalidity Pension Scheme）", "风险（Risk）", "风险转移（Risk Transfer）", "给付/清算期（Liquidation Phase）"], "answer": 1}, {"q": "你要向新进顾问说明「风险（Risk）」，下列哪项讲法最准确？", "options": ["暴露于不确定并可能造成财务损失的状态。", "生存至期满或在期内身故都可领取给付。", "采取措施降低损失发生频率或严重程度。", "估算家庭因经济支柱身故而损失的收入现值。"], "answer": 0}, {"q": "以下关于「风险（Risk）」的叙述，哪一项错误？", "options": ["风险（Risk）是指：投保人对被保险人生命或财产具有合法经济利益关系。", "区分风险（Risk）时，应抓住定义中的关键字。", "风险（Risk）是指：暴露于不确定并可能造成财务损失的状态。", "在考试题中，风险（Risk）常用于判断风险或保障处理逻辑。"], "answer": 0}, {"q": "当你以「风险（Risk）」作为分析核心时，下列哪组“术语—解释”最可采纳？", "options": ["关键人物价值（Key-man Value） — 暴露于不确定并可能造成财务损失的状态。", "风险（Risk） — 把损失财务后果转移给第三方，例如保险公司。", "风险（Risk） — 暴露于不确定并可能造成财务损失的状态。", "风险规避（Risk Avoidance） — 企业因关键员工离职或身故可能承担的经济损失价值。"], "answer": 2}, {"q": "根据以下描述，最贴切的术语是：\n导致损失发生的直接原因，例如火灾、车祸、疾病。", "options": ["危险因素（Peril）", "任何职业定义（Any Occupation）", "现金/金钱保险（Money Insurance）", "Al-Maisir"], "answer": 0}, {"q": "若要向客户解释「危险因素（Peril）」，哪项定义是正确的？", "options": ["由环境或实物条件造成的危险诱因，如电线老化。", "导致损失发生的直接原因，例如火灾、车祸、疾病。", "确诊合约列明疾病时一次性给付保险金。", "暴露于不确定并可能造成财务损失的状态。"], "answer": 1}, {"q": "关于「危险因素（Peril）」及相近概念，哪组配对是正确的？", "options": ["储蓄/两全保单（Endowment Policy） — 估算家庭因经济支柱身故而损失的收入现值。", "需求分析法（Needs Analysis） — 把损失财务后果转移给第三方，例如保险公司。", "危险因素（Peril） — 导致损失发生的直接原因，例如火灾、车祸、疾病。", "给付/清算期（Liquidation Phase） — 参与者将部分供款捐入风险基金以互助共济。"], "answer": 2}, {"q": "以下各项里，哪一项与「危险因素（Peril）」的概念关系不正确？", "options": ["动态风险（Dynamic Risk） — 由经济、科技、政策变化引起的新风险。", "不可争辩条款（Incontestability Clause） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "替代（Substitution） — 用较低危险的活动或物质替代高风险做法。", "危险因素（Peril） — 确诊合约列明疾病时一次性给付保险金。"], "answer": 3}, {"q": "顾问访谈记录显示：\n导致损失发生的直接原因，例如火灾、车祸、疾病。\n该信息对应的核心术语是？", "options": ["Mudharabah 模式", "危险因素（Peril）", "风险规避（Risk Avoidance）", "失效抚恤金计划（Invalidity Pension Scheme）"], "answer": 1}, {"q": "培训场景下，关于「危险因素（Peril）」的正确解释是？", "options": ["承保机器突发机械或电气故障造成的损失。", "由个人或企业自行承担损失后果。", "暴露于不确定并可能造成财务损失的状态。", "导致损失发生的直接原因，例如火灾、车祸、疾病。"], "answer": 3}, {"q": "在「危险因素（Peril）」的判断题里，哪项说法不成立？", "options": ["区分危险因素（Peril）时，应抓住定义中的关键字。", "在考试题中，危险因素（Peril）常用于判断风险或保障处理逻辑。", "危险因素（Peril）是指：影响社会大多数人的系统性风险，如经济衰退。", "危险因素（Peril）是指：导致损失发生的直接原因，例如火灾、车祸、疾病。"], "answer": 2}, {"q": "在拟定建议书时，围绕「危险因素（Peril）」应采用哪一组正确配对？", "options": ["危险因素（Peril） — 由社会长期结构问题引起、变化较慢的风险。", "机器故障险（Machinery Breakdown） — 导致损失发生的直接原因，例如火灾、车祸、疾病。", "危险因素（Peril） — 导致损失发生的直接原因，例如火灾、车祸、疾病。", "累积期（Accumulation Phase） — 承保机器突发机械或电气故障造成的损失。"], "answer": 2}, {"q": "阅读线索后判断术语：\n会提高损失发生概率或严重程度的条件。\n应选哪一项？", "options": ["给付/清算期（Liquidation Phase）", "基本风险（Fundamental Risk）", "替代（Substitution）", "风险诱因（Hazard）"], "answer": 3}, {"q": "以下对「风险诱因（Hazard）」的理解，何者最恰当？", "options": ["会提高损失发生概率或严重程度的条件。", "导致损失发生的直接原因，例如火灾、车祸、疾病。", "保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "SOCSO 对失去工作能力成员提供长期收入保障。"], "answer": 0}, {"q": "以下术语配对中，何者与「风险诱因（Hazard）」逻辑一致？", "options": ["风险诱因（Hazard） — 会提高损失发生概率或严重程度的条件。", "投机风险（Speculative Risk） — 消费者有权获得清晰、完整、可理解的产品信息。", "家政服务人员豁免（Domestic Servant Exemption） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "终身寿险（Whole Life Policy） — 以具体财务责任计算保障缺口的保险需求方法。"], "answer": 0}, {"q": "围绕「风险诱因（Hazard）」的辨错题中，哪组配对是错的？", "options": ["自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。", "风险转移（Risk Transfer） — 把损失财务后果转移给第三方，例如保险公司。", "家政服务人员豁免（Domestic Servant Exemption） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。", "风险诱因（Hazard） — 降低损失发生的可能性。"], "answer": 3}, {"q": "在案例分析中出现：\n会提高损失发生概率或严重程度的条件。\n最应判定为何种术语？", "options": ["确定年金（Annuity Certain）", "储蓄/两全保单（Endowment Policy）", "Mudharabah 模式", "风险诱因（Hazard）"], "answer": 3}, {"q": "在实务答辩中，哪项对「风险诱因（Hazard）」的定义最稳妥？", "options": ["因态度或行为疏忽导致损失概率上升的诱因。", "家政服务人员通常不属于 SOCSO 一般雇员承保范围。", "会提高损失发生概率或严重程度的条件。", "参与者将部分供款捐入风险基金以互助共济。"], "answer": 2}, {"q": "检视下列陈述，关于「风险诱因（Hazard）」哪项是错的？", "options": ["风险诱因（Hazard）是指：会提高损失发生概率或严重程度的条件。", "在考试题中，风险诱因（Hazard）常用于判断风险或保障处理逻辑。", "区分风险诱因（Hazard）时，应抓住定义中的关键字。", "风险诱因（Hazard）是指：承保现金在场所内或运送途中被抢劫盗窃等损失。"], "answer": 3}, {"q": "关于「风险诱因（Hazard）」的综合判断，下列配对哪项正确？", "options": ["风险诱因（Hazard） — 会提高损失发生概率或严重程度的条件。", "风险诱因（Hazard） — 降低损失发生的可能性。", "Mudharabah 模式 — 投保与承保双方都必须充分、诚实披露重大事实。", "最大诚信（Utmost Good Faith） — 会提高损失发生概率或严重程度的条件。"], "answer": 0}, {"q": "若出现下列情形：\n由环境或实物条件造成的危险诱因，如电线老化。\n通常归类为哪一术语？", "options": ["风险（Risk）", "重大疾病保险（Critical Illness）", "物理风险诱因（Physical Hazard）", "Tabarru'（互助捐献）"], "answer": 2}, {"q": "在RFP语境中，「物理风险诱因（Physical Hazard）」应如何定义？", "options": ["由个人或企业自行承担损失后果。", "由环境或实物条件造成的危险诱因，如电线老化。", "承保现金在场所内或运送途中被抢劫盗窃等损失。", "可能损失也可能获利的风险。"], "answer": 1}, {"q": "在概念配对题中，与「物理风险诱因（Physical Hazard）」相关的正确选项是？", "options": ["确定年金（Annuity Certain） — 用较低危险的活动或物质替代高风险做法。", "道德风险诱因（Morale Hazard） — SOCSO 对失去工作能力成员提供长期收入保障。", "最大诚信（Utmost Good Faith） — 保障终身并可累积现金价值。", "物理风险诱因（Physical Hazard） — 由环境或实物条件造成的危险诱因，如电线老化。"], "answer": 3}, {"q": "关于「物理风险诱因（Physical Hazard）」与其他术语的对应关系，哪项有误？", "options": ["Al-Maisir — 伊斯兰金融中被禁止的赌博成分。", "物理风险诱因（Physical Hazard） — SOCSO 对失去工作能力成员提供长期收入保障。", "共同保险（Co-insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。", "危险因素（Peril） — 导致损失发生的直接原因，例如火灾、车祸、疾病。"], "answer": 1}, {"q": "若客户陈述符合以下内容：\n由环境或实物条件造成的危险诱因，如电线老化。\n最佳术语判断是？", "options": ["物理风险诱因（Physical Hazard）", "储蓄/两全保单（Endowment Policy）", "定期寿险（Term Policy）", "最大诚信（Utmost Good Faith）"], "answer": 0}, {"q": "针对「物理风险诱因（Physical Hazard）」的高难度辨析，正确选项是？", "options": ["用较低危险的活动或物质替代高风险做法。", "由环境或实物条件造成的危险诱因，如电线老化。", "样本越大，实际损失越接近期望损失。", "承保现金在场所内或运送途中被抢劫盗窃等损失。"], "answer": 1}, {"q": "围绕「物理风险诱因（Physical Hazard）」的四项描述中，错误的是哪一个？", "options": ["区分物理风险诱因（Physical Hazard）时，应抓住定义中的关键字。", "物理风险诱因（Physical Hazard）是指：理赔目的是恢复损失前财务状态，而非让被保险人获利。", "在考试题中，物理风险诱因（Physical Hazard）常用于判断风险或保障处理逻辑。", "物理风险诱因（Physical Hazard）是指：由环境或实物条件造成的危险诱因，如电线老化。"], "answer": 1}, {"q": "若题干以「物理风险诱因（Physical Hazard）」为重点，哪组术语配对最合理？", "options": ["物理风险诱因（Physical Hazard） — 由环境或实物条件造成的危险诱因，如电线老化。", "物理风险诱因（Physical Hazard） — 以具体财务责任计算保障缺口的保险需求方法。", "确定年金（Annuity Certain） — 在约定期间提供保障，通常保费较低且保障纯粹。", "定期寿险（Term Policy） — 由环境或实物条件造成的危险诱因，如电线老化。"], "answer": 0}, {"q": "某客户在风险沟通中提到：\n因态度或行为疏忽导致损失概率上升的诱因。\n这最符合哪个术语？", "options": ["失效抚恤金计划（Invalidity Pension Scheme）", "任何职业定义（Any Occupation）", "道德风险诱因（Morale Hazard）", "现金/金钱保险（Money Insurance）"], "answer": 2}, {"q": "关于「道德风险诱因（Morale Hazard）」，下列哪项描述最准确？", "options": ["导致损失发生的直接原因，例如火灾、车祸、疾病。", "在损失发生后减少损失程度。", "给付持续至最后一位受领人身故。", "因态度或行为疏忽导致损失概率上升的诱因。"], "answer": 3}, {"q": "围绕「道德风险诱因（Morale Hazard）」这个概念，下列哪一组“术语—解释”配对正确？", "options": ["最大诚信（Utmost Good Faith） — 年金把累积资产转换为定期现金流的阶段。", "风险诱因（Hazard） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "道德风险诱因（Morale Hazard） — 因态度或行为疏忽导致损失概率上升的诱因。", "替代（Substitution） — SOCSO 对失去工作能力成员提供长期收入保障。"], "answer": 2}, {"q": "若以「道德风险诱因（Morale Hazard）」为参照，下列哪一组“术语—解释”配对错误？", "options": ["任何职业定义（Any Occupation） — 仅在无法从事合理适任的任何职业时才符合残疾给付。", "代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。", "赔偿原则（Principle of Indemnity） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。", "道德风险诱因（Morale Hazard） — 伊斯兰金融中被禁止的赌博成分。"], "answer": 3}, {"q": "情境：客户提供了这条关键线索：\n因态度或行为疏忽导致损失概率上升的诱因。\n你最可能采用哪个术语进行归纳？", "options": ["道德风险诱因（Morale Hazard）", "风险保留（Risk Retention）", "纯风险（Pure Risk）", "现金/金钱保险（Money Insurance）"], "answer": 0}, {"q": "你要向新进顾问说明「道德风险诱因（Morale Hazard）」，下列哪项讲法最准确？", "options": ["理赔目的是恢复损失前财务状态，而非让被保险人获利。", "把损失财务后果转移给第三方，例如保险公司。", "无法从事原本职业即符合残疾给付条件，定义较宽。", "因态度或行为疏忽导致损失概率上升的诱因。"], "answer": 3}, {"q": "以下关于「道德风险诱因（Morale Hazard）」的叙述，哪一项错误？", "options": ["在考试题中，道德风险诱因（Morale Hazard）常用于判断风险或保障处理逻辑。", "道德风险诱因（Morale Hazard）是指：企业因关键员工离职或身故可能承担的经济损失价值。", "道德风险诱因（Morale Hazard）是指：因态度或行为疏忽导致损失概率上升的诱因。", "区分道德风险诱因（Morale Hazard）时，应抓住定义中的关键字。"], "answer": 1}, {"q": "当你以「道德风险诱因（Morale Hazard）」作为分析核心时，下列哪组“术语—解释”最可采纳？", "options": ["道德风险诱因（Morale Hazard） — 企业因关键员工离职或身故可能承担的经济损失价值。", "道德风险诱因（Morale Hazard） — 因态度或行为疏忽导致损失概率上升的诱因。", "风险控制（Risk Control） — 参与者与经营者按约定比例分享投资利润。", "Mudharabah 模式 — 因态度或行为疏忽导致损失概率上升的诱因。"], "answer": 1}, {"q": "根据以下描述，最贴切的术语是：\n只有损失或无损失两种结果，不会带来获利。", "options": ["损失预防（Loss Prevention）", "消费者知情权", "纯风险（Pure Risk）", "静态风险（Static Risk）"], "answer": 2}, {"q": "若要向客户解释「纯风险（Pure Risk）」，哪项定义是正确的？", "options": ["只有损失或无损失两种结果，不会带来获利。", "降低损失发生的可能性。", "条款由保险人拟定，投保人通常只能接受或拒绝。", "由个人或企业自行承担损失后果。"], "answer": 0}, {"q": "关于「纯风险（Pure Risk）」及相近概念，哪组配对是正确的？", "options": ["给付/清算期（Liquidation Phase） — 生存至期满或在期内身故都可领取给付。", "风险保留（Risk Retention） — 用较低危险的活动或物质替代高风险做法。", "不可争辩条款（Incontestability Clause） — 承保现金在场所内或运送途中被抢劫盗窃等损失。", "纯风险（Pure Risk） — 只有损失或无损失两种结果，不会带来获利。"], "answer": 3}, {"q": "以下各项里，哪一项与「纯风险（Pure Risk）」的概念关系不正确？", "options": ["纯风险（Pure Risk） — 把损失财务后果转移给第三方，例如保险公司。", "危险因素（Peril） — 导致损失发生的直接原因，例如火灾、车祸、疾病。", "风险规避（Risk Avoidance） — 透过不参与某项活动来避免相关风险。", "Tabarru'（互助捐献） — 参与者将部分供款捐入风险基金以互助共济。"], "answer": 0}, {"q": "顾问访谈记录显示：\n只有损失或无损失两种结果，不会带来获利。\n该信息对应的核心术语是？", "options": ["危险因素（Peril）", "消费者知情权", "关键人物价值（Key-man Value）", "纯风险（Pure Risk）"], "answer": 3}, {"q": "培训场景下，关于「纯风险（Pure Risk）」的正确解释是？", "options": ["理赔目的是恢复损失前财务状态，而非让被保险人获利。", "只有损失或无损失两种结果，不会带来获利。", "主要影响个人或个别企业的风险。", "因态度或行为疏忽导致损失概率上升的诱因。"], "answer": 1}, {"q": "在「纯风险（Pure Risk）」的判断题里，哪项说法不成立？", "options": ["纯风险（Pure Risk）是指：由社会长期结构问题引起、变化较慢的风险。", "区分纯风险（Pure Risk）时，应抓住定义中的关键字。", "在考试题中，纯风险（Pure Risk）常用于判断风险或保障处理逻辑。", "纯风险（Pure Risk）是指：只有损失或无损失两种结果，不会带来获利。"], "answer": 0}, {"q": "在拟定建议书时，围绕「纯风险（Pure Risk）」应采用哪一组正确配对？", "options": ["给付/清算期（Liquidation Phase） — 确诊合约列明疾病时一次性给付保险金。", "重大疾病保险（Critical Illness） — 只有损失或无损失两种结果，不会带来获利。", "纯风险（Pure Risk） — 透过不参与某项活动来避免相关风险。", "纯风险（Pure Risk） — 只有损失或无损失两种结果，不会带来获利。"], "answer": 3}, {"q": "阅读线索后判断术语：\n可能损失也可能获利的风险。\n应选哪一项？", "options": ["物理风险诱因（Physical Hazard）", "确定年金（Annuity Certain）", "最大诚信（Utmost Good Faith）", "投机风险（Speculative Risk）"], "answer": 3}, {"q": "以下对「投机风险（Speculative Risk）」的理解，何者最恰当？", "options": ["暴露于不确定并可能造成财务损失的状态。", "伊斯兰金融中被禁止的赌博成分。", "给付期固定，不依赖受领人生存与否。", "可能损失也可能获利的风险。"], "answer": 3}, {"q": "以下术语配对中，何者与「投机风险（Speculative Risk）」逻辑一致？", "options": ["投机风险（Speculative Risk） — 可能损失也可能获利的风险。", "最大诚信（Utmost Good Faith） — 由经济、科技、政策变化引起的新风险。", "机器故障险（Machinery Breakdown） — 因态度或行为疏忽导致损失概率上升的诱因。", "给付/清算期（Liquidation Phase） — SOCSO 对失去工作能力成员提供长期收入保障。"], "answer": 0}, {"q": "围绕「投机风险（Speculative Risk）」的辨错题中，哪组配对是错的？", "options": ["自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。", "基本风险（Fundamental Risk） — 影响社会大多数人的系统性风险，如经济衰退。", "投机风险（Speculative Risk） — 用较低危险的活动或物质替代高风险做法。", "静态风险（Static Risk） — 由社会长期结构问题引起、变化较慢的风险。"], "answer": 2}, {"q": "在案例分析中出现：\n可能损失也可能获利的风险。\n最应判定为何种术语？", "options": ["关键人物价值（Key-man Value）", "投机风险（Speculative Risk）", "消费者知情权", "储蓄/两全保单（Endowment Policy）"], "answer": 1}, {"q": "在实务答辩中，哪项对「投机风险（Speculative Risk）」的定义最稳妥？", "options": ["可能损失也可能获利的风险。", "导致损失发生的直接原因，例如火灾、车祸、疾病。", "投保与承保双方都必须充分、诚实披露重大事实。", "给付持续至最后一位受领人身故。"], "answer": 0}, {"q": "检视下列陈述，关于「投机风险（Speculative Risk）」哪项是错的？", "options": ["投机风险（Speculative Risk）是指：可能损失也可能获利的风险。", "区分投机风险（Speculative Risk）时，应抓住定义中的关键字。", "投机风险（Speculative Risk）是指：消费者有权获得清晰、完整、可理解的产品信息。", "在考试题中，投机风险（Speculative Risk）常用于判断风险或保障处理逻辑。"], "answer": 2}, {"q": "关于「投机风险（Speculative Risk）」的综合判断，下列配对哪项正确？", "options": ["投机风险（Speculative Risk） — 可能损失也可能获利的风险。", "代位求偿（Subrogation） — 投保人对被保险人生命或财产具有合法经济利益关系。", "可保利益（Insurable Interest） — 可能损失也可能获利的风险。", "投机风险（Speculative Risk） — 参与者将部分供款捐入风险基金以互助共济。"], "answer": 0}, {"q": "若出现下列情形：\n主要影响个人或个别企业的风险。\n通常归类为哪一术语？", "options": ["任何职业定义（Any Occupation）", "代位求偿（Subrogation）", "可保利益（Insurable Interest）", "特定风险（Particular Risk）"], "answer": 3}, {"q": "在RFP语境中，「特定风险（Particular Risk）」应如何定义？", "options": ["由社会长期结构问题引起、变化较慢的风险。", "主要影响个人或个别企业的风险。", "经营者作为代理人管理基金并收取代理费用。", "由个人或企业自行承担损失后果。"], "answer": 1}, {"q": "在概念配对题中，与「特定风险（Particular Risk）」相关的正确选项是？", "options": ["赔偿原则（Principle of Indemnity） — 以具体财务责任计算保障缺口的保险需求方法。", "特定风险（Particular Risk） — 主要影响个人或个别企业的风险。", "给付/清算期（Liquidation Phase） — 由社会长期结构问题引起、变化较慢的风险。", "实际现金价值（Actual Cash Value） — 投保人对被保险人生命或财产具有合法经济利益关系。"], "answer": 1}, {"q": "关于「特定风险（Particular Risk）」与其他术语的对应关系，哪项有误？", "options": ["静态风险（Static Risk） — 由社会长期结构问题引起、变化较慢的风险。", "确定年金（Annuity Certain） — 给付期固定，不依赖受领人生存与否。", "特定风险（Particular Risk） — 因态度或行为疏忽导致损失概率上升的诱因。", "不可争辩条款（Incontestability Clause） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"], "answer": 2}, {"q": "若客户陈述符合以下内容：\n主要影响个人或个别企业的风险。\n最佳术语判断是？", "options": ["特定风险（Particular Risk）", "家政服务人员豁免（Domestic Servant Exemption）", "需求分析法（Needs Analysis）", "储蓄/两全保单（Endowment Policy）"], "answer": 0}, {"q": "针对「特定风险（Particular Risk）」的高难度辨析，正确选项是？", "options": ["以具体财务责任计算保障缺口的保险需求方法。", "主要影响个人或个别企业的风险。", "可能损失也可能获利的风险。", "由经济、科技、政策变化引起的新风险。"], "answer": 1}, {"q": "围绕「特定风险（Particular Risk）」的四项描述中，错误的是哪一个？", "options": ["在考试题中，特定风险（Particular Risk）常用于判断风险或保障处理逻辑。", "特定风险（Particular Risk）是指：主要影响个人或个别企业的风险。", "区分特定风险（Particular Risk）时，应抓住定义中的关键字。", "特定风险（Particular Risk）是指：经营者作为代理人管理基金并收取代理费用。"], "answer": 3}, {"q": "若题干以「特定风险（Particular Risk）」为重点，哪组术语配对最合理？", "options": ["特定风险（Particular Risk） — 年金把累积资产转换为定期现金流的阶段。", "现金/金钱保险（Money Insurance） — 主要影响个人或个别企业的风险。", "特定风险（Particular Risk） — 主要影响个人或个别企业的风险。", "重大疾病保险（Critical Illness） — 承保现金在场所内或运送途中被抢劫盗窃等损失。"], "answer": 2}, {"q": "某客户在风险沟通中提到：\n影响社会大多数人的系统性风险，如经济衰退。\n这最符合哪个术语？", "options": ["赔偿原则（Principle of Indemnity）", "基本风险（Fundamental Risk）", "动态风险（Dynamic Risk）", "终身寿险（Whole Life Policy）"], "answer": 1}, {"q": "关于「基本风险（Fundamental Risk）」，下列哪项描述最准确？", "options": ["确诊合约列明疾病时一次性给付保险金。", "影响社会大多数人的系统性风险，如经济衰退。", "导致损失发生的直接原因，例如火灾、车祸、疾病。", "由经济、科技、政策变化引起的新风险。"], "answer": 1}, {"q": "围绕「基本风险（Fundamental Risk）」这个概念，下列哪一组“术语—解释”配对正确？", "options": ["失效抚恤金计划（Invalidity Pension Scheme） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "实际现金价值（Actual Cash Value） — 在约定期间提供保障，通常保费较低且保障纯粹。", "损失降低（Loss Reduction） — 给付持续至最后一位受领人身故。", "基本风险（Fundamental Risk） — 影响社会大多数人的系统性风险，如经济衰退。"], "answer": 3}, {"q": "若以「基本风险（Fundamental Risk）」为参照，下列哪一组“术语—解释”配对错误？", "options": ["现金/金钱保险（Money Insurance） — 承保现金在场所内或运送途中被抢劫盗窃等损失。", "基本风险（Fundamental Risk） — 参与者与经营者按约定比例分享投资利润。", "Wakalah 模式 — 经营者作为代理人管理基金并收取代理费用。", "人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。"], "answer": 1}, {"q": "情境：客户提供了这条关键线索：\n影响社会大多数人的系统性风险，如经济衰退。\n你最可能采用哪个术语进行归纳？", "options": ["给付/清算期（Liquidation Phase）", "基本风险（Fundamental Risk）", "现金/金钱保险（Money Insurance）", "实际现金价值（Actual Cash Value）"], "answer": 1}, {"q": "你要向新进顾问说明「基本风险（Fundamental Risk）」，下列哪项讲法最准确？", "options": ["影响社会大多数人的系统性风险，如经济衰退。", "把损失财务后果转移给第三方，例如保险公司。", "确诊合约列明疾病时一次性给付保险金。", "参与者与经营者按约定比例分享投资利润。"], "answer": 0}, {"q": "以下关于「基本风险（Fundamental Risk）」的叙述，哪一项错误？", "options": ["区分基本风险（Fundamental Risk）时，应抓住定义中的关键字。", "在考试题中，基本风险（Fundamental Risk）常用于判断风险或保障处理逻辑。", "基本风险（Fundamental Risk）是指：无法从事原本职业即符合残疾给付条件，定义较宽。", "基本风险（Fundamental Risk）是指：影响社会大多数人的系统性风险，如经济衰退。"], "answer": 2}, {"q": "当你以「基本风险（Fundamental Risk）」作为分析核心时，下列哪组“术语—解释”最可采纳？", "options": ["基本风险（Fundamental Risk） — 保障终身并可累积现金价值。", "基本风险（Fundamental Risk） — 影响社会大多数人的系统性风险，如经济衰退。", "任何职业定义（Any Occupation） — 投保与承保双方都必须充分、诚实披露重大事实。", "最大诚信（Utmost Good Faith） — 影响社会大多数人的系统性风险，如经济衰退。"], "answer": 1}, {"q": "根据以下描述，最贴切的术语是：\n由社会长期结构问题引起、变化较慢的风险。", "options": ["Al-Maisir", "风险保留（Risk Retention）", "雇主责任险（Employer's Liability）", "静态风险（Static Risk）"], "answer": 3}, {"q": "若要向客户解释「静态风险（Static Risk）」，哪项定义是正确的？", "options": ["由社会长期结构问题引起、变化较慢的风险。", "给付期固定，不依赖受领人生存与否。", "保障终身并可累积现金价值。", "SOCSO 对失去工作能力成员提供长期收入保障。"], "answer": 0}, {"q": "关于「静态风险（Static Risk）」及相近概念，哪组配对是正确的？", "options": ["风险保留（Risk Retention） — 样本越大，实际损失越接近期望损失。", "危险因素（Peril） — 经营者作为代理人管理基金并收取代理费用。", "静态风险（Static Risk） — 由社会长期结构问题引起、变化较慢的风险。", "风险规避（Risk Avoidance） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"], "answer": 2}, {"q": "以下各项里，哪一项与「静态风险（Static Risk）」的概念关系不正确？", "options": ["纯风险（Pure Risk） — 只有损失或无损失两种结果，不会带来获利。", "储蓄/两全保单（Endowment Policy） — 生存至期满或在期内身故都可领取给付。", "共同保险（Co-insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。", "静态风险（Static Risk） — 保险人赔付后可向责任第三方追偿。"], "answer": 3}, {"q": "顾问访谈记录显示：\n由社会长期结构问题引起、变化较慢的风险。\n该信息对应的核心术语是？", "options": ["联合及遗属年金（Joint & Survivor）", "Al-Maisir", "物理风险诱因（Physical Hazard）", "静态风险（Static Risk）"], "answer": 3}, {"q": "培训场景下，关于「静态风险（Static Risk）」的正确解释是？", "options": ["承保雇主依法对员工工伤事故应承担的赔偿责任。", "消费者有权获得清晰、完整、可理解的产品信息。", "由社会长期结构问题引起、变化较慢的风险。", "无法从事原本职业即符合残疾给付条件，定义较宽。"], "answer": 2}, {"q": "在「静态风险（Static Risk）」的判断题里，哪项说法不成立？", "options": ["区分静态风险（Static Risk）时，应抓住定义中的关键字。", "静态风险（Static Risk）是指：由社会长期结构问题引起、变化较慢的风险。", "在考试题中，静态风险（Static Risk）常用于判断风险或保障处理逻辑。", "静态风险（Static Risk）是指：年金把累积资产转换为定期现金流的阶段。"], "answer": 3}, {"q": "在拟定建议书时，围绕「静态风险（Static Risk）」应采用哪一组正确配对？", "options": ["物理风险诱因（Physical Hazard） — 条款由保险人拟定，投保人通常只能接受或拒绝。", "静态风险（Static Risk） — 由社会长期结构问题引起、变化较慢的风险。", "附和合同（Contract of Adhesion） — 由社会长期结构问题引起、变化较慢的风险。", "静态风险（Static Risk） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。"], "answer": 1}, {"q": "阅读线索后判断术语：\n由经济、科技、政策变化引起的新风险。\n应选哪一项？", "options": ["基本风险（Fundamental Risk）", "关键人物价值（Key-man Value）", "大数法则（Law of Large Numbers）", "动态风险（Dynamic Risk）"], "answer": 3}, {"q": "以下对「动态风险（Dynamic Risk）」的理解，何者最恰当？", "options": ["用较低危险的活动或物质替代高风险做法。", "由社会长期结构问题引起、变化较慢的风险。", "因态度或行为疏忽导致损失概率上升的诱因。", "由经济、科技、政策变化引起的新风险。"], "answer": 3}, {"q": "以下术语配对中，何者与「动态风险（Dynamic Risk）」逻辑一致？", "options": ["动态风险（Dynamic Risk） — 由经济、科技、政策变化引起的新风险。", "重大疾病保险（Critical Illness） — 承保雇主依法对员工工伤事故应承担的赔偿责任。", "物理风险诱因（Physical Hazard） — 因态度或行为疏忽导致损失概率上升的诱因。", "失效抚恤金计划（Invalidity Pension Scheme） — 由个人或企业自行承担损失后果。"], "answer": 0}, {"q": "围绕「动态风险（Dynamic Risk）」的辨错题中，哪组配对是错的？", "options": ["风险诱因（Hazard） — 会提高损失发生概率或严重程度的条件。", "大数法则（Law of Large Numbers） — 样本越大，实际损失越接近期望损失。", "动态风险（Dynamic Risk） — 以具体财务责任计算保障缺口的保险需求方法。", "Wakalah 模式 — 经营者作为代理人管理基金并收取代理费用。"], "answer": 2}, {"q": "在案例分析中出现：\n由经济、科技、政策变化引起的新风险。\n最应判定为何种术语？", "options": ["损失降低（Loss Reduction）", "雇主责任险（Employer's Liability）", "机器故障险（Machinery Breakdown）", "动态风险（Dynamic Risk）"], "answer": 3}, {"q": "在实务答辩中，哪项对「动态风险（Dynamic Risk）」的定义最稳妥？", "options": ["因态度或行为疏忽导致损失概率上升的诱因。", "由经济、科技、政策变化引起的新风险。", "降低损失发生的可能性。", "理赔时被保险人与保险公司按比例共同承担医疗费用。"], "answer": 1}, {"q": "检视下列陈述，关于「动态风险（Dynamic Risk）」哪项是错的？", "options": ["动态风险（Dynamic Risk）是指：由经济、科技、政策变化引起的新风险。", "在考试题中，动态风险（Dynamic Risk）常用于判断风险或保障处理逻辑。", "区分动态风险（Dynamic Risk）时，应抓住定义中的关键字。", "动态风险（Dynamic Risk）是指：承保雇主依法对员工工伤事故应承担的赔偿责任。"], "answer": 3}, {"q": "关于「动态风险（Dynamic Risk）」的综合判断，下列配对哪项正确？", "options": ["联合及遗属年金（Joint & Survivor） — 承保雇主依法对员工工伤事故应承担的赔偿责任。", "动态风险（Dynamic Risk） — 由经济、科技、政策变化引起的新风险。", "动态风险（Dynamic Risk） — 估算家庭因经济支柱身故而损失的收入现值。", "雇主责任险（Employer's Liability） — 由经济、科技、政策变化引起的新风险。"], "answer": 1}, {"q": "若出现下列情形：\n透过不参与某项活动来避免相关风险。\n通常归类为哪一术语？", "options": ["现金/金钱保险（Money Insurance）", "家政服务人员豁免（Domestic Servant Exemption）", "投机风险（Speculative Risk）", "风险规避（Risk Avoidance）"], "answer": 3}, {"q": "在RFP语境中，「风险规避（Risk Avoidance）」应如何定义？", "options": ["企业因关键员工离职或身故可能承担的经济损失价值。", "以具体财务责任计算保障缺口的保险需求方法。", "透过不参与某项活动来避免相关风险。", "给付持续至最后一位受领人身故。"], "answer": 2}, {"q": "在概念配对题中，与「风险规避（Risk Avoidance）」相关的正确选项是？", "options": ["最大诚信（Utmost Good Faith） — 经营者作为代理人管理基金并收取代理费用。", "损失降低（Loss Reduction） — 保险人赔付后可向责任第三方追偿。", "风险控制（Risk Control） — 消费者有权获得清晰、完整、可理解的产品信息。", "风险规避（Risk Avoidance） — 透过不参与某项活动来避免相关风险。"], "answer": 3}, {"q": "关于「风险规避（Risk Avoidance）」与其他术语的对应关系，哪项有误？", "options": ["风险规避（Risk Avoidance） — 保险人赔付后可向责任第三方追偿。", "现金/金钱保险（Money Insurance） — 承保现金在场所内或运送途中被抢劫盗窃等损失。", "雇主责任险（Employer's Liability） — 承保雇主依法对员工工伤事故应承担的赔偿责任。", "需求分析法（Needs Analysis） — 以具体财务责任计算保障缺口的保险需求方法。"], "answer": 0}, {"q": "若客户陈述符合以下内容：\n透过不参与某项活动来避免相关风险。\n最佳术语判断是？", "options": ["共同保险（Co-insurance）", "风险规避（Risk Avoidance）", "Mudharabah 模式", "投机风险（Speculative Risk）"], "answer": 1}, {"q": "针对「风险规避（Risk Avoidance）」的高难度辨析，正确选项是？", "options": ["生存至期满或在期内身故都可领取给付。", "理赔时被保险人与保险公司按比例共同承担医疗费用。", "透过不参与某项活动来避免相关风险。", "家政服务人员通常不属于 SOCSO 一般雇员承保范围。"], "answer": 2}, {"q": "围绕「风险规避（Risk Avoidance）」的四项描述中，错误的是哪一个？", "options": ["在考试题中，风险规避（Risk Avoidance）常用于判断风险或保障处理逻辑。", "区分风险规避（Risk Avoidance）时，应抓住定义中的关键字。", "风险规避（Risk Avoidance）是指：透过不参与某项活动来避免相关风险。", "风险规避（Risk Avoidance）是指：条款由保险人拟定，投保人通常只能接受或拒绝。"], "answer": 3}, {"q": "若题干以「风险规避（Risk Avoidance）」为重点，哪组术语配对最合理？", "options": ["风险规避（Risk Avoidance） — 保障终身并可累积现金价值。", "基本风险（Fundamental Risk） — 透过不参与某项活动来避免相关风险。", "损失降低（Loss Reduction） — 影响社会大多数人的系统性风险，如经济衰退。", "风险规避（Risk Avoidance） — 透过不参与某项活动来避免相关风险。"], "answer": 3}, {"q": "某客户在风险沟通中提到：\n采取措施降低损失发生频率或严重程度。\n这最符合哪个术语？", "options": ["危险因素（Peril）", "大数法则（Law of Large Numbers）", "风险控制（Risk Control）", "共同保险（Co-insurance）"], "answer": 2}, {"q": "关于「风险控制（Risk Control）」，下列哪项描述最准确？", "options": ["采取措施降低损失发生频率或严重程度。", "企业因关键员工离职或身故可能承担的经济损失价值。", "保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "生存至期满或在期内身故都可领取给付。"], "answer": 0}, {"q": "围绕「风险控制（Risk Control）」这个概念，下列哪一组“术语—解释”配对正确？", "options": ["风险控制（Risk Control） — 采取措施降低损失发生频率或严重程度。", "代位求偿（Subrogation） — 在约定期间提供保障，通常保费较低且保障纯粹。", "投机风险（Speculative Risk） — 把损失财务后果转移给第三方，例如保险公司。", "储蓄/两全保单（Endowment Policy） — 参与者将部分供款捐入风险基金以互助共济。"], "answer": 0}, {"q": "若以「风险控制（Risk Control）」为参照，下列哪一组“术语—解释”配对错误？", "options": ["风险规避（Risk Avoidance） — 透过不参与某项活动来避免相关风险。", "确定年金（Annuity Certain） — 给付期固定，不依赖受领人生存与否。", "风险控制（Risk Control） — 可能损失也可能获利的风险。", "风险（Risk） — 暴露于不确定并可能造成财务损失的状态。"], "answer": 2}, {"q": "情境：客户提供了这条关键线索：\n采取措施降低损失发生频率或严重程度。\n你最可能采用哪个术语进行归纳？", "options": ["失效抚恤金计划（Invalidity Pension Scheme）", "风险（Risk）", "不可争辩条款（Incontestability Clause）", "风险控制（Risk Control）"], "answer": 3}, {"q": "你要向新进顾问说明「风险控制（Risk Control）」，下列哪项讲法最准确？", "options": ["采取措施降低损失发生频率或严重程度。", "理赔目的是恢复损失前财务状态，而非让被保险人获利。", "参与者与经营者按约定比例分享投资利润。", "给付期固定，不依赖受领人生存与否。"], "answer": 0}, {"q": "以下关于「风险控制（Risk Control）」的叙述，哪一项错误？", "options": ["在考试题中，风险控制（Risk Control）常用于判断风险或保障处理逻辑。", "风险控制（Risk Control）是指：赔偿金额等于重置成本减去折旧。", "区分风险控制（Risk Control）时，应抓住定义中的关键字。", "风险控制（Risk Control）是指：采取措施降低损失发生频率或严重程度。"], "answer": 1}, {"q": "当你以「风险控制（Risk Control）」作为分析核心时，下列哪组“术语—解释”最可采纳？", "options": ["消费者知情权 — 由经济、科技、政策变化引起的新风险。", "风险控制（Risk Control） — 以具体财务责任计算保障缺口的保险需求方法。", "动态风险（Dynamic Risk） — 采取措施降低损失发生频率或严重程度。", "风险控制（Risk Control） — 采取措施降低损失发生频率或严重程度。"], "answer": 3}, {"q": "根据以下描述，最贴切的术语是：\n由个人或企业自行承担损失后果。", "options": ["需求分析法（Needs Analysis）", "定期寿险（Term Policy）", "风险保留（Risk Retention）", "道德风险诱因（Morale Hazard）"], "answer": 2}, {"q": "若要向客户解释「风险保留（Risk Retention）」，哪项定义是正确的？", "options": ["赔偿金额等于重置成本减去折旧。", "由个人或企业自行承担损失后果。", "用较低危险的活动或物质替代高风险做法。", "样本越大，实际损失越接近期望损失。"], "answer": 1}, {"q": "关于「风险保留（Risk Retention）」及相近概念，哪组配对是正确的？", "options": ["风险转移（Risk Transfer） — 由环境或实物条件造成的危险诱因，如电线老化。", "风险保留（Risk Retention） — 由个人或企业自行承担损失后果。", "人类生命价值法（Human Life Value） — 保险人赔付后可向责任第三方追偿。", "不可争辩条款（Incontestability Clause） — 因态度或行为疏忽导致损失概率上升的诱因。"], "answer": 1}, {"q": "以下各项里，哪一项与「风险保留（Risk Retention）」的概念关系不正确？", "options": ["风险保留（Risk Retention） — 把损失财务后果转移给第三方，例如保险公司。", "人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。", "替代（Substitution） — 用较低危险的活动或物质替代高风险做法。", "关键人物价值（Key-man Value） — 企业因关键员工离职或身故可能承担的经济损失价值。"], "answer": 0}, {"q": "顾问访谈记录显示：\n由个人或企业自行承担损失后果。\n该信息对应的核心术语是？", "options": ["特定风险（Particular Risk）", "累积期（Accumulation Phase）", "风险保留（Risk Retention）", "Wakalah 模式"], "answer": 2}, {"q": "培训场景下，关于「风险保留（Risk Retention）」的正确解释是？", "options": ["因态度或行为疏忽导致损失概率上升的诱因。", "保险人赔付后可向责任第三方追偿。", "参与者将部分供款捐入风险基金以互助共济。", "由个人或企业自行承担损失后果。"], "answer": 3}, {"q": "在「风险保留（Risk Retention）」的判断题里，哪项说法不成立？", "options": ["风险保留（Risk Retention）是指：由个人或企业自行承担损失后果。", "区分风险保留（Risk Retention）时，应抓住定义中的关键字。", "风险保留（Risk Retention）是指：样本越大，实际损失越接近期望损失。", "在考试题中，风险保留（Risk Retention）常用于判断风险或保障处理逻辑。"], "answer": 2}, {"q": "在拟定建议书时，围绕「风险保留（Risk Retention）」应采用哪一组正确配对？", "options": ["现金/金钱保险（Money Insurance） — 参与者与经营者按约定比例分享投资利润。", "风险保留（Risk Retention） — 由个人或企业自行承担损失后果。", "Mudharabah 模式 — 由个人或企业自行承担损失后果。", "风险保留（Risk Retention） — 用较低危险的活动或物质替代高风险做法。"], "answer": 1}, {"q": "阅读线索后判断术语：\n把损失财务后果转移给第三方，例如保险公司。\n应选哪一项？", "options": ["Tabarru'（互助捐献）", "家政服务人员豁免（Domestic Servant Exemption）", "人类生命价值法（Human Life Value）", "风险转移（Risk Transfer）"], "answer": 3}, {"q": "以下对「风险转移（Risk Transfer）」的理解，何者最恰当？", "options": ["赔偿金额等于重置成本减去折旧。", "降低损失发生的可能性。", "把损失财务后果转移给第三方，例如保险公司。", "透过不参与某项活动来避免相关风险。"], "answer": 2}, {"q": "以下术语配对中，何者与「风险转移（Risk Transfer）」逻辑一致？", "options": ["物理风险诱因（Physical Hazard） — 样本越大，实际损失越接近期望损失。", "实际现金价值（Actual Cash Value） — 因态度或行为疏忽导致损失概率上升的诱因。", "风险转移（Risk Transfer） — 把损失财务后果转移给第三方，例如保险公司。", "风险诱因（Hazard） — 由社会长期结构问题引起、变化较慢的风险。"], "answer": 2}, {"q": "围绕「风险转移（Risk Transfer）」的辨错题中，哪组配对是错的？", "options": ["基本风险（Fundamental Risk） — 影响社会大多数人的系统性风险，如经济衰退。", "储蓄/两全保单（Endowment Policy） — 生存至期满或在期内身故都可领取给付。", "大数法则（Law of Large Numbers） — 样本越大，实际损失越接近期望损失。", "风险转移（Risk Transfer） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。"], "answer": 3}, {"q": "在案例分析中出现：\n把损失财务后果转移给第三方，例如保险公司。\n最应判定为何种术语？", "options": ["风险（Risk）", "损失预防（Loss Prevention）", "风险转移（Risk Transfer）", "纯风险（Pure Risk）"], "answer": 2}, {"q": "在实务答辩中，哪项对「风险转移（Risk Transfer）」的定义最稳妥？", "options": ["估算家庭因经济支柱身故而损失的收入现值。", "影响社会大多数人的系统性风险，如经济衰退。", "承保现金在场所内或运送途中被抢劫盗窃等损失。", "把损失财务后果转移给第三方，例如保险公司。"], "answer": 3}, {"q": "检视下列陈述，关于「风险转移（Risk Transfer）」哪项是错的？", "options": ["区分风险转移（Risk Transfer）时，应抓住定义中的关键字。", "风险转移（Risk Transfer）是指：主要影响个人或个别企业的风险。", "在考试题中，风险转移（Risk Transfer）常用于判断风险或保障处理逻辑。", "风险转移（Risk Transfer）是指：把损失财务后果转移给第三方，例如保险公司。"], "answer": 1}, {"q": "关于「风险转移（Risk Transfer）」的综合判断，下列配对哪项正确？", "options": ["风险转移（Risk Transfer） — 赔偿金额等于重置成本减去折旧。", "风险转移（Risk Transfer） — 把损失财务后果转移给第三方，例如保险公司。", "风险控制（Risk Control） — 影响社会大多数人的系统性风险，如经济衰退。", "基本风险（Fundamental Risk） — 把损失财务后果转移给第三方，例如保险公司。"], "answer": 1}, {"q": "若出现下列情形：\n降低损失发生的可能性。\n通常归类为哪一术语？", "options": ["Mudharabah 模式", "静态风险（Static Risk）", "损失预防（Loss Prevention）", "重大疾病保险（Critical Illness）"], "answer": 2}, {"q": "在RFP语境中，「损失预防（Loss Prevention）」应如何定义？", "options": ["伊斯兰金融中被禁止的赌博成分。", "可能损失也可能获利的风险。", "承保现金在场所内或运送途中被抢劫盗窃等损失。", "降低损失发生的可能性。"], "answer": 3}, {"q": "在概念配对题中，与「损失预防（Loss Prevention）」相关的正确选项是？", "options": ["给付/清算期（Liquidation Phase） — 年金产品中持续缴费与投资增长的阶段。", "替代（Substitution） — 消费者有权获得清晰、完整、可理解的产品信息。", "损失预防（Loss Prevention） — 降低损失发生的可能性。", "实际现金价值（Actual Cash Value） — 确诊合约列明疾病时一次性给付保险金。"], "answer": 2}, {"q": "关于「损失预防（Loss Prevention）」与其他术语的对应关系，哪项有误？", "options": ["损失预防（Loss Prevention） — 以具体财务责任计算保障缺口的保险需求方法。", "自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。", "风险保留（Risk Retention） — 由个人或企业自行承担损失后果。", "道德风险诱因（Morale Hazard） — 因态度或行为疏忽导致损失概率上升的诱因。"], "answer": 0}, {"q": "若客户陈述符合以下内容：\n降低损失发生的可能性。\n最佳术语判断是？", "options": ["任何职业定义（Any Occupation）", "风险转移（Risk Transfer）", "投机风险（Speculative Risk）", "损失预防（Loss Prevention）"], "answer": 3}, {"q": "针对「损失预防（Loss Prevention）」的高难度辨析，正确选项是？", "options": ["保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "在约定期间提供保障，通常保费较低且保障纯粹。", "降低损失发生的可能性。", "只有损失或无损失两种结果，不会带来获利。"], "answer": 2}, {"q": "围绕「损失预防（Loss Prevention）」的四项描述中，错误的是哪一个？", "options": ["区分损失预防（Loss Prevention）时，应抓住定义中的关键字。", "损失预防（Loss Prevention）是指：投保与承保双方都必须充分、诚实披露重大事实。", "在考试题中，损失预防（Loss Prevention）常用于判断风险或保障处理逻辑。", "损失预防（Loss Prevention）是指：降低损失发生的可能性。"], "answer": 1}, {"q": "若题干以「损失预防（Loss Prevention）」为重点，哪组术语配对最合理？", "options": ["损失预防（Loss Prevention） — 降低损失发生的可能性。", "基本风险（Fundamental Risk） — 降低损失发生的可能性。", "风险规避（Risk Avoidance） — 影响社会大多数人的系统性风险，如经济衰退。", "损失预防（Loss Prevention） — 给付持续至最后一位受领人身故。"], "answer": 0}, {"q": "某客户在风险沟通中提到：\n在损失发生后减少损失程度。\n这最符合哪个术语？", "options": ["Wakalah 模式", "关键人物价值（Key-man Value）", "损失降低（Loss Reduction）", "消费者知情权"], "answer": 2}, {"q": "关于「损失降低（Loss Reduction）」，下列哪项描述最准确？", "options": ["影响社会大多数人的系统性风险，如经济衰退。", "给付持续至最后一位受领人身故。", "在损失发生后减少损失程度。", "伊斯兰金融中被禁止的赌博成分。"], "answer": 2}, {"q": "围绕「损失降低（Loss Reduction）」这个概念，下列哪一组“术语—解释”配对正确？", "options": ["替代（Substitution） — 以具体财务责任计算保障缺口的保险需求方法。", "损失降低（Loss Reduction） — 在损失发生后减少损失程度。", "联合及遗属年金（Joint & Survivor） — 理赔时被保险人与保险公司按比例共同承担医疗费用。", "代位求偿（Subrogation） — 因态度或行为疏忽导致损失概率上升的诱因。"], "answer": 1}, {"q": "若以「损失降低（Loss Reduction）」为参照，下列哪一组“术语—解释”配对错误？", "options": ["损失降低（Loss Reduction） — 年金产品中持续缴费与投资增长的阶段。", "动态风险（Dynamic Risk） — 由经济、科技、政策变化引起的新风险。", "储蓄/两全保单（Endowment Policy） — 生存至期满或在期内身故都可领取给付。", "终身寿险（Whole Life Policy） — 保障终身并可累积现金价值。"], "answer": 0}, {"q": "情境：客户提供了这条关键线索：\n在损失发生后减少损失程度。\n你最可能采用哪个术语进行归纳？", "options": ["动态风险（Dynamic Risk）", "损失降低（Loss Reduction）", "风险保留（Risk Retention）", "大数法则（Law of Large Numbers）"], "answer": 1}, {"q": "你要向新进顾问说明「损失降低（Loss Reduction）」，下列哪项讲法最准确？", "options": ["在损失发生后减少损失程度。", "给付期固定，不依赖受领人生存与否。", "SOCSO 对失去工作能力成员提供长期收入保障。", "只有损失或无损失两种结果，不会带来获利。"], "answer": 0}, {"q": "以下关于「损失降低（Loss Reduction）」的叙述，哪一项错误？", "options": ["损失降低（Loss Reduction）是指：在损失发生后减少损失程度。", "区分损失降低（Loss Reduction）时，应抓住定义中的关键字。", "损失降低（Loss Reduction）是指：无法从事原本职业即符合残疾给付条件，定义较宽。", "在考试题中，损失降低（Loss Reduction）常用于判断风险或保障处理逻辑。"], "answer": 2}, {"q": "当你以「损失降低（Loss Reduction）」作为分析核心时，下列哪组“术语—解释”最可采纳？", "options": ["损失降低（Loss Reduction） — 在损失发生后减少损失程度。", "损失降低（Loss Reduction） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "纯风险（Pure Risk） — 估算家庭因经济支柱身故而损失的收入现值。", "人类生命价值法（Human Life Value） — 在损失发生后减少损失程度。"], "answer": 0}, {"q": "根据以下描述，最贴切的术语是：\n用较低危险的活动或物质替代高风险做法。", "options": ["替代（Substitution）", "联合及遗属年金（Joint & Survivor）", "家政服务人员豁免（Domestic Servant Exemption）", "需求分析法（Needs Analysis）"], "answer": 0}, {"q": "若要向客户解释「替代（Substitution）」，哪项定义是正确的？", "options": ["用较低危险的活动或物质替代高风险做法。", "估算家庭因经济支柱身故而损失的收入现值。", "投保人对被保险人生命或财产具有合法经济利益关系。", "SOCSO 对失去工作能力成员提供长期收入保障。"], "answer": 0}, {"q": "关于「替代（Substitution）」及相近概念，哪组配对是正确的？", "options": ["需求分析法（Needs Analysis） — 由环境或实物条件造成的危险诱因，如电线老化。", "替代（Substitution） — 用较低危险的活动或物质替代高风险做法。", "赔偿原则（Principle of Indemnity） — 承保雇主依法对员工工伤事故应承担的赔偿责任。", "关键人物价值（Key-man Value） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。"], "answer": 1}, {"q": "以下各项里，哪一项与「替代（Substitution）」的概念关系不正确？", "options": ["共同保险（Co-insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。", "道德风险诱因（Morale Hazard） — 因态度或行为疏忽导致损失概率上升的诱因。", "替代（Substitution） — 由环境或实物条件造成的危险诱因，如电线老化。", "代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。"], "answer": 2}, {"q": "顾问访谈记录显示：\n用较低危险的活动或物质替代高风险做法。\n该信息对应的核心术语是？", "options": ["失效抚恤金计划（Invalidity Pension Scheme）", "任何职业定义（Any Occupation）", "风险控制（Risk Control）", "替代（Substitution）"], "answer": 3}, {"q": "培训场景下，关于「替代（Substitution）」的正确解释是？", "options": ["用较低危险的活动或物质替代高风险做法。", "年金产品中持续缴费与投资增长的阶段。", "估算家庭因经济支柱身故而损失的收入现值。", "会提高损失发生概率或严重程度的条件。"], "answer": 0}, {"q": "在「替代（Substitution）」的判断题里，哪项说法不成立？", "options": ["替代（Substitution）是指：估算家庭因经济支柱身故而损失的收入现值。", "替代（Substitution）是指：用较低危险的活动或物质替代高风险做法。", "在考试题中，替代（Substitution）常用于判断风险或保障处理逻辑。", "区分替代（Substitution）时，应抓住定义中的关键字。"], "answer": 0}, {"q": "在拟定建议书时，围绕「替代（Substitution）」应采用哪一组正确配对？", "options": ["危险因素（Peril） — 用较低危险的活动或物质替代高风险做法。", "替代（Substitution） — 由个人或企业自行承担损失后果。", "风险转移（Risk Transfer） — 导致损失发生的直接原因，例如火灾、车祸、疾病。", "替代（Substitution） — 用较低危险的活动或物质替代高风险做法。"], "answer": 3}, {"q": "阅读线索后判断术语：\n样本越大，实际损失越接近期望损失。\n应选哪一项？", "options": ["大数法则（Law of Large Numbers）", "替代（Substitution）", "风险规避（Risk Avoidance）", "特定风险（Particular Risk）"], "answer": 0}, {"q": "以下对「大数法则（Law of Large Numbers）」的理解，何者最恰当？", "options": ["由经济、科技、政策变化引起的新风险。", "降低损失发生的可能性。", "样本越大，实际损失越接近期望损失。", "SOCSO 对失去工作能力成员提供长期收入保障。"], "answer": 2}, {"q": "以下术语配对中，何者与「大数法则（Law of Large Numbers）」逻辑一致？", "options": ["最大诚信（Utmost Good Faith） — 参与者与经营者按约定比例分享投资利润。", "大数法则（Law of Large Numbers） — 样本越大，实际损失越接近期望损失。", "动态风险（Dynamic Risk） — 会提高损失发生概率或严重程度的条件。", "投机风险（Speculative Risk） — 采取措施降低损失发生频率或严重程度。"], "answer": 1}, {"q": "围绕「大数法则（Law of Large Numbers）」的辨错题中，哪组配对是错的？", "options": ["大数法则（Law of Large Numbers） — 由环境或实物条件造成的危险诱因，如电线老化。", "确定年金（Annuity Certain） — 给付期固定，不依赖受领人生存与否。", "纯风险（Pure Risk） — 只有损失或无损失两种结果，不会带来获利。", "雇主责任险（Employer's Liability） — 承保雇主依法对员工工伤事故应承担的赔偿责任。"], "answer": 0}, {"q": "在案例分析中出现：\n样本越大，实际损失越接近期望损失。\n最应判定为何种术语？", "options": ["雇主责任险（Employer's Liability）", "风险控制（Risk Control）", "大数法则（Law of Large Numbers）", "动态风险（Dynamic Risk）"], "answer": 2}, {"q": "在实务答辩中，哪项对「大数法则（Law of Large Numbers）」的定义最稳妥？", "options": ["给付期固定，不依赖受领人生存与否。", "保险人赔付后可向责任第三方追偿。", "样本越大，实际损失越接近期望损失。", "给付持续至最后一位受领人身故。"], "answer": 2}, {"q": "检视下列陈述，关于「大数法则（Law of Large Numbers）」哪项是错的？", "options": ["大数法则（Law of Large Numbers）是指：样本越大，实际损失越接近期望损失。", "大数法则（Law of Large Numbers）是指：赔偿金额等于重置成本减去折旧。", "在考试题中，大数法则（Law of Large Numbers）常用于判断风险或保障处理逻辑。", "区分大数法则（Law of Large Numbers）时，应抓住定义中的关键字。"], "answer": 1}, {"q": "关于「大数法则（Law of Large Numbers）」的综合判断，下列配对哪项正确？", "options": ["定期寿险（Term Policy） — 样本越大，实际损失越接近期望损失。", "大数法则（Law of Large Numbers） — 年金把累积资产转换为定期现金流的阶段。", "大数法则（Law of Large Numbers） — 样本越大，实际损失越接近期望损失。", "重大疾病保险（Critical Illness） — 在约定期间提供保障，通常保费较低且保障纯粹。"], "answer": 2}, {"q": "若出现下列情形：\n以具体财务责任计算保障缺口的保险需求方法。\n通常归类为哪一术语？", "options": ["大数法则（Law of Large Numbers）", "特定风险（Particular Risk）", "累积期（Accumulation Phase）", "需求分析法（Needs Analysis）"], "answer": 3}, {"q": "在RFP语境中，「需求分析法（Needs Analysis）」应如何定义？", "options": ["可能损失也可能获利的风险。", "以具体财务责任计算保障缺口的保险需求方法。", "影响社会大多数人的系统性风险，如经济衰退。", "参与者将部分供款捐入风险基金以互助共济。"], "answer": 1}, {"q": "在概念配对题中，与「需求分析法（Needs Analysis）」相关的正确选项是？", "options": ["需求分析法（Needs Analysis） — 以具体财务责任计算保障缺口的保险需求方法。", "机器故障险（Machinery Breakdown） — 把损失财务后果转移给第三方，例如保险公司。", "赔偿原则（Principle of Indemnity） — 暴露于不确定并可能造成财务损失的状态。", "任何职业定义（Any Occupation） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"], "answer": 0}, {"q": "关于「需求分析法（Needs Analysis）」与其他术语的对应关系，哪项有误？", "options": ["附和合同（Contract of Adhesion） — 条款由保险人拟定，投保人通常只能接受或拒绝。", "风险规避（Risk Avoidance） — 透过不参与某项活动来避免相关风险。", "代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。", "需求分析法（Needs Analysis） — 企业因关键员工离职或身故可能承担的经济损失价值。"], "answer": 3}, {"q": "若客户陈述符合以下内容：\n以具体财务责任计算保障缺口的保险需求方法。\n最佳术语判断是？", "options": ["任何职业定义（Any Occupation）", "需求分析法（Needs Analysis）", "消费者知情权", "风险转移（Risk Transfer）"], "answer": 1}, {"q": "针对「需求分析法（Needs Analysis）」的高难度辨析，正确选项是？", "options": ["给付持续至最后一位受领人身故。", "可能损失也可能获利的风险。", "年金产品中持续缴费与投资增长的阶段。", "以具体财务责任计算保障缺口的保险需求方法。"], "answer": 3}, {"q": "围绕「需求分析法（Needs Analysis）」的四项描述中，错误的是哪一个？", "options": ["在考试题中，需求分析法（Needs Analysis）常用于判断风险或保障处理逻辑。", "需求分析法（Needs Analysis）是指：以具体财务责任计算保障缺口的保险需求方法。", "需求分析法（Needs Analysis）是指：暴露于不确定并可能造成财务损失的状态。", "区分需求分析法（Needs Analysis）时，应抓住定义中的关键字。"], "answer": 2}, {"q": "若题干以「需求分析法（Needs Analysis）」为重点，哪组术语配对最合理？", "options": ["任何职业定义（Any Occupation） — 由经济、科技、政策变化引起的新风险。", "需求分析法（Needs Analysis） — 把损失财务后果转移给第三方，例如保险公司。", "动态风险（Dynamic Risk） — 以具体财务责任计算保障缺口的保险需求方法。", "需求分析法（Needs Analysis） — 以具体财务责任计算保障缺口的保险需求方法。"], "answer": 3}, {"q": "某客户在风险沟通中提到：\n估算家庭因经济支柱身故而损失的收入现值。\n这最符合哪个术语？", "options": ["基本风险（Fundamental Risk）", "Tabarru'（互助捐献）", "危险因素（Peril）", "人类生命价值法（Human Life Value）"], "answer": 3}, {"q": "关于「人类生命价值法（Human Life Value）」，下列哪项描述最准确？", "options": ["估算家庭因经济支柱身故而损失的收入现值。", "会提高损失发生概率或严重程度的条件。", "理赔时被保险人与保险公司按比例共同承担医疗费用。", "导致损失发生的直接原因，例如火灾、车祸、疾病。"], "answer": 0}, {"q": "围绕「人类生命价值法（Human Life Value）」这个概念，下列哪一组“术语—解释”配对正确？", "options": ["Tabarru'（互助捐献） — 由环境或实物条件造成的危险诱因，如电线老化。", "最大诚信（Utmost Good Faith） — 经营者作为代理人管理基金并收取代理费用。", "共同保险（Co-insurance） — 主要影响个人或个别企业的风险。", "人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。"], "answer": 3}, {"q": "若以「人类生命价值法（Human Life Value）」为参照，下列哪一组“术语—解释”配对错误？", "options": ["雇主责任险（Employer's Liability） — 承保雇主依法对员工工伤事故应承担的赔偿责任。", "人类生命价值法（Human Life Value） — 主要影响个人或个别企业的风险。", "纯风险（Pure Risk） — 只有损失或无损失两种结果，不会带来获利。", "可保利益（Insurable Interest） — 投保人对被保险人生命或财产具有合法经济利益关系。"], "answer": 1}, {"q": "情境：客户提供了这条关键线索：\n估算家庭因经济支柱身故而损失的收入现值。\n你最可能采用哪个术语进行归纳？", "options": ["纯风险（Pure Risk）", "人类生命价值法（Human Life Value）", "自身职业定义（Own Occupation）", "Wakalah 模式"], "answer": 1}, {"q": "你要向新进顾问说明「人类生命价值法（Human Life Value）」，下列哪项讲法最准确？", "options": ["消费者有权获得清晰、完整、可理解的产品信息。", "导致损失发生的直接原因，例如火灾、车祸、疾病。", "采取措施降低损失发生频率或严重程度。", "估算家庭因经济支柱身故而损失的收入现值。"], "answer": 3}, {"q": "以下关于「人类生命价值法（Human Life Value）」的叙述，哪一项错误？", "options": ["在考试题中，人类生命价值法（Human Life Value）常用于判断风险或保障处理逻辑。", "人类生命价值法（Human Life Value）是指：参与者将部分供款捐入风险基金以互助共济。", "区分人类生命价值法（Human Life Value）时，应抓住定义中的关键字。", "人类生命价值法（Human Life Value）是指：估算家庭因经济支柱身故而损失的收入现值。"], "answer": 1}, {"q": "当你以「人类生命价值法（Human Life Value）」作为分析核心时，下列哪组“术语—解释”最可采纳？", "options": ["人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。", "道德风险诱因（Morale Hazard） — 估算家庭因经济支柱身故而损失的收入现值。", "人类生命价值法（Human Life Value） — 保障终身并可累积现金价值。", "特定风险（Particular Risk） — 因态度或行为疏忽导致损失概率上升的诱因。"], "answer": 0}, {"q": "根据以下描述，最贴切的术语是：\n赔偿金额等于重置成本减去折旧。", "options": ["风险保留（Risk Retention）", "物理风险诱因（Physical Hazard）", "实际现金价值（Actual Cash Value）", "终身寿险（Whole Life Policy）"], "answer": 2}, {"q": "若要向客户解释「实际现金价值（Actual Cash Value）」，哪项定义是正确的？", "options": ["赔偿金额等于重置成本减去折旧。", "生存至期满或在期内身故都可领取给付。", "在约定期间提供保障，通常保费较低且保障纯粹。", "由社会长期结构问题引起、变化较慢的风险。"], "answer": 0}, {"q": "关于「实际现金价值（Actual Cash Value）」及相近概念，哪组配对是正确的？", "options": ["失效抚恤金计划（Invalidity Pension Scheme） — 经营者作为代理人管理基金并收取代理费用。", "最大诚信（Utmost Good Faith） — 保障终身并可累积现金价值。", "危险因素（Peril） — 因态度或行为疏忽导致损失概率上升的诱因。", "实际现金价值（Actual Cash Value） — 赔偿金额等于重置成本减去折旧。"], "answer": 3}, {"q": "以下各项里，哪一项与「实际现金价值（Actual Cash Value）」的概念关系不正确？", "options": ["实际现金价值（Actual Cash Value） — 会提高损失发生概率或严重程度的条件。", "最大诚信（Utmost Good Faith） — 投保与承保双方都必须充分、诚实披露重大事实。", "给付/清算期（Liquidation Phase） — 年金把累积资产转换为定期现金流的阶段。", "重大疾病保险（Critical Illness） — 确诊合约列明疾病时一次性给付保险金。"], "answer": 0}, {"q": "顾问访谈记录显示：\n赔偿金额等于重置成本减去折旧。\n该信息对应的核心术语是？", "options": ["不可争辩条款（Incontestability Clause）", "道德风险诱因（Morale Hazard）", "实际现金价值（Actual Cash Value）", "附和合同（Contract of Adhesion）"], "answer": 2}, {"q": "培训场景下，关于「实际现金价值（Actual Cash Value）」的正确解释是？", "options": ["赔偿金额等于重置成本减去折旧。", "在损失发生后减少损失程度。", "由经济、科技、政策变化引起的新风险。", "给付持续至最后一位受领人身故。"], "answer": 0}, {"q": "在「实际现金价值（Actual Cash Value）」的判断题里，哪项说法不成立？", "options": ["实际现金价值（Actual Cash Value）是指：赔偿金额等于重置成本减去折旧。", "区分实际现金价值（Actual Cash Value）时，应抓住定义中的关键字。", "在考试题中，实际现金价值（Actual Cash Value）常用于判断风险或保障处理逻辑。", "实际现金价值（Actual Cash Value）是指：在约定期间提供保障，通常保费较低且保障纯粹。"], "answer": 3}, {"q": "在拟定建议书时，围绕「实际现金价值（Actual Cash Value）」应采用哪一组正确配对？", "options": ["替代（Substitution） — 把损失财务后果转移给第三方，例如保险公司。", "风险转移（Risk Transfer） — 赔偿金额等于重置成本减去折旧。", "实际现金价值（Actual Cash Value） — 生存至期满或在期内身故都可领取给付。", "实际现金价值（Actual Cash Value） — 赔偿金额等于重置成本减去折旧。"], "answer": 3}, {"q": "阅读线索后判断术语：\n企业因关键员工离职或身故可能承担的经济损失价值。\n应选哪一项？", "options": ["道德风险诱因（Morale Hazard）", "关键人物价值（Key-man Value）", "替代（Substitution）", "储蓄/两全保单（Endowment Policy）"], "answer": 1}, {"q": "以下对「关键人物价值（Key-man Value）」的理解，何者最恰当？", "options": ["企业因关键员工离职或身故可能承担的经济损失价值。", "仅在无法从事合理适任的任何职业时才符合残疾给付。", "参与者将部分供款捐入风险基金以互助共济。", "承保机器突发机械或电气故障造成的损失。"], "answer": 0}, {"q": "以下术语配对中，何者与「关键人物价值（Key-man Value）」逻辑一致？", "options": ["储蓄/两全保单（Endowment Policy） — 仅在无法从事合理适任的任何职业时才符合残疾给付。", "代位求偿（Subrogation） — 由环境或实物条件造成的危险诱因，如电线老化。", "雇主责任险（Employer's Liability） — 透过不参与某项活动来避免相关风险。", "关键人物价值（Key-man Value） — 企业因关键员工离职或身故可能承担的经济损失价值。"], "answer": 3}, {"q": "围绕「关键人物价值（Key-man Value）」的辨错题中，哪组配对是错的？", "options": ["终身寿险（Whole Life Policy） — 保障终身并可累积现金价值。", "关键人物价值（Key-man Value） — 影响社会大多数人的系统性风险，如经济衰退。", "人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。", "储蓄/两全保单（Endowment Policy） — 生存至期满或在期内身故都可领取给付。"], "answer": 1}, {"q": "在案例分析中出现：\n企业因关键员工离职或身故可能承担的经济损失价值。\n最应判定为何种术语？", "options": ["关键人物价值（Key-man Value）", "Tabarru'（互助捐献）", "储蓄/两全保单（Endowment Policy）", "风险规避（Risk Avoidance）"], "answer": 0}, {"q": "在实务答辩中，哪项对「关键人物价值（Key-man Value）」的定义最稳妥？", "options": ["承保机器突发机械或电气故障造成的损失。", "企业因关键员工离职或身故可能承担的经济损失价值。", "由环境或实物条件造成的危险诱因，如电线老化。", "投保与承保双方都必须充分、诚实披露重大事实。"], "answer": 1}, {"q": "检视下列陈述，关于「关键人物价值（Key-man Value）」哪项是错的？", "options": ["关键人物价值（Key-man Value）是指：主要影响个人或个别企业的风险。", "在考试题中，关键人物价值（Key-man Value）常用于判断风险或保障处理逻辑。", "区分关键人物价值（Key-man Value）时，应抓住定义中的关键字。", "关键人物价值（Key-man Value）是指：企业因关键员工离职或身故可能承担的经济损失价值。"], "answer": 0}, {"q": "关于「关键人物价值（Key-man Value）」的综合判断，下列配对哪项正确？", "options": ["关键人物价值（Key-man Value） — 企业因关键员工离职或身故可能承担的经济损失价值。", "雇主责任险（Employer's Liability） — 以具体财务责任计算保障缺口的保险需求方法。", "关键人物价值（Key-man Value） — 参与者与经营者按约定比例分享投资利润。", "需求分析法（Needs Analysis） — 企业因关键员工离职或身故可能承担的经济损失价值。"], "answer": 0}, {"q": "若出现下列情形：\n投保人对被保险人生命或财产具有合法经济利益关系。\n通常归类为哪一术语？", "options": ["特定风险（Particular Risk）", "代位求偿（Subrogation）", "可保利益（Insurable Interest）", "现金/金钱保险（Money Insurance）"], "answer": 2}, {"q": "在RFP语境中，「可保利益（Insurable Interest）」应如何定义？", "options": ["降低损失发生的可能性。", "以具体财务责任计算保障缺口的保险需求方法。", "投保人对被保险人生命或财产具有合法经济利益关系。", "由经济、科技、政策变化引起的新风险。"], "answer": 2}, {"q": "在概念配对题中，与「可保利益（Insurable Interest）」相关的正确选项是？", "options": ["可保利益（Insurable Interest） — 投保人对被保险人生命或财产具有合法经济利益关系。", "Mudharabah 模式 — 导致损失发生的直接原因，例如火灾、车祸、疾病。", "风险规避（Risk Avoidance） — 由个人或企业自行承担损失后果。", "消费者知情权 — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。"], "answer": 0}, {"q": "关于「可保利益（Insurable Interest）」与其他术语的对应关系，哪项有误？", "options": ["自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。", "投机风险（Speculative Risk） — 可能损失也可能获利的风险。", "损失降低（Loss Reduction） — 在损失发生后减少损失程度。", "可保利益（Insurable Interest） — 因态度或行为疏忽导致损失概率上升的诱因。"], "answer": 3}, {"q": "若客户陈述符合以下内容：\n投保人对被保险人生命或财产具有合法经济利益关系。\n最佳术语判断是？", "options": ["纯风险（Pure Risk）", "可保利益（Insurable Interest）", "累积期（Accumulation Phase）", "现金/金钱保险（Money Insurance）"], "answer": 1}, {"q": "针对「可保利益（Insurable Interest）」的高难度辨析，正确选项是？", "options": ["保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "影响社会大多数人的系统性风险，如经济衰退。", "估算家庭因经济支柱身故而损失的收入现值。", "投保人对被保险人生命或财产具有合法经济利益关系。"], "answer": 3}, {"q": "围绕「可保利益（Insurable Interest）」的四项描述中，错误的是哪一个？", "options": ["在考试题中，可保利益（Insurable Interest）常用于判断风险或保障处理逻辑。", "可保利益（Insurable Interest）是指：投保人对被保险人生命或财产具有合法经济利益关系。", "可保利益（Insurable Interest）是指：会提高损失发生概率或严重程度的条件。", "区分可保利益（Insurable Interest）时，应抓住定义中的关键字。"], "answer": 2}, {"q": "若题干以「可保利益（Insurable Interest）」为重点，哪组术语配对最合理？", "options": ["可保利益（Insurable Interest） — 给付持续至最后一位受领人身故。", "危险因素（Peril） — 投保人对被保险人生命或财产具有合法经济利益关系。", "可保利益（Insurable Interest） — 投保人对被保险人生命或财产具有合法经济利益关系。", "道德风险诱因（Morale Hazard） — 导致损失发生的直接原因，例如火灾、车祸、疾病。"], "answer": 2}, {"q": "某客户在风险沟通中提到：\n在约定期间提供保障，通常保费较低且保障纯粹。\n这最符合哪个术语？", "options": ["失效抚恤金计划（Invalidity Pension Scheme）", "定期寿险（Term Policy）", "终身寿险（Whole Life Policy）", "风险转移（Risk Transfer）"], "answer": 1}, {"q": "关于「定期寿险（Term Policy）」，下列哪项描述最准确？", "options": ["由社会长期结构问题引起、变化较慢的风险。", "给付持续至最后一位受领人身故。", "参与者与经营者按约定比例分享投资利润。", "在约定期间提供保障，通常保费较低且保障纯粹。"], "answer": 3}, {"q": "围绕「定期寿险（Term Policy）」这个概念，下列哪一组“术语—解释”配对正确？", "options": ["风险转移（Risk Transfer） — 保险人赔付后可向责任第三方追偿。", "给付/清算期（Liquidation Phase） — 导致损失发生的直接原因，例如火灾、车祸、疾病。", "定期寿险（Term Policy） — 在约定期间提供保障，通常保费较低且保障纯粹。", "投机风险（Speculative Risk） — 采取措施降低损失发生频率或严重程度。"], "answer": 2}, {"q": "若以「定期寿险（Term Policy）」为参照，下列哪一组“术语—解释”配对错误？", "options": ["定期寿险（Term Policy） — 承保现金在场所内或运送途中被抢劫盗窃等损失。", "危险因素（Peril） — 导致损失发生的直接原因，例如火灾、车祸、疾病。", "赔偿原则（Principle of Indemnity） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。", "代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。"], "answer": 0}, {"q": "情境：客户提供了这条关键线索：\n在约定期间提供保障，通常保费较低且保障纯粹。\n你最可能采用哪个术语进行归纳？", "options": ["定期寿险（Term Policy）", "Tabarru'（互助捐献）", "风险规避（Risk Avoidance）", "Al-Maisir"], "answer": 0}, {"q": "你要向新进顾问说明「定期寿险（Term Policy）」，下列哪项讲法最准确？", "options": ["参与者与经营者按约定比例分享投资利润。", "由社会长期结构问题引起、变化较慢的风险。", "企业因关键员工离职或身故可能承担的经济损失价值。", "在约定期间提供保障，通常保费较低且保障纯粹。"], "answer": 3}, {"q": "以下关于「定期寿险（Term Policy）」的叙述，哪一项错误？", "options": ["在考试题中，定期寿险（Term Policy）常用于判断风险或保障处理逻辑。", "定期寿险（Term Policy）是指：在约定期间提供保障，通常保费较低且保障纯粹。", "区分定期寿险（Term Policy）时，应抓住定义中的关键字。", "定期寿险（Term Policy）是指：投保与承保双方都必须充分、诚实披露重大事实。"], "answer": 3}, {"q": "当你以「定期寿险（Term Policy）」作为分析核心时，下列哪组“术语—解释”最可采纳？", "options": ["定期寿险（Term Policy） — 参与者与经营者按约定比例分享投资利润。", "累积期（Accumulation Phase） — 在约定期间提供保障，通常保费较低且保障纯粹。", "定期寿险（Term Policy） — 在约定期间提供保障，通常保费较低且保障纯粹。", "纯风险（Pure Risk） — 年金产品中持续缴费与投资增长的阶段。"], "answer": 2}, {"q": "根据以下描述，最贴切的术语是：\n保障终身并可累积现金价值。", "options": ["现金/金钱保险（Money Insurance）", "确定年金（Annuity Certain）", "终身寿险（Whole Life Policy）", "任何职业定义（Any Occupation）"], "answer": 2}, {"q": "若要向客户解释「终身寿险（Whole Life Policy）」，哪项定义是正确的？", "options": ["在损失发生后减少损失程度。", "保障终身并可累积现金价值。", "投保人对被保险人生命或财产具有合法经济利益关系。", "年金把累积资产转换为定期现金流的阶段。"], "answer": 1}, {"q": "关于「终身寿险（Whole Life Policy）」及相近概念，哪组配对是正确的？", "options": ["基本风险（Fundamental Risk） — 理赔时被保险人与保险公司按比例共同承担医疗费用。", "危险因素（Peril） — 因态度或行为疏忽导致损失概率上升的诱因。", "任何职业定义（Any Occupation） — 可能损失也可能获利的风险。", "终身寿险（Whole Life Policy） — 保障终身并可累积现金价值。"], "answer": 3}, {"q": "以下各项里，哪一项与「终身寿险（Whole Life Policy）」的概念关系不正确？", "options": ["基本风险（Fundamental Risk） — 影响社会大多数人的系统性风险，如经济衰退。", "雇主责任险（Employer's Liability） — 承保雇主依法对员工工伤事故应承担的赔偿责任。", "终身寿险（Whole Life Policy） — 可能损失也可能获利的风险。", "消费者知情权 — 消费者有权获得清晰、完整、可理解的产品信息。"], "answer": 2}, {"q": "顾问访谈记录显示：\n保障终身并可累积现金价值。\n该信息对应的核心术语是？", "options": ["终身寿险（Whole Life Policy）", "Tabarru'（互助捐献）", "代位求偿（Subrogation）", "基本风险（Fundamental Risk）"], "answer": 0}, {"q": "培训场景下，关于「终身寿险（Whole Life Policy）」的正确解释是？", "options": ["保障终身并可累积现金价值。", "承保雇主依法对员工工伤事故应承担的赔偿责任。", "参与者将部分供款捐入风险基金以互助共济。", "年金把累积资产转换为定期现金流的阶段。"], "answer": 0}, {"q": "在「终身寿险（Whole Life Policy）」的判断题里，哪项说法不成立？", "options": ["终身寿险（Whole Life Policy）是指：年金把累积资产转换为定期现金流的阶段。", "区分终身寿险（Whole Life Policy）时，应抓住定义中的关键字。", "在考试题中，终身寿险（Whole Life Policy）常用于判断风险或保障处理逻辑。", "终身寿险（Whole Life Policy）是指：保障终身并可累积现金价值。"], "answer": 0}, {"q": "在拟定建议书时，围绕「终身寿险（Whole Life Policy）」应采用哪一组正确配对？", "options": ["损失预防（Loss Prevention） — 由环境或实物条件造成的危险诱因，如电线老化。", "物理风险诱因（Physical Hazard） — 保障终身并可累积现金价值。", "终身寿险（Whole Life Policy） — 保障终身并可累积现金价值。", "终身寿险（Whole Life Policy） — 承保雇主依法对员工工伤事故应承担的赔偿责任。"], "answer": 2}, {"q": "阅读线索后判断术语：\n生存至期满或在期内身故都可领取给付。\n应选哪一项？", "options": ["现金/金钱保险（Money Insurance）", "附和合同（Contract of Adhesion）", "投机风险（Speculative Risk）", "储蓄/两全保单（Endowment Policy）"], "answer": 3}, {"q": "以下对「储蓄/两全保单（Endowment Policy）」的理解，何者最恰当？", "options": ["投保人对被保险人生命或财产具有合法经济利益关系。", "生存至期满或在期内身故都可领取给付。", "导致损失发生的直接原因，例如火灾、车祸、疾病。", "影响社会大多数人的系统性风险，如经济衰退。"], "answer": 1}, {"q": "以下术语配对中，何者与「储蓄/两全保单（Endowment Policy）」逻辑一致？", "options": ["可保利益（Insurable Interest） — 由社会长期结构问题引起、变化较慢的风险。", "现金/金钱保险（Money Insurance） — 因态度或行为疏忽导致损失概率上升的诱因。", "储蓄/两全保单（Endowment Policy） — 生存至期满或在期内身故都可领取给付。", "实际现金价值（Actual Cash Value） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"], "answer": 2}, {"q": "围绕「储蓄/两全保单（Endowment Policy）」的辨错题中，哪组配对是错的？", "options": ["自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。", "储蓄/两全保单（Endowment Policy） — 在损失发生后减少损失程度。", "投机风险（Speculative Risk） — 可能损失也可能获利的风险。", "现金/金钱保险（Money Insurance） — 承保现金在场所内或运送途中被抢劫盗窃等损失。"], "answer": 1}, {"q": "在案例分析中出现：\n生存至期满或在期内身故都可领取给付。\n最应判定为何种术语？", "options": ["静态风险（Static Risk）", "储蓄/两全保单（Endowment Policy）", "损失预防（Loss Prevention）", "需求分析法（Needs Analysis）"], "answer": 1}, {"q": "在实务答辩中，哪项对「储蓄/两全保单（Endowment Policy）」的定义最稳妥？", "options": ["年金把累积资产转换为定期现金流的阶段。", "采取措施降低损失发生频率或严重程度。", "降低损失发生的可能性。", "生存至期满或在期内身故都可领取给付。"], "answer": 3}, {"q": "检视下列陈述，关于「储蓄/两全保单（Endowment Policy）」哪项是错的？", "options": ["在考试题中，储蓄/两全保单（Endowment Policy）常用于判断风险或保障处理逻辑。", "储蓄/两全保单（Endowment Policy）是指：生存至期满或在期内身故都可领取给付。", "储蓄/两全保单（Endowment Policy）是指：透过不参与某项活动来避免相关风险。", "区分储蓄/两全保单（Endowment Policy）时，应抓住定义中的关键字。"], "answer": 2}, {"q": "关于「储蓄/两全保单（Endowment Policy）」的综合判断，下列配对哪项正确？", "options": ["储蓄/两全保单（Endowment Policy） — 生存至期满或在期内身故都可领取给付。", "储蓄/两全保单（Endowment Policy） — 条款由保险人拟定，投保人通常只能接受或拒绝。", "风险转移（Risk Transfer） — 承保机器突发机械或电气故障造成的损失。", "机器故障险（Machinery Breakdown） — 生存至期满或在期内身故都可领取给付。"], "answer": 0}, {"q": "若出现下列情形：\n保单生效一段时间后，保险人一般不得因早期资料争议拒赔。\n通常归类为哪一术语？", "options": ["损失预防（Loss Prevention）", "不可争辩条款（Incontestability Clause）", "消费者知情权", "道德风险诱因（Morale Hazard）"], "answer": 1}, {"q": "在RFP语境中，「不可争辩条款（Incontestability Clause）」应如何定义？", "options": ["经营者作为代理人管理基金并收取代理费用。", "给付持续至最后一位受领人身故。", "以具体财务责任计算保障缺口的保险需求方法。", "保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"], "answer": 3}, {"q": "在概念配对题中，与「不可争辩条款（Incontestability Clause）」相关的正确选项是？", "options": ["不可争辩条款（Incontestability Clause） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "定期寿险（Term Policy） — 仅在无法从事合理适任的任何职业时才符合残疾给付。", "家政服务人员豁免（Domestic Servant Exemption） — 导致损失发生的直接原因，例如火灾、车祸、疾病。", "道德风险诱因（Morale Hazard） — 承保雇主依法对员工工伤事故应承担的赔偿责任。"], "answer": 0}, {"q": "关于「不可争辩条款（Incontestability Clause）」与其他术语的对应关系，哪项有误？", "options": ["道德风险诱因（Morale Hazard） — 因态度或行为疏忽导致损失概率上升的诱因。", "可保利益（Insurable Interest） — 投保人对被保险人生命或财产具有合法经济利益关系。", "代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。", "不可争辩条款（Incontestability Clause） — 由社会长期结构问题引起、变化较慢的风险。"], "answer": 3}, {"q": "若客户陈述符合以下内容：\n保单生效一段时间后，保险人一般不得因早期资料争议拒赔。\n最佳术语判断是？", "options": ["动态风险（Dynamic Risk）", "Mudharabah 模式", "不可争辩条款（Incontestability Clause）", "需求分析法（Needs Analysis）"], "answer": 2}, {"q": "针对「不可争辩条款（Incontestability Clause）」的高难度辨析，正确选项是？", "options": ["保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "投保人对被保险人生命或财产具有合法经济利益关系。", "家政服务人员通常不属于 SOCSO 一般雇员承保范围。", "导致损失发生的直接原因，例如火灾、车祸、疾病。"], "answer": 0}, {"q": "围绕「不可争辩条款（Incontestability Clause）」的四项描述中，错误的是哪一个？", "options": ["不可争辩条款（Incontestability Clause）是指：承保现金在场所内或运送途中被抢劫盗窃等损失。", "在考试题中，不可争辩条款（Incontestability Clause）常用于判断风险或保障处理逻辑。", "不可争辩条款（Incontestability Clause）是指：保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "区分不可争辩条款（Incontestability Clause）时，应抓住定义中的关键字。"], "answer": 0}, {"q": "若题干以「不可争辩条款（Incontestability Clause）」为重点，哪组术语配对最合理？", "options": ["Mudharabah 模式 — 生存至期满或在期内身故都可领取给付。", "不可争辩条款（Incontestability Clause） — SOCSO 对失去工作能力成员提供长期收入保障。", "不可争辩条款（Incontestability Clause） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "储蓄/两全保单（Endowment Policy） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"], "answer": 2}, {"q": "某客户在风险沟通中提到：\n确诊合约列明疾病时一次性给付保险金。\n这最符合哪个术语？", "options": ["不可争辩条款（Incontestability Clause）", "现金/金钱保险（Money Insurance）", "实际现金价值（Actual Cash Value）", "重大疾病保险（Critical Illness）"], "answer": 3}, {"q": "关于「重大疾病保险（Critical Illness）」，下列哪项描述最准确？", "options": ["影响社会大多数人的系统性风险，如经济衰退。", "企业因关键员工离职或身故可能承担的经济损失价值。", "确诊合约列明疾病时一次性给付保险金。", "采取措施降低损失发生频率或严重程度。"], "answer": 2}, {"q": "围绕「重大疾病保险（Critical Illness）」这个概念，下列哪一组“术语—解释”配对正确？", "options": ["现金/金钱保险（Money Insurance） — 无法从事原本职业即符合残疾给付条件，定义较宽。", "基本风险（Fundamental Risk） — 样本越大，实际损失越接近期望损失。", "重大疾病保险（Critical Illness） — 确诊合约列明疾病时一次性给付保险金。", "储蓄/两全保单（Endowment Policy） — 投保与承保双方都必须充分、诚实披露重大事实。"], "answer": 2}, {"q": "若以「重大疾病保险（Critical Illness）」为参照，下列哪一组“术语—解释”配对错误？", "options": ["重大疾病保险（Critical Illness） — 年金把累积资产转换为定期现金流的阶段。", "风险规避（Risk Avoidance） — 透过不参与某项活动来避免相关风险。", "任何职业定义（Any Occupation） — 仅在无法从事合理适任的任何职业时才符合残疾给付。", "累积期（Accumulation Phase） — 年金产品中持续缴费与投资增长的阶段。"], "answer": 0}, {"q": "情境：客户提供了这条关键线索：\n确诊合约列明疾病时一次性给付保险金。\n你最可能采用哪个术语进行归纳？", "options": ["储蓄/两全保单（Endowment Policy）", "可保利益（Insurable Interest）", "重大疾病保险（Critical Illness）", "风险诱因（Hazard）"], "answer": 2}, {"q": "你要向新进顾问说明「重大疾病保险（Critical Illness）」，下列哪项讲法最准确？", "options": ["经营者作为代理人管理基金并收取代理费用。", "承保机器突发机械或电气故障造成的损失。", "由个人或企业自行承担损失后果。", "确诊合约列明疾病时一次性给付保险金。"], "answer": 3}, {"q": "以下关于「重大疾病保险（Critical Illness）」的叙述，哪一项错误？", "options": ["重大疾病保险（Critical Illness）是指：企业因关键员工离职或身故可能承担的经济损失价值。", "区分重大疾病保险（Critical Illness）时，应抓住定义中的关键字。", "在考试题中，重大疾病保险（Critical Illness）常用于判断风险或保障处理逻辑。", "重大疾病保险（Critical Illness）是指：确诊合约列明疾病时一次性给付保险金。"], "answer": 0}, {"q": "当你以「重大疾病保险（Critical Illness）」作为分析核心时，下列哪组“术语—解释”最可采纳？", "options": ["重大疾病保险（Critical Illness） — 可能损失也可能获利的风险。", "Wakalah 模式 — 消费者有权获得清晰、完整、可理解的产品信息。", "消费者知情权 — 确诊合约列明疾病时一次性给付保险金。", "重大疾病保险（Critical Illness） — 确诊合约列明疾病时一次性给付保险金。"], "answer": 3}, {"q": "根据以下描述，最贴切的术语是：\n理赔时被保险人与保险公司按比例共同承担医疗费用。", "options": ["危险因素（Peril）", "共同保险（Co-insurance）", "定期寿险（Term Policy）", "赔偿原则（Principle of Indemnity）"], "answer": 1}, {"q": "若要向客户解释「共同保险（Co-insurance）」，哪项定义是正确的？", "options": ["理赔时被保险人与保险公司按比例共同承担医疗费用。", "影响社会大多数人的系统性风险，如经济衰退。", "无法从事原本职业即符合残疾给付条件，定义较宽。", "投保与承保双方都必须充分、诚实披露重大事实。"], "answer": 0}, {"q": "关于「共同保险（Co-insurance）」及相近概念，哪组配对是正确的？", "options": ["给付/清算期（Liquidation Phase） — 在损失发生后减少损失程度。", "共同保险（Co-insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。", "投机风险（Speculative Risk） — 导致损失发生的直接原因，例如火灾、车祸、疾病。", "可保利益（Insurable Interest） — 由环境或实物条件造成的危险诱因，如电线老化。"], "answer": 1}, {"q": "以下各项里，哪一项与「共同保险（Co-insurance）」的概念关系不正确？", "options": ["动态风险（Dynamic Risk） — 由经济、科技、政策变化引起的新风险。", "风险（Risk） — 暴露于不确定并可能造成财务损失的状态。", "危险因素（Peril） — 导致损失发生的直接原因，例如火灾、车祸、疾病。", "共同保险（Co-insurance） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"], "answer": 3}, {"q": "顾问访谈记录显示：\n理赔时被保险人与保险公司按比例共同承担医疗费用。\n该信息对应的核心术语是？", "options": ["共同保险（Co-insurance）", "联合及遗属年金（Joint & Survivor）", "静态风险（Static Risk）", "累积期（Accumulation Phase）"], "answer": 0}, {"q": "培训场景下，关于「共同保险（Co-insurance）」的正确解释是？", "options": ["SOCSO 对失去工作能力成员提供长期收入保障。", "参与者将部分供款捐入风险基金以互助共济。", "理赔时被保险人与保险公司按比例共同承担医疗费用。", "把损失财务后果转移给第三方，例如保险公司。"], "answer": 2}, {"q": "在「共同保险（Co-insurance）」的判断题里，哪项说法不成立？", "options": ["在考试题中，共同保险（Co-insurance）常用于判断风险或保障处理逻辑。", "区分共同保险（Co-insurance）时，应抓住定义中的关键字。", "共同保险（Co-insurance）是指：透过不参与某项活动来避免相关风险。", "共同保险（Co-insurance）是指：理赔时被保险人与保险公司按比例共同承担医疗费用。"], "answer": 2}, {"q": "在拟定建议书时，围绕「共同保险（Co-insurance）」应采用哪一组正确配对？", "options": ["共同保险（Co-insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。", "联合及遗属年金（Joint & Survivor） — 承保现金在场所内或运送途中被抢劫盗窃等损失。", "现金/金钱保险（Money Insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。", "共同保险（Co-insurance） — 主要影响个人或个别企业的风险。"], "answer": 0}, {"q": "阅读线索后判断术语：\n无法从事原本职业即符合残疾给付条件，定义较宽。\n应选哪一项？", "options": ["风险诱因（Hazard）", "Wakalah 模式", "自身职业定义（Own Occupation）", "基本风险（Fundamental Risk）"], "answer": 2}, {"q": "以下对「自身职业定义（Own Occupation）」的理解，何者最恰当？", "options": ["影响社会大多数人的系统性风险，如经济衰退。", "无法从事原本职业即符合残疾给付条件，定义较宽。", "确诊合约列明疾病时一次性给付保险金。", "消费者有权获得清晰、完整、可理解的产品信息。"], "answer": 1}, {"q": "以下术语配对中，何者与「自身职业定义（Own Occupation）」逻辑一致？", "options": ["雇主责任险（Employer's Liability） — 采取措施降低损失发生频率或严重程度。", "重大疾病保险（Critical Illness） — 由社会长期结构问题引起、变化较慢的风险。", "代位求偿（Subrogation） — 影响社会大多数人的系统性风险，如经济衰退。", "自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。"], "answer": 3}, {"q": "围绕「自身职业定义（Own Occupation）」的辨错题中，哪组配对是错的？", "options": ["自身职业定义（Own Occupation） — 降低损失发生的可能性。", "风险控制（Risk Control） — 采取措施降低损失发生频率或严重程度。", "赔偿原则（Principle of Indemnity） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。", "风险保留（Risk Retention） — 由个人或企业自行承担损失后果。"], "answer": 0}, {"q": "在案例分析中出现：\n无法从事原本职业即符合残疾给付条件，定义较宽。\n最应判定为何种术语？", "options": ["联合及遗属年金（Joint & Survivor）", "代位求偿（Subrogation）", "自身职业定义（Own Occupation）", "共同保险（Co-insurance）"], "answer": 2}, {"q": "在实务答辩中，哪项对「自身职业定义（Own Occupation）」的定义最稳妥？", "options": ["承保机器突发机械或电气故障造成的损失。", "影响社会大多数人的系统性风险，如经济衰退。", "参与者与经营者按约定比例分享投资利润。", "无法从事原本职业即符合残疾给付条件，定义较宽。"], "answer": 3}, {"q": "检视下列陈述，关于「自身职业定义（Own Occupation）」哪项是错的？", "options": ["自身职业定义（Own Occupation）是指：无法从事原本职业即符合残疾给付条件，定义较宽。", "区分自身职业定义（Own Occupation）时，应抓住定义中的关键字。", "在考试题中，自身职业定义（Own Occupation）常用于判断风险或保障处理逻辑。", "自身职业定义（Own Occupation）是指：给付持续至最后一位受领人身故。"], "answer": 3}, {"q": "关于「自身职业定义（Own Occupation）」的综合判断，下列配对哪项正确？", "options": ["自身职业定义（Own Occupation） — 参与者与经营者按约定比例分享投资利润。", "纯风险（Pure Risk） — 无法从事原本职业即符合残疾给付条件，定义较宽。", "自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。", "大数法则（Law of Large Numbers） — 只有损失或无损失两种结果，不会带来获利。"], "answer": 2}, {"q": "若出现下列情形：\n仅在无法从事合理适任的任何职业时才符合残疾给付。\n通常归类为哪一术语？", "options": ["代位求偿（Subrogation）", "共同保险（Co-insurance）", "Al-Maisir", "任何职业定义（Any Occupation）"], "answer": 3}, {"q": "在RFP语境中，「任何职业定义（Any Occupation）」应如何定义？", "options": ["参与者将部分供款捐入风险基金以互助共济。", "参与者与经营者按约定比例分享投资利润。", "仅在无法从事合理适任的任何职业时才符合残疾给付。", "暴露于不确定并可能造成财务损失的状态。"], "answer": 2}, {"q": "在概念配对题中，与「任何职业定义（Any Occupation）」相关的正确选项是？", "options": ["损失预防（Loss Prevention） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。", "风险转移（Risk Transfer） — 承保雇主依法对员工工伤事故应承担的赔偿责任。", "任何职业定义（Any Occupation） — 仅在无法从事合理适任的任何职业时才符合残疾给付。", "风险诱因（Hazard） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。"], "answer": 2}, {"q": "关于「任何职业定义（Any Occupation）」与其他术语的对应关系，哪项有误？", "options": ["雇主责任险（Employer's Liability） — 承保雇主依法对员工工伤事故应承担的赔偿责任。", "损失预防（Loss Prevention） — 降低损失发生的可能性。", "任何职业定义（Any Occupation） — 由环境或实物条件造成的危险诱因，如电线老化。", "给付/清算期（Liquidation Phase） — 年金把累积资产转换为定期现金流的阶段。"], "answer": 2}, {"q": "若客户陈述符合以下内容：\n仅在无法从事合理适任的任何职业时才符合残疾给付。\n最佳术语判断是？", "options": ["代位求偿（Subrogation）", "任何职业定义（Any Occupation）", "风险控制（Risk Control）", "机器故障险（Machinery Breakdown）"], "answer": 1}, {"q": "针对「任何职业定义（Any Occupation）」的高难度辨析，正确选项是？", "options": ["以具体财务责任计算保障缺口的保险需求方法。", "在损失发生后减少损失程度。", "仅在无法从事合理适任的任何职业时才符合残疾给付。", "保险人赔付后可向责任第三方追偿。"], "answer": 2}, {"q": "围绕「任何职业定义（Any Occupation）」的四项描述中，错误的是哪一个？", "options": ["任何职业定义（Any Occupation）是指：暴露于不确定并可能造成财务损失的状态。", "任何职业定义（Any Occupation）是指：仅在无法从事合理适任的任何职业时才符合残疾给付。", "区分任何职业定义（Any Occupation）时，应抓住定义中的关键字。", "在考试题中，任何职业定义（Any Occupation）常用于判断风险或保障处理逻辑。"], "answer": 0}, {"q": "若题干以「任何职业定义（Any Occupation）」为重点，哪组术语配对最合理？", "options": ["静态风险（Static Risk） — 仅在无法从事合理适任的任何职业时才符合残疾给付。", "任何职业定义（Any Occupation） — 仅在无法从事合理适任的任何职业时才符合残疾给付。", "任何职业定义（Any Occupation） — 伊斯兰金融中被禁止的赌博成分。", "投机风险（Speculative Risk） — 由社会长期结构问题引起、变化较慢的风险。"], "answer": 1}, {"q": "某客户在风险沟通中提到：\n给付期固定，不依赖受领人生存与否。\n这最符合哪个术语？", "options": ["确定年金（Annuity Certain）", "附和合同（Contract of Adhesion）", "雇主责任险（Employer's Liability）", "风险（Risk）"], "answer": 0}, {"q": "关于「确定年金（Annuity Certain）」，下列哪项描述最准确？", "options": ["投保与承保双方都必须充分、诚实披露重大事实。", "承保机器突发机械或电气故障造成的损失。", "给付期固定，不依赖受领人生存与否。", "主要影响个人或个别企业的风险。"], "answer": 2}, {"q": "围绕「确定年金（Annuity Certain）」这个概念，下列哪一组“术语—解释”配对正确？", "options": ["确定年金（Annuity Certain） — 给付期固定，不依赖受领人生存与否。", "静态风险（Static Risk） — 透过不参与某项活动来避免相关风险。", "不可争辩条款（Incontestability Clause） — 消费者有权获得清晰、完整、可理解的产品信息。", "风险（Risk） — 因态度或行为疏忽导致损失概率上升的诱因。"], "answer": 0}, {"q": "若以「确定年金（Annuity Certain）」为参照，下列哪一组“术语—解释”配对错误？", "options": ["终身寿险（Whole Life Policy） — 保障终身并可累积现金价值。", "确定年金（Annuity Certain） — 赔偿金额等于重置成本减去折旧。", "危险因素（Peril） — 导致损失发生的直接原因，例如火灾、车祸、疾病。", "风险（Risk） — 暴露于不确定并可能造成财务损失的状态。"], "answer": 1}, {"q": "情境：客户提供了这条关键线索：\n给付期固定，不依赖受领人生存与否。\n你最可能采用哪个术语进行归纳？", "options": ["机器故障险（Machinery Breakdown）", "雇主责任险（Employer's Liability）", "确定年金（Annuity Certain）", "风险诱因（Hazard）"], "answer": 2}, {"q": "你要向新进顾问说明「确定年金（Annuity Certain）」，下列哪项讲法最准确？", "options": ["保险人赔付后可向责任第三方追偿。", "消费者有权获得清晰、完整、可理解的产品信息。", "给付期固定，不依赖受领人生存与否。", "可能损失也可能获利的风险。"], "answer": 2}, {"q": "以下关于「确定年金（Annuity Certain）」的叙述，哪一项错误？", "options": ["确定年金（Annuity Certain）是指：生存至期满或在期内身故都可领取给付。", "在考试题中，确定年金（Annuity Certain）常用于判断风险或保障处理逻辑。", "确定年金（Annuity Certain）是指：给付期固定，不依赖受领人生存与否。", "区分确定年金（Annuity Certain）时，应抓住定义中的关键字。"], "answer": 0}, {"q": "当你以「确定年金（Annuity Certain）」作为分析核心时，下列哪组“术语—解释”最可采纳？", "options": ["Wakalah 模式 — 给付期固定，不依赖受领人生存与否。", "可保利益（Insurable Interest） — 经营者作为代理人管理基金并收取代理费用。", "确定年金（Annuity Certain） — 给付期固定，不依赖受领人生存与否。", "确定年金（Annuity Certain） — 由社会长期结构问题引起、变化较慢的风险。"], "answer": 2}, {"q": "根据以下描述，最贴切的术语是：\n给付持续至最后一位受领人身故。", "options": ["替代（Substitution）", "联合及遗属年金（Joint & Survivor）", "Mudharabah 模式", "静态风险（Static Risk）"], "answer": 1}, {"q": "若要向客户解释「联合及遗属年金（Joint & Survivor）」，哪项定义是正确的？", "options": ["因态度或行为疏忽导致损失概率上升的诱因。", "条款由保险人拟定，投保人通常只能接受或拒绝。", "给付持续至最后一位受领人身故。", "承保现金在场所内或运送途中被抢劫盗窃等损失。"], "answer": 2}, {"q": "关于「联合及遗属年金（Joint & Survivor）」及相近概念，哪组配对是正确的？", "options": ["联合及遗属年金（Joint & Survivor） — 给付持续至最后一位受领人身故。", "终身寿险（Whole Life Policy） — 年金产品中持续缴费与投资增长的阶段。", "风险（Risk） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。", "损失预防（Loss Prevention） — 给付期固定，不依赖受领人生存与否。"], "answer": 0}, {"q": "以下各项里，哪一项与「联合及遗属年金（Joint & Survivor）」的概念关系不正确？", "options": ["关键人物价值（Key-man Value） — 企业因关键员工离职或身故可能承担的经济损失价值。", "代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。", "动态风险（Dynamic Risk） — 由经济、科技、政策变化引起的新风险。", "联合及遗属年金（Joint & Survivor） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。"], "answer": 3}, {"q": "顾问访谈记录显示：\n给付持续至最后一位受领人身故。\n该信息对应的核心术语是？", "options": ["联合及遗属年金（Joint & Survivor）", "动态风险（Dynamic Risk）", "可保利益（Insurable Interest）", "雇主责任险（Employer's Liability）"], "answer": 0}, {"q": "培训场景下，关于「联合及遗属年金（Joint & Survivor）」的正确解释是？", "options": ["降低损失发生的可能性。", "以具体财务责任计算保障缺口的保险需求方法。", "主要影响个人或个别企业的风险。", "给付持续至最后一位受领人身故。"], "answer": 3}, {"q": "在「联合及遗属年金（Joint & Survivor）」的判断题里，哪项说法不成立？", "options": ["联合及遗属年金（Joint & Survivor）是指：给付持续至最后一位受领人身故。", "区分联合及遗属年金（Joint & Survivor）时，应抓住定义中的关键字。", "联合及遗属年金（Joint & Survivor）是指：参与者与经营者按约定比例分享投资利润。", "在考试题中，联合及遗属年金（Joint & Survivor）常用于判断风险或保障处理逻辑。"], "answer": 2}, {"q": "在拟定建议书时，围绕「联合及遗属年金（Joint & Survivor）」应采用哪一组正确配对？", "options": ["联合及遗属年金（Joint & Survivor） — 投保人对被保险人生命或财产具有合法经济利益关系。", "实际现金价值（Actual Cash Value） — 给付持续至最后一位受领人身故。", "确定年金（Annuity Certain） — 赔偿金额等于重置成本减去折旧。", "联合及遗属年金（Joint & Survivor） — 给付持续至最后一位受领人身故。"], "answer": 3}, {"q": "阅读线索后判断术语：\n年金产品中持续缴费与投资增长的阶段。\n应选哪一项？", "options": ["道德风险诱因（Morale Hazard）", "累积期（Accumulation Phase）", "替代（Substitution）", "风险转移（Risk Transfer）"], "answer": 1}, {"q": "以下对「累积期（Accumulation Phase）」的理解，何者最恰当？", "options": ["年金产品中持续缴费与投资增长的阶段。", "投保与承保双方都必须充分、诚实披露重大事实。", "参与者将部分供款捐入风险基金以互助共济。", "用较低危险的活动或物质替代高风险做法。"], "answer": 0}, {"q": "以下术语配对中，何者与「累积期（Accumulation Phase）」逻辑一致？", "options": ["纯风险（Pure Risk） — 可能损失也可能获利的风险。", "累积期（Accumulation Phase） — 年金产品中持续缴费与投资增长的阶段。", "代位求偿（Subrogation） — 暴露于不确定并可能造成财务损失的状态。", "风险诱因（Hazard） — 由社会长期结构问题引起、变化较慢的风险。"], "answer": 1}, {"q": "围绕「累积期（Accumulation Phase）」的辨错题中，哪组配对是错的？", "options": ["累积期（Accumulation Phase） — 由社会长期结构问题引起、变化较慢的风险。", "风险规避（Risk Avoidance） — 透过不参与某项活动来避免相关风险。", "自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。", "重大疾病保险（Critical Illness） — 确诊合约列明疾病时一次性给付保险金。"], "answer": 0}, {"q": "在案例分析中出现：\n年金产品中持续缴费与投资增长的阶段。\n最应判定为何种术语？", "options": ["投机风险（Speculative Risk）", "累积期（Accumulation Phase）", "风险诱因（Hazard）", "Al-Maisir"], "answer": 1}, {"q": "在实务答辩中，哪项对「累积期（Accumulation Phase）」的定义最稳妥？", "options": ["参与者将部分供款捐入风险基金以互助共济。", "承保现金在场所内或运送途中被抢劫盗窃等损失。", "降低损失发生的可能性。", "年金产品中持续缴费与投资增长的阶段。"], "answer": 3}, {"q": "检视下列陈述，关于「累积期（Accumulation Phase）」哪项是错的？", "options": ["累积期（Accumulation Phase）是指：年金产品中持续缴费与投资增长的阶段。", "在考试题中，累积期（Accumulation Phase）常用于判断风险或保障处理逻辑。", "累积期（Accumulation Phase）是指：因态度或行为疏忽导致损失概率上升的诱因。", "区分累积期（Accumulation Phase）时，应抓住定义中的关键字。"], "answer": 2}, {"q": "关于「累积期（Accumulation Phase）」的综合判断，下列配对哪项正确？", "options": ["风险转移（Risk Transfer） — 由个人或企业自行承担损失后果。", "累积期（Accumulation Phase） — 年金产品中持续缴费与投资增长的阶段。", "累积期（Accumulation Phase） — 企业因关键员工离职或身故可能承担的经济损失价值。", "风险保留（Risk Retention） — 年金产品中持续缴费与投资增长的阶段。"], "answer": 1}, {"q": "若出现下列情形：\n年金把累积资产转换为定期现金流的阶段。\n通常归类为哪一术语？", "options": ["家政服务人员豁免（Domestic Servant Exemption）", "最大诚信（Utmost Good Faith）", "给付/清算期（Liquidation Phase）", "大数法则（Law of Large Numbers）"], "answer": 2}, {"q": "在RFP语境中，「给付/清算期（Liquidation Phase）」应如何定义？", "options": ["伊斯兰金融中被禁止的赌博成分。", "参与者与经营者按约定比例分享投资利润。", "会提高损失发生概率或严重程度的条件。", "年金把累积资产转换为定期现金流的阶段。"], "answer": 3}, {"q": "在概念配对题中，与「给付/清算期（Liquidation Phase）」相关的正确选项是？", "options": ["给付/清算期（Liquidation Phase） — 年金把累积资产转换为定期现金流的阶段。", "任何职业定义（Any Occupation） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。", "损失预防（Loss Prevention） — 条款由保险人拟定，投保人通常只能接受或拒绝。", "基本风险（Fundamental Risk） — 会提高损失发生概率或严重程度的条件。"], "answer": 0}, {"q": "关于「给付/清算期（Liquidation Phase）」与其他术语的对应关系，哪项有误？", "options": ["现金/金钱保险（Money Insurance） — 承保现金在场所内或运送途中被抢劫盗窃等损失。", "给付/清算期（Liquidation Phase） — 在损失发生后减少损失程度。", "累积期（Accumulation Phase） — 年金产品中持续缴费与投资增长的阶段。", "不可争辩条款（Incontestability Clause） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。"], "answer": 1}, {"q": "若客户陈述符合以下内容：\n年金把累积资产转换为定期现金流的阶段。\n最佳术语判断是？", "options": ["给付/清算期（Liquidation Phase）", "风险（Risk）", "静态风险（Static Risk）", "危险因素（Peril）"], "answer": 0}, {"q": "针对「给付/清算期（Liquidation Phase）」的高难度辨析，正确选项是？", "options": ["在损失发生后减少损失程度。", "暴露于不确定并可能造成财务损失的状态。", "年金把累积资产转换为定期现金流的阶段。", "企业因关键员工离职或身故可能承担的经济损失价值。"], "answer": 2}, {"q": "围绕「给付/清算期（Liquidation Phase）」的四项描述中，错误的是哪一个？", "options": ["在考试题中，给付/清算期（Liquidation Phase）常用于判断风险或保障处理逻辑。", "给付/清算期（Liquidation Phase）是指：年金把累积资产转换为定期现金流的阶段。", "给付/清算期（Liquidation Phase）是指：会提高损失发生概率或严重程度的条件。", "区分给付/清算期（Liquidation Phase）时，应抓住定义中的关键字。"], "answer": 2}, {"q": "若题干以「给付/清算期（Liquidation Phase）」为重点，哪组术语配对最合理？", "options": ["风险诱因（Hazard） — 年金把累积资产转换为定期现金流的阶段。", "特定风险（Particular Risk） — 会提高损失发生概率或严重程度的条件。", "给付/清算期（Liquidation Phase） — 暴露于不确定并可能造成财务损失的状态。", "给付/清算期（Liquidation Phase） — 年金把累积资产转换为定期现金流的阶段。"], "answer": 3}, {"q": "某客户在风险沟通中提到：\n承保机器突发机械或电气故障造成的损失。\n这最符合哪个术语？", "options": ["风险控制（Risk Control）", "附和合同（Contract of Adhesion）", "给付/清算期（Liquidation Phase）", "机器故障险（Machinery Breakdown）"], "answer": 3}, {"q": "关于「机器故障险（Machinery Breakdown）」，下列哪项描述最准确？", "options": ["企业因关键员工离职或身故可能承担的经济损失价值。", "保障终身并可累积现金价值。", "以具体财务责任计算保障缺口的保险需求方法。", "承保机器突发机械或电气故障造成的损失。"], "answer": 3}, {"q": "围绕「机器故障险（Machinery Breakdown）」这个概念，下列哪一组“术语—解释”配对正确？", "options": ["机器故障险（Machinery Breakdown） — 承保机器突发机械或电气故障造成的损失。", "关键人物价值（Key-man Value） — 年金产品中持续缴费与投资增长的阶段。", "实际现金价值（Actual Cash Value） — 承保雇主依法对员工工伤事故应承担的赔偿责任。", "大数法则（Law of Large Numbers） — 生存至期满或在期内身故都可领取给付。"], "answer": 0}, {"q": "若以「机器故障险（Machinery Breakdown）」为参照，下列哪一组“术语—解释”配对错误？", "options": ["机器故障险（Machinery Breakdown） — 理赔时被保险人与保险公司按比例共同承担医疗费用。", "风险诱因（Hazard） — 会提高损失发生概率或严重程度的条件。", "家政服务人员豁免（Domestic Servant Exemption） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。", "风险规避（Risk Avoidance） — 透过不参与某项活动来避免相关风险。"], "answer": 0}, {"q": "情境：客户提供了这条关键线索：\n承保机器突发机械或电气故障造成的损失。\n你最可能采用哪个术语进行归纳？", "options": ["重大疾病保险（Critical Illness）", "需求分析法（Needs Analysis）", "物理风险诱因（Physical Hazard）", "机器故障险（Machinery Breakdown）"], "answer": 3}, {"q": "你要向新进顾问说明「机器故障险（Machinery Breakdown）」，下列哪项讲法最准确？", "options": ["把损失财务后果转移给第三方，例如保险公司。", "承保机器突发机械或电气故障造成的损失。", "承保现金在场所内或运送途中被抢劫盗窃等损失。", "参与者将部分供款捐入风险基金以互助共济。"], "answer": 1}, {"q": "以下关于「机器故障险（Machinery Breakdown）」的叙述，哪一项错误？", "options": ["机器故障险（Machinery Breakdown）是指：承保机器突发机械或电气故障造成的损失。", "机器故障险（Machinery Breakdown）是指：透过不参与某项活动来避免相关风险。", "在考试题中，机器故障险（Machinery Breakdown）常用于判断风险或保障处理逻辑。", "区分机器故障险（Machinery Breakdown）时，应抓住定义中的关键字。"], "answer": 1}, {"q": "当你以「机器故障险（Machinery Breakdown）」作为分析核心时，下列哪组“术语—解释”最可采纳？", "options": ["机器故障险（Machinery Breakdown） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。", "物理风险诱因（Physical Hazard） — 承保机器突发机械或电气故障造成的损失。", "定期寿险（Term Policy） — 由环境或实物条件造成的危险诱因，如电线老化。", "机器故障险（Machinery Breakdown） — 承保机器突发机械或电气故障造成的损失。"], "answer": 3}, {"q": "根据以下描述，最贴切的术语是：\n承保雇主依法对员工工伤事故应承担的赔偿责任。", "options": ["联合及遗属年金（Joint & Survivor）", "失效抚恤金计划（Invalidity Pension Scheme）", "雇主责任险（Employer's Liability）", "定期寿险（Term Policy）"], "answer": 2}, {"q": "若要向客户解释「雇主责任险（Employer's Liability）」，哪项定义是正确的？", "options": ["理赔目的是恢复损失前财务状态，而非让被保险人获利。", "承保雇主依法对员工工伤事故应承担的赔偿责任。", "由环境或实物条件造成的危险诱因，如电线老化。", "在约定期间提供保障，通常保费较低且保障纯粹。"], "answer": 1}, {"q": "关于「雇主责任险（Employer's Liability）」及相近概念，哪组配对是正确的？", "options": ["定期寿险（Term Policy） — 理赔时被保险人与保险公司按比例共同承担医疗费用。", "雇主责任险（Employer's Liability） — 承保雇主依法对员工工伤事故应承担的赔偿责任。", "风险保留（Risk Retention） — 承保机器突发机械或电气故障造成的损失。", "Wakalah 模式 — 承保现金在场所内或运送途中被抢劫盗窃等损失。"], "answer": 1}, {"q": "以下各项里，哪一项与「雇主责任险（Employer's Liability）」的概念关系不正确？", "options": ["代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。", "风险诱因（Hazard） — 会提高损失发生概率或严重程度的条件。", "雇主责任险（Employer's Liability） — 透过不参与某项活动来避免相关风险。", "道德风险诱因（Morale Hazard） — 因态度或行为疏忽导致损失概率上升的诱因。"], "answer": 2}, {"q": "顾问访谈记录显示：\n承保雇主依法对员工工伤事故应承担的赔偿责任。\n该信息对应的核心术语是？", "options": ["雇主责任险（Employer's Liability）", "机器故障险（Machinery Breakdown）", "危险因素（Peril）", "实际现金价值（Actual Cash Value）"], "answer": 0}, {"q": "培训场景下，关于「雇主责任险（Employer's Liability）」的正确解释是？", "options": ["承保机器突发机械或电气故障造成的损失。", "家政服务人员通常不属于 SOCSO 一般雇员承保范围。", "给付持续至最后一位受领人身故。", "承保雇主依法对员工工伤事故应承担的赔偿责任。"], "answer": 3}, {"q": "在「雇主责任险（Employer's Liability）」的判断题里，哪项说法不成立？", "options": ["雇主责任险（Employer's Liability）是指：承保雇主依法对员工工伤事故应承担的赔偿责任。", "雇主责任险（Employer's Liability）是指：生存至期满或在期内身故都可领取给付。", "区分雇主责任险（Employer's Liability）时，应抓住定义中的关键字。", "在考试题中，雇主责任险（Employer's Liability）常用于判断风险或保障处理逻辑。"], "answer": 1}, {"q": "在拟定建议书时，围绕「雇主责任险（Employer's Liability）」应采用哪一组正确配对？", "options": ["雇主责任险（Employer's Liability） — 承保雇主依法对员工工伤事故应承担的赔偿责任。", "机器故障险（Machinery Breakdown） — 年金把累积资产转换为定期现金流的阶段。", "给付/清算期（Liquidation Phase） — 承保雇主依法对员工工伤事故应承担的赔偿责任。", "雇主责任险（Employer's Liability） — 用较低危险的活动或物质替代高风险做法。"], "answer": 0}, {"q": "阅读线索后判断术语：\n承保现金在场所内或运送途中被抢劫盗窃等损失。\n应选哪一项？", "options": ["累积期（Accumulation Phase）", "静态风险（Static Risk）", "现金/金钱保险（Money Insurance）", "风险诱因（Hazard）"], "answer": 2}, {"q": "以下对「现金/金钱保险（Money Insurance）」的理解，何者最恰当？", "options": ["年金把累积资产转换为定期现金流的阶段。", "保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "承保现金在场所内或运送途中被抢劫盗窃等损失。", "以具体财务责任计算保障缺口的保险需求方法。"], "answer": 2}, {"q": "以下术语配对中，何者与「现金/金钱保险（Money Insurance）」逻辑一致？", "options": ["现金/金钱保险（Money Insurance） — 承保现金在场所内或运送途中被抢劫盗窃等损失。", "重大疾病保险（Critical Illness） — 由社会长期结构问题引起、变化较慢的风险。", "风险保留（Risk Retention） — 保障终身并可累积现金价值。", "附和合同（Contract of Adhesion） — 企业因关键员工离职或身故可能承担的经济损失价值。"], "answer": 0}, {"q": "围绕「现金/金钱保险（Money Insurance）」的辨错题中，哪组配对是错的？", "options": ["可保利益（Insurable Interest） — 投保人对被保险人生命或财产具有合法经济利益关系。", "现金/金钱保险（Money Insurance） — 条款由保险人拟定，投保人通常只能接受或拒绝。", "大数法则（Law of Large Numbers） — 样本越大，实际损失越接近期望损失。", "风险保留（Risk Retention） — 由个人或企业自行承担损失后果。"], "answer": 1}, {"q": "在案例分析中出现：\n承保现金在场所内或运送途中被抢劫盗窃等损失。\n最应判定为何种术语？", "options": ["机器故障险（Machinery Breakdown）", "现金/金钱保险（Money Insurance）", "家政服务人员豁免（Domestic Servant Exemption）", "可保利益（Insurable Interest）"], "answer": 1}, {"q": "在实务答辩中，哪项对「现金/金钱保险（Money Insurance）」的定义最稳妥？", "options": ["降低损失发生的可能性。", "承保雇主依法对员工工伤事故应承担的赔偿责任。", "由经济、科技、政策变化引起的新风险。", "承保现金在场所内或运送途中被抢劫盗窃等损失。"], "answer": 3}, {"q": "检视下列陈述，关于「现金/金钱保险（Money Insurance）」哪项是错的？", "options": ["区分现金/金钱保险（Money Insurance）时，应抓住定义中的关键字。", "现金/金钱保险（Money Insurance）是指：承保现金在场所内或运送途中被抢劫盗窃等损失。", "在考试题中，现金/金钱保险（Money Insurance）常用于判断风险或保障处理逻辑。", "现金/金钱保险（Money Insurance）是指：投保与承保双方都必须充分、诚实披露重大事实。"], "answer": 3}, {"q": "关于「现金/金钱保险（Money Insurance）」的综合判断，下列配对哪项正确？", "options": ["人类生命价值法（Human Life Value） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。", "赔偿原则（Principle of Indemnity） — 承保现金在场所内或运送途中被抢劫盗窃等损失。", "现金/金钱保险（Money Insurance） — 仅在无法从事合理适任的任何职业时才符合残疾给付。", "现金/金钱保险（Money Insurance） — 承保现金在场所内或运送途中被抢劫盗窃等损失。"], "answer": 3}, {"q": "若出现下列情形：\n保险人赔付后可向责任第三方追偿。\n通常归类为哪一术语？", "options": ["确定年金（Annuity Certain）", "Wakalah 模式", "代位求偿（Subrogation）", "损失降低（Loss Reduction）"], "answer": 2}, {"q": "在RFP语境中，「代位求偿（Subrogation）」应如何定义？", "options": ["由个人或企业自行承担损失后果。", "由环境或实物条件造成的危险诱因，如电线老化。", "保险人赔付后可向责任第三方追偿。", "企业因关键员工离职或身故可能承担的经济损失价值。"], "answer": 2}, {"q": "在概念配对题中，与「代位求偿（Subrogation）」相关的正确选项是？", "options": ["人类生命价值法（Human Life Value） — 采取措施降低损失发生频率或严重程度。", "家政服务人员豁免（Domestic Servant Exemption） — 参与者与经营者按约定比例分享投资利润。", "代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。", "不可争辩条款（Incontestability Clause） — 把损失财务后果转移给第三方，例如保险公司。"], "answer": 2}, {"q": "关于「代位求偿（Subrogation）」与其他术语的对应关系，哪项有误？", "options": ["关键人物价值（Key-man Value） — 企业因关键员工离职或身故可能承担的经济损失价值。", "风险（Risk） — 暴露于不确定并可能造成财务损失的状态。", "实际现金价值（Actual Cash Value） — 赔偿金额等于重置成本减去折旧。", "代位求偿（Subrogation） — 年金产品中持续缴费与投资增长的阶段。"], "answer": 3}, {"q": "若客户陈述符合以下内容：\n保险人赔付后可向责任第三方追偿。\n最佳术语判断是？", "options": ["代位求偿（Subrogation）", "风险转移（Risk Transfer）", "附和合同（Contract of Adhesion）", "Tabarru'（互助捐献）"], "answer": 0}, {"q": "针对「代位求偿（Subrogation）」的高难度辨析，正确选项是？", "options": ["估算家庭因经济支柱身故而损失的收入现值。", "保险人赔付后可向责任第三方追偿。", "由环境或实物条件造成的危险诱因，如电线老化。", "经营者作为代理人管理基金并收取代理费用。"], "answer": 1}, {"q": "围绕「代位求偿（Subrogation）」的四项描述中，错误的是哪一个？", "options": ["区分代位求偿（Subrogation）时，应抓住定义中的关键字。", "代位求偿（Subrogation）是指：保险人赔付后可向责任第三方追偿。", "代位求偿（Subrogation）是指：生存至期满或在期内身故都可领取给付。", "在考试题中，代位求偿（Subrogation）常用于判断风险或保障处理逻辑。"], "answer": 2}, {"q": "若题干以「代位求偿（Subrogation）」为重点，哪组术语配对最合理？", "options": ["代位求偿（Subrogation） — 主要影响个人或个别企业的风险。", "现金/金钱保险（Money Insurance） — 生存至期满或在期内身故都可领取给付。", "储蓄/两全保单（Endowment Policy） — 保险人赔付后可向责任第三方追偿。", "代位求偿（Subrogation） — 保险人赔付后可向责任第三方追偿。"], "answer": 3}, {"q": "某客户在风险沟通中提到：\n理赔目的是恢复损失前财务状态，而非让被保险人获利。\n这最符合哪个术语？", "options": ["家政服务人员豁免（Domestic Servant Exemption）", "赔偿原则（Principle of Indemnity）", "风险控制（Risk Control）", "Tabarru'（互助捐献）"], "answer": 1}, {"q": "关于「赔偿原则（Principle of Indemnity）」，下列哪项描述最准确？", "options": ["保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "理赔目的是恢复损失前财务状态，而非让被保险人获利。", "导致损失发生的直接原因，例如火灾、车祸、疾病。", "生存至期满或在期内身故都可领取给付。"], "answer": 1}, {"q": "围绕「赔偿原则（Principle of Indemnity）」这个概念，下列哪一组“术语—解释”配对正确？", "options": ["赔偿原则（Principle of Indemnity） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。", "不可争辩条款（Incontestability Clause） — 主要影响个人或个别企业的风险。", "最大诚信（Utmost Good Faith） — 样本越大，实际损失越接近期望损失。", "风险保留（Risk Retention） — 由经济、科技、政策变化引起的新风险。"], "answer": 0}, {"q": "若以「赔偿原则（Principle of Indemnity）」为参照，下列哪一组“术语—解释”配对错误？", "options": ["赔偿原则（Principle of Indemnity） — 经营者作为代理人管理基金并收取代理费用。", "需求分析法（Needs Analysis） — 以具体财务责任计算保障缺口的保险需求方法。", "人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。", "关键人物价值（Key-man Value） — 企业因关键员工离职或身故可能承担的经济损失价值。"], "answer": 0}, {"q": "情境：客户提供了这条关键线索：\n理赔目的是恢复损失前财务状态，而非让被保险人获利。\n你最可能采用哪个术语进行归纳？", "options": ["赔偿原则（Principle of Indemnity）", "替代（Substitution）", "大数法则（Law of Large Numbers）", "家政服务人员豁免（Domestic Servant Exemption）"], "answer": 0}, {"q": "你要向新进顾问说明「赔偿原则（Principle of Indemnity）」，下列哪项讲法最准确？", "options": ["以具体财务责任计算保障缺口的保险需求方法。", "降低损失发生的可能性。", "参与者将部分供款捐入风险基金以互助共济。", "理赔目的是恢复损失前财务状态，而非让被保险人获利。"], "answer": 3}, {"q": "以下关于「赔偿原则（Principle of Indemnity）」的叙述，哪一项错误？", "options": ["赔偿原则（Principle of Indemnity）是指：理赔目的是恢复损失前财务状态，而非让被保险人获利。", "在考试题中，赔偿原则（Principle of Indemnity）常用于判断风险或保障处理逻辑。", "区分赔偿原则（Principle of Indemnity）时，应抓住定义中的关键字。", "赔偿原则（Principle of Indemnity）是指：条款由保险人拟定，投保人通常只能接受或拒绝。"], "answer": 3}, {"q": "当你以「赔偿原则（Principle of Indemnity）」作为分析核心时，下列哪组“术语—解释”最可采纳？", "options": ["赔偿原则（Principle of Indemnity） — 导致损失发生的直接原因，例如火灾、车祸、疾病。", "动态风险（Dynamic Risk） — 在损失发生后减少损失程度。", "赔偿原则（Principle of Indemnity） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。", "损失降低（Loss Reduction） — 理赔目的是恢复损失前财务状态，而非让被保险人获利。"], "answer": 2}, {"q": "根据以下描述，最贴切的术语是：\n参与者将部分供款捐入风险基金以互助共济。", "options": ["Tabarru'（互助捐献）", "风险控制（Risk Control）", "确定年金（Annuity Certain）", "特定风险（Particular Risk）"], "answer": 0}, {"q": "若要向客户解释「Tabarru'（互助捐献）」，哪项定义是正确的？", "options": ["由个人或企业自行承担损失后果。", "赔偿金额等于重置成本减去折旧。", "参与者将部分供款捐入风险基金以互助共济。", "估算家庭因经济支柱身故而损失的收入现值。"], "answer": 2}, {"q": "关于「Tabarru'（互助捐献）」及相近概念，哪组配对是正确的？", "options": ["纯风险（Pure Risk） — 在损失发生后减少损失程度。", "人类生命价值法（Human Life Value） — 参与者与经营者按约定比例分享投资利润。", "风险诱因（Hazard） — 确诊合约列明疾病时一次性给付保险金。", "Tabarru'（互助捐献） — 参与者将部分供款捐入风险基金以互助共济。"], "answer": 3}, {"q": "以下各项里，哪一项与「Tabarru'（互助捐献）」的概念关系不正确？", "options": ["终身寿险（Whole Life Policy） — 保障终身并可累积现金价值。", "重大疾病保险（Critical Illness） — 确诊合约列明疾病时一次性给付保险金。", "基本风险（Fundamental Risk） — 影响社会大多数人的系统性风险，如经济衰退。", "Tabarru'（互助捐献） — 用较低危险的活动或物质替代高风险做法。"], "answer": 3}, {"q": "顾问访谈记录显示：\n参与者将部分供款捐入风险基金以互助共济。\n该信息对应的核心术语是？", "options": ["Tabarru'（互助捐献）", "纯风险（Pure Risk）", "基本风险（Fundamental Risk）", "终身寿险（Whole Life Policy）"], "answer": 0}, {"q": "培训场景下，关于「Tabarru'（互助捐献）」的正确解释是？", "options": ["确诊合约列明疾病时一次性给付保险金。", "参与者将部分供款捐入风险基金以互助共济。", "用较低危险的活动或物质替代高风险做法。", "降低损失发生的可能性。"], "answer": 1}, {"q": "在「Tabarru'（互助捐献）」的判断题里，哪项说法不成立？", "options": ["区分Tabarru'（互助捐献）时，应抓住定义中的关键字。", "在考试题中，Tabarru'（互助捐献）常用于判断风险或保障处理逻辑。", "Tabarru'（互助捐献）是指：参与者将部分供款捐入风险基金以互助共济。", "Tabarru'（互助捐献）是指：保险人赔付后可向责任第三方追偿。"], "answer": 3}, {"q": "在拟定建议书时，围绕「Tabarru'（互助捐献）」应采用哪一组正确配对？", "options": ["给付/清算期（Liquidation Phase） — 伊斯兰金融中被禁止的赌博成分。", "Tabarru'（互助捐献） — 参与者将部分供款捐入风险基金以互助共济。", "Tabarru'（互助捐献） — 在损失发生后减少损失程度。", "Al-Maisir — 参与者将部分供款捐入风险基金以互助共济。"], "answer": 1}, {"q": "阅读线索后判断术语：\n经营者作为代理人管理基金并收取代理费用。\n应选哪一项？", "options": ["Wakalah 模式", "实际现金价值（Actual Cash Value）", "定期寿险（Term Policy）", "重大疾病保险（Critical Illness）"], "answer": 0}, {"q": "以下对「Wakalah 模式」的理解，何者最恰当？", "options": ["由经济、科技、政策变化引起的新风险。", "经营者作为代理人管理基金并收取代理费用。", "把损失财务后果转移给第三方，例如保险公司。", "投保与承保双方都必须充分、诚实披露重大事实。"], "answer": 1}, {"q": "以下术语配对中，何者与「Wakalah 模式」逻辑一致？", "options": ["风险（Risk） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "Wakalah 模式 — 经营者作为代理人管理基金并收取代理费用。", "需求分析法（Needs Analysis） — 导致损失发生的直接原因，例如火灾、车祸、疾病。", "雇主责任险（Employer's Liability） — 样本越大，实际损失越接近期望损失。"], "answer": 1}, {"q": "围绕「Wakalah 模式」的辨错题中，哪组配对是错的？", "options": ["储蓄/两全保单（Endowment Policy） — 生存至期满或在期内身故都可领取给付。", "确定年金（Annuity Certain） — 给付期固定，不依赖受领人生存与否。", "Wakalah 模式 — 估算家庭因经济支柱身故而损失的收入现值。", "损失预防（Loss Prevention） — 降低损失发生的可能性。"], "answer": 2}, {"q": "在案例分析中出现：\n经营者作为代理人管理基金并收取代理费用。\n最应判定为何种术语？", "options": ["风险转移（Risk Transfer）", "人类生命价值法（Human Life Value）", "Wakalah 模式", "关键人物价值（Key-man Value）"], "answer": 2}, {"q": "在实务答辩中，哪项对「Wakalah 模式」的定义最稳妥？", "options": ["经营者作为代理人管理基金并收取代理费用。", "由个人或企业自行承担损失后果。", "承保现金在场所内或运送途中被抢劫盗窃等损失。", "生存至期满或在期内身故都可领取给付。"], "answer": 0}, {"q": "检视下列陈述，关于「Wakalah 模式」哪项是错的？", "options": ["在考试题中，Wakalah 模式常用于判断风险或保障处理逻辑。", "区分Wakalah 模式时，应抓住定义中的关键字。", "Wakalah 模式是指：经营者作为代理人管理基金并收取代理费用。", "Wakalah 模式是指：投保人对被保险人生命或财产具有合法经济利益关系。"], "answer": 3}, {"q": "关于「Wakalah 模式」的综合判断，下列配对哪项正确？", "options": ["终身寿险（Whole Life Policy） — 给付期固定，不依赖受领人生存与否。", "Wakalah 模式 — 经营者作为代理人管理基金并收取代理费用。", "确定年金（Annuity Certain） — 经营者作为代理人管理基金并收取代理费用。", "Wakalah 模式 — 企业因关键员工离职或身故可能承担的经济损失价值。"], "answer": 1}, {"q": "若出现下列情形：\n参与者与经营者按约定比例分享投资利润。\n通常归类为哪一术语？", "options": ["实际现金价值（Actual Cash Value）", "现金/金钱保险（Money Insurance）", "物理风险诱因（Physical Hazard）", "Mudharabah 模式"], "answer": 3}, {"q": "在RFP语境中，「Mudharabah 模式」应如何定义？", "options": ["样本越大，实际损失越接近期望损失。", "企业因关键员工离职或身故可能承担的经济损失价值。", "参与者与经营者按约定比例分享投资利润。", "把损失财务后果转移给第三方，例如保险公司。"], "answer": 2}, {"q": "在概念配对题中，与「Mudharabah 模式」相关的正确选项是？", "options": ["雇主责任险（Employer's Liability） — 保单生效一段时间后，保险人一般不得因早期资料争议拒赔。", "道德风险诱因（Morale Hazard） — 给付期固定，不依赖受领人生存与否。", "任何职业定义（Any Occupation） — 年金把累积资产转换为定期现金流的阶段。", "Mudharabah 模式 — 参与者与经营者按约定比例分享投资利润。"], "answer": 3}, {"q": "关于「Mudharabah 模式」与其他术语的对应关系，哪项有误？", "options": ["人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。", "消费者知情权 — 消费者有权获得清晰、完整、可理解的产品信息。", "Mudharabah 模式 — 透过不参与某项活动来避免相关风险。", "任何职业定义（Any Occupation） — 仅在无法从事合理适任的任何职业时才符合残疾给付。"], "answer": 2}, {"q": "若客户陈述符合以下内容：\n参与者与经营者按约定比例分享投资利润。\n最佳术语判断是？", "options": ["风险控制（Risk Control）", "风险保留（Risk Retention）", "机器故障险（Machinery Breakdown）", "Mudharabah 模式"], "answer": 3}, {"q": "针对「Mudharabah 模式」的高难度辨析，正确选项是？", "options": ["参与者与经营者按约定比例分享投资利润。", "用较低危险的活动或物质替代高风险做法。", "降低损失发生的可能性。", "由社会长期结构问题引起、变化较慢的风险。"], "answer": 0}, {"q": "围绕「Mudharabah 模式」的四项描述中，错误的是哪一个？", "options": ["Mudharabah 模式是指：参与者与经营者按约定比例分享投资利润。", "在考试题中，Mudharabah 模式常用于判断风险或保障处理逻辑。", "区分Mudharabah 模式时，应抓住定义中的关键字。", "Mudharabah 模式是指：无法从事原本职业即符合残疾给付条件，定义较宽。"], "answer": 3}, {"q": "若题干以「Mudharabah 模式」为重点，哪组术语配对最合理？", "options": ["Mudharabah 模式 — 承保现金在场所内或运送途中被抢劫盗窃等损失。", "自身职业定义（Own Occupation） — 用较低危险的活动或物质替代高风险做法。", "替代（Substitution） — 参与者与经营者按约定比例分享投资利润。", "Mudharabah 模式 — 参与者与经营者按约定比例分享投资利润。"], "answer": 3}, {"q": "某客户在风险沟通中提到：\n伊斯兰金融中被禁止的赌博成分。\n这最符合哪个术语？", "options": ["人类生命价值法（Human Life Value）", "Al-Maisir", "累积期（Accumulation Phase）", "自身职业定义（Own Occupation）"], "answer": 1}, {"q": "关于「Al-Maisir」，下列哪项描述最准确？", "options": ["影响社会大多数人的系统性风险，如经济衰退。", "年金产品中持续缴费与投资增长的阶段。", "伊斯兰金融中被禁止的赌博成分。", "参与者与经营者按约定比例分享投资利润。"], "answer": 2}, {"q": "围绕「Al-Maisir」这个概念，下列哪一组“术语—解释”配对正确？", "options": ["消费者知情权 — 估算家庭因经济支柱身故而损失的收入现值。", "储蓄/两全保单（Endowment Policy） — 承保机器突发机械或电气故障造成的损失。", "危险因素（Peril） — 采取措施降低损失发生频率或严重程度。", "Al-Maisir — 伊斯兰金融中被禁止的赌博成分。"], "answer": 3}, {"q": "若以「Al-Maisir」为参照，下列哪一组“术语—解释”配对错误？", "options": ["替代（Substitution） — 用较低危险的活动或物质替代高风险做法。", "Al-Maisir — 承保机器突发机械或电气故障造成的损失。", "风险（Risk） — 暴露于不确定并可能造成财务损失的状态。", "自身职业定义（Own Occupation） — 无法从事原本职业即符合残疾给付条件，定义较宽。"], "answer": 1}, {"q": "情境：客户提供了这条关键线索：\n伊斯兰金融中被禁止的赌博成分。\n你最可能采用哪个术语进行归纳？", "options": ["Al-Maisir", "任何职业定义（Any Occupation）", "赔偿原则（Principle of Indemnity）", "现金/金钱保险（Money Insurance）"], "answer": 0}, {"q": "你要向新进顾问说明「Al-Maisir」，下列哪项讲法最准确？", "options": ["采取措施降低损失发生频率或严重程度。", "估算家庭因经济支柱身故而损失的收入现值。", "以具体财务责任计算保障缺口的保险需求方法。", "伊斯兰金融中被禁止的赌博成分。"], "answer": 3}, {"q": "以下关于「Al-Maisir」的叙述，哪一项错误？", "options": ["Al-Maisir是指：伊斯兰金融中被禁止的赌博成分。", "Al-Maisir是指：在损失发生后减少损失程度。", "在考试题中，Al-Maisir常用于判断风险或保障处理逻辑。", "区分Al-Maisir时，应抓住定义中的关键字。"], "answer": 1}, {"q": "当你以「Al-Maisir」作为分析核心时，下列哪组“术语—解释”最可采纳？", "options": ["共同保险（Co-insurance） — 给付期固定，不依赖受领人生存与否。", "Al-Maisir — 参与者与经营者按约定比例分享投资利润。", "Al-Maisir — 伊斯兰金融中被禁止的赌博成分。", "确定年金（Annuity Certain） — 伊斯兰金融中被禁止的赌博成分。"], "answer": 2}, {"q": "根据以下描述，最贴切的术语是：\n投保与承保双方都必须充分、诚实披露重大事实。", "options": ["联合及遗属年金（Joint & Survivor）", "最大诚信（Utmost Good Faith）", "基本风险（Fundamental Risk）", "现金/金钱保险（Money Insurance）"], "answer": 1}, {"q": "若要向客户解释「最大诚信（Utmost Good Faith）」，哪项定义是正确的？", "options": ["承保雇主依法对员工工伤事故应承担的赔偿责任。", "导致损失发生的直接原因，例如火灾、车祸、疾病。", "在损失发生后减少损失程度。", "投保与承保双方都必须充分、诚实披露重大事实。"], "answer": 3}, {"q": "关于「最大诚信（Utmost Good Faith）」及相近概念，哪组配对是正确的？", "options": ["特定风险（Particular Risk） — 承保现金在场所内或运送途中被抢劫盗窃等损失。", "替代（Substitution） — 经营者作为代理人管理基金并收取代理费用。", "最大诚信（Utmost Good Faith） — 投保与承保双方都必须充分、诚实披露重大事实。", "风险保留（Risk Retention） — 因态度或行为疏忽导致损失概率上升的诱因。"], "answer": 2}, {"q": "以下各项里，哪一项与「最大诚信（Utmost Good Faith）」的概念关系不正确？", "options": ["消费者知情权 — 消费者有权获得清晰、完整、可理解的产品信息。", "联合及遗属年金（Joint & Survivor） — 给付持续至最后一位受领人身故。", "最大诚信（Utmost Good Faith） — 会提高损失发生概率或严重程度的条件。", "任何职业定义（Any Occupation） — 仅在无法从事合理适任的任何职业时才符合残疾给付。"], "answer": 2}, {"q": "顾问访谈记录显示：\n投保与承保双方都必须充分、诚实披露重大事实。\n该信息对应的核心术语是？", "options": ["最大诚信（Utmost Good Faith）", "风险（Risk）", "损失降低（Loss Reduction）", "终身寿险（Whole Life Policy）"], "answer": 0}, {"q": "培训场景下，关于「最大诚信（Utmost Good Faith）」的正确解释是？", "options": ["透过不参与某项活动来避免相关风险。", "参与者与经营者按约定比例分享投资利润。", "投保与承保双方都必须充分、诚实披露重大事实。", "承保雇主依法对员工工伤事故应承担的赔偿责任。"], "answer": 2}, {"q": "在「最大诚信（Utmost Good Faith）」的判断题里，哪项说法不成立？", "options": ["最大诚信（Utmost Good Faith）是指：投保与承保双方都必须充分、诚实披露重大事实。", "在考试题中，最大诚信（Utmost Good Faith）常用于判断风险或保障处理逻辑。", "最大诚信（Utmost Good Faith）是指：暴露于不确定并可能造成财务损失的状态。", "区分最大诚信（Utmost Good Faith）时，应抓住定义中的关键字。"], "answer": 2}, {"q": "在拟定建议书时，围绕「最大诚信（Utmost Good Faith）」应采用哪一组正确配对？", "options": ["最大诚信（Utmost Good Faith） — 投保与承保双方都必须充分、诚实披露重大事实。", "消费者知情权 — 以具体财务责任计算保障缺口的保险需求方法。", "需求分析法（Needs Analysis） — 投保与承保双方都必须充分、诚实披露重大事实。", "最大诚信（Utmost Good Faith） — 仅在无法从事合理适任的任何职业时才符合残疾给付。"], "answer": 0}, {"q": "阅读线索后判断术语：\n条款由保险人拟定，投保人通常只能接受或拒绝。\n应选哪一项？", "options": ["附和合同（Contract of Adhesion）", "道德风险诱因（Morale Hazard）", "大数法则（Law of Large Numbers）", "赔偿原则（Principle of Indemnity）"], "answer": 0}, {"q": "以下对「附和合同（Contract of Adhesion）」的理解，何者最恰当？", "options": ["经营者作为代理人管理基金并收取代理费用。", "估算家庭因经济支柱身故而损失的收入现值。", "条款由保险人拟定，投保人通常只能接受或拒绝。", "只有损失或无损失两种结果，不会带来获利。"], "answer": 2}, {"q": "以下术语配对中，何者与「附和合同（Contract of Adhesion）」逻辑一致？", "options": ["附和合同（Contract of Adhesion） — 条款由保险人拟定，投保人通常只能接受或拒绝。", "风险保留（Risk Retention） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。", "定期寿险（Term Policy） — 估算家庭因经济支柱身故而损失的收入现值。", "不可争辩条款（Incontestability Clause） — 企业因关键员工离职或身故可能承担的经济损失价值。"], "answer": 0}, {"q": "围绕「附和合同（Contract of Adhesion）」的辨错题中，哪组配对是错的？", "options": ["附和合同（Contract of Adhesion） — 保障终身并可累积现金价值。", "机器故障险（Machinery Breakdown） — 承保机器突发机械或电气故障造成的损失。", "共同保险（Co-insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。", "累积期（Accumulation Phase） — 年金产品中持续缴费与投资增长的阶段。"], "answer": 0}, {"q": "在案例分析中出现：\n条款由保险人拟定，投保人通常只能接受或拒绝。\n最应判定为何种术语？", "options": ["储蓄/两全保单（Endowment Policy）", "失效抚恤金计划（Invalidity Pension Scheme）", "家政服务人员豁免（Domestic Servant Exemption）", "附和合同（Contract of Adhesion）"], "answer": 3}, {"q": "在实务答辩中，哪项对「附和合同（Contract of Adhesion）」的定义最稳妥？", "options": ["样本越大，实际损失越接近期望损失。", "条款由保险人拟定，投保人通常只能接受或拒绝。", "给付持续至最后一位受领人身故。", "主要影响个人或个别企业的风险。"], "answer": 1}, {"q": "检视下列陈述，关于「附和合同（Contract of Adhesion）」哪项是错的？", "options": ["附和合同（Contract of Adhesion）是指：承保雇主依法对员工工伤事故应承担的赔偿责任。", "附和合同（Contract of Adhesion）是指：条款由保险人拟定，投保人通常只能接受或拒绝。", "区分附和合同（Contract of Adhesion）时，应抓住定义中的关键字。", "在考试题中，附和合同（Contract of Adhesion）常用于判断风险或保障处理逻辑。"], "answer": 0}, {"q": "关于「附和合同（Contract of Adhesion）」的综合判断，下列配对哪项正确？", "options": ["风险（Risk） — 条款由保险人拟定，投保人通常只能接受或拒绝。", "附和合同（Contract of Adhesion） — 条款由保险人拟定，投保人通常只能接受或拒绝。", "附和合同（Contract of Adhesion） — 采取措施降低损失发生频率或严重程度。", "联合及遗属年金（Joint & Survivor） — 暴露于不确定并可能造成财务损失的状态。"], "answer": 1}, {"q": "若出现下列情形：\n消费者有权获得清晰、完整、可理解的产品信息。\n通常归类为哪一术语？", "options": ["Tabarru'（互助捐献）", "累积期（Accumulation Phase）", "Al-Maisir", "消费者知情权"], "answer": 3}, {"q": "在RFP语境中，「消费者知情权」应如何定义？", "options": ["透过不参与某项活动来避免相关风险。", "消费者有权获得清晰、完整、可理解的产品信息。", "确诊合约列明疾病时一次性给付保险金。", "主要影响个人或个别企业的风险。"], "answer": 1}, {"q": "在概念配对题中，与「消费者知情权」相关的正确选项是？", "options": ["Mudharabah 模式 — 会提高损失发生概率或严重程度的条件。", "消费者知情权 — 消费者有权获得清晰、完整、可理解的产品信息。", "损失预防（Loss Prevention） — 投保人对被保险人生命或财产具有合法经济利益关系。", "Tabarru'（互助捐献） — 样本越大，实际损失越接近期望损失。"], "answer": 1}, {"q": "关于「消费者知情权」与其他术语的对应关系，哪项有误？", "options": ["风险控制（Risk Control） — 采取措施降低损失发生频率或严重程度。", "重大疾病保险（Critical Illness） — 确诊合约列明疾病时一次性给付保险金。", "风险转移（Risk Transfer） — 把损失财务后果转移给第三方，例如保险公司。", "消费者知情权 — 因态度或行为疏忽导致损失概率上升的诱因。"], "answer": 3}, {"q": "若客户陈述符合以下内容：\n消费者有权获得清晰、完整、可理解的产品信息。\n最佳术语判断是？", "options": ["风险规避（Risk Avoidance）", "累积期（Accumulation Phase）", "消费者知情权", "确定年金（Annuity Certain）"], "answer": 2}, {"q": "针对「消费者知情权」的高难度辨析，正确选项是？", "options": ["暴露于不确定并可能造成财务损失的状态。", "企业因关键员工离职或身故可能承担的经济损失价值。", "消费者有权获得清晰、完整、可理解的产品信息。", "投保与承保双方都必须充分、诚实披露重大事实。"], "answer": 2}, {"q": "围绕「消费者知情权」的四项描述中，错误的是哪一个？", "options": ["消费者知情权是指：消费者有权获得清晰、完整、可理解的产品信息。", "区分消费者知情权时，应抓住定义中的关键字。", "消费者知情权是指：SOCSO 对失去工作能力成员提供长期收入保障。", "在考试题中，消费者知情权常用于判断风险或保障处理逻辑。"], "answer": 2}, {"q": "若题干以「消费者知情权」为重点，哪组术语配对最合理？", "options": ["特定风险（Particular Risk） — 消费者有权获得清晰、完整、可理解的产品信息。", "动态风险（Dynamic Risk） — 主要影响个人或个别企业的风险。", "消费者知情权 — 年金把累积资产转换为定期现金流的阶段。", "消费者知情权 — 消费者有权获得清晰、完整、可理解的产品信息。"], "answer": 3}, {"q": "某客户在风险沟通中提到：\nSOCSO 对失去工作能力成员提供长期收入保障。\n这最符合哪个术语？", "options": ["定期寿险（Term Policy）", "基本风险（Fundamental Risk）", "Tabarru'（互助捐献）", "失效抚恤金计划（Invalidity Pension Scheme）"], "answer": 3}, {"q": "关于「失效抚恤金计划（Invalidity Pension Scheme）」，下列哪项描述最准确？", "options": ["保障终身并可累积现金价值。", "给付期固定，不依赖受领人生存与否。", "只有损失或无损失两种结果，不会带来获利。", "SOCSO 对失去工作能力成员提供长期收入保障。"], "answer": 3}, {"q": "围绕「失效抚恤金计划（Invalidity Pension Scheme）」这个概念，下列哪一组“术语—解释”配对正确？", "options": ["动态风险（Dynamic Risk） — 影响社会大多数人的系统性风险，如经济衰退。", "可保利益（Insurable Interest） — 投保与承保双方都必须充分、诚实披露重大事实。", "失效抚恤金计划（Invalidity Pension Scheme） — SOCSO 对失去工作能力成员提供长期收入保障。", "任何职业定义（Any Occupation） — 在约定期间提供保障，通常保费较低且保障纯粹。"], "answer": 2}, {"q": "若以「失效抚恤金计划（Invalidity Pension Scheme）」为参照，下列哪一组“术语—解释”配对错误？", "options": ["需求分析法（Needs Analysis） — 以具体财务责任计算保障缺口的保险需求方法。", "动态风险（Dynamic Risk） — 由经济、科技、政策变化引起的新风险。", "失效抚恤金计划（Invalidity Pension Scheme） — 用较低危险的活动或物质替代高风险做法。", "人类生命价值法（Human Life Value） — 估算家庭因经济支柱身故而损失的收入现值。"], "answer": 2}, {"q": "情境：客户提供了这条关键线索：\nSOCSO 对失去工作能力成员提供长期收入保障。\n你最可能采用哪个术语进行归纳？", "options": ["动态风险（Dynamic Risk）", "失效抚恤金计划（Invalidity Pension Scheme）", "现金/金钱保险（Money Insurance）", "可保利益（Insurable Interest）"], "answer": 1}, {"q": "你要向新进顾问说明「失效抚恤金计划（Invalidity Pension Scheme）」，下列哪项讲法最准确？", "options": ["由经济、科技、政策变化引起的新风险。", "SOCSO 对失去工作能力成员提供长期收入保障。", "可能损失也可能获利的风险。", "降低损失发生的可能性。"], "answer": 1}, {"q": "以下关于「失效抚恤金计划（Invalidity Pension Scheme）」的叙述，哪一项错误？", "options": ["区分失效抚恤金计划（Invalidity Pension Scheme）时，应抓住定义中的关键字。", "失效抚恤金计划（Invalidity Pension Scheme）是指：SOCSO 对失去工作能力成员提供长期收入保障。", "失效抚恤金计划（Invalidity Pension Scheme）是指：企业因关键员工离职或身故可能承担的经济损失价值。", "在考试题中，失效抚恤金计划（Invalidity Pension Scheme）常用于判断风险或保障处理逻辑。"], "answer": 2}, {"q": "当你以「失效抚恤金计划（Invalidity Pension Scheme）」作为分析核心时，下列哪组“术语—解释”最可采纳？", "options": ["Al-Maisir — SOCSO 对失去工作能力成员提供长期收入保障。", "失效抚恤金计划（Invalidity Pension Scheme） — 采取措施降低损失发生频率或严重程度。", "机器故障险（Machinery Breakdown） — 伊斯兰金融中被禁止的赌博成分。", "失效抚恤金计划（Invalidity Pension Scheme） — SOCSO 对失去工作能力成员提供长期收入保障。"], "answer": 3}, {"q": "根据以下描述，最贴切的术语是：\n家政服务人员通常不属于 SOCSO 一般雇员承保范围。", "options": ["风险转移（Risk Transfer）", "家政服务人员豁免（Domestic Servant Exemption）", "机器故障险（Machinery Breakdown）", "定期寿险（Term Policy）"], "answer": 1}, {"q": "若要向客户解释「家政服务人员豁免（Domestic Servant Exemption）」，哪项定义是正确的？", "options": ["投保与承保双方都必须充分、诚实披露重大事实。", "以具体财务责任计算保障缺口的保险需求方法。", "家政服务人员通常不属于 SOCSO 一般雇员承保范围。", "仅在无法从事合理适任的任何职业时才符合残疾给付。"], "answer": 2}, {"q": "关于「家政服务人员豁免（Domestic Servant Exemption）」及相近概念，哪组配对是正确的？", "options": ["家政服务人员豁免（Domestic Servant Exemption） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。", "实际现金价值（Actual Cash Value） — 参与者将部分供款捐入风险基金以互助共济。", "需求分析法（Needs Analysis） — 年金产品中持续缴费与投资增长的阶段。", "不可争辩条款（Incontestability Clause） — 企业因关键员工离职或身故可能承担的经济损失价值。"], "answer": 0}, {"q": "以下各项里，哪一项与「家政服务人员豁免（Domestic Servant Exemption）」的概念关系不正确？", "options": ["累积期（Accumulation Phase） — 年金产品中持续缴费与投资增长的阶段。", "家政服务人员豁免（Domestic Servant Exemption） — SOCSO 对失去工作能力成员提供长期收入保障。", "可保利益（Insurable Interest） — 投保人对被保险人生命或财产具有合法经济利益关系。", "共同保险（Co-insurance） — 理赔时被保险人与保险公司按比例共同承担医疗费用。"], "answer": 1}, {"q": "顾问访谈记录显示：\n家政服务人员通常不属于 SOCSO 一般雇员承保范围。\n该信息对应的核心术语是？", "options": ["风险规避（Risk Avoidance）", "风险保留（Risk Retention）", "家政服务人员豁免（Domestic Servant Exemption）", "物理风险诱因（Physical Hazard）"], "answer": 2}, {"q": "培训场景下，关于「家政服务人员豁免（Domestic Servant Exemption）」的正确解释是？", "options": ["由社会长期结构问题引起、变化较慢的风险。", "透过不参与某项活动来避免相关风险。", "给付期固定，不依赖受领人生存与否。", "家政服务人员通常不属于 SOCSO 一般雇员承保范围。"], "answer": 3}, {"q": "在「家政服务人员豁免（Domestic Servant Exemption）」的判断题里，哪项说法不成立？", "options": ["家政服务人员豁免（Domestic Servant Exemption）是指：参与者与经营者按约定比例分享投资利润。", "家政服务人员豁免（Domestic Servant Exemption）是指：家政服务人员通常不属于 SOCSO 一般雇员承保范围。", "区分家政服务人员豁免（Domestic Servant Exemption）时，应抓住定义中的关键字。", "在考试题中，家政服务人员豁免（Domestic Servant Exemption）常用于判断风险或保障处理逻辑。"], "answer": 0}, {"q": "在拟定建议书时，围绕「家政服务人员豁免（Domestic Servant Exemption）」应采用哪一组正确配对？", "options": ["消费者知情权 — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。", "家政服务人员豁免（Domestic Servant Exemption） — 在约定期间提供保障，通常保费较低且保障纯粹。", "不可争辩条款（Incontestability Clause） — 消费者有权获得清晰、完整、可理解的产品信息。", "家政服务人员豁免（Domestic Servant Exemption） — 家政服务人员通常不属于 SOCSO 一般雇员承保范围。"], "answer": 3}]}];
+
+let currentQuestions = [];   // active quiz question list (with lessonTitle attached)
+let currentIndex = 0;
+let currentScore = 0;
+let userAnswers = [];        // {selected, correct, question}
+let answeredThisQ = false;
+let quizTitle = "";
+
+const screenHome = document.getElementById('screen-home');
+const screenQuiz = document.getElementById('screen-quiz');
+const screenResults = document.getElementById('screen-results');
+
+function shuffle(arr){
+  const a = arr.slice();
+  for(let i=a.length-1;i>0;i--){
+    const j = Math.floor(Math.random()*(i+1));
+    [a[i],a[j]]=[a[j],a[i]];
+  }
+  return a;
+}
+
+// ---------- Build home screen lesson cards ----------
+function renderHome(){
+  const list = document.getElementById('lesson-list');
+  list.innerHTML = '';
+  LESSONS.forEach(lesson=>{
+    const card = document.createElement('div');
+    card.className = 'lesson-card';
+    card.innerHTML = `
+      <div class="num">${lesson.id}</div>
+      <div class="title">${lesson.title}</div>
+      <div class="meta">${lesson.questions.length} 题</div>
+    `;
+    card.addEventListener('click', ()=> startLessonQuiz(lesson));
+    list.appendChild(card);
+  });
+}
+
+function startLessonQuiz(lesson){
+  currentQuestions = lesson.questions.map(q=>({...q, lessonTitle: lesson.title}));
+  quizTitle = lesson.title;
+  beginQuiz();
+}
+
+function startAllQuiz(){
+  let all = [];
+  LESSONS.forEach(lesson=>{
+    lesson.questions.forEach(q=> all.push({...q, lessonTitle: lesson.title}));
+  });
+  currentQuestions = shuffle(all);
+  quizTitle = "全书综合测验";
+  beginQuiz();
+}
+
+function beginQuiz(){
+  currentIndex = 0;
+  currentScore = 0;
+  userAnswers = [];
+  screenHome.classList.add('hidden');
+  screenResults.classList.add('hidden');
+  screenQuiz.classList.remove('hidden');
+  document.getElementById('quiz-lesson-tag').textContent = quizTitle;
+  renderQuestion();
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+function renderQuestion(){
+  answeredThisQ = false;
+  const total = currentQuestions.length;
+  const q = currentQuestions[currentIndex];
+  document.getElementById('progress-fill').style.width = ((currentIndex)/total*100)+'%';
+  document.getElementById('qnum').textContent = `第 ${currentIndex+1} / ${total} 题　·　${q.lessonTitle}`;
+  document.getElementById('qtext').textContent = q.q;
+  document.getElementById('score-pill').textContent = `当前得分：${currentScore} / ${currentIndex}`;
+
+  const optWrap = document.getElementById('options');
+  optWrap.innerHTML = '';
+  const letters = ['A','B','C','D','E','F'];
+  q.options.forEach((optText, idx)=>{
+    const div = document.createElement('div');
+    div.className = 'opt';
+    div.innerHTML = `<div class="letter">${letters[idx]}</div><div class="otext">${optText}</div>`;
+    div.addEventListener('click', ()=> selectOption(idx));
+    optWrap.appendChild(div);
+  });
+
+  const rl = document.getElementById('result-line');
+  rl.className = 'result-line';
+  rl.textContent = '';
+
+  const nextBtn = document.getElementById('btn-next');
+  nextBtn.classList.remove('active');
+  nextBtn.textContent = (currentIndex === total-1) ? '查看结果 →' : '下一题 →';
+}
+
+function selectOption(idx){
+  if(answeredThisQ) return;
+  answeredThisQ = true;
+  const q = currentQuestions[currentIndex];
+  const isCorrect = idx === q.answer;
+  if(isCorrect) currentScore++;
+
+  userAnswers.push({
+    question: q.q,
+    lessonTitle: q.lessonTitle,
+    options: q.options,
+    selected: idx,
+    correctIdx: q.answer,
+    isCorrect: isCorrect
+  });
+
+  const opts = document.querySelectorAll('#options .opt');
+  opts.forEach((el,i)=>{
+    el.classList.add('disabled');
+    if(i === q.answer) el.classList.add('correct');
+    if(i === idx && idx !== q.answer) el.classList.add('wrong');
+    if(i === idx) el.classList.add('selected');
+  });
+
+  const rl = document.getElementById('result-line');
+  rl.classList.add('show');
+  if(isCorrect){
+    rl.classList.add('ok');
+    rl.textContent = '✓ 答对了';
+  } else {
+    rl.classList.add('bad');
+    rl.textContent = `✗ 答错了 — 正确答案是 ${['A','B','C','D'][q.answer]}`;
+  }
+
+  document.getElementById('score-pill').textContent = `当前得分：${currentScore} / ${currentIndex+1}`;
+  document.getElementById('btn-next').classList.add('active');
+}
+
+document.getElementById('btn-next').addEventListener('click', ()=>{
+  if(!answeredThisQ) return;
+  if(currentIndex < currentQuestions.length - 1){
+    currentIndex++;
+    renderQuestion();
+    window.scrollTo({top:0, behavior:'smooth'});
+  } else {
+    showResults();
+  }
+});
+
+document.getElementById('btn-back').addEventListener('click', ()=>{
+  screenQuiz.classList.add('hidden');
+  screenHome.classList.remove('hidden');
+});
+
+document.getElementById('btn-all').addEventListener('click', startAllQuiz);
+
+function showResults(){
+  screenQuiz.classList.add('hidden');
+  screenResults.classList.remove('hidden');
+  const total = currentQuestions.length;
+  const pct = Math.round((currentScore/total)*100);
+  document.getElementById('results-lesson-tag').textContent = quizTitle + ' · 测验完成';
+  document.getElementById('score-percent').textContent = pct + '%';
+  document.getElementById('score-frac').textContent = `答对 ${currentScore} / ${total} 题`;
+
+  let remark;
+  if(pct === 100) remark = '满分！对这部分内容掌握得非常扎实。';
+  else if(pct >= 80) remark = '掌握程度良好，再复习错题即可。';
+  else if(pct >= 60) remark = '基础尚可，建议重新阅读相关章节后再测一次。';
+  else remark = '这部分需要多花时间复习，建议重新阅读课文后再测验。';
+  document.getElementById('score-remark').textContent = remark;
+
+  const reviewList = document.getElementById('review-list');
+  reviewList.innerHTML = '';
+  const wrongOnes = userAnswers.filter(a=>!a.isCorrect);
+  if(wrongOnes.length > 0){
+    const heading = document.createElement('div');
+    heading.style.fontFamily = "'Helvetica Neue',Arial,sans-serif";
+    heading.style.fontSize = '12px';
+    heading.style.letterSpacing = '.18em';
+    heading.style.textTransform = 'uppercase';
+    heading.style.color = 'var(--ink-soft)';
+    heading.style.margin = '10px 2px 4px';
+    heading.textContent = `错题回顾（${wrongOnes.length} 题）`;
+    reviewList.appendChild(heading);
+
+    wrongOnes.forEach(a=>{
+      const div = document.createElement('div');
+      div.className = 'review-item';
+      const letters = ['A','B','C','D'];
+      div.innerHTML = `
+        <span class="tag-lesson">${a.lessonTitle}</span>
+        <div class="rq">${a.question}</div>
+        <div class="ra">
+          你的答案：<span class="yours">${letters[a.selected]}. ${a.options[a.selected]}</span><br>
+          正确答案：<span class="correct">${letters[a.correctIdx]}. ${a.options[a.correctIdx]}</span>
+        </div>
+      `;
+      reviewList.appendChild(div);
+    });
+  }
+  window.scrollTo({top:0, behavior:'smooth'});
+}
+
+document.getElementById('btn-retry').addEventListener('click', ()=>{
+  // retry same set (re-shuffle if it was the "all" quiz)
+  if(quizTitle === "全书综合测验"){
+    startAllQuiz();
+  } else {
+    beginQuiz();
+  }
+});
+
+document.getElementById('btn-home').addEventListener('click', ()=>{
+  screenResults.classList.add('hidden');
+  screenHome.classList.remove('hidden');
+  window.scrollTo({top:0, behavior:'smooth'});
+});
+
+renderHome();
+</script>
+</body>
+</html>
